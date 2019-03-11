@@ -6,7 +6,8 @@
     "buildClient": "./node_modules/.bin/webpack --config ./webpack.client.config.js",
     "buildServer": "./node_modules/.bin/webpack --config ./webpack.server.config.js",
     "build": "npm run createfirebaseconf && npm run buildClient && npm run buildServer",
-    "watch": "watch 'npm run buildClient'"
+    "watch": "watch 'npm run buildClient'",
+    "serve": "firebase serve --only hosting,functions"
   },
   "dependencies": {
     "apollo-boost": "^0.3.1",

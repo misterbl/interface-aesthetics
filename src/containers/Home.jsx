@@ -7,14 +7,15 @@ export class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h1>hello</h1>
-        <iframe
-          id="existing-iframe-example"
-          width="640"
-          height="360"
-          src="https://www.youtube.com/embed/-SFcIUEvNOQ?autoplay=1&mute=1&enablejsapi=1?modestbranding=1&showinfo=0&iv_load_policy=3&loop=1&showsearch=0&rel=0"
-          frameborder="0"
-        />
+        <div className="no-hover">
+          <iframe
+            id="existing-iframe-example"
+            width="640"
+            height="360"
+            src="https://www.youtube.com/embed/-SFcIUEvNOQ?&mute=1&enablejsapi=0&cc_load_policy=0&fs=0&controls=0&autoplay=1&&playlist=-SFcIUEvNOQ&disablekb=1&modestbranding=1&showinfo=0&iv_load_policy=3&loop=1&showsearch=0&rel=0"
+            frameborder="0"
+          />
+        </div>
         <div className="px-5 m-5">
           <h2 className="font-weight-bold mb-4">
             {" "}
@@ -62,7 +63,7 @@ export class Home extends React.Component {
               </p>
             </div>
             <div className="d-flex flex-column">
-              <img src="/static/media/CPDMemberlogo.jpeg" />
+              <img src={CPDMemberlogo} />
               <p>CPD accredited training</p>
               <p>
                 {" "}
