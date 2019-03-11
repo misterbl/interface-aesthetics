@@ -1,6 +1,6 @@
 {
-  "name": "functions-isomorphic-react-app",
-  "description": "A sample isomorphic React app using Functions and Hosting",
+  "name": "interface-aesthetics",
+  "description": "interface-aesthetics",
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
