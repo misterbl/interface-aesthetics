@@ -1,0 +1,41 @@
+type Course {
+  _id: String!
+  title: String
+  description: String
+  price: String
+  image: String
+}
+type Query {
+  getCourseByKey(key: ID!): Course
+  courses: [Course]
+  getCourseById(_id: String): Course
+}
+
+type Mutation {
+  updateCourseByKey(input: UpdateCourseInput!): Course
+  getCourse(_id: String): Course!
+  addCourse(
+    title: String
+    description: String
+    price: String
+    image: String
+  ): Course!
+  updateCourse(
+    _id: String
+    title: String
+    description: String
+    price: String
+    image: String
+  ): Course!
+  removeCourse(_id: String!): Course!
+}
+
+input UpdateCourseInput {
+  key: ID!
+  _id: String
+  title: String
+  description: String
+  price: String
+  image: String
+}
+    

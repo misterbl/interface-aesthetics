@@ -1,0 +1,25 @@
+[debug] [2019-03-10T12:54:21.427Z] ----------------------------------------------------------------------
+[debug] [2019-03-10T12:54:21.430Z] Command:       /Users/laurent.bouhnik/.nvm/versions/node/v10.7.0/bin/node /Users/laurent.bouhnik/.nvm/versions/node/v10.7.0/bin/firebase experimental:functions:shell
+[debug] [2019-03-10T12:54:21.430Z] CLI Version:   6.4.0
+[debug] [2019-03-10T12:54:21.431Z] Platform:      darwin
+[debug] [2019-03-10T12:54:21.431Z] Node Version:  v10.7.0
+[debug] [2019-03-10T12:54:21.432Z] Time:          Sun Mar 10 2019 12:54:21 GMT+0000 (Greenwich Mean Time)
+[debug] [2019-03-10T12:54:21.432Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-03-10T12:54:21.443Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-03-10T12:54:21.443Z] > authorizing via signed-in user
+[debug] [2019-03-10T12:54:21.443Z] [iam] checking project interface-aesthetics for permissions ["firebase.projects.get"]
+[debug] [2019-03-10T12:54:21.445Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/interface-aesthetics:testIamPermissions  
+
+[debug] [2019-03-10T12:54:22.292Z] <<< HTTP RESPONSE 200
+[info] i  functions: Preparing to emulate functions.
+[debug] [2019-03-10T12:54:22.911Z] Fetching environment
+[debug] [2019-03-10T12:54:22.913Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/interface-aesthetics  
+ 
+[debug] [2019-03-10T12:54:23.722Z] <<< HTTP RESPONSE 200
+[debug] [2019-03-10T12:54:23.722Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/316527730177:getServerAppConfig  
+ 
+[debug] [2019-03-10T12:54:23.949Z] <<< HTTP RESPONSE 200
+[debug] [2019-03-10T12:54:23.950Z] Starting @google-cloud/functions-emulator
+[debug] [2019-03-10T12:54:25.513Z] Parsing function triggers
+[info] ✔  functions: app

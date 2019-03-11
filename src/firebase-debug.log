@@ -1,0 +1,49 @@
+[debug] [2019-03-11T12:24:32.159Z] ----------------------------------------------------------------------
+[debug] [2019-03-11T12:24:32.162Z] Command:       /Users/laurent.bouhnik/.nvm/versions/node/v10.7.0/bin/node /Users/laurent.bouhnik/.nvm/versions/node/v10.7.0/bin/firebase serve --only hosting,functions
+[debug] [2019-03-11T12:24:32.162Z] CLI Version:   6.4.0
+[debug] [2019-03-11T12:24:32.162Z] Platform:      darwin
+[debug] [2019-03-11T12:24:32.162Z] Node Version:  v10.7.0
+[debug] [2019-03-11T12:24:32.163Z] Time:          Mon Mar 11 2019 12:24:32 GMT+0000 (Greenwich Mean Time)
+[debug] [2019-03-11T12:24:32.164Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-03-11T12:24:32.175Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-03-11T12:24:32.175Z] > authorizing via signed-in user
+[debug] [2019-03-11T12:24:32.176Z] [iam] checking project interface-aesthetics for permissions ["firebase.projects.get"]
+[debug] [2019-03-11T12:24:32.178Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/interface-aesthetics:testIamPermissions  
+
+[debug] [2019-03-11T12:24:33.051Z] <<< HTTP RESPONSE 200
+[debug] [2019-03-11T12:24:33.053Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/interface-aesthetics  
+ 
+[debug] [2019-03-11T12:24:33.791Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/laurent.bouhnik/Documents/perso/isomorphic-react-app'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2019-03-11T12:24:34.360Z] Fetching environment
+[debug] [2019-03-11T12:24:34.362Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/316527730177:getServerAppConfig  
+ 
+[debug] [2019-03-11T12:24:34.362Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/316527730177/clients/_:getWebAppConfig  
+ 
+[debug] [2019-03-11T12:24:34.569Z] <<< HTTP RESPONSE 200
+[debug] [2019-03-11T12:24:34.569Z] Starting @google-cloud/functions-emulator
+[debug] [2019-03-11T12:24:34.670Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2019-03-11T12:24:36.123Z] Parsing function triggers
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /static/media/CPDMemberlogo.jpeg to local function app
+[info] [hosting] Rewriting /static/media/CPDMemberlogo.jpeg to local function app
+[info] ✔  functions: app: http://localhost:5001/interface-aesthetics/us-central1/app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /static/media/CPDMemberlogo.jpeg to local function app
+[info] [hosting] Rewriting /static/media/CPDMemberlogo.jpeg to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /static/media/CPDMemberlogo.jpeg to local function app
+[info] [hosting] Rewriting /static/media/CPDMemberlogo.jpeg to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /static/media/CPDMemberlogo.jpeg to local function app
+[info] [hosting] Rewriting /static/media/CPDMemberlogo.jpeg to local function app

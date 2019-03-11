@@ -1,0 +1,38 @@
+{
+  "name": "functions-isomorphic-react-app",
+  "description": "A sample isomorphic React app using Functions and Hosting",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "4.15.2",
+    "express-graphql": "^0.7.1",
+    "firebase": "5.8.2",
+    "firebase-admin": "~7.0.0",
+    "firebase-functions": "^2.2.0",
+    "global": "^4.3.2",
+    "graphql": "^14.1.1",
+    "graphql-tag": "^2.10.1",
+    "graphql-tools": "^4.0.4",
+    "mongoose": "^5.4.17",
+    "node-sass": "^4.11.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "request": "2.81.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.13.1",
+    "eslint-plugin-promise": "^3.6.0"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --max-warnings=0 .",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase experimental:functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "private": true
+}
