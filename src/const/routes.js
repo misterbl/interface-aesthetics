@@ -3,9 +3,11 @@ const routes = {
   COURSES: "/courses",
   COURSE: "/courses/:courseGuid",
   WHO_WE_TRAIN: "/who-we-train",
-  BECOME_A_MODEL: "/become-a-model",
+  TESTIMONIALS: "/testimonials",
+  MODEL: "/model",
   ABOUT: "/about",
-  CONTACT_US: "/contact-us",
+  BLOG: "blog",
+  CONTACT: "/contact",
   ADMIN: "/admin"
 };
 

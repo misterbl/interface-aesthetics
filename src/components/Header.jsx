@@ -10,13 +10,18 @@ export class Header extends React.Component {
 
   render() {
     return (
-      <Navbar className="py-4" collapseOnSelect expand="lg">
-        <div
+      <Navbar
+        className="py-4 bg-white"
+        collapseOnSelect
+        navbar-expand-sm
+        expand="md"
+      >
+        {/* <div
           onClick={this.pushToIndex}
           className="image-container mx-5 pr-5 mt-2"
         >
           <img className="w-100" src={logo} alt="interface aesthetics's logo" />
-        </div>
+        </div> */}
         <Navbar.Toggle aria-controls="responsive-navbar-nav">
           <div className="hamburger-line " />
           <div className="hamburger-line " />
@@ -25,10 +30,18 @@ export class Header extends React.Component {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href={ROUTES.COURSES}>Courses</Nav.Link>
-            <Nav.Link href={ROUTES.WHO_WE_TRAIN}>Who we train</Nav.Link>
-            <Nav.Link href={ROUTES.BECOME_A_MODEL}>Become a model</Nav.Link>
             <Nav.Link href={ROUTES.ABOUT}>About</Nav.Link>
-            <Nav.Link href={ROUTES.CONTACT_US}>Contact us</Nav.Link>
+            <Nav.Link href={ROUTES.TESTIMONIALS}>Testimonials</Nav.Link>
+            <Navbar.Brand href={ROUTES.INDEX}>
+              <img
+                className="nav-link"
+                src={logo}
+                alt="interface aesthetics's logo"
+              />
+            </Navbar.Brand>
+            <Nav.Link href={ROUTES.MODEL}>Model</Nav.Link>
+            <Nav.Link href={ROUTES.CONTACT}>Contact</Nav.Link>
+            <Nav.Link href={ROUTES.BLOG}>Blog</Nav.Link>
 
             {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

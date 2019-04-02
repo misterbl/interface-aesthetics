@@ -1,11 +1,22 @@
+$dark-blue: #1e5589;
+$blue-font: #2d76bb;
+
+%cta-button {
+  border: none;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 12px 18px 12px 18px;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "FuturaPT", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
 }
 
 code {
@@ -48,8 +59,10 @@ code {
   color: white;
 } */
 .navbar {
-  box-shadow: 0 4px 2px -2px lightgrey;
   justify-content: space-between;
+  img {
+    width: 180px;
+  }
 }
 
 /* .App-link {
@@ -78,7 +91,7 @@ a:hover {
   color: #2e76ba;
 }
 .navbar-light .navbar-nav .nav-link {
-  color: #2e76ba;
+  color: $blue-font;
   margin-left: 50px;
 }
 
@@ -94,7 +107,7 @@ a:hover {
 .hamburger-line {
   width: 35px;
   height: 5px;
-  background-color: #2e76ba;
+  background-color: $blue-font;
   margin: 6px 0px;
 }
 
@@ -119,6 +132,13 @@ a:hover {
   font-size: 10px;
 }
 
+.w-500 {
+  width: 500px;
+}
+
+.p-60 {
+  padding: 60px;
+}
 .gradiant-div {
   background-image: linear-gradient(to right, #2e76ba, white);
   width: 100%;
@@ -146,4 +166,75 @@ a:hover {
 .interface-bg-grey {
   background-color: #ebebeb;
   padding: 6rem;
+}
+
+.model {
+  background-image: url("../assets/model.png");
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+  p {
+    margin: 0px;
+  }
+  p:first-of-type {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 67px;
+    padding-top: 50px;
+  }
+  p:nth-child(2) {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 67px;
+  }
+  p:nth-child(3) {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 30px;
+    padding: 0 200px 0 200px;
+  }
+}
+
+.discount {
+  width: 360px;
+  p:first-of-type {
+    color: $blue-font;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 46px;
+  }
+  p:nth-child(2) {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+  }
+}
+
+.cta-button-white {
+  @extend %cta-button;
+  background-color: #ffffff;
+  color: $dark-blue;
+}
+
+.cta-button-blue {
+  @extend %cta-button;
+  background-color: $dark-blue;
+  color: #ffffff;
+}
+
+.accordion {
+  max-width: 600px;
+  .btn-link:after {
+    /* symbol for "opening" panels */
+    font-family: "Glyphicons Halflings"; /* essential for enabling glyphicon */
+    content: "\e114"; /* adjust as needed, taken from bootstrap.css */
+    float: right; /* adjust as needed */
+    color: grey; /* adjust as needed */
+  }
+  .btn-link.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080"; /* adjust as needed, taken from bootstrap.css */
+  }
 }
