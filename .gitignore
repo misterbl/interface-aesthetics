@@ -2,3 +2,4 @@
 node_modules
 *.bundle.js
 ./functions/development.env
+.functions/firebase-config.json

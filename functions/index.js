@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const window = require("global/window");
 const functions = require("firebase-functions");
 const app = require("express")();
 const React = require("react");
@@ -38,7 +37,9 @@ const template = require("./template");
 const database = require("./firebase-database");
 
 const fs = require("fs");
-
+// var storage = firebase.storage();
+// var storageRef = storage.ref();
+// var imagesRef = storageRef.child("images");
 var jsonParser = bodyParser.json({
   limit: 1024 * 1024 * 2000,
   type: "application/json"
@@ -94,13 +95,12 @@ app.post("/upload", (req, res, next) => {
 
 app.post("/uploadCourseImage", (req, res, next) => {
   const extension = path.extname(req.body.imageName);
-  console.log(extension);
   const guid = uuid();
   fs.writeFile(`/tmp/${guid}${extension}`, req.body.image, function(err) {
     if (err) {
       return console.log(err);
     }
-    console.log("The file was saved!");
+    return console.log("The file was saved!");
   });
 
   Course.updateOne(

@@ -22,8 +22,8 @@ const template = opts => {
   <!DOCTYPE html>
   <html>
     <head>
-      <title>Employee Directory</title>
-      <meta name="description" content="Demonstrates how to dynamically generate images on the server">
+      <title>Interface Aesthetics</title>
+      <meta name="description" content="Innovative aesthetic training in non-surgical cosmetics for healthcare professionals">
       <!-- Bootstrap -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
       <!-- Custom CSS -->
