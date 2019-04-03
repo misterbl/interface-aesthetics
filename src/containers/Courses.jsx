@@ -34,7 +34,7 @@ export class Courses extends React.Component {
               </div>
             );
           if (error) return `Error! ${error.message}`;
-          console.log(data.courses);
+          // console.log(data.courses);
           return (
             <div className="position-absolute bg-white m-5 p-5">
               {" "}

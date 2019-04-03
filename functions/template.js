@@ -26,6 +26,7 @@ const template = opts => {
       <meta name="description" content="Innovative aesthetic training in non-surgical cosmetics for healthcare professionals">
       <!-- Bootstrap -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+      <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
       <!-- Custom CSS -->
       <link rel="stylesheet" href="/assets/custom.css" />
       </head>

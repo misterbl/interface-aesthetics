@@ -13,7 +13,7 @@ export class Home extends React.Component {
             width="640"
             height="360"
             src="https://www.youtube.com/embed/-SFcIUEvNOQ?&mute=1&enablejsapi=0&cc_load_policy=0&fs=0&controls=0&autoplay=1&&playlist=-SFcIUEvNOQ&disablekb=1&modestbranding=1&showinfo=0&iv_load_policy=3&loop=1&showsearch=0&rel=0"
-            frameborder="0"
+            frameBorder="0"
           />
         </div>
         <div className="px-5 m-5">

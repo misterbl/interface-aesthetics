@@ -54,6 +54,10 @@ module.exports = {
         test: /\.(bmp|gif|jpe?g|png)$/,
         exclude: /node_modules/,
         loader: "url-loader"
+      },
+      {
+        test: /\.(gif|eot|woff|woff2|ttf|svg|otf)$/,
+        loaders: ["url-loader"]
       }
     ]
   }

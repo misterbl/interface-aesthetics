@@ -44,6 +44,10 @@ module.exports = Object.assign({}, baseConfig, {
       {
         test: /\.(scss|sass|css)$/,
         use: ["null-loader"]
+      },
+      {
+        test: /\.(gif|eot|woff|woff2|ttf|svg|otf)$/,
+        loaders: ["url-loader"]
       }
     ]
   }

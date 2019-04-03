@@ -2,26 +2,21 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import { Nav, NavDropdown, Modal, Button, Navbar } from "react-bootstrap";
 import ROUTES from "../const/routes";
-import logo from "../assets/Interface_logo_darkblue.png";
+import logo from "../assets/Interface_logo.svg";
 export class Header extends React.Component {
-  pushToIndex = () => {
-    this.props.history.push(ROUTES.INDEX);
+  isActive = route => {
+    if (route === this.props.location.pathname)
+      return {
+        textDecoration: "none",
+        borderBottom: "2px solid red",
+        height: "35px",
+        color: "#2e76ba !important"
+      };
   };
 
   render() {
     return (
-      <Navbar
-        className="py-4 bg-white"
-        collapseOnSelect
-        navbar-expand-sm
-        expand="md"
-      >
-        {/* <div
-          onClick={this.pushToIndex}
-          className="image-container mx-5 pr-5 mt-2"
-        >
-          <img className="w-100" src={logo} alt="interface aesthetics's logo" />
-        </div> */}
+      <Navbar className="py-4 bg-white" collapseOnSelect expand="md">
         <Navbar.Toggle aria-controls="responsive-navbar-nav">
           <div className="hamburger-line " />
           <div className="hamburger-line " />
@@ -29,9 +24,18 @@ export class Header extends React.Component {
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href={ROUTES.COURSES}>Courses</Nav.Link>
-            <Nav.Link href={ROUTES.ABOUT}>About</Nav.Link>
-            <Nav.Link href={ROUTES.TESTIMONIALS}>Testimonials</Nav.Link>
+            <Nav.Link style={this.isActive("/courses")} href={ROUTES.COURSES}>
+              Courses
+            </Nav.Link>
+            <Nav.Link style={this.isActive("/about")} href={ROUTES.ABOUT}>
+              About
+            </Nav.Link>
+            <Nav.Link
+              style={this.isActive("/testimonials")}
+              href={ROUTES.TESTIMONIALS}
+            >
+              Testimonials
+            </Nav.Link>
             <Navbar.Brand href={ROUTES.INDEX}>
               <img
                 className="nav-link"
@@ -39,9 +43,15 @@ export class Header extends React.Component {
                 alt="interface aesthetics's logo"
               />
             </Navbar.Brand>
-            <Nav.Link href={ROUTES.MODEL}>Model</Nav.Link>
-            <Nav.Link href={ROUTES.CONTACT}>Contact</Nav.Link>
-            <Nav.Link href={ROUTES.BLOG}>Blog</Nav.Link>
+            <Nav.Link style={this.isActive("/model")} href={ROUTES.MODEL}>
+              Model
+            </Nav.Link>
+            <Nav.Link style={this.isActive("/contact")} href={ROUTES.CONTACT}>
+              Contact
+            </Nav.Link>
+            <Nav.Link style={this.isActive("/blog")} href={ROUTES.BLOG}>
+              Blog
+            </Nav.Link>
 
             {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

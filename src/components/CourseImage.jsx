@@ -6,7 +6,6 @@ class CourseImage extends React.Component {
 
   async componentDidMount() {
     const imageBase64 = await getCourseImage(this.props.image);
-    console.log(imageBase64);
     this.setState({ imageBase64 });
   }
   render() {

@@ -15,8 +15,8 @@ class Course extends React.Component {
 
     // const imageBase64 = await getCourseImage(this.props.image);
     // this.setState({ imageBase64 });
-    console.log(this);
-    console.log(courseGuid);
+    //   console.log(this);
+    //   console.log(courseGuid);
   }
   renderImage() {
     const imageBase64 = this.state.image && getCourseImage(this.state.image);
