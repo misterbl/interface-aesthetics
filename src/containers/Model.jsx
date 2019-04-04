@@ -4,9 +4,9 @@ import mark from "../assets/Mark.svg";
 import ROUTES from "../const/routes";
 import Accordion from "../components/Accordion";
 import ModelCard from "../components/ModelCard";
-import marionetteModel from "../assets/Marionette_filler_model.jpg";
+import modelCards from "../data/modelCards";
 export class Model extends React.Component {
-  state = { isActive: "", showModal: false };
+  state = { isActive: "" };
 
   onClick = e => {
     const { isActive } = this.state;
@@ -17,13 +17,30 @@ export class Model extends React.Component {
     this.setState({ isActive: value });
   };
 
-  handleShowModal = () => {
-    this.setState({ showModal: true });
-  };
-
-  handleCloseModal = () => {
-    this.setState({ showModal: false });
-  };
+  showModelCards = () => (
+    <div className="model-card-container">
+      {modelCards.map(card => {
+        const {
+          image,
+          title,
+          price,
+          whatIsIt,
+          whatDoesItInvolve,
+          isThereDowntime
+        } = card;
+        return (
+          <ModelCard
+            image={image}
+            title={title}
+            price={price}
+            whatIsIt={whatIsIt}
+            whatDoesItInvolve={whatDoesItInvolve}
+            isThereDowntime={isThereDowntime}
+          />
+        );
+      })}
+    </div>
+  );
 
   render() {
     return (
@@ -67,18 +84,8 @@ export class Model extends React.Component {
             </p>
           </div>
         </div>
-        <ModelCard
-          image={marionetteModel}
-          title="Dermal Filler for Marionette Lines"
-          price="£100"
-          show={this.state.showModal}
-          handleShowModal={this.handleShowModal}
-          handleCloseModal={this.handleCloseModal}
-          whatIsIt="Treatment with Botox(R) for the forehead, brow and crow's feet"
-          whatDoesItInvolve="Injections with fine needles, with Botox(R) acting to relax the muscles of the upper face and reduce the appearance of lines"
-          isThereDowntime="The procedure itself takes around 30 minutes in total. After the procedure there are some instructions to follow, but there is no downtime."
-        />
-        <div className="d-flex justify-content-around p-60">
+        {this.showModelCards()}
+        <div className="d-flex justify-content-between p-60">
           <div className="discount d-flex flex-column">
             <div>
               <img src={mark} />
