@@ -31,7 +31,7 @@ const Accordion = ({ isActive, onClick }) => (
           aria-labelledby="headingOne"
           data-parent="#model-faq"
         >
-          <div className="card-body">
+          <div className="card-body font-16">
             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
             terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
             skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
@@ -73,7 +73,7 @@ const Accordion = ({ isActive, onClick }) => (
           aria-labelledby="headingTwo"
           data-parent="#model-faq"
         >
-          <div className="card-body">
+          <div className="card-body font-16">
             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
             terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
             skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
@@ -115,7 +115,7 @@ const Accordion = ({ isActive, onClick }) => (
           aria-labelledby="headingThree"
           data-parent="#model-faq"
         >
-          <div className="card-body">
+          <div className="card-body font-16">
             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
             terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
             skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
@@ -157,7 +157,7 @@ const Accordion = ({ isActive, onClick }) => (
           aria-labelledby="headingFour"
           data-parent="#model-faq"
         >
-          <div className="card-body">
+          <div className="card-body font-16">
             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
             terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
             skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
@@ -199,7 +199,7 @@ const Accordion = ({ isActive, onClick }) => (
           aria-labelledby="headingFive"
           data-parent="#model-faq"
         >
-          <div className="card-body">
+          <div className="card-body font-16">
             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
             terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
             skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
@@ -241,7 +241,7 @@ const Accordion = ({ isActive, onClick }) => (
           aria-labelledby="headingSix"
           data-parent="#model-faq"
         >
-          <div className="card-body">
+          <div className="card-body font-16">
             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
             terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
             skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
