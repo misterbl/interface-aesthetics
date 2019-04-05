@@ -9,6 +9,7 @@ import mark from "../assets/Mark.svg";
 
 import courses from "../data/courses";
 import CourseInformation from "../components/CourseInformation";
+import BookCourseCard from "../components/BookCourseCard";
 
 class Course extends React.Component {
   constructor(props) {
@@ -89,33 +90,44 @@ class Course extends React.Component {
     const filtered = courses.filter(
       course => course.id === this.state.courseId
     );
-    const { overview, moreInformation, information } = filtered[0];
+    const {
+      overview,
+      moreInformation,
+      information,
+      title,
+      dates
+    } = filtered[0];
     return (
       <React.Fragment>
-        <div className="course-section">
-          <img src={mark} />
-          <span className="blue-font">Course Overview</span>
-          <p className="font-16 my-3">{overview}</p>
-        </div>
-        <div className="course-section">
-          <img src={mark} />
-          <span className="blue-font">What can you expect</span>
-          <p className="font-16 my-3">{overview}</p>
-        </div>
-        {information.map(info => (
-          <CourseInformation
-            key={info.overview}
-            image={info.image}
-            overview={info.overview}
-            details={info.details}
-          />
-        ))}
-        <div className="course-section">
-          <img src={mark} />
-          <span className="blue-font">More information</span>
-          {moreInformation.map(info => (
-            <p className="font-16 my-3">{info}</p>
-          ))}
+        <div className="d-flex">
+          <div className="w-75 mr-5">
+            <div className="course-section">
+              <img src={mark} />
+              <span className="blue-font">Course Overview</span>
+              <p className="font-16 my-3">{overview}</p>
+            </div>
+            <div className="course-section">
+              <img src={mark} />
+              <span className="blue-font">What can you expect</span>
+              <p className="font-16 my-3">{overview}</p>
+            </div>
+            {information.map(info => (
+              <CourseInformation
+                key={info.overview}
+                image={info.image}
+                overview={info.overview}
+                details={info.details}
+              />
+            ))}
+            <div className="course-section">
+              <img src={mark} />
+              <span className="blue-font">More information</span>
+              {moreInformation.map(info => (
+                <p className="font-16 my-3">{info}</p>
+              ))}
+            </div>
+          </div>
+          <BookCourseCard title={title} dates={dates} />
         </div>
       </React.Fragment>
     );

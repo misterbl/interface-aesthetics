@@ -59,7 +59,8 @@ const courses = [
     moreInformation: [
       "We believe that our Foundation Course provides unrivalled levels of patient contact and hands-on injecting. Our philosophy focuses on developing competency to perform Foundation techniques safely and effectively. Many Foundation Courses on the market are delivered over a single day for both Botulinum Toxin and Dermal Filler. Furthermore, teaching is often in large groups and consists in observing most, if not all, treatments without taking part and gaining hands-on exposure.",
       "Such an approach to training in any field of healthcare would be judged wholly inadequate. If we consider learning how to take blood, or indeed how to extract a tooth, it becomes obvious that simply watching a procedure and then being expected to carry it out competently would be unacceptable to both our patients and to ourselves. With this in mind, Interface courses will have you assessing and injecting for the majority of your time, ensuring you get the learning opportunities you need to begin practising safely and confidently. As an Interface trainee, you will have the opportunity to directly perform all of the listed techniques – we make this our responsibility and guarantee."
-    ]
+    ],
+    dates: ["date1", "date2", "date3"]
   },
   {
     id: 2,
@@ -94,7 +95,8 @@ const courses = [
     ],
     moreInformation: [
       "Entry to the Advanced Course will require proof of completion of any recognised Foundation Course. Group sizes are limited to 4 delegates per trainer to ensure adequate exposure and practice."
-    ]
+    ],
+    dates: ["date1", "date2", "date3"]
   }
 ];
 
