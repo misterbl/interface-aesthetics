@@ -5,83 +5,126 @@ import { Query } from "react-apollo";
 import { ClipLoader } from "react-spinners";
 import gql from "graphql-tag";
 import CourseImage from "../components/CourseImage";
+import mark from "../assets/Mark.svg";
+
+import courses from "../data/courses";
+import CourseInformation from "../components/CourseInformation";
 
 class Course extends React.Component {
-  state = { image: "", imageBase64: "", courseGuid: "" };
+  constructor(props) {
+    super(props);
+    this.state = {
+      image: "",
+      imageBase64: "",
+      courseId: parseInt(props.match.params.courseId, 10)
+    };
+  }
 
   componentDidMount() {
-    const { courseGuid } = this.props.match.params;
-    this.setState({ courseGuid });
-
+    // this.getCourse();
+    // const { courseId } = this.props.match.params;
+    // this.setState({ courseId });
     // const imageBase64 = await getCourseImage(this.props.image);
     // this.setState({ imageBase64 });
     //   console.log(this);
-    //   console.log(courseGuid);
+    //   console.log(courseId);
   }
-  renderImage() {
-    const imageBase64 = this.state.image && getCourseImage(this.state.image);
-    return <img src={imageBase64} />;
-  }
+  // renderImage() {
+  //   const imageBase64 = this.state.image && getCourseImage(this.state.image);
+  //   return <img src={imageBase64} />;
+  // }
+  // getCourse = () => {
+  //   // const { courseId } = this.props.match.params;
+  //   //  this.setState({ courseId });
+  //   const GET_COURSE = gql`
+  //     {
+  //       getCourseById(_id:"${this.state.courseId}") {
+  //         _id
+  //         title
+  //         description
+  //         price
+  //         image
+  //       }
+  //     }
+  //   `;
+  //   return (
+  //     <Query query={GET_COURSE}>
+  //       {({ loading, error, data }) => {
+  //         if (loading)
+  //           return (
+  //             <div className="text-center">
+  //               <ClipLoader
+  //                 sizeUnit={"px"}
+  //                 size={30}
+  //                 color={"#123abc"}
+  //                 loading={true}
+  //               />
+  //             </div>
+  //           );
+  //         if (error) return `Error! ${error.message}`;
+  //         const {
+  //           getCourseById: { title, description, image }
+  //         } = data;
+  //         return (
+  //           <div className="container position-absolute bg-white p-5 m-5 w-85">
+  //             <div className="row d-flex">
+  //               <div className="col col-6">
+  //                 <h1
+  //                   className="interface-blue mb-3"
+  //                   dangerouslySetInnerHTML={{ __html: title }}
+  //                 />
+  //                 <p dangerouslySetInnerHTML={{ __html: description }} />
+  //               </div>
+  //               <div className="col">
+  //                 <CourseImage image={image} />
+  //               </div>
+  //             </div>
+  //           </div>
+  //         );
+  //       }}
+  //     </Query>
+  //   );
+  // };
   getCourse = () => {
-    // const { courseGuid } = this.props.match.params;
-    //  this.setState({ courseGuid });
-    const GET_COURSE = gql`
-      {
-        getCourseById(_id:"${this.state.courseGuid}") {
-          _id
-          title
-          description
-          price
-          image
-        }
-      }
-    `;
+    const filtered = courses.filter(
+      course => course.id === this.state.courseId
+    );
+    const { overview, moreInformation, information } = filtered[0];
     return (
-      <Query query={GET_COURSE}>
-        {({ loading, error, data }) => {
-          if (loading)
-            return (
-              <div className="text-center">
-                <ClipLoader
-                  sizeUnit={"px"}
-                  size={30}
-                  color={"#123abc"}
-                  loading={true}
-                />
-              </div>
-            );
-          if (error) return `Error! ${error.message}`;
-          const {
-            getCourseById: { title, description, image }
-          } = data;
-          return (
-            <div className="container position-absolute bg-white p-5 m-5 w-85">
-              <div className="row d-flex">
-                <div className="col col-6">
-                  <h1
-                    className="interface-blue mb-3"
-                    dangerouslySetInnerHTML={{ __html: title }}
-                  />
-                  <p dangerouslySetInnerHTML={{ __html: description }} />
-                </div>
-                <div className="col">
-                  <CourseImage image={image} />
-                </div>
-              </div>
-            </div>
-          );
-        }}
-      </Query>
+      <React.Fragment>
+        <div className="course-section">
+          <img src={mark} />
+          <span className="blue-font">Course Overview</span>
+          <p className="font-16 my-3">{overview}</p>
+        </div>
+        <div className="course-section">
+          <img src={mark} />
+          <span className="blue-font">What can you expect</span>
+          <p className="font-16 my-3">{overview}</p>
+        </div>
+        {information.map(info => (
+          <CourseInformation
+            key={info.overview}
+            image={info.image}
+            overview={info.overview}
+            details={info.details}
+          />
+        ))}
+        <div className="course-section">
+          <img src={mark} />
+          <span className="blue-font">More information</span>
+          {moreInformation.map(info => (
+            <p className="font-16 my-3">{info}</p>
+          ))}
+        </div>
+      </React.Fragment>
     );
   };
+
   render() {
-    return (
-      <div>
-        <div className="gradiant-div"> </div>
-        {this.getCourse()}
-        {this.renderImage()}
-      </div>
-    );
+    console.log(this.state);
+
+    return <div className="p-60">{this.getCourse()}</div>;
   }
 }
 export default withRouter(Course);

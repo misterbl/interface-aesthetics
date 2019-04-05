@@ -1,7 +1,7 @@
 const routes = {
   INDEX: "/",
   COURSES: "/courses",
-  COURSE: "/courses/:courseGuid",
+  COURSE: "/course/:courseId",
   WHO_WE_TRAIN: "/who-we-train",
   TESTIMONIALS: "/testimonials",
   MODEL: "/model",
