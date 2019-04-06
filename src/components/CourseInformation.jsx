@@ -7,7 +7,7 @@ const CourseInformation = ({ image, overview, details }) => (
       <p>{overview}</p>
       <ul>
         {details.map(paragraph => (
-          <li>{paragraph}</li>
+          <li key={paragraph}>{paragraph}</li>
         ))}
       </ul>
     </div>

@@ -6,7 +6,7 @@ const CourseDay = ({ index, description, details }) => (
     <div>{`Day ${index}`}</div>
     <div>{description}</div>
     {details.map(info => (
-      <div className="position-relative">
+      <div key={info} className="position-relative">
         <img src={tick} />
         <p>{info}</p>
       </div>

@@ -11,6 +11,7 @@ import courses from "../data/courses";
 import CourseInformation from "../components/CourseInformation";
 import BookCourseCard from "../components/BookCourseCard";
 import CourseDay from "../components/CourseDay";
+import BlueFooter from "../components/BlueFooter";
 
 class Course extends React.Component {
   constructor(props) {
@@ -146,19 +147,40 @@ class Course extends React.Component {
               <img src={mark} />
               <span className="blue-font">More information</span>
               {moreInformation.map(info => (
-                <p className="font-16 my-3">{info}</p>
+                <p key={info} className="font-16 my-3">
+                  {info}
+                </p>
               ))}
             </div>
           </div>
           <BookCourseCard title={title} dates={dates} />
         </div>
+        <BlueFooter container="book-course-photo">
+          <div>
+            <div className="w-50">
+              <img src={mark} />
+              <span className="white">Book your place now</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                feugiat rhoncus nisl, id rutrum dui tempor vitae. Aenean vel
+                placerat nisl.
+              </p>
+            </div>
+            <div className="select-date">
+              <select className="form-control form-control-sm">
+                <option selected>Select course date</option>
+                {dates.map(date => (
+                  <option key={date}>{date}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </BlueFooter>
       </React.Fragment>
     );
   };
 
   render() {
-    console.log(this.state);
-
     return <div>{this.getCourse()}</div>;
   }
 }

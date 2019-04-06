@@ -4,10 +4,10 @@ const BookCourseCard = ({ title, dates }) => (
   <div className="book-course">
     <div>{title}</div>
     <div>
-      <select class="form-control form-control-sm">
+      <select className="form-control form-control-sm">
         <option selected>Select course date</option>
         {dates.map(date => (
-          <option>{date}</option>
+          <option key={date}>{date}</option>
         ))}
       </select>
     </div>

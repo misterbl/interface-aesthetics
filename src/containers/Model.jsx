@@ -5,7 +5,7 @@ import ROUTES from "../const/routes";
 import Accordion from "../components/Accordion";
 import ModelCard from "../components/ModelCard";
 import modelCards from "../data/modelCards";
-import Testimonial from "../components/Testimonial";
+import BlueFooter from "../components/BlueFooter";
 export class Model extends React.Component {
   state = { isActive: "" };
 
@@ -103,7 +103,7 @@ export class Model extends React.Component {
           </div>
           <Accordion isActive={this.state.isActive} onClick={this.onClick} />
         </div>
-        <Testimonial />
+        <BlueFooter container="model-man" />
       </React.Fragment>
     );
   }

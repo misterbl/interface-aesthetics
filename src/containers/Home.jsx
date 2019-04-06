@@ -8,7 +8,7 @@ import home4 from "../assets/home4.jpg";
 import play from "../assets/Play.svg";
 import Accreditations from "../components/Accreditations";
 import WhoWeTrain from "../components/WhoWeTrain";
-import Testimonial from "../components/Testimonial";
+import BlueFooter from "../components/BlueFooter";
 
 export class Home extends React.Component {
   state = { isPlaying: false };
@@ -133,7 +133,7 @@ export class Home extends React.Component {
         </div>
         <Accreditations />
         <WhoWeTrain />
-        <Testimonial />
+        <BlueFooter />
       </React.Fragment>
       // {/* <div className="no-hover">
       //   <iframe
