@@ -10,6 +10,7 @@ import mark from "../assets/Mark.svg";
 import courses from "../data/courses";
 import CourseInformation from "../components/CourseInformation";
 import BookCourseCard from "../components/BookCourseCard";
+import CourseDay from "../components/CourseDay";
 
 class Course extends React.Component {
   constructor(props) {
@@ -95,11 +96,19 @@ class Course extends React.Component {
       moreInformation,
       information,
       title,
-      dates
+      dates,
+      days
     } = filtered[0];
     return (
       <React.Fragment>
-        <div className="d-flex">
+        <div className="course-photo position-relative">
+          <div className="bg-blue" />
+          <div className="course-header">
+            <p>OUR COURSES</p>
+            <p>{title}</p>
+          </div>
+        </div>
+        <div className="course">
           <div className="w-75 mr-5">
             <div className="course-section">
               <img src={mark} />
@@ -109,16 +118,30 @@ class Course extends React.Component {
             <div className="course-section">
               <img src={mark} />
               <span className="blue-font">What can you expect</span>
-              <p className="font-16 my-3">{overview}</p>
             </div>
-            {information.map(info => (
-              <CourseInformation
-                key={info.overview}
-                image={info.image}
-                overview={info.overview}
-                details={info.details}
-              />
-            ))}
+            {days && (
+              <div className="d-flex my-5">
+                {days.map((day, i) => (
+                  <CourseDay
+                    index={i + 1}
+                    description={day.description}
+                    details={day.details}
+                  />
+                ))}
+              </div>
+            )}
+            {
+              <div className="my-3">
+                {information.map(info => (
+                  <CourseInformation
+                    key={info.overview}
+                    image={info.image}
+                    overview={info.overview}
+                    details={info.details}
+                  />
+                ))}
+              </div>
+            }
             <div className="course-section">
               <img src={mark} />
               <span className="blue-font">More information</span>
@@ -136,7 +159,7 @@ class Course extends React.Component {
   render() {
     console.log(this.state);
 
-    return <div className="p-60">{this.getCourse()}</div>;
+    return <div>{this.getCourse()}</div>;
   }
 }
 export default withRouter(Course);

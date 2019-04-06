@@ -1,0 +1,10 @@
+$dark-blue: #1e5589;
+$blue-font: #2d76bb;
+$orange: #fc4c10;
+$grey: #7a7a7a;
+
+%box-shadow {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}

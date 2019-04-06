@@ -11,7 +11,7 @@ const Accreditations = () => (
       <img src={mark} alt="mark" />
       <span className="dark-blue font-34">Our Accreditations</span>
     </div>
-    <div className="d-flex accreditations">
+    <div className="d-flex accreditations justify-content-between">
       <img src={cpd} alt="cpd certification service" />
       <img src={cosmeticInsure} alt="cosmetic insure" />
       <img src={ace} alt="aesthetic complications expert" />

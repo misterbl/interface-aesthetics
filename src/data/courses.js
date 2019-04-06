@@ -69,6 +69,7 @@ const courses = [
     price: "£100",
     overview:
       "Our one-day advanced course builds on the main techniques taught from the Foundation Course.",
+    days: null,
     information: [
       {
         image: "",

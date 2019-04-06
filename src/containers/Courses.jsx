@@ -61,7 +61,7 @@ export class Courses extends React.Component {
   //   );
   // };
   getCourses = () => (
-    <div className="d-flex flex-wrap p-60 justify-content-between">
+    <div className="d-flex flex-wrap p-60 justify-content-around">
       {courses.map(course => (
         <CourseCard
           key={course.id}
