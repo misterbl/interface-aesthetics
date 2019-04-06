@@ -1,67 +1,110 @@
-[debug] [2019-04-06T12:13:43.425Z] ----------------------------------------------------------------------
-[debug] [2019-04-06T12:13:43.428Z] Command:       /Users/laurent.bouhnik/.nvm/versions/node/v10.14.1/bin/node /Users/laurent.bouhnik/.nvm/versions/node/v10.14.1/bin/firebase serve --only hosting,functions
-[debug] [2019-04-06T12:13:43.429Z] CLI Version:   6.4.0
-[debug] [2019-04-06T12:13:43.429Z] Platform:      darwin
-[debug] [2019-04-06T12:13:43.429Z] Node Version:  v10.14.1
-[debug] [2019-04-06T12:13:43.430Z] Time:          Sat Apr 06 2019 13:13:43 GMT+0100 (British Summer Time)
-[debug] [2019-04-06T12:13:43.430Z] ----------------------------------------------------------------------
+[debug] [2019-04-06T12:59:44.715Z] ----------------------------------------------------------------------
+[debug] [2019-04-06T12:59:44.718Z] Command:       /Users/laurent.bouhnik/.nvm/versions/node/v10.14.1/bin/node /Users/laurent.bouhnik/.nvm/versions/node/v10.14.1/bin/firebase serve --only hosting,functions
+[debug] [2019-04-06T12:59:44.719Z] CLI Version:   6.4.0
+[debug] [2019-04-06T12:59:44.719Z] Platform:      darwin
+[debug] [2019-04-06T12:59:44.719Z] Node Version:  v10.14.1
+[debug] [2019-04-06T12:59:44.720Z] Time:          Sat Apr 06 2019 13:59:44 GMT+0100 (British Summer Time)
+[debug] [2019-04-06T12:59:44.720Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2019-04-06T12:13:43.446Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-04-06T12:13:43.447Z] > authorizing via signed-in user
-[debug] [2019-04-06T12:13:43.447Z] [iam] checking project interface-aesthetics for permissions ["firebase.projects.get"]
-[debug] [2019-04-06T12:13:43.451Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/interface-aesthetics:testIamPermissions  
+[debug] [2019-04-06T12:59:44.731Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-04-06T12:59:44.731Z] > authorizing via signed-in user
+[debug] [2019-04-06T12:59:44.731Z] [iam] checking project interface-aesthetics for permissions ["firebase.projects.get"]
+[debug] [2019-04-06T12:59:44.734Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/interface-aesthetics:testIamPermissions  
 
-[debug] [2019-04-06T12:13:44.265Z] <<< HTTP RESPONSE 200
-[debug] [2019-04-06T12:13:44.268Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/interface-aesthetics  
+[debug] [2019-04-06T12:59:45.538Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-06T12:59:45.540Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/interface-aesthetics  
  
-[debug] [2019-04-06T12:13:45.081Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-06T12:59:46.354Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/Users/laurent.bouhnik/Documents/perso/interface-aesthetics-ssr'...
 [info] 
 [info] i  functions: Preparing to emulate functions.
-[debug] [2019-04-06T12:13:46.020Z] Fetching environment
-[debug] [2019-04-06T12:13:46.024Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/316527730177:getServerAppConfig  
+[debug] [2019-04-06T12:59:47.030Z] Fetching environment
+[debug] [2019-04-06T12:59:47.033Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/316527730177:getServerAppConfig  
  
-[debug] [2019-04-06T12:13:46.025Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/316527730177/clients/_:getWebAppConfig  
+[debug] [2019-04-06T12:59:47.034Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/316527730177/clients/_:getWebAppConfig  
  
-[debug] [2019-04-06T12:13:46.251Z] <<< HTTP RESPONSE 200
-[debug] [2019-04-06T12:13:46.252Z] Starting @google-cloud/functions-emulator
-[debug] [2019-04-06T12:13:46.787Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-06T12:59:47.260Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-06T12:59:47.260Z] Starting @google-cloud/functions-emulator
+[debug] [2019-04-06T12:59:47.567Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000
-[debug] [2019-04-06T12:13:48.855Z] Parsing function triggers
-[info] [hosting] Rewriting /contact to local function app
+[debug] [2019-04-06T12:59:49.130Z] Parsing function triggers
+[info] [hosting] Rewriting /courses to local function app
 [info] [hosting] Rewriting /assets/custom.css to local function app
 [info] ✔  functions: app: http://localhost:5001/interface-aesthetics/us-central1/app
-[info] [hosting] Rewriting /contact to local function app
+[info] [hosting] Rewriting /courses to local function app
 [info] [hosting] Rewriting /assets/custom.css to local function app
-[info] [hosting] Rewriting /contact to local function app
+[info] [hosting] Rewriting /courses to local function app
 [info] [hosting] Rewriting /assets/custom.css to local function app
-[info] [hosting] Rewriting /contact to local function app
+[info] [hosting] Rewriting /courses to local function app
 [info] [hosting] Rewriting /assets/custom.css to local function app
-[info] [hosting] Rewriting /contact to local function app
+[info] [hosting] Rewriting /courses to local function app
 [info] [hosting] Rewriting /assets/custom.css to local function app
-[info] [hosting] Rewriting /contact to local function app
 [info] [hosting] Rewriting /assets/custom.css to local function app
-[info] [hosting] Rewriting /contact to local function app
+[info] [hosting] Rewriting /courses to local function app
 [info] [hosting] Rewriting /assets/custom.css to local function app
-[info] [hosting] Rewriting /contact to local function app
+[info] [hosting] Rewriting /courses to local function app
 [info] [hosting] Rewriting /assets/custom.css to local function app
-[info] [hosting] Rewriting /contact to local function app
 [info] [hosting] Rewriting /assets/custom.css to local function app
-[info] [hosting] Rewriting /contact to local function app
+[info] [hosting] Rewriting /courses to local function app
 [info] [hosting] Rewriting /assets/custom.css to local function app
-[info] [hosting] Rewriting /contact to local function app
+[info] [hosting] Rewriting /courses to local function app
 [info] [hosting] Rewriting /assets/custom.css to local function app
-[info] [hosting] Rewriting /contact to local function app
+[info] [hosting] Rewriting /courses to local function app
 [info] [hosting] Rewriting /assets/custom.css to local function app
-[info] [hosting] Rewriting /contact to local function app
+[info] [hosting] Rewriting /courses to local function app
 [info] [hosting] Rewriting /assets/custom.css to local function app
-[info] [hosting] Rewriting /contact to local function app
+[info] [hosting] Rewriting /courses to local function app
 [info] [hosting] Rewriting /assets/custom.css to local function app
-[info] [hosting] Rewriting /contact to local function app
+[info] [hosting] Rewriting /courses to local function app
 [info] [hosting] Rewriting /assets/custom.css to local function app
-[info] [hosting] Rewriting /contact to local function app
+[info] [hosting] Rewriting /courses to local function app
 [info] [hosting] Rewriting /assets/custom.css to local function app
-[info] [hosting] Rewriting /contact to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
+[info] [hosting] Rewriting /assets/custom.css to local function app
+[info] [hosting] Rewriting /courses to local function app
 [info] [hosting] Rewriting /assets/custom.css to local function app

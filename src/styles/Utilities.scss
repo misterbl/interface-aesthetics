@@ -3,6 +3,99 @@ $blue-font: #2d76bb;
 $orange: #fc4c10;
 $grey: #7a7a7a;
 
+.bg-blue {
+  background-color: $dark-blue;
+  height: 380px;
+  opacity: 0.7;
+}
+
+.bg-dark-blue {
+  background-color: $dark-blue;
+  height: 220px;
+  opacity: 0.8;
+}
+.font-12 {
+  color: #7a7a7a;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.font-14 {
+  color: #7a7a7a;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.font-16 {
+  color: #7a7a7a;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.font-18 {
+  color: #7a7a7a;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.font-22 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.font-10 {
+  font-size: 10px;
+}
+
+.font-34 {
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.w-400 {
+  width: 400px;
+}
+
+.p-60 {
+  padding: 60px;
+}
+
+.dark-blue {
+  color: $dark-blue;
+}
+
+.w-85 {
+  width: 85%;
+}
+
+.interface-bg-grey {
+  background-color: #ebebeb;
+  padding: 6rem;
+}
+
+.cta-button-white {
+  @extend %cta-button;
+  background-color: #ffffff;
+  color: $dark-blue;
+}
+
+.cta-button-blue {
+  @extend %cta-button;
+  background-color: $dark-blue;
+  color: #ffffff;
+}
+
+.blue-font {
+  color: $blue-font;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 43px;
+}
+
+.z-index-5 {
+  z-index: 5;
+}
+
 %cta-button {
   border: none;
   font-weight: 800;
@@ -28,3 +121,4 @@ $grey: #7a7a7a;
     font-size: 36px;
   }
 }
+

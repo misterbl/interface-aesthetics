@@ -227,3 +227,54 @@
     }
   }
 }
+
+.why-card {
+  background-color: white;
+  display: flex;
+  width: 450px;
+  margin: 0px 30px 15px 0px;
+  padding: 25px;
+  p {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0px;
+  }
+  p:first-of-type {
+    font-weight: bold;
+  }
+  p:nth-of-type(2) {
+    margin-top: 5px;
+  }
+  img {
+    margin-bottom: -5px;
+  }
+  &__small {
+    width: 300px;
+    padding: 10px;
+  }
+}
+
+.photo-gallery {
+  display: flex;
+  overflow: hidden;
+  max-height: 280px;
+  //   overflow-y: scroll;
+  margin: 20px 0px 40px 0px;
+  img {
+    width: auto;
+    height: 140px;
+    margin: 0px 0px 20px 20px;
+  }
+  .james-speech {
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    height: 280px;
+    width: auto;
+    margin: 0px;
+  }
+}
+
+.why-container {
+  margin: 0px 80px 40px 110px;
+}

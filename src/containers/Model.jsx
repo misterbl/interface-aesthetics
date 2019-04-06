@@ -1,7 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import mark from "../assets/Mark.svg";
-import ROUTES from "../const/routes";
 import Accordion from "../components/Accordion";
 import ModelCard from "../components/ModelCard";
 import modelCards from "../data/modelCards";
