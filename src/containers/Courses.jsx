@@ -75,7 +75,7 @@ export class Courses extends React.Component {
   );
   render() {
     return (
-      <div>
+      <main>
         <div className="group-photo position-relative">
           <div className="bg-blue" />
           <div className="courses-header">
@@ -105,7 +105,7 @@ export class Courses extends React.Component {
           </div>
         </div>
         {this.getCourses()}
-      </div>
+      </main>
     );
   }
 }

@@ -1,0 +1,83 @@
+@import "./Utilities.scss";
+
+.contact-header {
+  @extend %header-text;
+  top: 45%;
+  left: 45%;
+  p:first-of-type {
+    font-size: 34px;
+  }
+}
+
+.contact-form {
+  display: flex;
+  justify-content: space-around;
+  padding: 80px;
+  background-color: white;
+  margin-bottom: 70px;
+  div {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  span {
+    margin-left: 20px;
+  }
+  form > div {
+    display: flex;
+    width: 500px;
+    flex-wrap: wrap;
+    select,
+    input,
+    textarea {
+      width: 200px !important;
+      margin-bottom: 40px;
+    }
+    select {
+      border: none;
+      font-size: 14px;
+      color: $grey;
+    }
+    textarea {
+      padding-bottom: 50px;
+      width: 100% !important;
+    }
+
+    input::-webkit-input-placeholder {
+      font-size: 14px;
+      color: $grey;
+    }
+    input::-moz-placeholder {
+      font-size: 14px;
+      color: $grey;
+    }
+    input:-ms-input-placeholder {
+      font-size: 14px;
+      color: $grey;
+    }
+    input:-moz-placeholder {
+      font-size: 14px;
+      color: $grey;
+    }
+
+    textarea::-webkit-input-placeholder {
+      font-size: 14px;
+      color: $grey;
+    }
+    textarea::-moz-placeholder {
+      font-size: 14px;
+      color: $grey;
+    }
+    textarea:-ms-input-placeholder {
+      font-size: 14px;
+      color: $grey;
+    }
+    textarea:-moz-placeholder {
+      font-size: 14px;
+      color: $grey;
+    }
+  }
+  form > button {
+    padding: 13px;
+  }
+}

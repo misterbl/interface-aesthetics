@@ -166,14 +166,14 @@ class Course extends React.Component {
                 placerat nisl.
               </p>
             </div>
-            <div className="select-date">
+            <form className="select-date">
               <select className="form-control form-control-sm">
                 <option selected>Select course date</option>
                 {dates.map(date => (
                   <option key={date}>{date}</option>
                 ))}
               </select>
-            </div>
+            </form>
           </div>
         </BlueFooter>
       </React.Fragment>

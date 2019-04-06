@@ -7,19 +7,6 @@
   background-position: 0px -70px;
 }
 
-%header-text {
-  color: white;
-  text-align: center;
-  position: absolute;
-  p {
-    margin: 0px;
-    font-weight: 700;
-  }
-  p:nth-child(2) {
-    font-size: 36px;
-  }
-}
-
 .group-photo {
   @extend %header-photo;
   background-image: url("../assets/group-photo.jpg");
@@ -168,9 +155,6 @@
     border-radius: 0px 0px 9px 9px;
     height: 40px;
     font-weight: 700;
-  }
-  select {
-    border: none;
   }
 }
 
