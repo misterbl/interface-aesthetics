@@ -1,0 +1,17 @@
+@import "./Utilities.scss";
+
+.blog-photo {
+  background-image: url("../assets/home1.jpg");
+  height: 380px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px -270px;
+}
+
+.blog-card {
+  @extend %box-shadow;
+  width: 18rem;
+  a {
+    color: $orange !important;
+  }
+}

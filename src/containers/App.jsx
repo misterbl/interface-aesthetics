@@ -13,6 +13,8 @@ import Course from "./Course";
 import Model from "./Model";
 import { Footer } from "../components/Footer";
 import ModelForm from "../components/ModelForm";
+import Blog from "./Blog";
+import Article from "../components/Article";
 
 class App extends Component {
   constructor(props) {
@@ -54,7 +56,8 @@ class App extends Component {
           <Route path={ROUTES.ABOUT} component={About} />
           <Route path={ROUTES.CONTACT} component={Contact} />
           <Route path={ROUTES.BECOME_A_MODEL} component={ModelForm} />
-          {/* <Route path={ROUTES.BLOG} component={Blog} /> */}
+          <Route path={ROUTES.BLOG} component={Blog} />
+          <Route path={ROUTES.ARTICLE} component={Article} />
           <Route path={ROUTES.ADMIN} component={Admin} />
         </Switch>
         <Footer />
