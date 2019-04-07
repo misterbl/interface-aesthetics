@@ -1,0 +1,35 @@
+@import "./Utilities.scss";
+
+.about-header {
+  @extend %header-text;
+  left: 35%;
+  top: 30%;
+  width: 400px;
+  p {
+    font-size: 28px;
+    font-weight: bold;
+  }
+}
+.about-founder {
+  padding: 120px 80px 35px;
+  color: $grey;
+  margin-left: 40%;
+  background-color: white;
+}
+
+.about-founder-image {
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  position: absolute;
+  width: 58%;
+  height: auto;
+  left: -40px;
+  top: 230px;
+}
+
+.about-page {
+  .photo-gallery {
+    margin-top: 220px !important;
+  }
+}

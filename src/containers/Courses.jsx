@@ -6,16 +6,10 @@ import gql from "graphql-tag";
 import ROUTES from "../const/routes";
 import courses from "../data/courses";
 import CourseCard from "../components/CourseCard";
-import mark from "../assets/Mark.svg";
-import WhyCard from "../components/WhyCard";
-import whyChoose from "../data/whyChoose";
-import whyTrain from "../data/whyTrain";
-import jamesSpeech from "../assets/James-speech.jpg";
-import home2 from "../assets/home2.jpg";
-import bottoxForhead from "../assets/bottox-forhead.jpg";
-import fillersCheeks from "../assets/fillers-cheeks.jpg";
-import group2 from "../assets/group2.jpg";
 import BluePhotoContainer from "../components/BluePhotoContainer";
+import WhyTrain from "../components/WhyTrain";
+import WhyChoose from "../components/WhyChoose";
+import PhotoGallery from "../components/PhotoGallery";
 export class Courses extends React.Component {
   // getCourses = () => {
   //   const GET_ALL_COURSES = gql`
@@ -111,38 +105,9 @@ export class Courses extends React.Component {
           </div>
         </div>
         {this.getCourses()}
-        <div className="why-container">
-          <img src={mark} />
-          <span className="blue-font">Why choose Interface Aesthetics</span>
-          <div className="d-flex flex-wrap mt-3">
-            {whyChoose.map(reason => (
-              <WhyCard title={reason.title} text={reason.text} />
-            ))}
-          </div>
-          <div className="photo-gallery">
-            <img
-              className="james-speech"
-              src={jamesSpeech}
-              alt="James Olding"
-            />
-            <div className="d-flex flex-wrap">
-              <img src={home2} alt="Interface Aesthetics training" />
-              <img src={bottoxForhead} alt="Botox training" />
-              <img src={fillersCheeks} alt="fillers for cheeks" />
-              <img
-                src={group2}
-                alt="Interface Aesthetics training certification"
-              />
-            </div>
-          </div>
-          <img src={mark} />
-          <span className="blue-font">Why Train in Aesthetic Medicine?</span>
-          <div className="d-flex flex-wrap mt-3">
-            {whyTrain.map(reason => (
-              <WhyCard title={reason.title} small />
-            ))}
-          </div>
-        </div>
+        <WhyChoose />
+        <PhotoGallery />
+        <WhyTrain />
       </main>
     );
   }

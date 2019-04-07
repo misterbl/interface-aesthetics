@@ -35,7 +35,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.state.isLoading ? (
+        {/* {this.state.isLoading ? (
           <div
             class="spinner-border text-primary loading-indicator "
             role="status"
@@ -43,22 +43,22 @@ class App extends Component {
             <span class="sr-only">Loading...</span>
           </div>
         ) : (
-          <React.Fragment>
-            <Header />
-            <Switch>
-              <Route exact path={ROUTES.INDEX} component={Home} />
-              <Route path={ROUTES.COURSE} component={Course} />
-              <Route exact path={ROUTES.COURSES} component={Courses} />
-              <Route path={ROUTES.WHO_WE_TRAIN} component={WhoWetrain} />
-              <Route path={ROUTES.MODEL} component={Model} />
-              <Route path={ROUTES.ABOUT} component={About} />
-              <Route path={ROUTES.CONTACT} component={Contact} />
-              <Route path={ROUTES.BECOME_A_MODEL} component={ModelForm} />
-              {/* <Route path={ROUTES.BLOG} component={Blog} /> */}
-              <Route path={ROUTES.ADMIN} component={Admin} />
-            </Switch>
-            <Footer />
-          </React.Fragment>
+          <React.Fragment> */}
+        <Header />
+        <Switch>
+          <Route exact path={ROUTES.INDEX} component={Home} />
+          <Route path={ROUTES.COURSE} component={Course} />
+          <Route exact path={ROUTES.COURSES} component={Courses} />
+          <Route path={ROUTES.WHO_WE_TRAIN} component={WhoWetrain} />
+          <Route path={ROUTES.MODEL} component={Model} />
+          <Route path={ROUTES.ABOUT} component={About} />
+          <Route path={ROUTES.CONTACT} component={Contact} />
+          <Route path={ROUTES.BECOME_A_MODEL} component={ModelForm} />
+          {/* <Route path={ROUTES.BLOG} component={Blog} /> */}
+          <Route path={ROUTES.ADMIN} component={Admin} />
+        </Switch>
+        <Footer />
+        {/* </React.Fragment> */}
         )}
       </div>
     );

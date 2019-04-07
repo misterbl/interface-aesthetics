@@ -19,7 +19,7 @@ export class Model extends React.Component {
     this.setState({ isActive: value });
   };
   pushToModelForm = () => {
-    this.props.history.push(ROUTES.MODEL_FORM);
+    this.props.history.push(ROUTES.BECOME_A_MODEL);
   };
   showModelCards = () => (
     <div className="model-card-container">

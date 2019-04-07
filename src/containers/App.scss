@@ -4,7 +4,7 @@
 @import "../styles/Contact.scss";
 @import "../styles/Utilities.scss";
 @import "../styles/ModelForm.scss";
-
+@import "../styles/About.scss";
 body {
   margin: 0;
   padding: 0;
@@ -43,6 +43,7 @@ form > div {
     font-size: 14px;
     color: $grey;
     margin-right: 40px;
+    background: transparent;
   }
   textarea {
     padding-bottom: 50px;

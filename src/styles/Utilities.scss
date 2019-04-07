@@ -78,6 +78,7 @@ $grey: #7a7a7a;
   @extend %cta-button;
   background-color: #ffffff;
   color: $dark-blue;
+  width: auto !important;
 }
 
 .cta-button-blue {

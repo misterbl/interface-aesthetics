@@ -71,6 +71,7 @@
     padding: 7px 30px 7px 30px;
     font-weight: 900;
     color: $dark-blue;
+    width: auto;
   }
 }
 
@@ -249,8 +250,11 @@
     margin-bottom: -5px;
   }
   &__small {
-    width: 300px;
+    width: 290px;
     padding: 10px;
+    p {
+      margin-top: 10px !important;
+    }
   }
 }
 
@@ -259,7 +263,7 @@
   overflow: hidden;
   max-height: 280px;
   //   overflow-y: scroll;
-  margin: 20px 0px 40px 0px;
+  margin: 20px 80px 40px 110px;
   img {
     width: auto;
     height: 140px;

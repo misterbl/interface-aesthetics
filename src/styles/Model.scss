@@ -79,6 +79,9 @@
 
 .accordion {
   max-width: 480px;
+  button {
+    width: auto;
+  }
 
   .card {
     max-width: 480px;
