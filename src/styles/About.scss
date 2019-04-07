@@ -15,6 +15,9 @@
   color: $grey;
   margin-left: 40%;
   background-color: white;
+  @media (max-width: 1000px) {
+    margin: 0px 80px 0px 80px;
+  }
 }
 
 .about-founder-image {
@@ -26,10 +29,24 @@
   height: auto;
   left: -40px;
   top: 230px;
+  @media (max-width: 1000px) {
+    display: none;
+  }
 }
-
+.about-founder-container {
+  position: relative;
+  height: 800px;
+  margin: 40px;
+  @media (max-width: 1000px) {
+    height: auto;
+    margin: 0px;
+  }
+}
 .about-page {
   .photo-gallery {
     margin-top: 220px !important;
+  }
+  .blue-font-md {
+    padding-right: 100px;
   }
 }

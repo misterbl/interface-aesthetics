@@ -1,12 +1,12 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import mark from "../assets/Mark.svg";
 import Accordion from "../components/Accordion";
 import ModelCard from "../components/ModelCard";
 import modelCards from "../data/modelCards";
 import BlueFooter from "../components/BlueFooter";
 import ROUTES from "../const/routes";
 import BluePhotoContainer from "../components/BluePhotoContainer";
+import TitleWithMark from "../components/TitleWithMark";
 export class Model extends React.Component {
   state = { isActive: "" };
 
@@ -91,8 +91,7 @@ export class Model extends React.Component {
         <div className="d-flex justify-content-between p-60">
           <div className="discount d-flex flex-column">
             <div>
-              <img src={mark} />
-              <span className="blue-font">Model FAQ</span>
+              <TitleWithMark text="Model FAQ" />
             </div>
             <p className="font-16 my-3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent

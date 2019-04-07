@@ -1,11 +1,17 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import BluePhotoContainer from "../components/BluePhotoContainer";
-import mark from "../assets/Mark.svg";
 import james from "../assets/james_olding.jpg";
 import WhyTrain from "../components/WhyTrain";
 import PhotoGallery from "../components/PhotoGallery";
+import TitleWithMark from "../components/TitleWithMark";
+import VideoPlayer from "../components/VideoPlayer";
+import ROUTES from "../const/routes";
+import WhyChoose from "../components/WhyChoose";
 export class About extends React.Component {
+  pushToCourses = () => {
+    this.props.history.push(ROUTES.COURSES);
+  };
   render() {
     return (
       <main className="about-page">
@@ -15,10 +21,25 @@ export class About extends React.Component {
             innovation at its core.
           </p>
         </BluePhotoContainer>
-        <div className="position-relative my-5">
+        <div className="d-flex justify-content-around p-60">
+          <div className="w-50">
+            <p className="blue-font w-75">
+              Our courses have been developed to provide the greatest possible
+              exposure to real patients
+            </p>
+            <button className="w-50" onClick={this.pushToCourses}>
+              VIEW COURSES
+            </button>
+          </div>
+          <div>
+            <VideoPlayer videoUrl="https:www.youtube.com/embed/-SFcIUEvNOQ?&mute=1&enablejsapi=0&cc_load_policy=0&fs=0&controls=0&playlist=-SFcIUEvNOQ&disablekb=1&modestbranding=1&showinfo=0&iv_load_policy=3&loop=1&showsearch=0&rel=0" />
+          </div>
+        </div>
+        <WhyChoose />
+        <div className="w-100 text-center bg-primary text-white">Partners</div>
+        <div className="about-founder-container position-relative my-5">
           <div className="about-founder">
-            <img src={mark} />
-            <span className="blue-font">About The Founder</span>
+            <TitleWithMark text="About The Founder" />
             <p>
               Dr James Olding is a GMC-registered surgical doctor, training in
               Oral & Maxillofacial Surgery. He is a Member of The Royal College
@@ -48,8 +69,59 @@ export class About extends React.Component {
             alt="James Olding, founder and trainer at Interface Aesthetics"
           />
         </div>
+        <div className="why-container">
+          <TitleWithMark text="Who we train" />
+          <div className="d-flex">
+            <p className="blue-font-md">
+              If you are a doctor, dentist or nurse interested in training in
+              medical aesthetics, Interface has the courses to equip you with
+              the knowledge and skills to achieve confidence and competence in
+              this exciting and dynamic field.
+            </p>
+            <div className="ml-5">
+              <p className="font-18">
+                Interface courses are designed for registered healthcare
+                professionals, and require a background understanding of key
+                healthcare principles and clinical skills. Our courses are
+                suitable for:
+              </p>
+              <ul>
+                <li>Doctors registered with the GMC</li>
+                <li>Dentists registered with the GDC</li>
+                <li>Nurses and Midwives registered with the NMC</li>
+                <li>
+                  Overseas healthcare professionals – registered with
+                  appropriate governing body in country of practice.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <PhotoGallery />
         <WhyTrain />
+        <div className="d-flex why-container">
+          <div className="w-75 mr-5">
+            <TitleWithMark text="Hugely rewarding in all senses" />
+            <p>
+              A career in medical aesthetics can be hugely rewarding in all
+              senses. It is a rapidly growing area, with continuous advances in
+              techniques and technology. To be at the forefront of such an area
+              is hugely exciting. Non-surgical cosmetic treatments are rapidly
+              becoming the new normal, and wide and diverse demographic groups
+              now seek aesthetic treatment to manage the signs of ageing and
+              enhance natural features.
+            </p>
+            <p>
+              Being successful in aesthetics can be extremely lucrative; all
+              work is private, and your skills will be evermore in demand in
+              line with the expansion of the aesthetic medicine field.
+            </p>
+          </div>
+          <div>
+            <TitleWithMark text="Make a change" />
+            <button className="w-100">Book a course today</button>
+          </div>
+        </div>
       </main>
     );
   }

@@ -113,6 +113,25 @@ footer {
   }
 }
 
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: $orange;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+li {
+  font-size: 18px;
+  font-weight: 300;
+  color: $grey;
+}
+
 .loading-indicator {
   position: absolute;
   top: 40%;
@@ -199,4 +218,8 @@ a:hover {
 
 .navbar-toggler-icon {
   display: none;
+}
+
+.mark-margin {
+  margin-left: -15px;
 }

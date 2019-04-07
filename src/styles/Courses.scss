@@ -100,22 +100,6 @@
   display: flex;
   div:first-of-type {
     margin-left: 30px;
-    ul {
-      list-style: none;
-    }
-    ul li::before {
-      content: "\2022";
-      color: $orange;
-      font-weight: bold;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-    }
-    li {
-      font-size: 18px;
-      font-weight: 300;
-      color: $grey;
-    }
     p {
       font-size: 24px;
       font-weight: 700;

@@ -1,27 +1,16 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import ReactPlayer from "react-player";
 import home1 from "../assets/home1.jpg";
 import home2 from "../assets/home2.jpg";
 import home3 from "../assets/home3.jpg";
 import home4 from "../assets/home4.jpg";
-import play from "../assets/Play.svg";
 import Accreditations from "../components/Accreditations";
 import WhoWeTrain from "../components/WhoWeTrain";
 import BlueFooter from "../components/BlueFooter";
+import VideoPlayer from "../components/VideoPlayer";
 
 export class Home extends React.Component {
-  state = { isPlaying: false };
-
-  playVideo = () => {
-    console.log("playing");
-    this.setState({ isPlaying: !this.state.isPlaying });
-  };
-
   render() {
-    const { isPlaying } = this.state;
-    console.log(isPlaying);
-
     return (
       <React.Fragment>
         <div className="home-bg-blue">
@@ -117,19 +106,7 @@ export class Home extends React.Component {
               </p>
             </div>
           </div>
-          <div className="no-hover">
-            {this.state.isPlaying ? (
-              <div onClick={this.playVideo} className="player-overlay" />
-            ) : (
-              <img onClick={this.playVideo} src={play} alt="play" />
-            )}
-            <ReactPlayer
-              url="https:www.youtube.com/embed/-SFcIUEvNOQ?&mute=1&enablejsapi=0&cc_load_policy=0&fs=0&controls=0&playlist=-SFcIUEvNOQ&disablekb=1&modestbranding=1&showinfo=0&iv_load_policy=3&loop=1&showsearch=0&rel=0"
-              playing={isPlaying}
-              width="350px"
-              controls={false}
-            />
-          </div>
+          <VideoPlayer videoUrl="https:www.youtube.com/embed/-SFcIUEvNOQ?&mute=1&enablejsapi=0&cc_load_policy=0&fs=0&controls=0&playlist=-SFcIUEvNOQ&disablekb=1&modestbranding=1&showinfo=0&iv_load_policy=3&loop=1&showsearch=0&rel=0" />
         </div>
         <Accreditations />
         <WhoWeTrain />

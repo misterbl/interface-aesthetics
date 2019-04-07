@@ -1,15 +1,14 @@
 import React from "react";
-import mark from "../assets/Mark.svg";
 import WhyCard from "../components/WhyCard";
 import whyTrain from "../data/whyTrain";
+import TitleWithMark from "./TitleWithMark";
 
 const WhyTrain = () => (
   <div className="why-container">
-    <img src={mark} />
-    <span className="blue-font">Why Train in Aesthetic Medicine?</span>
+    <TitleWithMark text="Why Train in Aesthetic Medicine?" />
     <div className="d-flex flex-wrap mt-3">
       {whyTrain.map(reason => (
-        <WhyCard title={reason.title} small />
+        <WhyCard key={reason.title} title={reason.title} small />
       ))}
     </div>
   </div>

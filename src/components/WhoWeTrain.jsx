@@ -12,6 +12,7 @@ const WhoWeTrain = () => (
     <div className="d-flex flex-wrap">
       {whoWeTrain.map(card => (
         <WhoWeTrainCard
+          key={card.title}
           image={card.image}
           title={card.title}
           text={card.text}

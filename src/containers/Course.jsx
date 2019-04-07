@@ -5,14 +5,13 @@ import { Query } from "react-apollo";
 import { ClipLoader } from "react-spinners";
 import gql from "graphql-tag";
 import CourseImage from "../components/CourseImage";
-import mark from "../assets/Mark.svg";
-
 import courses from "../data/courses";
 import CourseInformation from "../components/CourseInformation";
 import BookCourseCard from "../components/BookCourseCard";
 import CourseDay from "../components/CourseDay";
 import BlueFooter from "../components/BlueFooter";
 import BluePhotoContainer from "../components/BluePhotoContainer";
+import TitleWithMark from "../components/TitleWithMark";
 
 class Course extends React.Component {
   constructor(props) {
@@ -110,13 +109,11 @@ class Course extends React.Component {
         <div className="course">
           <div className="w-75 mr-5">
             <div className="course-section">
-              <img src={mark} />
-              <span className="blue-font">Course Overview</span>
+              <TitleWithMark text="Course Overviewr" />
               <p className="font-16 my-3">{overview}</p>
             </div>
             <div className="course-section">
-              <img src={mark} />
-              <span className="blue-font">What can you expect</span>
+              <TitleWithMark text="What can you expect" />
             </div>
             {days && (
               <div className="d-flex my-5">
@@ -142,8 +139,7 @@ class Course extends React.Component {
               </div>
             }
             <div className="course-section">
-              <img src={mark} />
-              <span className="blue-font">More information</span>
+              <TitleWithMark text="More information" />
               {moreInformation.map(info => (
                 <p key={info} className="font-16 my-3">
                   {info}
@@ -156,8 +152,7 @@ class Course extends React.Component {
         <BlueFooter container="book-course-photo">
           <div>
             <div className="w-50">
-              <img src={mark} />
-              <span className="white">Book your place now</span>
+              <TitleWithMark text="Book your place now" />
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
                 feugiat rhoncus nisl, id rutrum dui tempor vitae. Aenean vel
