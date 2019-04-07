@@ -1,6 +1,4 @@
-$dark-blue: #1e5589;
-$blue-font: #2d76bb;
-$orange: #fc4c10;
+@import "./Utilities.scss";
 
 .home-bg-blue {
   background-color: $dark-blue;

@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import james from "../assets/james.jpeg";
+// import james from "../assets/james.jpeg";
 export class About extends React.Component {
   render() {
     return (
@@ -8,7 +8,7 @@ export class About extends React.Component {
         <div className="gradiant-div"> </div>
         <div className="text-center p-5 m-5 position-absolute bg-white">
           <div className="text-center">
-            <img className="w-25 mb-4" src={james} alt="James Olding" />
+            {/* <img className="w-25 mb-4" src={james} alt="James Olding" /> */}
           </div>
           <p className="font-22 mb-1">Dr James Olding</p>
           <p className="font-16 text-secondary font-weight-bold">

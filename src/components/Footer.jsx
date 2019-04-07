@@ -23,7 +23,7 @@ export class Footer extends React.Component {
             Stay up to date with the latest news from Interface Aesthetics
           </p>
           <form onSubmit={this.handleSubmit}>
-            <div className="d-flex">
+            <div>
               <label htmlFor="name" />
               <input
                 autoComplete="off"
@@ -50,7 +50,7 @@ export class Footer extends React.Component {
                 SIGN UP
               </button>
             </div>
-            <label className="d-flex mt-3">
+            <label className="d-flex">
               <input
                 className="mt-1"
                 type="checkbox"

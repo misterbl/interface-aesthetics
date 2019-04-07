@@ -12,6 +12,7 @@ import CourseInformation from "../components/CourseInformation";
 import BookCourseCard from "../components/BookCourseCard";
 import CourseDay from "../components/CourseDay";
 import BlueFooter from "../components/BlueFooter";
+import BluePhotoContainer from "../components/BluePhotoContainer";
 
 class Course extends React.Component {
   constructor(props) {
@@ -102,13 +103,10 @@ class Course extends React.Component {
     } = filtered[0];
     return (
       <React.Fragment>
-        <div className="course-photo position-relative">
-          <div className="bg-blue" />
-          <div className="course-header">
-            <p>OUR COURSES</p>
-            <p>{title}</p>
-          </div>
-        </div>
+        <BluePhotoContainer container="course-photo" header="course-header">
+          <p>OUR COURSES</p>
+          <p>{title}</p>
+        </BluePhotoContainer>
         <div className="course">
           <div className="w-75 mr-5">
             <div className="course-section">
@@ -167,12 +165,14 @@ class Course extends React.Component {
               </p>
             </div>
             <form className="select-date">
-              <select className="form-control form-control-sm">
-                <option selected>Select course date</option>
-                {dates.map(date => (
-                  <option key={date}>{date}</option>
-                ))}
-              </select>
+              <div className="select-container">
+                <select className="form-control form-control-sm">
+                  <option selected>Select course date</option>
+                  {dates.map(date => (
+                    <option key={date}>{date}</option>
+                  ))}
+                </select>
+              </div>
             </form>
           </div>
         </BlueFooter>

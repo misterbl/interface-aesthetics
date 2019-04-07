@@ -8,7 +8,8 @@ const routes = {
   ABOUT: "/about",
   BLOG: "blog",
   CONTACT: "/contact",
-  ADMIN: "/admin"
+  ADMIN: "/admin",
+  BECOME_A_MODEL: "/become-a-model"
 };
 
 export default routes;

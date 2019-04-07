@@ -2,16 +2,14 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import phone from "../assets/Phone.svg";
 import email from "../assets/Email.svg";
+import BluePhotoContainer from "../components/BluePhotoContainer";
 export class Contact extends React.Component {
   render() {
     return (
       <main>
-        <div className="group-photo position-relative">
-          <div className="bg-blue" />
-          <div className="contact-header">
-            <p>Contact Interface</p>
-          </div>
-        </div>
+        <BluePhotoContainer container="group-photo" header="contact-header">
+          <p>Contact Interface</p>
+        </BluePhotoContainer>
         <div className="contact-form">
           <div className="d-flex flex-column">
             <p className="blue-font w-75">Get in touch with us</p>
@@ -34,12 +32,14 @@ export class Contact extends React.Component {
               <input type="text" placeholder="Name" />
               <input type="text" placeholder="Email address" />
               <input type="text" placeholder="Phone number" />
-              <select className="form-control form-control-sm">
-                <option selected>Reason for enquiry</option>
-                <option key="reason1">reason1</option>
-                <option key="reason2">reason2</option>
-                <option key="reason3">reason3</option>
-              </select>
+              <div className="select-container">
+                <select>
+                  <option selected>Reason for enquiry</option>
+                  <option key="reason1">reason1</option>
+                  <option key="reason2">reason2</option>
+                  <option key="reason3">reason3</option>
+                </select>
+              </div>
               <textarea placeholder="Message" />{" "}
             </div>
             <button type="submit">SEND</button>

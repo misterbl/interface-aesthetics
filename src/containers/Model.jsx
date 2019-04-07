@@ -5,6 +5,8 @@ import Accordion from "../components/Accordion";
 import ModelCard from "../components/ModelCard";
 import modelCards from "../data/modelCards";
 import BlueFooter from "../components/BlueFooter";
+import ROUTES from "../const/routes";
+import BluePhotoContainer from "../components/BluePhotoContainer";
 export class Model extends React.Component {
   state = { isActive: "" };
 
@@ -16,7 +18,9 @@ export class Model extends React.Component {
     }
     this.setState({ isActive: value });
   };
-
+  pushToModelForm = () => {
+    this.props.history.push(ROUTES.MODEL_FORM);
+  };
   showModelCards = () => (
     <div className="model-card-container">
       {modelCards.map(card => {
@@ -45,21 +49,20 @@ export class Model extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="model-photo position-relative">
-          <div className="bg-blue" />
-          <div className="model-header">
-            <p>INTERFACE AESTHETICS</p>
-            <p>BECOME A MODEL PATIENT</p>
-            <p>
-              Model patientss are in the center of all our traning courses.
-              Model patientss are in the center of all our traning courses.
-              Model patientss are in the center of all our traning courses.
-              Model patientss are in the center of all our traning courses.
-              Model patientss are in the center of all our traning courses.{" "}
-            </p>
-            <button className="cta-button-white">BE A MODEL PATIENT</button>{" "}
-          </div>
-        </div>
+        <BluePhotoContainer container="model-photo" header="model-header">
+          <p>INTERFACE AESTHETICS</p>
+          <p>BECOME A MODEL PATIENT</p>
+          <p>
+            Model patientss are in the center of all our traning courses. Model
+            patientss are in the center of all our traning courses. Model
+            patientss are in the center of all our traning courses. Model
+            patientss are in the center of all our traning courses. Model
+            patientss are in the center of all our traning courses.{" "}
+          </p>
+          <button className="cta-button-white" onClick={this.pushToModelForm}>
+            BE A MODEL PATIENT
+          </button>
+        </BluePhotoContainer>
         <div className="d-flex justify-content-around bg-white p-60">
           <div className="discount d-flex flex-column">
             <p className="blue-font w-75">

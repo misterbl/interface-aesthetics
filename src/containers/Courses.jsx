@@ -15,6 +15,7 @@ import home2 from "../assets/home2.jpg";
 import bottoxForhead from "../assets/bottox-forhead.jpg";
 import fillersCheeks from "../assets/fillers-cheeks.jpg";
 import group2 from "../assets/group2.jpg";
+import BluePhotoContainer from "../components/BluePhotoContainer";
 export class Courses extends React.Component {
   // getCourses = () => {
   //   const GET_ALL_COURSES = gql`
@@ -84,13 +85,10 @@ export class Courses extends React.Component {
   render() {
     return (
       <main>
-        <div className="group-photo position-relative">
-          <div className="bg-blue" />
-          <div className="courses-header">
-            <p>INTERFACE AESTHETICS</p>
-            <p>OUR COURSES</p>
-          </div>
-        </div>
+        <BluePhotoContainer container="group-photo" header="courses-header">
+          <p>INTERFACE AESTHETICS</p>
+          <p>OUR COURSES</p>
+        </BluePhotoContainer>
         <div className="d-flex justify-content-around bg-white p-60">
           <div className="discount d-flex flex-column">
             <p className="blue-font w-75">
