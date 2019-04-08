@@ -28,15 +28,13 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.isLoading);
-
     return (
       <div className="App">
-        {this.state.isLoading && (
+        {/* {this.state.isLoading && (
           <div className="spinner-border loading-indicator " role="status">
             <span className="sr-only">Loading...</span>
           </div>
-        )}
+        )} */}
         <Header />
         <Switch>
           <Route exact path={ROUTES.INDEX} component={Home} />

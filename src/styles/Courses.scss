@@ -91,7 +91,7 @@
 
 .course {
   display: flex;
-  padding: 60px 140px 60px 140px;
+  padding: 60px 0px 60px 140px;
 }
 .course-information {
   margin-bottom: 30px;
@@ -144,10 +144,11 @@
 }
 
 .course-day {
-  min-width: 400px;
+  width: 350px;
+  border-radius: 10px;
   border: 1px solid $grey;
   padding: 40px;
-  margin-right: 40px;
+  margin: 0px 40px 40px 0px;
   div:first-of-type {
     color: $dark-blue;
     font-size: 28px;

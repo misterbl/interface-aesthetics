@@ -1,6 +1,8 @@
 import React from "react";
 import Modal from "react-modal";
+import { withRouter } from "react-router";
 
+import ROUTES from "../const/routes";
 class ModelCard extends React.Component {
   state = {
     showModal: false
@@ -12,6 +14,10 @@ class ModelCard extends React.Component {
 
   handleCloseModal = () => {
     this.setState({ showModal: false });
+  };
+
+  pushToModelForm = () => {
+    this.props.history.push(ROUTES.BECOME_A_MODEL);
   };
 
   render() {
@@ -55,9 +61,7 @@ class ModelCard extends React.Component {
               <h5>IS THERE ANY DOWNTIME:</h5>
               <p>{isThereDowntime}</p>
               <span>{`From ${price}`}</span>
-              <button onClick={this.handleCloseModal}>
-                BE A MODEL PATIENT
-              </button>
+              <button onClick={this.pushToModelForm}>BE A MODEL PATIENT</button>
             </div>
           </div>
         </Modal>
@@ -66,4 +70,4 @@ class ModelCard extends React.Component {
   }
 }
 
-export default ModelCard;
+export default withRouter(ModelCard);

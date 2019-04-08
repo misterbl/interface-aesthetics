@@ -175,17 +175,19 @@
     padding: 7px 30px 7px 30px;
     font-weight: 900;
     color: $orange;
+    width: 150px;
   }
 }
 
 .modal-info {
   margin-left: 20px;
+  padding: 20px;
   button:first-of-type {
     position: absolute;
     background-color: transparent;
     border: none;
-    right: 20px;
-    top: 20px;
+    right: -20px;
+    top: 5px;
     color: #4d4d4d;
     font-size: 32px;
   }
@@ -196,6 +198,8 @@
     padding: 7px 30px 7px 30px;
     font-weight: 900;
     color: $orange;
+    width: 230px;
+    margin-left: 40px;
   }
   span {
     color: $dark-blue;

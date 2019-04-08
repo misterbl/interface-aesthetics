@@ -109,14 +109,14 @@ class Course extends React.Component {
         <div className="course">
           <div className="w-75 mr-5">
             <div className="course-section">
-              <TitleWithMark text="Course Overviewr" />
+              <TitleWithMark text="Course Overview" />
               <p className="font-16 my-3">{overview}</p>
             </div>
             <div className="course-section">
               <TitleWithMark text="What can you expect" />
             </div>
             {days && (
-              <div className="d-flex my-5">
+              <div className="d-flex flex-wrap my-5">
                 {days.map((day, i) => (
                   <CourseDay
                     index={i + 1}
