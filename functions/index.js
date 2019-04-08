@@ -18,6 +18,7 @@ const app = require("express")();
 const React = require("react");
 const ReactDOMServer = require("react-dom/server");
 const bodyParser = require("body-parser");
+const nodemailer = require("nodemailer");
 const cors = require("cors");
 const graphqlHTTP = require("express-graphql");
 const gqlServerConfig = require("./api");
@@ -44,7 +45,7 @@ var jsonParser = bodyParser.json({
   limit: 1024 * 1024 * 2000,
   type: "application/json"
 });
-
+app.use(cors());
 app.use(bodyParser.json({ limit: "10mb" }));
 app.use(bodyParser.urlencoded({ extended: true }));
 const schema = makeExecutableSchema(gqlServerConfig);
@@ -81,6 +82,40 @@ app.use((req, res, next) => {
 
 app.get("/favicon.ico", (req, res) => {
   res.send(204);
+});
+
+app.post("/email", (req, res) => {
+  var data = req.body;
+  var smtpTransport = nodemailer.createTransport({
+    service: "Gmail",
+    port: 465,
+    auth: {
+      user: "interface.aesthetics@gmail.com",
+      pass: "JamesOlding2019!"
+    }
+  });
+
+  var mailOptions = {
+    from: data.email,
+    to: "interface.aesthetics@gmail.com",
+    subject: "contact",
+    html: `<p>From:</p>
+          <p>${data.name}</p>
+          <p>${data.email}</p>
+          <p>${data.phoneNumber}</p>
+          <p>Contact reason:${data.reason}</p>
+          <p>Message:<p>
+          <p>${data.message}</p>`
+  };
+
+  smtpTransport.sendMail(mailOptions, (error, response) => {
+    if (error) {
+      res.send(error);
+    } else {
+      res.send("Success");
+    }
+    smtpTransport.close();
+  });
 });
 
 app.get("/*", async (req, res) => {
