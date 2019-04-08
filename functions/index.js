@@ -24,7 +24,7 @@ const graphqlHTTP = require("express-graphql");
 const gqlServerConfig = require("./api");
 const firebase = require("firebase");
 const { makeExecutableSchema } = require("graphql-tools");
-const emailAuth = require("../emailAuth.js");
+const emailAuth = require("../emailAuth");
 if (process.env.NODE_ENV === "development") {
   require("dotenv").config({ path: "development.env" });
 }
