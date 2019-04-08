@@ -1,5 +1,6 @@
 .firebaserc
-node_modules
+./functions/node_modules
+./src/node_modules
 *.bundle.js
 ./functions/development.env
 .functions/firebase-config.json
