@@ -10,10 +10,11 @@
 }
 
 .contact-form {
+  @extend %grey-mark-background;
+  background-position: 50% 55% !important;
   display: flex;
   justify-content: space-around;
   padding: 80px;
-  background-color: white;
   margin-bottom: 70px;
   div {
     font-size: 20px;

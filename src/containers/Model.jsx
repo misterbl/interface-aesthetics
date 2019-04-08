@@ -34,6 +34,7 @@ export class Model extends React.Component {
         } = card;
         return (
           <ModelCard
+            key={title}
             image={image}
             title={title}
             price={price}
@@ -48,7 +49,7 @@ export class Model extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <main className="model-page">
         <BluePhotoContainer container="model-photo" header="model-header">
           <p>INTERFACE AESTHETICS</p>
           <p>BECOME A MODEL PATIENT</p>
@@ -63,7 +64,7 @@ export class Model extends React.Component {
             BE A MODEL PATIENT
           </button>
         </BluePhotoContainer>
-        <div className="d-flex justify-content-around bg-white p-60">
+        <div className="d-flex justify-content-around grey-mark-background p-60">
           <div className="discount d-flex flex-column">
             <p className="blue-font w-75">
               Up to 70% discount on the usual price
@@ -105,7 +106,7 @@ export class Model extends React.Component {
           <Accordion isActive={this.state.isActive} onClick={this.onClick} />
         </div>
         <BlueFooter container="model-man" />
-      </React.Fragment>
+      </main>
     );
   }
 }

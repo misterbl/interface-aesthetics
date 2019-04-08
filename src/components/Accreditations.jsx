@@ -6,7 +6,7 @@ import ace from "../assets/ACE.png";
 import hamiltonFraser from "../assets/Hamilton-Fraser.png";
 
 const Accreditations = () => (
-  <div className="bg-white p-60 accreditations-container">
+  <div className="p-60 accreditations-container">
     <div>
       <img src={mark} alt="mark" />
       <span className="dark-blue font-34">Our Accreditations</span>

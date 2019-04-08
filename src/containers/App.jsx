@@ -26,26 +26,17 @@ class App extends Component {
   componentDidMount() {
     this.setState({ isLoading: false });
   }
-  // openModal = () => {
-  //   this.setState({ openModal: true });
-  // };
-
-  // closeModal = () => {
-  //   this.setState({ openModal: false });
-  // };
 
   render() {
+    console.log(this.state.isLoading);
+
     return (
       <div className="App">
-        {/* {this.state.isLoading ? (
-          <div
-            class="spinner-border text-primary loading-indicator "
-            role="status"
-          >
-            <span class="sr-only">Loading...</span>
+        {this.state.isLoading && (
+          <div className="spinner-border loading-indicator " role="status">
+            <span className="sr-only">Loading...</span>
           </div>
-        ) : (
-          <React.Fragment> */}
+        )}
         <Header />
         <Switch>
           <Route exact path={ROUTES.INDEX} component={Home} />
@@ -61,8 +52,6 @@ class App extends Component {
           <Route path={ROUTES.ADMIN} component={Admin} />
         </Switch>
         <Footer />
-        {/* </React.Fragment> */}
-        )}
       </div>
     );
   }

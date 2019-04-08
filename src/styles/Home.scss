@@ -61,6 +61,8 @@
 }
 
 .accreditations-container {
+  @extend %grey-mark-background;
+  background-position: 60% 50% !important;
   margin: 0px 72px 0px 72px;
   overflow: hidden;
   div:first-of-type {
@@ -105,5 +107,38 @@
     font-size: 16px;
     font-weight: 400;
     margin-top: 20px;
+  }
+}
+
+.upcoming-courses {
+  margin: 0px 80px 30px 80px;
+
+  .carousel {
+    @extend %grey-mark-background;
+  }
+  .carousel-inner {
+    padding: 70px 50px 70px 50px;
+  }
+  .carousel-item {
+    div {
+      position: relative;
+      top: 0px;
+      left: 0px;
+    }
+    p:first-of-type {
+      font-weight: 500 !important;
+    }
+    p:nth-of-type(2) {
+      font-weight: 700;
+      font-size: 20px;
+    }
+  }
+  .course-image {
+    margin-left: 80px;
+    width: 320px !important;
+    height: 500px;
+  }
+  img {
+    opacity: 1;
   }
 }

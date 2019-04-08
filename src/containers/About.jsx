@@ -21,8 +21,8 @@ export class About extends React.Component {
             innovation at its core.
           </p>
         </BluePhotoContainer>
-        <div className="d-flex justify-content-around p-60">
-          <div className="w-50">
+        <div className="d-flex justify-content-around">
+          <div className="grey-mark-background ">
             <p className="blue-font w-75">
               Our courses have been developed to provide the greatest possible
               exposure to real patients

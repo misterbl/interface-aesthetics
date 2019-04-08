@@ -8,6 +8,7 @@ import Accreditations from "../components/Accreditations";
 import WhoWeTrain from "../components/WhoWeTrain";
 import BlueFooter from "../components/BlueFooter";
 import VideoPlayer from "../components/VideoPlayer";
+import UpcomingCourses from "../components/UpcomingCourses";
 
 export class Home extends React.Component {
   render() {
@@ -110,6 +111,7 @@ export class Home extends React.Component {
         </div>
         <Accreditations />
         <WhoWeTrain />
+        <UpcomingCourses />
         <BlueFooter />
       </React.Fragment>
       // {/* <div className="no-hover">
