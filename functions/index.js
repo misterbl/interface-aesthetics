@@ -24,7 +24,7 @@ const graphqlHTTP = require("express-graphql");
 const gqlServerConfig = require("./api");
 const firebase = require("firebase");
 const { makeExecutableSchema } = require("graphql-tools");
-
+const emailAuth = require("../emailAuth.js");
 if (process.env.NODE_ENV === "development") {
   require("dotenv").config({ path: "development.env" });
 }
@@ -90,8 +90,8 @@ app.post("/email", (req, res) => {
     service: "Gmail",
     port: 465,
     auth: {
-      user: "interface.aesthetics@gmail.com",
-      pass: "JamesOlding2019!"
+      user: emailAuth.user,
+      pass: emailAuth.pass
     }
   });
 
