@@ -13,6 +13,15 @@ export default class ModelForm extends PureComponent {
     buttonText: "Send Message"
   };
 
+  resetForm = () => {
+    this.setState({
+      name: "",
+      message: "",
+      email: "",
+      buttonText: "Message Sent"
+    });
+  };
+
   formSubmit = e => {
     const { name, email, phoneNumber, treatment } = this.state;
     e.preventDefault();
@@ -33,6 +42,7 @@ export default class ModelForm extends PureComponent {
       });
   };
   render() {
+    const { name, email, phoneNumber } = this.state;
     return (
       <main>
         <BluePhotoContainer container="become-a-model" header="model-form">
@@ -47,18 +57,21 @@ export default class ModelForm extends PureComponent {
                   type="text"
                   name="name"
                   placeholder="Name"
+                  value={name}
                 />
                 <input
                   onChange={e => this.setState({ email: e.target.value })}
                   type="text"
                   name="email"
                   placeholder="Email address"
+                  value={email}
                 />
                 <input
                   onChange={e => this.setState({ phoneNumber: e.target.value })}
                   type="text"
                   name="phoneNumber"
                   placeholder="Phone number"
+                  value={phoneNumber}
                 />
                 <div>
                   <div className="select-container">

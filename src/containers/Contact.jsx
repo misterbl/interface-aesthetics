@@ -4,6 +4,7 @@ import axios from "axios";
 import phone from "../assets/Phone.svg";
 import email from "../assets/Email.svg";
 import BluePhotoContainer from "../components/BluePhotoContainer";
+import { DH_CHECK_P_NOT_SAFE_PRIME } from "constants";
 export class Contact extends React.Component {
   state = {
     name: "",
@@ -13,6 +14,16 @@ export class Contact extends React.Component {
     message: "",
     sent: false,
     buttonText: "Send Message"
+  };
+
+  resetForm = () => {
+    console.log("reset");
+    this.setState({
+      name: "",
+      message: "",
+      email: "",
+      buttonText: "Message Sent"
+    });
   };
 
   formSubmit = e => {
@@ -28,13 +39,15 @@ export class Contact extends React.Component {
     axios
       .post("http://localhost:5000/email", data)
       .then(res => {
+        console.log("res", res);
         this.setState({ sent: true }, this.resetForm());
       })
-      .catch(() => {
-        console.log("Message not sent");
+      .catch(e => {
+        console.log("Message not sent", e);
       });
   };
   render() {
+    const { name, email, phoneNumber, reason, message } = this.state;
     return (
       <main>
         <BluePhotoContainer container="group-photo" header="contact-header">
@@ -64,18 +77,21 @@ export class Contact extends React.Component {
                 name="name"
                 type="text"
                 placeholder="Name"
+                value={DH_CHECK_P_NOT_SAFE_PRIME}
               />
               <input
                 onChange={e => this.setState({ email: e.target.value })}
                 name="email"
                 type="text"
                 placeholder="Email address"
+                value={email}
               />
               <input
                 onChange={e => this.setState({ phoneNumber: e.target.value })}
                 name="phoneNumber"
                 type="text"
                 placeholder="Phone number"
+                value={phoneNumber}
               />
               <div className="select-container">
                 <select
@@ -91,6 +107,7 @@ export class Contact extends React.Component {
               <textarea
                 onChange={e => this.setState({ message: e.target.value })}
                 placeholder="Message"
+                value={message}
               />
             </div>
             <button type="submit">SEND</button>
