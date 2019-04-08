@@ -7,9 +7,16 @@
   background-position: 0px -70px;
 }
 
+.courses-page {
+  .grey-mark-background {
+    background-position: 50% 55% !important;
+  }
+}
+
 .group-photo {
   @extend %header-photo;
   background-image: url("../assets/group-photo.jpg");
+  z-index: 1;
 }
 
 .course-photo {
@@ -47,7 +54,7 @@
     background-color: white;
     width: 400px;
     height: 280px;
-    opacity: 0.5;
+    opacity: 0.8;
   }
   div:nth-child(2) {
     color: $dark-blue;
@@ -248,7 +255,7 @@
   overflow: hidden;
   max-height: 280px;
   //   overflow-y: scroll;
-  margin: 20px 80px 40px 110px;
+  margin: 20px 80px 60px 40px;
   img {
     width: auto;
     height: 140px;

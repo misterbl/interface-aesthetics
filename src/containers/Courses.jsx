@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import { ClipLoader } from "react-spinners";
+// import { ClipLoader } from "react-spinners";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import ROUTES from "../const/routes";
@@ -78,12 +78,12 @@ export class Courses extends React.Component {
   );
   render() {
     return (
-      <main>
+      <main className="courses-page">
         <BluePhotoContainer container="group-photo" header="courses-header">
           <p>INTERFACE AESTHETICS</p>
           <p>OUR COURSES</p>
         </BluePhotoContainer>
-        <div className="d-flex justify-content-around bg-white p-60">
+        <div className="d-flex justify-content-around p-60 grey-mark-background">
           <div className="discount d-flex flex-column">
             <p className="blue-font w-75">
               Our courses have been developed to provide the greatest possible

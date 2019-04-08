@@ -16,9 +16,14 @@ export class About extends React.Component {
     return (
       <main className="about-page">
         <BluePhotoContainer container="group-photo" header="about-header">
+          <p>INTERFACE AESTHETICS</p>
+          <p>ABOUT US</p>
           <p>
-            Interface is a surgeon-led aesthetic training academy with
-            innovation at its core.
+            Interface Aesthetics is a surgeon-led training academy (Smaller)
+            Small-Groups and hands-on training are at the core of our
+            philosophy. Our courses are accredited by the two leading insurers
+            of cosmetic practice in the UK, The CPD Accreditation Service, and
+            the pharmaceutical industry leader in aesthetics, Allergan.
           </p>
         </BluePhotoContainer>
         <div className="d-flex justify-content-around">

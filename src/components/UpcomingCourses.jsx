@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import TitleWithMark from "./TitleWithMark";
-import home1 from "../assets/home1.jpg";
+import rightArrow from "../assets/right-orange-arrow.png";
 import courses from "../data/courses";
 
 export default class UpcomingCourses extends Component {
@@ -12,22 +12,23 @@ export default class UpcomingCourses extends Component {
           className="carousel slide position-relative"
           data-ride="upcoming-courses-carousel"
         >
-          {/* <ol className="carousel-indicators">
-          <li
-            data-target="#upcoming-courses-indicator"
-            data-slide-to="0"
-            className="active"
-          />
-          <li data-target="#upcoming-courses-indicator" data-slide-to="1" />
-          <li data-target="#upcoming-courses-indicator" data-slide-to="2" />
-          <li data-target="#upcoming-courses-indicator" data-slide-to="3" />
-        </ol> */}
+          <ol className="carousel-indicators">
+            <li
+              data-target="#upcoming-courses-indicator"
+              data-slide-to="0"
+              className="active"
+            />
+            <li data-target="#upcoming-courses-indicator" data-slide-to="1" />
+            {/* <li data-target="#upcoming-courses-indicator" data-slide-to="2" />
+          <li data-target="#upcoming-courses-indicator" data-slide-to="3" /> */}
+          </ol>
 
           <div className="carousel-inner">
             {courses.map((course, index) => (
               <div
                 className={`carousel-item ${index === 0 && "active"}`}
                 data-interval="10000"
+                key={course.title}
               >
                 <div className="d-flex">
                   <div>
@@ -39,6 +40,15 @@ export default class UpcomingCourses extends Component {
                     </p>
                     <p className="blue-font mt-3 mb-2">{course.title}</p>
                     <p className="font-16">{course.overview}</p>
+                    <div className="d-flex">
+                      <div className="next-course w-50 p-3">
+                        {`Next Course: ${course.dates[0]}`}
+                      </div>
+                      <div className="position-relative">
+                        <div className="right-arrow-light" />
+                        <button>BOOK COURSE</button>
+                      </div>
+                    </div>
                   </div>
                   <img
                     src={course.image}

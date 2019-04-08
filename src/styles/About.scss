@@ -2,12 +2,27 @@
 
 .about-header {
   @extend %header-text;
-  left: 35%;
-  top: 30%;
-  width: 400px;
+  width: 1000px;
+  left: 10%;
+  top: 5%;
   p {
+    margin: 0px;
+  }
+  p:first-of-type {
     font-size: 28px;
-    font-weight: bold;
+    font-weight: 700;
+    padding-top: 50px;
+  }
+  p:nth-child(2) {
+    font-size: 48px;
+    font-weight: 700;
+  }
+  p:nth-child(3) {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    padding: 0 200px 0 200px;
+    margin-bottom: 15px;
   }
 }
 .about-founder {
@@ -43,9 +58,6 @@
   }
 }
 .about-page {
-  .photo-gallery {
-    margin-top: 220px !important;
-  }
   .blue-font-md {
     padding-right: 100px;
   }
@@ -55,5 +67,17 @@
     background-position: 45% 55%;
     padding: 70px 100px 70px 100px;
     margin-bottom: 50px;
+  }
+  .no-hover {
+    margin-top: -60px;
+    z-index: 0;
+    div {
+      width: 500px !important;
+      height: 525px !important;
+    }
+    img {
+      top: 210px;
+      left: 200px;
+    }
   }
 }

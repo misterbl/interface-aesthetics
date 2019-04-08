@@ -2,7 +2,7 @@ import React from "react";
 import { getCourseImage } from "../apiThunk";
 import { withRouter } from "react-router";
 import { Query } from "react-apollo";
-import { ClipLoader } from "react-spinners";
+// import { ClipLoader } from "react-spinners";
 import gql from "graphql-tag";
 import CourseImage from "../components/CourseImage";
 import courses from "../data/courses";
