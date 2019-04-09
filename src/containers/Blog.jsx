@@ -1,7 +1,7 @@
 import React from "react";
 import BluePhotoContainer from "../components/BluePhotoContainer";
 import BlogCard from "../components/BlogCard";
-import templeFiller from "../assets/temple-filler-model.jpg";
+import templeFiller from "../assets/temple_filler_model.jpg";
 
 class Blog extends React.Component {
   render() {

@@ -1,8 +1,8 @@
 import React from "react";
-import jamesSpeech from "../assets/James-speech.jpg";
+import jamesSpeech from "../assets/james_speech.jpg";
 import home2 from "../assets/home2.jpg";
-import bottoxForhead from "../assets/bottox-forhead.jpg";
-import fillersCheeks from "../assets/fillers-cheeks.jpg";
+import bottoxForhead from "../assets/bottox_forhead.jpg";
+import fillersCheeks from "../assets/fillers_cheeks.jpg";
 import group2 from "../assets/group2.jpg";
 
 const PhotoGallery = () => (

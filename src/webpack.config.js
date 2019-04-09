@@ -41,15 +41,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        loader: "babel-loader"
-      },
-      {
         test: /\.(scss|sass|css)$/,
         exclude: /node_modules/,
         loaders: ["style-loader", "css-loader", "sass-loader"]
       },
+
       {
         test: /\.(bmp|gif|jpe?g|png)$/,
         exclude: /node_modules/,
@@ -58,6 +54,11 @@ module.exports = {
       {
         test: /\.(gif|eot|woff|woff2|ttf|svg|otf)$/,
         loaders: ["url-loader"]
+      },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
       }
     ]
   }

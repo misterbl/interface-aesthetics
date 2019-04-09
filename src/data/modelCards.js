@@ -1,4 +1,4 @@
-import marionetteModel from "../assets/Marionette_filler_model.jpg";
+import marionetteModel from "../assets/marionette_filler_model.jpg";
 
 const modelCards = [
   {
