@@ -36,28 +36,41 @@ async function getAllCourses() {
   return { courses: snap.val() };
 }
 
+async function addCourse(id, description, image, price, link, title) {
+  firebase
+    .database()
+    .ref("/courses/" + id)
+    .set({
+      description,
+      image,
+      price,
+      link,
+      title
+    });
+}
 // Get and return an employee by their id number
 // also fetch all of the employee's direct reports (if any)
-async function getEmployeeById(employeeId) {
-  let employee;
-  const snap = await firebase
-    .database()
-    .ref(`/employees/${employeeId}`)
-    .once("value");
-  employee = snap.val();
-  const reportIds = Object.keys(employee.reports || []);
-  const getReports = reportIds.map(userId =>
-    firebase
-      .database()
-      .ref(`/employees/${userId}`)
-      .once("value")
-  );
-  const reportSnapshots = await Promise.all(getReports);
-  reports = reportSnapshots.map(snap => snap.val());
-  return { employee, reports: reports };
-}
+// async function getEmployeeById(employeeId) {
+//   let employee;
+//   const snap = await firebase
+//     .database()
+//     .ref(`/employees/${employeeId}`)
+//     .once("value");
+//   employee = snap.val();
+//   const reportIds = Object.keys(employee.reports || []);
+//   const getReports = reportIds.map(userId =>
+//     firebase
+//       .database()
+//       .ref(`/employees/${userId}`)
+//       .once("value")
+//   );
+//   const reportSnapshots = await Promise.all(getReports);
+//   reports = reportSnapshots.map(snap => snap.val());
+//   return { employee, reports: reports };
+// }
 
 module.exports = {
   getAllCourses,
-  getEmployeeById
+  addCourse
+  // getEmployeeById
 };

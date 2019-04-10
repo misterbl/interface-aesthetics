@@ -20,8 +20,8 @@ const path = require("path");
 const devMode = process.env.NODE_ENV !== "production";
 
 new MiniCssExtractPlugin({
-  filename: devMode ? "[name].css" : "[name].[hash].css",
-  chunkFilename: devMode ? "[id].css" : "[id].[hash].css"
+  filename: devMode ? "[name].css" : "[name].css",
+  chunkFilename: devMode ? "[id].css" : "[id].css"
 });
 
 module.exports = {
@@ -43,7 +43,12 @@ module.exports = {
       {
         test: /\.(scss|sass|css)$/,
         exclude: /node_modules/,
-        loaders: ["style-loader", "css-loader", "sass-loader"]
+        loaders: [
+          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          "css-loader",
+          "postcss-loader",
+          "sass-loader"
+        ]
       },
 
       {

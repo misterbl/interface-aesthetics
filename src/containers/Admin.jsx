@@ -7,8 +7,13 @@ import { Mutation } from "react-apollo";
 import ROUTES from "../const/routes";
 import { uploadCourseImage, getCourseImage } from "../apiThunk";
 import { UploadScreen } from "../components/UploadScreen";
-
+import { getAllCourses } from "../../functions/firebase-database";
+import { addCourse } from "../../functions/firebase-database";
 export class Admin extends React.Component {
+  async componentDidMount() {
+    const courses = await getAllCourses();
+    console.log("courses: ", courses);
+  }
   constructor(props) {
     super(props);
     this.state = {
@@ -126,6 +131,15 @@ export class Admin extends React.Component {
   };
 
   render() {
+    getAllCourses().then(courses => console.log("courses: ", courses));
+    // addCourse(
+    //   "course1",
+    //   "new description",
+    //   "new image",
+    //   "new price",
+    //   "new link",
+    //   "new title"
+    // );
     const styles = {
       editor: {
         border: "1px solid gray",
@@ -134,7 +148,7 @@ export class Admin extends React.Component {
     };
 
     const { title, description, price } = this.state;
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <React.Fragment>
         <div>
@@ -201,8 +215,8 @@ export class Admin extends React.Component {
           />
           <button onClick={this.saveImage}>Save Image</button>
         </div>
-        {/* 
-        {this.saveCourse()} */}
+
+        {this.saveCourse()}
         <button
           onClick={() =>
             getCourseImage(this.state.imageFullName).then(data =>

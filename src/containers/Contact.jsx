@@ -27,7 +27,7 @@ export class Contact extends React.Component {
   };
 
   formSubmit = e => {
-    const { name, email, phoneNumber, reason, message } = this.state;
+    const { name, phoneNumber, reason, message } = this.state;
     e.preventDefault();
 
     this.setState({
@@ -84,7 +84,7 @@ export class Contact extends React.Component {
                 name="email"
                 type="text"
                 placeholder="Email address"
-                value={email}
+                value={this.email}
               />
               <input
                 onChange={e => this.setState({ phoneNumber: e.target.value })}

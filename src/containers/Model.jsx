@@ -69,7 +69,12 @@ export class Model extends React.Component {
             <p className="blue-font w-75">
               Up to 70% discount on the usual price
             </p>
-            <button className="cta-button-blue w-50">BE A MODEL PATIENT</button>
+            <button
+              onClick={this.pushToModelForm}
+              className="cta-button-blue w-50"
+            >
+              BE A MODEL PATIENT
+            </button>
           </div>
           <div className="w-50 font-16">
             <p>
