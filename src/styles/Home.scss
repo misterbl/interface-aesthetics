@@ -8,13 +8,12 @@
 
 .carousel-prev-icon {
   padding: 15px;
-  background-color: white;
   position: absolute;
-  left: 0px;
+  left: -60px;
   div:first-of-type {
     background-image: url("../assets/left-orange-arrow.png");
-    width: 30px;
-    height: 30px;
+    width: 70px;
+    height: 70px;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -22,13 +21,12 @@
 
 .carousel-next-icon {
   padding: 15px;
-  background-color: white;
   position: absolute;
-  right: 0px;
+  right: -60px;
   div:first-of-type {
     background-image: url("../assets/right-orange-arrow.png");
-    width: 30px;
-    height: 30px;
+    width: 70px;
+    height: 70px;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -85,8 +83,6 @@
 }
 
 .who-we-train {
-  margin: 0px 72px 0px 72px;
-  overflow: hidden;
   img {
     width: 53px;
   }
@@ -136,8 +132,16 @@
   }
   .course-image {
     margin-left: 80px;
-    width: 320px !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250%;
     height: 500px;
+    background-position: -300px;
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
   img {
     opacity: 1;
@@ -181,4 +185,28 @@
     border-radius: 100%;
     background-color: $dark-blue;
   }
+}
+
+.home-become-model {
+  margin-left: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  .why-card {
+    flex-direction: column;
+    height: 200px;
+    width: 250px;
+    overflow: hidden;
+    overflow-y: scroll;
+    img {
+      width: auto;
+    }
+    p {
+      color: $grey;
+    }
+  }
+}
+
+.charity-img {
+  width: 30%;
+  height: 30%;
 }

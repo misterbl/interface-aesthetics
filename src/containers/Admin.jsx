@@ -153,6 +153,8 @@ export class Admin extends React.Component {
       <React.Fragment>
         <div>
           <h1 className="text-center mt-5">Title</h1>
+          <p>https://compressimage.toolur.com/</p>
+          <p>at 20%</p>
           <div style={styles.editor} onClick={this.focusEditor}>
             <button onClick={this.onItalicClick}>
               <em>I</em>

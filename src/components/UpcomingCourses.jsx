@@ -50,11 +50,16 @@ export default class UpcomingCourses extends Component {
                       </div>
                     </div>
                   </div>
-                  <img
-                    src={course.image}
+                  <div
                     className="course-image"
-                    alt={course.title}
-                  />
+                    style={{ backgroundImage: `url(${course.image})` }}
+                  >
+                    {/* <img
+                      src={course.image}
+                      className="course-image"
+                      alt={course.title}
+                    /> */}
+                  </div>
                 </div>
               </div>
             ))}

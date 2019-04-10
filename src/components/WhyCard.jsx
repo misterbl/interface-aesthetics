@@ -5,7 +5,7 @@ const WhyCard = ({ title, text, small }) => (
   <div className={`why-card ${small ? "why-card__small" : ""}`}>
     <img src={tick} alt="tick" />
     <div className="ml-3">
-      <p>{title.toUpperCase()}</p>
+      {title && <p>{title.toUpperCase()}</p>}
       {text && <p>{text}</p>}
     </div>
   </div>

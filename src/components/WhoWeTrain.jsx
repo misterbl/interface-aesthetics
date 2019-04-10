@@ -4,7 +4,7 @@ import whoWeTrain from "../data/who-we-train";
 import WhoWeTrainCard from "./WhoWeTrainCard";
 
 const WhoWeTrain = () => (
-  <div className="p-60 who-we-train">
+  <div className="p-60 who-we-train side-margin">
     <div>
       <img src={mark} alt="mark" />
       <span className="dark-blue font-34">Who we train</span>

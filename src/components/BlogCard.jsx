@@ -1,7 +1,7 @@
 import React from "react";
 
-const BlogCard = ({ image, title, text, id }) => (
-  <div className="blog-card card">
+const BlogCard = ({ image, title, text, id, className = "" }) => (
+  <div className={`blog-card card ${className}`}>
     <img src={image} className="card-img-top" alt={title} />
     <div className="card-body">
       <h5 className="card-title">{title}</h5>
