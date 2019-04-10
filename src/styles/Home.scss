@@ -9,7 +9,7 @@
 .carousel-prev-icon {
   padding: 15px;
   position: absolute;
-  left: -60px;
+  left: 0px;
   div:first-of-type {
     background-image: url("../assets/left-orange-arrow.png");
     width: 70px;
@@ -22,7 +22,7 @@
 .carousel-next-icon {
   padding: 15px;
   position: absolute;
-  right: -60px;
+  right: 0px;
   div:first-of-type {
     background-image: url("../assets/right-orange-arrow.png");
     width: 70px;
@@ -109,7 +109,12 @@
 
 .upcoming-courses {
   margin: 0px 80px 30px 80px;
-
+  .carousel-prev-icon {
+    left: -60px;
+  }
+  .carousel-next-icon {
+    right: -60px;
+  }
   .carousel {
     @extend %grey-mark-background;
   }
@@ -171,6 +176,12 @@
     height: 30px;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .content {
+    @media (max-width: 1000px) {
+      width: auto;
+    }
+    width: 50%;
   }
 }
 

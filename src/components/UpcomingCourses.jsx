@@ -31,7 +31,7 @@ export default class UpcomingCourses extends Component {
                 key={course.title}
               >
                 <div className="d-flex">
-                  <div className="mw-50">
+                  <div className="content">
                     <TitleWithMark text="Upcoming Courses" />
                     <p className="font-18">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
