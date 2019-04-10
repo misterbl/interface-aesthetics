@@ -107,7 +107,7 @@ export class About extends React.Component {
         <div className="d-flex why-container">
           <div className="w-75 mr-5">
             <TitleWithMark text="Hugely rewarding in all senses" />
-            <p>
+            <p className="font-18">
               A career in medical aesthetics can be hugely rewarding in all
               senses. It is a rapidly growing area, with continuous advances in
               techniques and technology. To be at the forefront of such an area
@@ -116,7 +116,7 @@ export class About extends React.Component {
               now seek aesthetic treatment to manage the signs of ageing and
               enhance natural features.
             </p>
-            <p>
+            <p className="font-18">
               Being successful in aesthetics can be extremely lucrative; all
               work is private, and your skills will be evermore in demand in
               line with the expansion of the aesthetic medicine field.

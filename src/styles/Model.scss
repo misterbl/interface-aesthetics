@@ -1,6 +1,7 @@
 @import "./Utilities.scss";
 
 .course-card {
+  @extend %box-shadow;
   width: 150px;
   @media (min-width: 768px) {
     width: 250px;

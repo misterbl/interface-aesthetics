@@ -65,6 +65,11 @@ $grey: #7a7a7a;
 .p-70 {
   padding: 70px;
 }
+
+.mw-50 {
+  min-width: 50%;
+}
+
 .dark-blue {
   color: $dark-blue;
 }
@@ -95,14 +100,14 @@ $grey: #7a7a7a;
   color: $blue-font;
   font-size: 30px;
   font-weight: 700;
-  line-height: 43px;
+  line-height: 30px;
 }
 
 .blue-font-md {
   color: $blue-font;
   font-size: 22px;
   font-weight: 700;
-  line-height: 43px;
+  line-height: 30px;
 }
 
 .z-index-5 {

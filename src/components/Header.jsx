@@ -25,16 +25,16 @@ export class Header extends React.Component {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link style={this.isActive("/courses")} href={ROUTES.COURSES}>
-              Courses
+              COURSES
             </Nav.Link>
             <Nav.Link style={this.isActive("/about")} href={ROUTES.ABOUT}>
-              About
+              ABOUT
             </Nav.Link>
             <Nav.Link
               style={this.isActive("/testimonials")}
               href={ROUTES.TESTIMONIALS}
             >
-              Testimonials
+              TESTIMONIALS
             </Nav.Link>
             <Navbar.Brand href={ROUTES.INDEX}>
               <img
@@ -44,13 +44,13 @@ export class Header extends React.Component {
               />
             </Navbar.Brand>
             <Nav.Link style={this.isActive("/model")} href={ROUTES.MODEL}>
-              Model
+              MODEL
             </Nav.Link>
             <Nav.Link style={this.isActive("/contact")} href={ROUTES.CONTACT}>
-              Contact
+              CONTACT
             </Nav.Link>
             <Nav.Link style={this.isActive("/blog")} href={ROUTES.BLOG}>
-              Blog
+              BLOG
             </Nav.Link>
 
             {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">

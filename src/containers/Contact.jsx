@@ -47,7 +47,7 @@ export class Contact extends React.Component {
       });
   };
   render() {
-    const { name, email, phoneNumber, reason, message } = this.state;
+    const { name, phoneNumber, reason, message } = this.state;
     return (
       <main>
         <BluePhotoContainer container="group-photo" header="contact-header">
@@ -77,14 +77,14 @@ export class Contact extends React.Component {
                 name="name"
                 type="text"
                 placeholder="Name"
-                value={DH_CHECK_P_NOT_SAFE_PRIME}
+                value={name}
               />
               <input
                 onChange={e => this.setState({ email: e.target.value })}
                 name="email"
                 type="text"
                 placeholder="Email address"
-                value={this.email}
+                value={this.state.email}
               />
               <input
                 onChange={e => this.setState({ phoneNumber: e.target.value })}
