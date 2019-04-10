@@ -6,6 +6,7 @@
 @import "../styles/ModelForm.scss";
 @import "../styles/About.scss";
 @import "../styles/Blog.scss";
+@import "../styles/Admin.scss";
 
 body {
   margin: 0;
@@ -202,8 +203,10 @@ a:hover {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: $blue-font;
+  color: #2d76ba;
   margin-left: 50px;
+  font-weight: 800;
+  font-size: 14px;
 }
 
 .navbar-light .navbar-nav .nav-link:focus,

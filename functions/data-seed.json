@@ -1,25 +1,87 @@
 {
-  "courses": {
-    "course1": {
+  "courses": [
+    {
       "title": "FOUNDATION COURSE IN BOTULINUM TOXIN & DERMAL FILLER",
-      "description": "The approach towards the lower face is often one of the most undervalued and misunderstood. Our lower face masterclass is an in-depth hands-on course and an excellent opportunity for current level 7 students and more experienced injectors to build confidence in an often overlooked range of procedures. Our lower face masterclass is ideal for doctors, dentists, nurses and many other medical professionals.",
-      "image": "https://www.harleyacademy.com/wp-content/uploads/2019/02/level-7-fd-day-YES.jpg",
-      "link": "/courses",
-      "price": "9000"
+      "price": "£100",
+      "overview": "Our two-day course provides training in the key treatments of non-surgical aesthetics that you will be expected to perform as independent practitioners. Our innovative approach to competency-based training focuses on hands-on practical injecting on real patients in a supportive and friendly environment. ",
+      "days": [
+        {
+          "description": "Day 1 is devoted to the use of Botulinum Toxin to the upper face:",
+          "details": ["Forehead", "Brow", "Eyes (“crows feet”)"]
+        },
+        {
+          "description": "Day 2 will cover the use of Dermal Filler to the face and lips:",
+          "details": [
+            "Lip augmentation",
+            "Nasolabial fold",
+            "Marionette Lines",
+            "Cheek bone augmentation"
+          ]
+        }
+      ],
+      "placesLeft": 10,
+      "information": [
+        {
+          "overview": "Hands-on practical training in all of the listed techniques:",
+          "details": [
+            "Groups are limited to a maximum of 4 delegates, meaning greater exposure and more opportunities to perform techniques.",
+            "Procedure-based learning, ensuring knowledge and practical skills are linked at every stage."
+          ]
+        },
+        {
+          "overview": "A supportive learning environment:",
+          "details": [
+            "We make it our business to ensure that you get the learning opportunities you need to meet the level expected of a Foundation Course graduate.",
+            "Ongoing access to expert advice as you begin to practice independently with our exclusive Graduate Zone."
+          ]
+        },
+        {
+          "overview": "Get practising immediately with our Foundation Certificate of Completion:",
+          "details": [
+            "Graduates are able to obtain insurance with our partner Hamilton Fraser, the number one cosmetic insurance provider in the UK.",
+            "Certificates are presented at the end of the two-day course, enabling you to take the first steps into the vast and exciting field of medical aesthetics."
+          ]
+        }
+      ],
+      "moreInformation": [
+        "We believe that our Foundation Course provides unrivalled levels of patient contact and hands-on injecting. Our philosophy focuses on developing competency to perform Foundation techniques safely and effectively. Many Foundation Courses on the market are delivered over a single day for both Botulinum Toxin and Dermal Filler. Furthermore, teaching is often in large groups and consists in observing most, if not all, treatments without taking part and gaining hands-on exposure.",
+        "Such an approach to training in any field of healthcare would be judged wholly inadequate. If we consider learning how to take blood, or indeed how to extract a tooth, it becomes obvious that simply watching a procedure and then being expected to carry it out competently would be unacceptable to both our patients and to ourselves. With this in mind, Interface courses will have you assessing and injecting for the majority of your time, ensuring you get the learning opportunities you need to begin practising safely and confidently. As an Interface trainee, you will have the opportunity to directly perform all of the listed techniques – we make this our responsibility and guarantee."
+      ],
+      "dates": ["date1", "date2", "date3"]
     },
-    "course2": {
-      "title": "Fillers",
-      "description": "The approach towards the lower face is often one of the most undervaexperienced injectors to build confidence in an often overlooked range oflass is ideal for doctors, dentists, nurses and many other medical professionals.",
-      "image": "https://www.harleyacademy.com/wp-content/uploads/2019/02/level-7-fd-day-YES.jpg",
-      "link": "/courses",
-      "price": "9000"
-    },
-    "course3": {
-      "title": "Botox",
-      "description": "The approach towards the lower facellent opportunity for current level 7 students and more experienced injectors to build confidence in an often overlooked range of procedures. Our lower face masterclass is ideal for doctors, dentists, nurses and many other medical professionals.",
-      "image": "https://www.harleyacademy.com/wp-content/uploads/2019/02/level-7-fd-day-YES.jpg",
-      "link": "/courses",
-      "price": "9000"
+    {
+      "title": "ADVANCED COURSE IN BOTULINUM TOXIN & DERMAL FILLER",
+      "price": "£100",
+      "overview": "Our one-day advanced course builds on the main techniques taught from the Foundation Course.",
+      "days": null,
+      "placesLeft": 10,
+      "information": [
+        {
+          "image": "",
+          "overview": "Advanced Botulinum Toxin treatments:",
+          "details": [
+            "Neck – Platysma",
+            "Jaw line/teeth grinding – Masseter",
+            "Brow lift",
+            "Bunny lines",
+            "Chin – Mentalis",
+            "Gummy smile"
+          ]
+        },
+        {
+          "image": "",
+          "overview": "Advanced Dermal Filler Treatments (including training in use of cannulas):",
+          "details": [
+            "Cheek augmentation",
+            "Jaw line contouring",
+            "Tear trough (under-eye bags) "
+          ]
+        }
+      ],
+      "moreInformation": [
+        "Entry to the Advanced Course will require proof of completion of any recognised Foundation Course. Group sizes are limited to 4 delegates per trainer to ensure adequate exposure and practice."
+      ],
+      "dates": ["date1", "date2", "date3"]
     }
-  }
+  ]
 }

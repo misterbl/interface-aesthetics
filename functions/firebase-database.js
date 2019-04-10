@@ -33,20 +33,14 @@ async function getAllCourses() {
     .ref("/courses")
     .orderByChild("level")
     .once("value");
-  return { courses: snap.val() };
+  return snap.val();
 }
 
-async function addCourse(id, description, image, price, link, title) {
+async function updateCourses(courses) {
   firebase
     .database()
-    .ref("/courses/" + id)
-    .set({
-      description,
-      image,
-      price,
-      link,
-      title
-    });
+    .ref("/courses")
+    .set(courses);
 }
 // Get and return an employee by their id number
 // also fetch all of the employee's direct reports (if any)
@@ -71,6 +65,6 @@ async function addCourse(id, description, image, price, link, title) {
 
 module.exports = {
   getAllCourses,
-  addCourse
+  updateCourses
   // getEmployeeById
 };
