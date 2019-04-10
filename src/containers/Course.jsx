@@ -106,7 +106,7 @@ class Course extends React.Component {
           <p>OUR COURSES</p>
           <p>{title}</p>
         </BluePhotoContainer>
-        <div className="course">
+        <div className="course flex-wrap flex-lg-nowrap">
           <div className="w-75 mr-5">
             <div className="course-section">
               <TitleWithMark text="Course Overview" />
@@ -150,7 +150,7 @@ class Course extends React.Component {
           <BookCourseCard title={title} dates={dates} />
         </div>
         <BlueFooter container="book-course-photo">
-          <div>
+          <div className="flex-wrap flex-lg-nowrap">
             <div className="w-50">
               <TitleWithMark text="Book your place now" />
               <p>

@@ -1,7 +1,7 @@
 import React from "react";
 
 const CourseInformation = ({ image, overview, details }) => (
-  <div className="course-information">
+  <div className="course-information flex-wrap flex-lg-nowrap">
     <img src={image} alt={overview} />
     <div>
       <p>{overview}</p>
