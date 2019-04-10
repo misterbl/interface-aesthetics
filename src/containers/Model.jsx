@@ -64,14 +64,14 @@ export class Model extends React.Component {
             BE A MODEL PATIENT
           </button>
         </BluePhotoContainer>
-        <div className="d-flex justify-content-around grey-mark-background p-60">
+        <div className="d-flex flex-wrap flex-lg-nowrap grey-mark-background p-60">
           <div className="discount d-flex flex-column">
             <p className="blue-font w-75">
               Up to 70% discount on the usual price
             </p>
             <button
               onClick={this.pushToModelForm}
-              className="cta-button-blue w-50"
+              className="cta-button-blue w-50 mb-5"
             >
               BE A MODEL PATIENT
             </button>
@@ -94,7 +94,7 @@ export class Model extends React.Component {
           </div>
         </div>
         {this.showModelCards()}
-        <div className="d-flex justify-content-between p-60">
+        <div className="d-flex  flex-wrap flex-lg-nowrap justify-content-between p-60">
           <div className="discount d-flex flex-column">
             <div>
               <TitleWithMark text="Model FAQ" />
@@ -106,7 +106,9 @@ export class Model extends React.Component {
               eleifend vitae sagittis non, porta gravida urna. Curabitur ut enim
               placerat, facilisis nulla et, volutpat ex.
             </p>
-            <button className="cta-button-blue w-50">BE A MODEL PATIENT</button>
+            <button className="cta-button-blue w-50 mb-5">
+              BE A MODEL PATIENT
+            </button>
           </div>
           <Accordion isActive={this.state.isActive} onClick={this.onClick} />
         </div>

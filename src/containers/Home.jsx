@@ -25,7 +25,7 @@ export class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="home-bg-blue">
+        <div className="home-bg-blue d-none d-md-block">
           <div
             id="carouselExampleIndicators"
             className="carousel slide position-relative"
@@ -101,7 +101,7 @@ export class Home extends React.Component {
             </a>
           </div>
         </div>
-        <div className="d-flex justify-content-around p-60">
+        <div className="d-flex justify-content-around p-60 flex-wrap flex-lg-nowrap">
           <div className="d-flex flex-column w-50">
             <p className="blue-font w-75">
               Interface Aesthetics is leading innovation in non-surgical
@@ -120,7 +120,7 @@ export class Home extends React.Component {
         <Accreditations />
         <WhoWeTrain />
         <UpcomingCourses />
-        <div className="d-flex p-60 side-margin">
+        <div className="d-flex p-60 side-margin flex-wrap flex-lg-nowrap">
           <div className="w-75">
             <TitleWithMark text="Become a model" />
             <p className="font-16">
@@ -133,7 +133,7 @@ export class Home extends React.Component {
             <img
               src={becomeAModel}
               alt="model for us and receive cheap Aesthetic treatments"
-              className="d-block w-75"
+              className="d-block w-75 mb-5"
             />
           </div>
           <div className="home-become-model">
@@ -168,7 +168,7 @@ export class Home extends React.Component {
             />
           </div>
         </div>
-        <div className="d-flex p-60 side-margin pt-0">
+        <div className="d-flex p-60 side-margin pt-0 flex-wrap flex-lg-nowrap">
           <img
             className="charity-img"
             src={charity}

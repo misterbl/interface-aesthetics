@@ -104,6 +104,9 @@ footer {
   form > div {
     display: flex;
     flex-wrap: nowrap;
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
     width: auto;
     input {
       width: 400px;
@@ -207,6 +210,7 @@ a:hover {
   margin-left: 50px;
   font-weight: 800;
   font-size: 14px;
+  width: 20%;
 }
 
 .navbar-light .navbar-nav .nav-link:focus,

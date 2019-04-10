@@ -240,6 +240,9 @@
   }
   img {
     margin-bottom: -5px;
+    @media (max-width: 480) {
+      width: 20px;
+    }
   }
   &__small {
     width: 290px;
@@ -273,4 +276,7 @@
 
 .why-container {
   margin: 0px 80px 40px 110px;
+  @media (max-width: 758px) {
+    margin: 20px 20px 20px 20px;
+  }
 }

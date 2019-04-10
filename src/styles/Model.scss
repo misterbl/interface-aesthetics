@@ -69,8 +69,11 @@
 }
 
 .discount {
-  width: 360px;
-  margin-right: 20px;
+  @media (min-width: 768px) {
+    width: 360px;
+    margin-right: 20px;
+  }
+
   div:first-of-type {
     margin-left: 35px;
     position: relative;

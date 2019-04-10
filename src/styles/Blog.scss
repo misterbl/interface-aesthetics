@@ -14,4 +14,9 @@
   a {
     color: $orange !important;
   }
+  .card-text {
+    @media (max-width: 400px) {
+      display: none;
+    }
+  }
 }

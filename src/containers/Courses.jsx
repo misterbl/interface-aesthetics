@@ -83,7 +83,7 @@ export class Courses extends React.Component {
           <p>INTERFACE AESTHETICS</p>
           <p>OUR COURSES</p>
         </BluePhotoContainer>
-        <div className="d-flex justify-content-around p-60 grey-mark-background">
+        <div className="d-flex flex-wrap p-60 grey-mark-background">
           <div className="discount d-flex flex-column">
             <p className="blue-font w-75">
               Our courses have been developed to provide the greatest possible

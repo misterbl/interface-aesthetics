@@ -28,7 +28,7 @@ export class About extends React.Component {
         </BluePhotoContainer>
         <div className="d-flex justify-content-around">
           <div className="grey-mark-background ">
-            <p className="blue-font w-75">
+            <p className="blue-font">
               Our courses have been developed to provide the greatest possible
               exposure to real patients
             </p>
@@ -76,7 +76,7 @@ export class About extends React.Component {
         </div>
         <div className="why-container">
           <TitleWithMark text="Who we train" />
-          <div className="d-flex">
+          <div className="d-flex flex-wrap flex-lg-nowrap">
             <p className="blue-font-md">
               If you are a doctor, dentist or nurse interested in training in
               medical aesthetics, Interface has the courses to equip you with
@@ -104,7 +104,7 @@ export class About extends React.Component {
         </div>
         <PhotoGallery />
         <WhyTrain />
-        <div className="d-flex why-container">
+        <div className="d-flex why-container flex-wrap flex-lg-nowrap">
           <div className="w-75 mr-5">
             <TitleWithMark text="Hugely rewarding in all senses" />
             <p className="font-18">

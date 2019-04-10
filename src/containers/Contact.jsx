@@ -53,7 +53,7 @@ export class Contact extends React.Component {
         <BluePhotoContainer container="group-photo" header="contact-header">
           <p>Contact Interface</p>
         </BluePhotoContainer>
-        <div className="contact-form">
+        <div className="contact-form flex-wrap flex-lg-nowrap">
           <div className="d-flex flex-column">
             <p className="blue-font w-75">Get in touch with us</p>
             <p className="w-50 font-16">

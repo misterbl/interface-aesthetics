@@ -50,7 +50,7 @@ export class Footer extends React.Component {
                 SIGN UP
               </button>
             </div>
-            <label className="d-flex">
+            <label className="d-flex mt-2">
               <input
                 className="mt-1"
                 type="checkbox"

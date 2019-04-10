@@ -40,8 +40,8 @@ export default class UpcomingCourses extends Component {
                     </p>
                     <p className="blue-font mt-3 mb-2">{course.title}</p>
                     <p className="font-16">{course.overview}</p>
-                    <div className="d-flex">
-                      <div className="next-course w-50 p-3">
+                    <div className="d-flex flex-wrap flex-lg-nowrap">
+                      <div className="next-course  p-3">
                         {`Next Course: ${course.dates[0]}`}
                       </div>
                       <div className="position-relative">
