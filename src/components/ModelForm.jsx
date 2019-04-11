@@ -91,7 +91,9 @@ export default class ModelForm extends PureComponent {
                   </div>
                 </div>
               </div>
-              <button type="submit">SEND</button>
+              <button className="mt-5" type="submit">
+                SEND
+              </button>
             </form>
           </div>
         </BluePhotoContainer>

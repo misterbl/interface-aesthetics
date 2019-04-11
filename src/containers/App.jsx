@@ -8,13 +8,13 @@ import WhoWetrain from "./WhoWetrain";
 import About from "./About";
 import Contact from "./Contact";
 import Header from "../components/Header";
-import Admin from "./Admin";
 import Course from "./Course";
 import Model from "./Model";
 import { Footer } from "../components/Footer";
 import ModelForm from "../components/ModelForm";
 import Blog from "./Blog";
 import Article from "../components/Article";
+import Admin from "./Admin";
 
 class App extends Component {
   constructor(props) {

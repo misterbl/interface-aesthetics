@@ -1,0 +1,40 @@
+[debug] [2019-04-11T16:44:58.463Z] ----------------------------------------------------------------------
+[debug] [2019-04-11T16:44:58.466Z] Command:       /Users/laurent.bouhnik/.nvm/versions/node/v10.14.1/bin/node /Users/laurent.bouhnik/.nvm/versions/node/v10.14.1/bin/firebase serve --only hosting,functions
+[debug] [2019-04-11T16:44:58.466Z] CLI Version:   6.4.0
+[debug] [2019-04-11T16:44:58.466Z] Platform:      darwin
+[debug] [2019-04-11T16:44:58.466Z] Node Version:  v10.14.1
+[debug] [2019-04-11T16:44:58.467Z] Time:          Thu Apr 11 2019 17:44:58 GMT+0100 (British Summer Time)
+[debug] [2019-04-11T16:44:58.467Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-04-11T16:44:58.479Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-04-11T16:44:58.480Z] > authorizing via signed-in user
+[debug] [2019-04-11T16:44:58.480Z] [iam] checking project interface-aesthetics for permissions ["firebase.projects.get"]
+[debug] [2019-04-11T16:44:58.483Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/interface-aesthetics:testIamPermissions  
+
+[debug] [2019-04-11T16:44:59.346Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-11T16:44:59.349Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/interface-aesthetics  
+ 
+[debug] [2019-04-11T16:45:00.161Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/laurent.bouhnik/Documents/perso/interface-aesthetics-ssr'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2019-04-11T16:45:00.982Z] Fetching environment
+[debug] [2019-04-11T16:45:00.985Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/316527730177:getServerAppConfig  
+ 
+[debug] [2019-04-11T16:45:00.986Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/316527730177/clients/_:getWebAppConfig  
+ 
+[debug] [2019-04-11T16:45:01.217Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-11T16:45:01.217Z] Starting @google-cloud/functions-emulator
+[debug] [2019-04-11T16:45:01.747Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+[info] [hosting] Rewriting /admin?signInEmail=test%40test.com&signInPassword=test2019 to local function app
+[debug] [2019-04-11T16:45:03.320Z] Parsing function triggers
+[info] [hosting] Rewriting /admin?signInEmail=test%40test.com&signInPassword=test2019 to local function app
+[info] [hosting] Rewriting /admin?signInEmail=test%40test.com&signInPassword=test2019 to local function app
+[info] [hosting] Rewriting /admin?signInEmail=test%40test.com&signInPassword=test2019 to local function app
+[info] ✔  functions: app: http://localhost:5001/interface-aesthetics/us-central1/app
+[info] [hosting] Rewriting /admin?signInEmail=test%40test.com&signInPassword=test2019 to local function app
+[info] [hosting] Rewriting /admin to local function app
+[info] [hosting] Rewriting /admin to local function app

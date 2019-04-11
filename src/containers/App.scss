@@ -210,7 +210,9 @@ a:hover {
   margin-left: 50px;
   font-weight: 800;
   font-size: 14px;
-  width: 20%;
+  @media (max-width: 768px) {
+    width: 20%;
+  }
 }
 
 .navbar-light .navbar-nav .nav-link:focus,
@@ -236,4 +238,13 @@ a:hover {
 
 .mark-margin {
   margin-left: -15px;
+}
+
+.admin-header {
+  @extend %header-text;
+  top: 40%;
+  left: 30%;
+  p {
+    font-size: 30px;
+  }
 }

@@ -24,14 +24,17 @@ export class Header extends React.Component {
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link style={this.isActive("/courses")} href={ROUTES.COURSES}>
+            <Nav.Link
+              style={this.isActive(ROUTES.COURSES)}
+              href={ROUTES.COURSES}
+            >
               COURSES
             </Nav.Link>
-            <Nav.Link style={this.isActive("/about")} href={ROUTES.ABOUT}>
+            <Nav.Link style={this.isActive(ROUTES.ABOUT)} href={ROUTES.ABOUT}>
               ABOUT
             </Nav.Link>
             <Nav.Link
-              style={this.isActive("/testimonials")}
+              style={this.isActive(ROUTES.TESTIMONIALS)}
               href={ROUTES.TESTIMONIALS}
             >
               TESTIMONIALS
@@ -43,13 +46,16 @@ export class Header extends React.Component {
                 alt="interface aesthetics's logo"
               />
             </Navbar.Brand>
-            <Nav.Link style={this.isActive("/model")} href={ROUTES.MODEL}>
+            <Nav.Link style={this.isActive(ROUTES.MODEL)} href={ROUTES.MODEL}>
               MODEL
             </Nav.Link>
-            <Nav.Link style={this.isActive("/contact")} href={ROUTES.CONTACT}>
+            <Nav.Link
+              style={this.isActive(ROUTES.CONTACT)}
+              href={ROUTES.CONTACT}
+            >
               CONTACT
             </Nav.Link>
-            <Nav.Link style={this.isActive("/blog")} href={ROUTES.BLOG}>
+            <Nav.Link style={this.isActive(ROUTES.BLOG)} href={ROUTES.BLOG}>
               BLOG
             </Nav.Link>
           </Nav>

@@ -1,7 +1,6 @@
 import React from "react";
 import { Editor, EditorState, RichUtils } from "draft-js";
 import { withRouter } from "react-router-dom";
-// import ReactQuill from "react-quill";
 import gql from "graphql-tag";
 import { Mutation } from "react-apollo";
 import ROUTES from "../const/routes";
@@ -9,126 +8,95 @@ import { uploadCourseImage, getCourseImage } from "../apiThunk";
 import { UploadScreen } from "../components/UploadScreen";
 import { getAllCourses } from "../../functions/firebase-database";
 import { updateCourses } from "../../functions/firebase-database";
+import { signIn } from "../../functions/firebase-auth";
 import BluePhotoContainer from "../components/BluePhotoContainer";
+import TitleWithMark from "../components/TitleWithMark";
+import SignInForm from "../components/SignInForm";
+import BlogAdmin from "../components/BlogAdmin";
+import CoursesAdmin from "../components/CoursesAdmin";
+
 export class Admin extends React.Component {
+  state = {
+    courses: [],
+    auth: { user: { uid: "" } },
+    showCourseAdmin: true,
+    showBlogAdmin: false,
+    blog: []
+  };
+
   async componentDidMount() {
     const courses = await getAllCourses();
     this.setState({ courses });
-    console.log("courses: ", courses);
-  }
-  constructor(props) {
-    super(props);
-    this.state = {
-      courses: [],
-      editorState: EditorState.createEmpty()
-    };
-    this.focusEditor = () => {
-      if (this.editor) {
-        this.editor.focus();
-      }
-    };
-    this.onChange = editorState => this.setState({ editorState });
-    this.setEditor = editor => {
-      this.editor = editor;
-    };
   }
 
-  formSubmit = e => {
-    e.preventDefault();
-    updateCourses(this.state.courses);
+  updateBlog = blog => {
+    updateCourses(blog);
     console.log("update");
   };
 
-  render() {
-    const { courses } = this.state;
+  updateBlog = courses => {
+    updateCourses(courses);
+    console.log("update");
+  };
 
-    console.log(this.state);
+  handleSignIn = async (email, password) => {
+    const auth = await signIn(email, password);
+    this.setState({ auth });
+  };
+
+  showCourse = () => {
+    this.setState({ showCourseAdmin: true, showBlogAdmin: false });
+  };
+
+  showBlog = () => {
+    this.setState({ showBlogAdmin: true, showCourseAdmin: false });
+  };
+
+  renderPage = () => {
+    const { courses, blog, auth, showCourseAdmin, showBlogAdmin } = this.state;
+    if (auth.user.uid === "d61hpynjQDXY59Zh8MU33R2rDSp2") {
+      return (
+        <React.Fragment>
+          <nav className="nav nav-pills flex-column flex-sm-row">
+            <button
+              className={`flex-sm-fill text-sm-center nav-link ${
+                showCourseAdmin ? "active" : "bg-secondary"
+              }`}
+              onClick={this.showCourse}
+            >
+              Courses
+            </button>
+            <button
+              className={`flex-sm-fill text-sm-center nav-link ${
+                showBlogAdmin ? "active" : "bg-secondary"
+              }`}
+              onClick={this.showBlog}
+            >
+              Blog
+            </button>
+          </nav>
+          {showCourseAdmin && (
+            <CoursesAdmin
+              courses={courses}
+              updateCourses={this.updateCourses}
+            />
+          )}
+          {showBlogAdmin && (
+            <BlogAdmin blog={blog} updateBlog={this.updateBlog} />
+          )}
+        </React.Fragment>
+      );
+    }
+    return <SignInForm signIn={this.handleSignIn} />;
+  };
+  render() {
     return (
-      <main className="admin-page">
-        <BluePhotoContainer container="group-photo" header="contact-header">
+      <main className="admin-page side-margin p-60">
+        <BluePhotoContainer container="group-photo" header="admin-header">
           <p>Admin Dashboard</p>
         </BluePhotoContainer>
-        <p className="blue-font w-75">Courses</p>
-        <p className="w-50 font-16">
-          You can update the courses information here
-        </p>
-        <form onSubmit={this.formSubmit}>
-          {courses.map((course, index) => (
-            <div className="mb-5 w-100 p-5">
-              <label htmlFor={`${course.id}-title`}>Title</label>
-              <input
-                onChange={e => {
-                  const coursesState = this.state.courses;
-                  coursesState[index].title = e.target.value;
-                  this.setState({ courses: coursesState });
-                }}
-                id={`${course.id}-title`}
-                name={`${course.id}-title`}
-                type="text"
-                placeholder="Title"
-                value={course.title}
-              />
-              <label htmlFor={`${course.id}-price`}>Price</label>
-              <input
-                onChange={e => {
-                  const coursesState = this.state.courses;
-                  coursesState[index].price = e.target.value;
-                  this.setState({ courses: coursesState });
-                }}
-                name={`${course.id}-price`}
-                type="text"
-                placeholder="Price"
-                value={course.price}
-              />
-              <label htmlFor={`${course.id}-placesLeft`}>Places left</label>
-              <input
-                onChange={e => {
-                  const coursesState = this.state.courses;
-                  coursesState[index].placesLeft = e.target.value;
-                  this.setState({ courses: coursesState });
-                }}
-                id={`${course.id}-placesLeft`}
-                name={`${course.id}-placesLeft`}
-                type="text"
-                placeholder="PlacesLeft"
-                value={course.placesLeft}
-              />
-              <label htmlFor={`${course.id}-description`}>Description</label>
-              <textarea
-                onChange={e => {
-                  const coursesState = this.state.courses;
-                  coursesState[index].description = e.target.value;
-                  this.setState({ courses: coursesState });
-                }}
-                id={`${course.id}-description`}
-                name={`${course.id}-description`}
-                placeholder="Description"
-                value={course.description}
-              />
-              {course.dates &&
-                course.dates.map((date, dateIndex) => (
-                  <React.Fragment>
-                    <label htmlFor={`${course.id}-description`}>
-                      {`Date${dateIndex + 1}`}
-                    </label>
-                    <input
-                      onChange={e => {
-                        const coursesState = this.state.courses;
-                        coursesState[index].dates[dateIndex] = e.target.value;
-                        this.setState({ courses: coursesState });
-                      }}
-                      id={`${course.id}-${date}`}
-                      name={`${course.id}-${date}`}
-                      type="text"
-                      placeholder="DD/MM/YEAR"
-                      value={date}
-                    />
-                  </React.Fragment>
-                ))}
-              <button type="submit">SAVE</button>
-            </div>
-          ))}
-        </form>
+        <br />
+        {this.renderPage()}
       </main>
     );
   }
