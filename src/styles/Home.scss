@@ -1,12 +1,67 @@
 @import "./Utilities.scss";
 
+.become-model {
+  @media (min-width: 769px) {
+    width: 75%;
+  }
+  button {
+    @media (max-width: 500px) {
+      width: 100%;
+    }
+  }
+  img {
+    display: block;
+    @media (max-width: 768px) {
+      margin: 0 auto;
+    }
+  }
+}
+
 .home-bg-blue {
   background-color: $dark-blue;
   width: 100%;
   height: 100%;
+  .carousel-prev-icon,
+  .carousel-next-icon {
+    background-color: white;
+  }
+  .carousel {
+    img {
+      max-height: 520px;
+    }
+  }
+  .carousel-item {
+    // height: 500px;
+    overflow: hidden;
+    color: white;
+    div {
+      position: absolute;
+      top: 130px;
+      left: 120px;
+    }
+    p:first-of-type {
+      margin: 0;
+      font-size: 30px;
+      font-weight: 700;
+    }
+    p:nth-of-type(2) {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+  .carousel-item div {
+    @media (max-width: 600px) {
+      top: 20px;
+      left: 25px;
+    }
+  }
 }
 
 .carousel-prev-icon {
+  @media (max-width: 600px) {
+    display: none;
+  }
   padding: 15px;
   position: absolute;
   left: 0px;
@@ -20,6 +75,9 @@
 }
 
 .carousel-next-icon {
+  @media (max-width: 600px) {
+    display: none;
+  }
   padding: 15px;
   position: absolute;
   right: 0px;
@@ -37,48 +95,17 @@
     opacity: 0.3;
   }
 }
-.carousel-item {
-  height: 500px;
-  overflow: hidden;
-  color: white;
-  div {
-    position: absolute;
-    top: 130px;
-    left: 120px;
-  }
-  p:first-of-type {
-    margin: 0;
-    font-size: 30px;
-    font-weight: 700;
-  }
-  p:nth-of-type(2) {
-    margin: 0;
-    font-size: 24px;
-    font-weight: 500;
-  }
-}
 
 .accreditations-container {
   @extend %grey-mark-background;
   @extend %box-shadow;
   background-position: 60% 50% !important;
-  margin: 0px 72px 0px 72px;
-  overflow: hidden;
-  div:first-of-type {
-    position: relative;
-    img {
-      width: 53px;
-      position: absolute;
-      top: 0px;
-      left: -50px;
-    }
-  }
-}
-.accreditations {
-  overflow-x: scroll;
   margin-top: 30px;
+
   img {
-    height: 145px;
+    height: 100%;
+    width: 200px;
+    margin: 0px auto;
   }
 }
 
@@ -86,9 +113,18 @@
   img {
     width: 53px;
   }
+  padding: 20px 20px 60px 20px;
+  .carousel-indicators {
+    left: 5%;
+    right: 0;
+    bottom: -13%;
+    @media (max-width: 550px) {
+      left: 0;
+    }
+  }
 }
 .blue-card {
-  margin: 20px;
+  margin: 0 auto 20px;
   background-color: $blue-font;
   width: 320px;
   height: 400px;
@@ -105,15 +141,20 @@
     font-weight: 400;
     margin-top: 20px;
   }
+  @media (max-width: 600px) {
+    margin: 0 auto;
+  }
 }
 
 .upcoming-courses {
-  margin: 0px 80px 30px 80px;
+  margin: 30px 80px 30px 80px;
   .carousel-prev-icon {
     left: -60px;
+    top: 40%;
   }
   .carousel-next-icon {
     right: -60px;
+    top: 40%;
   }
   .carousel {
     @extend %grey-mark-background;
@@ -136,13 +177,21 @@
       font-size: 20px;
     }
   }
+
+  .carousel-indicators {
+    @media (max-width: 768px) {
+      left: 0;
+      right: 0;
+      margin: 0px auto;
+    }
+  }
   .course-image {
     margin-left: 80px;
     background-repeat: no-repeat;
     background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 250%;
+    width: 500px;
     height: 500px;
     background-position: -300px;
     @media (max-width: 1000px) {
@@ -161,16 +210,22 @@
     border: 1px solid $grey;
     color: $blue-font;
     font-weight: bold;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   .next-course + div {
     background-color: #fc4c10;
     width: 200px;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
   .right-arrow-light {
     position: absolute !important;
-    top: 15px !important;
-    left: 150px !important;
+    top: 15% !important;
+    left: 80% !important;
     background-image: url("../assets//right-arrow-light.png");
     width: 30px;
     height: 30px;
@@ -181,7 +236,7 @@
     @media (max-width: 1000px) {
       width: auto;
     }
-    width: 50%;
+    width: 60%;
   }
 }
 
@@ -199,21 +254,27 @@
   }
 }
 
-.home-become-model {
-  margin-left: 40px;
+.become-model-usp {
+  @media (min-width: 1000px) {
+    margin-left: 40px;
+  }
   display: flex;
   flex-wrap: wrap;
   .why-card {
     flex-direction: column;
     height: 200px;
-    width: 250px;
+    width: 200px;
     overflow: hidden;
     overflow-y: scroll;
+    @media (max-width: 990px) {
+      flex-direction: initial;
+      height: 100px;
+      width: 100%;
+    }
     img {
       width: auto;
       @media (max-width: 480px) {
         width: 20px;
-        margin-left: 50%;
       }
     }
     p {
@@ -222,11 +283,20 @@
   }
 }
 
-.charity-img {
-  width: 30%;
-  height: 30%;
-  @media (max-width: 440px) {
-    width: 100%;
-    height: 40%;
+.charity {
+  img {
+    width: 30%;
+    height: 30%;
+  }
+  padding: 60px;
+  @media (max-width: 768px) {
+    padding: 0px;
+    img {
+      width: 100%;
+      height: 40%;
+    }
+    div {
+      padding: 60px;
+    }
   }
 }

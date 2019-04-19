@@ -11,6 +11,7 @@ export default class UpcomingCourses extends Component {
           id="upcoming-courses-indicator"
           className="carousel slide position-relative"
           data-ride="upcoming-courses-carousel"
+          touch="true"
         >
           <ol className="carousel-indicators">
             <li
@@ -33,7 +34,7 @@ export default class UpcomingCourses extends Component {
                 <div className="d-flex">
                   <div className="content">
                     <TitleWithMark text="Upcoming Courses" />
-                    <p className="font-18">
+                    <p className="font-22">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       In congue, neque at dignissim condimentum, metus nisl
                       luctus lectus, et consequat tellus justo nec augue.
@@ -41,11 +42,11 @@ export default class UpcomingCourses extends Component {
                     <p className="blue-font mt-3 mb-2">{course.title}</p>
                     <p className="font-16">{course.overview}</p>
                     <div className="d-flex flex-wrap flex-lg-nowrap">
-                      <div className="next-course  p-3">
+                      <div className="next-course w-100 p-3">
                         {`Next Course: ${course.dates[0]}`}
                       </div>
                       <div className="position-relative">
-                        <div className="right-arrow-light" />
+                        <div className="right-arrow-light d-none d-md-block" />
                         <button>BOOK COURSE</button>
                       </div>
                     </div>
@@ -65,7 +66,7 @@ export default class UpcomingCourses extends Component {
             ))}
           </div>
           <a
-            className="carousel-control-prev"
+            className="carousel-control-prev d-none d-md-block"
             href="#upcoming-courses-indicator"
             role="button"
             data-slide="prev"
@@ -76,7 +77,7 @@ export default class UpcomingCourses extends Component {
             </div>
           </a>
           <a
-            className="carousel-control-next"
+            className="carousel-control-next d-none d-md-block"
             href="#upcoming-courses-indicator"
             role="button"
             data-slide="next"

@@ -1,15 +1,12 @@
 import React from "react";
-import mark from "../assets/Mark.svg";
 import whoWeTrain from "../data/who-we-train";
 import WhoWeTrainCard from "./WhoWeTrainCard";
+import TitleWithMark from "./TitleWithMark";
 
 const WhoWeTrain = () => (
-  <div className="p-60 who-we-train side-margin">
-    <div>
-      <img src={mark} alt="mark" />
-      <span className="dark-blue font-34">Who we train</span>
-    </div>
-    <div className="d-flex flex-wrap">
+  <div className="who-we-train side-margin">
+    <TitleWithMark text="Who we train" />
+    <div className="d-md-flex flex-wrap d-none d-md-block">
       {whoWeTrain.map(card => (
         <WhoWeTrainCard
           key={card.title}
@@ -18,6 +15,45 @@ const WhoWeTrain = () => (
           text={card.text}
         />
       ))}
+    </div>
+    <div
+      id="who-we-train-indicator"
+      className="carousel slide position-relative d-md-none"
+      data-ride="who-we-train-carousel"
+      touch="true"
+    >
+      <ol className="carousel-indicators">
+        <li
+          data-target="#who-we-train-indicator"
+          data-slide-to="0"
+          className="active border-0"
+        />
+        <li
+          data-target="#who-we-train-indicator"
+          data-slide-to="1"
+          className="border-0"
+        />
+        <li
+          data-target="#who-we-train-indicator"
+          data-slide-to="2"
+          className="border-0"
+        />
+      </ol>
+
+      <div className="carousel-inner">
+        {whoWeTrain.map((card, index) => (
+          <div
+            className={`carousel-item ${index === 0 && "active"}`}
+            key={card.title}
+          >
+            <WhoWeTrainCard
+              image={card.image}
+              title={card.title}
+              text={card.text}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 );

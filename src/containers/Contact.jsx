@@ -55,7 +55,7 @@ export class Contact extends React.Component {
         </BluePhotoContainer>
         <div className="contact-form flex-wrap flex-lg-nowrap">
           <div className="d-flex flex-column">
-            <p className="blue-font w-75">Get in touch with us</p>
+            <p className="blue-font w-75">Get in touch="true" with us</p>
             <p className="w-50 font-16">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
               iaculis turpis dictum felis accumsan, semper bibendum neque

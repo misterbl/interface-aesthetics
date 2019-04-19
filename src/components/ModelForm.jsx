@@ -49,7 +49,9 @@ export default class ModelForm extends PureComponent {
           <p>INTERFACE AESTHETICS</p>
           <p>BECOME A MODEL PATIENT</p>
           <div className="model-form-container">
-            <h3>Fill out the form below and we’ll be in touch shortly</h3>
+            <h3>
+              Fill out the form below and we’ll be in touch="true" shortly
+            </h3>
             <form onSubmit={this.formSubmit}>
               <div>
                 <input

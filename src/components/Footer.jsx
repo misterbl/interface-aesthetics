@@ -5,19 +5,31 @@ import logo from "../assets/Interface_logo.svg";
 import ROUTES from "../const/routes";
 
 export class Footer extends React.Component {
-  state = { isButtonDisabled: true };
-  handleSubmit = e => {
-    console.log(e);
+  state = { isGdprChecked: false, name: "", email: "" };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    console.log(this.state);
   };
 
   isChecked = e => {
-    this.setState({ isButtonDisabled: !e.target.checked });
+    this.setState({ isGdprChecked: e.target.checked });
+  };
+
+  onNameChange = e => {
+    this.setState({ name: e.target.value });
+  };
+
+  onEmailChange = e => {
+    this.setState({ email: e.target.value });
   };
 
   render() {
-    const isButtonDisabled = this.state.isButtonDisabled;
+    const { isGdprChecked, name, email } = this.state;
+    const isButtonDisabled =
+      !isGdprChecked || name.length === 0 || email.length === 0;
     return (
-      <footer className="px-4 h-25 mx-5">
+      <footer className="h-25">
         <div className="bg-white p-5">
           <p className="blue-font">
             Stay up to date with the latest news from Interface Aesthetics
@@ -32,6 +44,8 @@ export class Footer extends React.Component {
                 className="pb-3"
                 type="text"
                 name="name"
+                onChange={this.onNameChange}
+                value={name}
               />
               <label htmlFor="email" />
               <input
@@ -41,6 +55,8 @@ export class Footer extends React.Component {
                 className="pb-3"
                 type="text"
                 name="email"
+                onChange={this.onEmailChange}
+                value={email}
               />
               <button
                 disabled={isButtonDisabled}

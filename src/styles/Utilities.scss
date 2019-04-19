@@ -30,7 +30,10 @@ $grey: #7a7a7a;
 .font-16 {
   color: #7a7a7a;
   font-size: 16px !important;
-  font-weight: 300 !important ;
+  font-weight: 400 !important ;
+  @media (max-width: 768px) {
+    font-size: 12px !important;
+  }
 }
 
 .font-18 {
@@ -42,7 +45,10 @@ $grey: #7a7a7a;
 .font-22 {
   color: #7a7a7a;
   font-size: 22px !important;
-  font-weight: 700 !important;
+  font-weight: 400 !important;
+  @media (max-width: 768px) {
+    font-size: 14px !important;
+  }
 }
 
 .font-10 {
@@ -60,8 +66,8 @@ $grey: #7a7a7a;
 
 .p-60 {
   padding: 60px;
-  @media (max-width: 500px) {
-    padding: 20px;
+  @media (max-width: 600px) {
+    padding: 40px;
   }
 }
 
@@ -101,6 +107,11 @@ $grey: #7a7a7a;
 
 .blue-font {
   color: $blue-font;
+  @media (max-width: 768px) {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26px;
+  }
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;

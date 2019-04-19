@@ -9,6 +9,10 @@
 }
 
 .blog-card {
+  margin: 5rem;
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
   @extend %box-shadow;
   width: 18rem;
   a {
@@ -18,5 +22,15 @@
     @media (max-width: 400px) {
       display: none;
     }
+  }
+}
+
+.blog-list {
+  .carousel {
+    padding-bottom: 50px;
+  }
+  .carousel-indicators {
+    right: 0px;
+    margin-left: null;
   }
 }

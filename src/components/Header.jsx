@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 import { Nav, NavDropdown, Modal, Button, Navbar } from "react-bootstrap";
 import ROUTES from "../const/routes";
 import logo from "../assets/Interface_logo.svg";
+// import NavBurgerButton from "./NavBurgerButton";
 export class Header extends React.Component {
   isActive = route => {
     if (route === this.props.location.pathname)
@@ -18,9 +19,13 @@ export class Header extends React.Component {
     return (
       <Navbar className="py-4 bg-white" collapseOnSelect expand="md">
         <Navbar.Toggle aria-controls="responsive-navbar-nav">
-          <div className="hamburger-line " />
-          <div className="hamburger-line " />
-          <div className="hamburger-line " />
+          <div className="hamburger hamburger__container">
+            <div className="hamburger hamburger__line-container">
+              <div className="hamburger hamburger__line" />
+              <div className="hamburger hamburger__line" />
+              <div className="hamburger hamburger__line" />
+            </div>
+          </div>
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
@@ -39,13 +44,15 @@ export class Header extends React.Component {
             >
               TESTIMONIALS
             </Nav.Link>
-            <Navbar.Brand href={ROUTES.INDEX}>
-              <img
-                className="nav-link"
-                src={logo}
-                alt="interface aesthetics's logo"
-              />
-            </Navbar.Brand>
+            <div className="d-none d-md-block">
+              <Navbar.Brand href={ROUTES.INDEX}>
+                <img
+                  className="nav-link"
+                  src={logo}
+                  alt="interface aesthetics's logo"
+                />
+              </Navbar.Brand>
+            </div>
             <Nav.Link style={this.isActive(ROUTES.MODEL)} href={ROUTES.MODEL}>
               MODEL
             </Nav.Link>
@@ -60,6 +67,15 @@ export class Header extends React.Component {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        <div className="d-block d-md-none">
+          <Navbar.Brand href={ROUTES.INDEX}>
+            <img
+              className="nav-link"
+              src={logo}
+              alt="interface aesthetics's logo"
+            />
+          </Navbar.Brand>
+        </div>
       </Navbar>
     );
   }

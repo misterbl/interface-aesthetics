@@ -17,6 +17,7 @@ import becomeAModelUsps from "../data/become-a-model-usps";
 import BlogCard from "../components/BlogCard";
 import templeFiller from "../assets/temple_filler_model.jpg";
 import charity from "../assets/charity.jpg";
+import BlogList from "../components/BlogList";
 
 export class Home extends React.Component {
   pushToModelForm = () => {
@@ -24,12 +25,13 @@ export class Home extends React.Component {
   };
   render() {
     return (
-      <React.Fragment>
-        <div className="home-bg-blue d-none d-md-block">
+      <main className="text-center text-md-left">
+        <div className="home-bg-blue">
           <div
             id="carouselExampleIndicators"
             className="carousel slide position-relative"
             data-ride="carousel"
+            touch="true"
           >
             {/* <ol className="carousel-indicators">
               <li
@@ -102,8 +104,8 @@ export class Home extends React.Component {
           </div>
         </div>
         <div className="d-flex justify-content-around p-60 flex-wrap flex-lg-nowrap">
-          <div className="d-flex flex-column w-50">
-            <p className="blue-font w-75">
+          <div className="d-flex flex-column w-50-md">
+            <p className="blue-font w-75-md">
               Interface Aesthetics is leading innovation in non-surgical
               aesthetic training
             </p>
@@ -121,9 +123,9 @@ export class Home extends React.Component {
         <WhoWeTrain />
         <UpcomingCourses />
         <div className="d-flex p-60 side-margin flex-wrap flex-lg-nowrap">
-          <div className="w-75">
+          <div className="become-model">
             <TitleWithMark text="Become a model" />
-            <p className="font-16">
+            <p className="font-22">
               Aesthetic treatments carried out by healthcare professionals under
               expert supervision.
             </p>
@@ -136,44 +138,15 @@ export class Home extends React.Component {
               className="d-block w-75 mb-5"
             />
           </div>
-          <div className="home-become-model">
+          <div className="become-model-usp">
             {becomeAModelUsps.map(usp => (
-              <WhyCard text={usp} small />
+              <WhyCard key={usp} text={usp} small />
             ))}
           </div>
         </div>
-        <div className="p-60 side-margin">
-          <TitleWithMark text="Interface Aethestics in focus" />
-          <div className="d-flex flex-wrap">
-            <BlogCard
-              className="m-5"
-              image={templeFiller}
-              title="Blog Title Goes Here"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet purus eget lectus gravida, vel mattis magna placerat…"
-              id={1}
-            />
-            <BlogCard
-              className="m-5"
-              image={templeFiller}
-              title="Blog Title Goes Here"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet purus eget lectus gravida, vel mattis magna placerat…"
-              id={1}
-            />
-            <BlogCard
-              className="m-5"
-              image={templeFiller}
-              title="Blog Title Goes Here"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet purus eget lectus gravida, vel mattis magna placerat…"
-              id={1}
-            />
-          </div>
-        </div>
-        <div className="d-flex p-60 side-margin pt-0 flex-wrap flex-lg-nowrap">
-          <img
-            className="charity-img"
-            src={charity}
-            alt="charity and interface aesthetics"
-          />
+        <BlogList />
+        <div className="charity d-flex side-margin pt-0 flex-wrap flex-lg-nowrap">
+          <img src={charity} alt="charity and interface aesthetics" />
           <div className="ml-5">
             <p className="blue-font">Charity heading goes here</p>
             <p>
@@ -189,7 +162,7 @@ export class Home extends React.Component {
           </div>
         </div>
         <BlueFooter />
-      </React.Fragment>
+      </main>
       // {/* <div className="no-hover">
       //   <iframe
       //     id="existing-iframe-example"
