@@ -3,8 +3,9 @@ import { withRouter } from "react-router-dom";
 import { Nav, NavDropdown, Modal, Button, Navbar } from "react-bootstrap";
 import ROUTES from "../const/routes";
 import logo from "../assets/Interface_logo.svg";
-// import NavBurgerButton from "./NavBurgerButton";
+import NavBurgerButton from "./NavBurgerButton";
 export class Header extends React.Component {
+  state = { isMenuOpen: false };
   isActive = route => {
     if (route === this.props.location.pathname)
       return {
@@ -15,17 +16,17 @@ export class Header extends React.Component {
       };
   };
 
+  handleToggleClick = () => {
+    this.setState({ isMenuOpen: !this.state.isMenuOpen });
+  };
   render() {
     return (
       <Navbar className="py-4 bg-white" collapseOnSelect expand="md">
-        <Navbar.Toggle aria-controls="responsive-navbar-nav">
-          <div className="hamburger hamburger__container">
-            <div className="hamburger hamburger__line-container">
-              <div className="hamburger hamburger__line" />
-              <div className="hamburger hamburger__line" />
-              <div className="hamburger hamburger__line" />
-            </div>
-          </div>
+        <Navbar.Toggle
+          onClick={this.handleToggleClick}
+          aria-controls="responsive-navbar-nav"
+        >
+          <NavBurgerButton open={this.state.isMenuOpen} />
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">

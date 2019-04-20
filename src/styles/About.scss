@@ -30,33 +30,16 @@
   color: $grey;
   margin-left: 40%;
   background-color: white;
+  display: flex;
   @media (max-width: 1000px) {
     margin: 0;
   }
+  img {
+    width: 50%;
+    height: 50%;
+  }
 }
 
-.about-founder-image {
-  -ms-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  position: absolute;
-  width: 58%;
-  height: auto;
-  left: -40px;
-  top: 230px;
-  @media (max-width: 1000px) {
-    display: none;
-  }
-}
-.about-founder-container {
-  position: relative;
-  height: 800px;
-  margin: 40px;
-  @media (max-width: 1000px) {
-    height: auto;
-    margin: 0px;
-  }
-}
 .about-page {
   .blue-font-md {
     padding-right: 100px;

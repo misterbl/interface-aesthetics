@@ -3,8 +3,8 @@ import WhyCard from "../components/WhyCard";
 import whyTrain from "../data/whyTrain";
 import TitleWithMark from "./TitleWithMark";
 
-const WhyTrain = () => (
-  <div className="why-container">
+const WhyTrain = ({ className = "" }) => (
+  <div className={`why-container ${className}`}>
     <TitleWithMark text="Why Train in Aesthetic Medicine?" />
     <div className="d-flex flex-wrap mt-3">
       {whyTrain.map(reason => (

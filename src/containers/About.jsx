@@ -8,6 +8,7 @@ import TitleWithMark from "../components/TitleWithMark";
 import VideoPlayer from "../components/VideoPlayer";
 import ROUTES from "../const/routes";
 import WhyChoose from "../components/WhyChoose";
+import Accreditations from "../components/Accreditations";
 export class About extends React.Component {
   pushToCourses = () => {
     this.props.history.push(ROUTES.COURSES);
@@ -41,9 +42,13 @@ export class About extends React.Component {
           </div>
         </div>
         <WhyChoose />
-        <div className="w-100 text-center bg-primary text-white">Partners</div>
-        <div className="about-founder-container position-relative my-5">
-          <div className="about-founder">
+        <Accreditations />
+        <div className="about-founder p-60">
+          <img
+            src={james}
+            alt="James Olding, founder and trainer at Interface Aesthetics"
+          />
+          <div className="ml-5">
             <TitleWithMark text="About The Founder" />
             <p>
               Dr James Olding is a GMC-registered surgical doctor, training in
@@ -68,11 +73,6 @@ export class About extends React.Component {
               trauma.
             </p>
           </div>
-          <img
-            className="about-founder-image"
-            src={james}
-            alt="James Olding, founder and trainer at Interface Aesthetics"
-          />
         </div>
         <div className="why-container">
           <TitleWithMark text="Who we train" />
@@ -103,7 +103,7 @@ export class About extends React.Component {
           </div>
         </div>
         <PhotoGallery />
-        <WhyTrain />
+        <WhyTrain className="mt-5" />
         <div className="d-flex why-container flex-wrap flex-lg-nowrap">
           <div className="w-75 mr-5">
             <TitleWithMark text="Hugely rewarding in all senses" />

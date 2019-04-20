@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import TitleWithMark from "./TitleWithMark";
-import rightArrow from "../assets/right-orange-arrow.png";
 import courses from "../data/courses";
 
 export default class UpcomingCourses extends Component {
@@ -46,7 +45,6 @@ export default class UpcomingCourses extends Component {
                         {`Next Course: ${course.dates[0]}`}
                       </div>
                       <div className="position-relative">
-                        <div className="right-arrow-light d-none d-md-block" />
                         <button>BOOK COURSE</button>
                       </div>
                     </div>

@@ -1,8 +1,8 @@
 import React from "react";
 import Modal from "react-modal";
 import { withRouter } from "react-router";
-
 import ROUTES from "../const/routes";
+import cross from "../assets/cross-grey.svg";
 class ModelCard extends React.Component {
   state = {
     showModal: false
@@ -44,15 +44,17 @@ class ModelCard extends React.Component {
           isOpen={this.state.showModal}
           onRequestClose={this.handleCloseModal}
         >
-          <div className="d-flex h-100">
-            <div className="modal-image-container h-100">
+          <div className="d-flex">
+            <div className="modal-image-container">
               <div
-                className="modal-image h-100"
+                className="modal-image"
                 style={{ backgroundImage: `url(${image})` }}
               />
             </div>
             <div className="modal-info">
-              <button onClick={this.handleCloseModal}>X</button>
+              <button onClick={this.handleCloseModal}>
+                <img src={cross} alt="close model card" className="w-25" />
+              </button>
               <h3>{title}</h3>
               <h5>WHAT IS IT: </h5>
               <p>{whatIsIt}</p>

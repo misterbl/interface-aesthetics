@@ -269,27 +269,6 @@
   }
 }
 
-.photo-gallery {
-  display: flex;
-  overflow: hidden;
-  max-height: 280px;
-  //   overflow-y: scroll;
-  margin: 20px 80px 60px 40px;
-  img {
-    width: auto;
-    height: 140px;
-    margin: 0px 0px 20px 20px;
-  }
-  .james-speech {
-    -ms-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-    height: 280px;
-    width: auto;
-    margin: 0px;
-  }
-}
-
 .why-container {
   margin: 0px 80px 40px 110px;
   @media (max-width: 758px) {

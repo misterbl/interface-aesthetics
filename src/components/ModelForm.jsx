@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import axios from "axios";
 import BluePhotoContainer from "./BluePhotoContainer";
+import modelContactReason from "../data/modelContactReason";
 
 export default class ModelForm extends PureComponent {
   state = {
@@ -49,9 +50,7 @@ export default class ModelForm extends PureComponent {
           <p>INTERFACE AESTHETICS</p>
           <p>BECOME A MODEL PATIENT</p>
           <div className="model-form-container">
-            <h3>
-              Fill out the form below and we’ll be in touch="true" shortly
-            </h3>
+            <h3>Fill out the form below and we’ll be in touch shortly</h3>
             <form onSubmit={this.formSubmit}>
               <div>
                 <input
@@ -86,9 +85,9 @@ export default class ModelForm extends PureComponent {
                       <option selected>
                         What treatment are you interested in?
                       </option>
-                      <option key="treatment1">treatment1</option>
-                      <option key="treatment2">treatment2</option>
-                      <option key="treatment3">treatment3</option>
+                      {modelContactReason.map(reason => (
+                        <option key={reason}>{reason}</option>
+                      ))}
                     </select>
                   </div>
                 </div>

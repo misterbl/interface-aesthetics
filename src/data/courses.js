@@ -1,4 +1,4 @@
-import upperFaceBotox from "../assets/upper_face_botox_model.jpg";
+import upperFaceBotox from "../assets/model/upper_face_botox_model.jpg";
 import handsOn from "../assets/Hands-on.svg";
 import supportLearning from "../assets/Support-learning.svg";
 import certificate from "../assets/Certificate.svg";

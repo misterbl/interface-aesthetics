@@ -107,7 +107,7 @@ export class Courses extends React.Component {
         {this.getCourses()}
         <WhyChoose />
         <PhotoGallery />
-        <WhyTrain />
+        <WhyTrain className="mt-5" />
       </main>
     );
   }
