@@ -3,8 +3,8 @@ import whoWeTrain from "../data/who-we-train";
 import WhoWeTrainCard from "./WhoWeTrainCard";
 import TitleWithMark from "./TitleWithMark";
 
-const WhoWeTrain = () => (
-  <div className="who-we-train side-margin">
+const WhoWeTrain = ({ className = "" }) => (
+  <div className={`${className} who-we-train side-margin`}>
     <TitleWithMark text="Who we train" />
     <div className="d-md-flex flex-wrap d-none d-md-block">
       {whoWeTrain.map(card => (

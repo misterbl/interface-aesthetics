@@ -45,6 +45,7 @@ export class About extends React.Component {
         <Accreditations />
         <div className="about-founder p-60">
           <img
+            className="about-founder about-founder__photo"
             src={james}
             alt="James Olding, founder and trainer at Interface Aesthetics"
           />
@@ -75,7 +76,7 @@ export class About extends React.Component {
           </div>
         </div>
         <div className="why-container">
-          <TitleWithMark text="Who we train" />
+          <TitleWithMark text="Who we train" className="mt-5" />
           <div className="d-flex flex-wrap flex-lg-nowrap">
             <p className="blue-font-md">
               If you are a doctor, dentist or nurse interested in training in

@@ -26,17 +26,15 @@
   }
 }
 .about-founder {
-  padding: 120px 80px 35px;
   color: $grey;
-  margin-left: 40%;
   background-color: white;
   display: flex;
   @media (max-width: 1000px) {
     margin: 0;
   }
-  img {
-    width: 50%;
-    height: 50%;
+  &__photo {
+    width: 40%;
+    height: 40%;
   }
 }
 
