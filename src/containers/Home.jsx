@@ -18,6 +18,7 @@ import BlogCard from "../components/BlogCard";
 import templeFiller from "../assets/temple_filler_model.jpg";
 import charity from "../assets/charity.jpg";
 import BlogList from "../components/BlogList";
+import TestimonialCard from "../components/TestimonialCard";
 
 export class Home extends React.Component {
   pushToModelForm = () => {
@@ -161,7 +162,7 @@ export class Home extends React.Component {
             </p>
           </div>
         </div>
-        <BlueFooter />
+        <TestimonialCard />
       </main>
       // {/* <div className="no-hover">
       //   <iframe
