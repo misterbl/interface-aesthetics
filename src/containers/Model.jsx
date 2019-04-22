@@ -3,10 +3,10 @@ import { withRouter } from "react-router-dom";
 import Accordion from "../components/Accordion";
 import ModelCard from "../components/ModelCard";
 import modelCards from "../data/modelCards";
-import BlueFooter from "../components/BlueFooter";
 import ROUTES from "../const/routes";
 import BluePhotoContainer from "../components/BluePhotoContainer";
 import TitleWithMark from "../components/TitleWithMark";
+import TestimonialCard from "../components/TestimonialCard";
 export class Model extends React.Component {
   state = { isActive: "" };
 
@@ -112,7 +112,7 @@ export class Model extends React.Component {
           </div>
           <Accordion isActive={this.state.isActive} onClick={this.onClick} />
         </div>
-        <BlueFooter container="model-man" />
+        <TestimonialCard />
       </main>
     );
   }

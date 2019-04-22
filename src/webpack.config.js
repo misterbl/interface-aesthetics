@@ -19,12 +19,20 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const devMode = process.env.NODE_ENV !== "production";
 
-new MiniCssExtractPlugin({
-  filename: devMode ? "[name].css" : "[name].css",
-  chunkFilename: devMode ? "[id].css" : "[id].css"
-});
+// const extractCSS = new MiniCssExtractPlugin({
+//   filename: devMode ? "[name].css" : "[name].css",
+//   chunkFilename: devMode ? "[id].css" : "[id].css"
+// });
 
 module.exports = {
+  plugins: [
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: "[name].css",
+      chunkFilename: "[id].css"
+    })
+  ],
   mode: "development",
   resolve: {
     extensions: [".js", ".jsx"],
@@ -43,12 +51,7 @@ module.exports = {
       {
         test: /\.(scss|sass|css)$/,
         exclude: /node_modules/,
-        loaders: [
-          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader",
-          "sass-loader"
-        ]
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
       },
 
       {

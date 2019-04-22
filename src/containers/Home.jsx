@@ -14,11 +14,10 @@ import becomeAModel from "../assets/become_a_model_home_page.jpg";
 import ROUTES from "../const/routes";
 import WhyCard from "../components/WhyCard";
 import becomeAModelUsps from "../data/become-a-model-usps";
-import BlogCard from "../components/BlogCard";
-import templeFiller from "../assets/temple_filler_model.jpg";
 import charity from "../assets/charity.jpg";
 import BlogList from "../components/BlogList";
 import TestimonialCard from "../components/TestimonialCard";
+import blogList from "../data/blogList";
 
 export class Home extends React.Component {
   pushToModelForm = () => {
@@ -34,18 +33,8 @@ export class Home extends React.Component {
             data-ride="carousel"
             touch="true"
           >
-            {/* <ol className="carousel-indicators">
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="0"
-                className="active"
-              />
-              <li data-target="#carouselExampleIndicators" data-slide-to="1" />
-              <li data-target="#carouselExampleIndicators" data-slide-to="2" />
-              <li data-target="#carouselExampleIndicators" data-slide-to="3" />
-            </ol> */}
             <div className="carousel-inner">
-              <div className="carousel-item active">
+              <div className="carousel-item home-header-item active">
                 <div>
                   <p>WELCOME TO INTERFACE AESTHETICS</p>
                   <p>
@@ -55,21 +44,21 @@ export class Home extends React.Component {
                 </div>
                 <img src={home1} className="d-block w-100" alt="..." />
               </div>
-              <div className="carousel-item">
+              <div className="carousel-item home-header-item">
                 <div>
                   <p>SURGICALLY INSPIRED THEORETICAL TEACHING</p>
                   <p>Emphasis on anatomy and safety</p>
                 </div>
                 <img src={home2} className="d-block w-100" alt="..." />
               </div>
-              <div className="carousel-item">
+              <div className="carousel-item home-header-item">
                 <div>
                   <p>BECOME A COMPETENT AESTHETIC PRACTITIONER</p>
                   <p>Unrivalled level of practical training on live models”</p>
                 </div>
                 <img src={home3} className="d-block w-100" alt="..." />
               </div>
-              <div className="carousel-item">
+              <div className="carousel-item home-header-item">
                 <div>
                   <p>
                     GUARANTEED SMALL GROUP TEACHING TO MAXIMISE YOUR HANDS-ON
@@ -145,8 +134,8 @@ export class Home extends React.Component {
             ))}
           </div>
         </div>
-        <BlogList />
-        <div className="charity d-flex side-margin pt-0 flex-wrap flex-lg-nowrap">
+        <BlogList blogList={blogList} />
+        <div className="charity d-flex side-margin pt-0 flex-wrap flex-lg-nowrap mt-5">
           <img src={charity} alt="charity and interface aesthetics" />
           <div className="ml-5">
             <p className="blue-font">Charity heading goes here</p>

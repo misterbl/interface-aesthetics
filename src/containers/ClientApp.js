@@ -10,7 +10,7 @@ const client = new ApolloClient({
   uri: "http://localhost:5000/graphql"
 });
 
-ReactDOM.render(
+ReactDOM.hydrate(
   <ApolloProvider client={client}>
     <BrowserRouter>
       <ScrollToTop>

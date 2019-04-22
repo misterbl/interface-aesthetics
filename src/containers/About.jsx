@@ -75,8 +75,8 @@ export class About extends React.Component {
             </p>
           </div>
         </div>
-        <div className="why-container">
-          <TitleWithMark text="Who we train" className="mt-5" />
+        <div className="why-container mt-5">
+          <TitleWithMark text="Who we train" />
           <div className="d-flex flex-wrap flex-lg-nowrap">
             <p className="blue-font-md">
               If you are a doctor, dentist or nurse interested in training in
@@ -125,7 +125,7 @@ export class About extends React.Component {
           </div>
           <div>
             <TitleWithMark text="Make a change" />
-            <button className="w-100">Book a course today</button>
+            <button className="w-75">Book a course today</button>
           </div>
         </div>
       </main>

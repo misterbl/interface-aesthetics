@@ -176,7 +176,7 @@ class Course extends React.Component {
   };
 
   render() {
-    return <div>{this.getCourse()}</div>;
+    return <main>{this.getCourse()}</main>;
   }
 }
 export default withRouter(Course);

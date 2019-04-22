@@ -92,6 +92,13 @@ $grey: #7a7a7a;
   padding: 6rem;
 }
 
+.button-orange-border {
+  width: 190px;
+  background-color: transparent;
+  border: 1px solid $orange;
+  color: $dark-blue;
+  padding: 15px 37px;
+}
 .cta-button-white {
   @extend %cta-button;
   background-color: #ffffff;
@@ -105,6 +112,9 @@ $grey: #7a7a7a;
   color: #ffffff;
 }
 
+.blue-font-reg {
+  color: $blue-font;
+}
 .blue-font {
   color: $blue-font;
   @media (max-width: 768px) {
