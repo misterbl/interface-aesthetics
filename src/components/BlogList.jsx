@@ -1,9 +1,8 @@
 import React from "react";
-import blogList from "../data/blogList";
 import TitleWithMark from "./TitleWithMark";
 import BlogCard from "./BlogCard";
 
-const BlogList = () => (
+const BlogList = ({ blogList }) => (
   <div className="blog-list side-margin">
     <TitleWithMark text="Interface Aethestics in focus" />
     <div className="d-md-flex flex-wrap d-none">
@@ -13,6 +12,8 @@ const BlogList = () => (
           image={blog.image}
           title={blog.title}
           text={blog.text}
+          id={blog.id}
+          className="m-4"
         />
       ))}
     </div>

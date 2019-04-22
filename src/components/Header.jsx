@@ -68,7 +68,7 @@ export class Header extends React.Component {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        <div className="d-block d-md-none">
+        <div className="d-block d-md-none text-center">
           <Navbar.Brand href={ROUTES.INDEX}>
             <img
               className="nav-link"

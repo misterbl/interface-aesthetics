@@ -45,7 +45,7 @@ const TestimonialCard = () => (
           {testimonials.map((testimonial, index) => (
             <div
               className={`carousel-item ${index === 0 &&
-                "active"} text-white p-4`}
+                "active"} text-white p-5`}
               key={testimonial.name}
               data-interval="1000"
             >

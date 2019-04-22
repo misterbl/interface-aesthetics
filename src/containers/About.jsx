@@ -27,8 +27,8 @@ export class About extends React.Component {
             the pharmaceutical industry leader in aesthetics, Allergan.
           </p>
         </BluePhotoContainer>
-        <div className="d-flex justify-content-around">
-          <div className="grey-mark-background ">
+        <div className="d-flex justify-content-around grey-mark-background ">
+          <div className="mr-5 w-50 ">
             <p className="blue-font">
               Our courses have been developed to provide the greatest possible
               exposure to real patients
@@ -37,9 +37,18 @@ export class About extends React.Component {
               VIEW COURSES
             </button>
           </div>
-          <div>
-            <VideoPlayer videoUrl="https:www.youtube.com/embed/-SFcIUEvNOQ?&mute=1&enablejsapi=0&cc_load_policy=0&fs=0&controls=0&playlist=-SFcIUEvNOQ&disablekb=1&modestbranding=1&showinfo=0&iv_load_policy=3&loop=1&showsearch=0&rel=0" />
-          </div>
+
+          <iframe
+            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Finterfaceaesthetics.co.uk%2Fvideos%2F430225077804662%2F&show_text=0&width=560"
+            width="560"
+            height="315"
+            style={{ border: "none", overflow: "hidden" }}
+            scrolling="no"
+            frameBorder="0"
+            allowtransparency={true}
+            allowFullScreen={true}
+          />
+          {/* <VideoPlayer videoUrl="https:www.youtube.com/embed/-SFcIUEvNOQ?&mute=1&enablejsapi=0&cc_load_policy=0&fs=0&controls=0&playlist=-SFcIUEvNOQ&disablekb=1&modestbranding=1&showinfo=0&iv_load_policy=3&loop=1&showsearch=0&rel=0" /> */}
         </div>
         <WhyChoose />
         <Accreditations />
@@ -75,8 +84,8 @@ export class About extends React.Component {
             </p>
           </div>
         </div>
-        <div className="why-container">
-          <TitleWithMark text="Who we train" className="mt-5" />
+        <div className="why-container mt-5">
+          <TitleWithMark text="Who we train" />
           <div className="d-flex flex-wrap flex-lg-nowrap">
             <p className="blue-font-md">
               If you are a doctor, dentist or nurse interested in training in
@@ -125,7 +134,7 @@ export class About extends React.Component {
           </div>
           <div>
             <TitleWithMark text="Make a change" />
-            <button className="w-100">Book a course today</button>
+            <button className="w-75">Book a course today</button>
           </div>
         </div>
       </main>

@@ -1,10 +1,34 @@
 import React from "react";
 import BluePhotoContainer from "../components/BluePhotoContainer";
-import BlogCard from "../components/BlogCard";
-import templeFiller from "../assets/temple_filler_model.jpg";
+import BlogList from "../components/BlogList";
+import blog from "../data/blogList";
 
 class Blog extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showedArticles: [],
+      numberInView: 9
+    };
+  }
+
+  componentDidMount() {
+    this.filterBlog();
+  }
+  filterBlog = () => {
+    const showedArticles = blog.filter(
+      article => article.id <= this.state.numberInView
+    );
+    this.setState({ showedArticles });
+  };
+
+  exploreMore = async () => {
+    await this.setState({ numberInView: this.state.numberInView + 6 });
+    this.filterBlog();
+  };
+
   render() {
+    const { showedArticles } = this.state;
     return (
       <main className>
         <BluePhotoContainer container="blog-photo" header="courses-header">
@@ -12,12 +36,17 @@ class Blog extends React.Component {
           <p>LATEST NEWS</p>
         </BluePhotoContainer>
         <div className="p-70">
-          <BlogCard
-            image={templeFiller}
-            title="Blog Title Goes Here"
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet purus eget lectus gravida, vel mattis magna placerat…"
-            id={1}
-          />
+          <BlogList blogList={showedArticles} />
+        </div>
+        <div className="text-center">
+          {showedArticles.length < blog.length && (
+            <button
+              className="button-orange-border my-5"
+              onClick={this.exploreMore}
+            >
+              EXPLORE MORE
+            </button>
+          )}
         </div>
       </main>
     );

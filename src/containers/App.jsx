@@ -13,8 +13,9 @@ import Model from "./Model";
 import { Footer } from "../components/Footer";
 import ModelForm from "../components/ModelForm";
 import Blog from "./Blog";
-import Article from "../components/Article";
+import Article from "./Article";
 import Admin from "./Admin";
+import Testimonials from "./Testimonials";
 
 class App extends Component {
   constructor(props) {
@@ -43,6 +44,7 @@ class App extends Component {
           <Route path={ROUTES.WHO_WE_TRAIN} component={WhoWetrain} />
           <Route path={ROUTES.MODEL} component={Model} />
           <Route path={ROUTES.ABOUT} component={About} />
+          <Route path={ROUTES.TESTIMONIALS} component={Testimonials} />
           <Route path={ROUTES.CONTACT} component={Contact} />
           <Route path={ROUTES.BECOME_A_MODEL} component={ModelForm} />
           <Route path={ROUTES.BLOG} component={Blog} />
