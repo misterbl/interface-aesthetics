@@ -32,6 +32,9 @@ export class Home extends React.Component {
     this.props.history.push(ROUTES.BECOME_A_MODEL);
   };
 
+  pushToBookCourse = () => {
+    this.props.history.push(ROUTES.BOOK_A_COURSE);
+  };
   render() {
     return (
       <main className="text-center text-md-left">
@@ -130,7 +133,10 @@ export class Home extends React.Component {
         </div>
         <Accreditations />
         <WhoWeTrain />
-        <UpcomingCourses courses={this.state.courses} />
+        <UpcomingCourses
+          courses={this.state.courses}
+          onClick={this.pushToBookCourse}
+        />
         <div className="d-flex p-60 side-margin flex-wrap flex-lg-nowrap">
           <div className="become-model">
             <TitleWithMark text="Become a model" />

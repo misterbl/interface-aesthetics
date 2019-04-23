@@ -10,7 +10,8 @@ const routes = {
   ARTICLE: "/article/:articleId",
   CONTACT: "/contact",
   ADMIN: "/admin",
-  BECOME_A_MODEL: "/become-a-model"
+  BECOME_A_MODEL: "/become-a-model",
+  BOOK_A_COURSE: "/book-a-course"
 };
 
 export default routes;

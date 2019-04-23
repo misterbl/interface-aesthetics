@@ -13,6 +13,10 @@ export class About extends React.Component {
   pushToCourses = () => {
     this.props.history.push(ROUTES.COURSES);
   };
+
+  pushToBookCourse = () => {
+    this.props.history.push(ROUTES.BOOK_A_COURSE);
+  };
   render() {
     return (
       <main className="about-page">
@@ -134,7 +138,9 @@ export class About extends React.Component {
           </div>
           <div>
             <TitleWithMark text="Make a change" />
-            <button className="w-75">Book a course today</button>
+            <button onClick={this.pushToBookCourse} className="w-75">
+              Book a course today
+            </button>
           </div>
         </div>
       </main>

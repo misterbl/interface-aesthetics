@@ -1,7 +1,7 @@
 import React from "react";
 import formattedDate from "../utils/formattedDate";
 
-const BookCourseCard = ({ title, dates }) => (
+const BookCourseCard = ({ title, dates, onClick }) => (
   <div className="book-course">
     <div>{title}</div>
     <div>
@@ -16,7 +16,7 @@ const BookCourseCard = ({ title, dates }) => (
         </div>
       </form>
     </div>
-    <button>BOOK COURSE</button>
+    <button onClick={onClick}>BOOK COURSE</button>
   </div>
 );
 

@@ -5,7 +5,7 @@ import { Query } from "react-apollo";
 // import { ClipLoader } from "react-spinners";
 import gql from "graphql-tag";
 import CourseImage from "../components/CourseImage";
-// import courses from "../data/courses";
+import ROUTES from "../const/routes";
 import { getAllCourses } from "../../functions/firebase-database";
 import CourseInformation from "../components/CourseInformation";
 import BookCourseCard from "../components/BookCourseCard";
@@ -95,6 +95,10 @@ class Course extends React.Component {
   //     </Query>
   //   );
   // };
+
+  pushToBookCourse = () => {
+    this.props.history.push(ROUTES.BOOK_A_COURSE);
+  };
   getCourse = () => {
     if (this.state.courses) {
       const filtered = this.state.courses.filter(
@@ -155,7 +159,11 @@ class Course extends React.Component {
                 ))}
               </div>
             </div>
-            <BookCourseCard title={title} dates={dates} />
+            <BookCourseCard
+              title={title}
+              dates={dates}
+              onClick={this.pushToBookCourse}
+            />
           </div>
           <BlueFooter container="book-course-photo">
             <div className="flex-wrap flex-lg-nowrap">

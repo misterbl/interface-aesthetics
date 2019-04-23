@@ -228,15 +228,12 @@ a:hover {
 //     width: 100%;
 //   }
 // }
-// .navbar-light .navbar-nav .nav-link .active > .nav-link {
-//   color: $blue-font;
-//   margin-left: 50px;
-//   font-weight: 800;
-//   font-size: 14px;
-//   @media (max-width: 768px) {
-//     width: 40%;
-//   }
-// }
+.navbar-light,
+.navbar-nav,
+.nav-link,
+.active > .nav-link {
+  color: $blue-font !important;
+}
 
 .nav-link:last-of-type {
   @media (min-width: 769px) {
@@ -286,6 +283,9 @@ nav {
   outline: none;
 }
 
+.nav-link {
+  padding-right: 0 !important;
+}
 .hamburger {
   &__container {
     position: relative;

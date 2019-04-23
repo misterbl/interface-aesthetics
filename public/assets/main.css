@@ -2318,6 +2318,12 @@ a:hover {
 .interface-blue {
   color: #2e76ba; }
 
+.navbar-light,
+.navbar-nav,
+.nav-link,
+.active > .nav-link {
+  color: #2d76bb !important; }
+
 @media (min-width: 769px) {
   .nav-link:last-of-type {
     margin-right: 50px; } }
@@ -2365,6 +2371,9 @@ nav {
 .navbar-light .navbar-toggler {
   border: none;
   outline: none; }
+
+.nav-link {
+  padding-right: 0 !important; }
 
 .hamburger__container {
   position: relative;

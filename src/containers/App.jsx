@@ -16,6 +16,7 @@ import Blog from "./Blog";
 import Article from "./Article";
 import Admin from "./Admin";
 import Testimonials from "./Testimonials";
+import BookACourseForm from "../components/BookACourseForm";
 
 class App extends Component {
   constructor(props) {
@@ -47,6 +48,7 @@ class App extends Component {
           <Route path={ROUTES.TESTIMONIALS} component={Testimonials} />
           <Route path={ROUTES.CONTACT} component={Contact} />
           <Route path={ROUTES.BECOME_A_MODEL} component={ModelForm} />
+          <Route path={ROUTES.BOOK_A_COURSE} component={BookACourseForm} />
           <Route path={ROUTES.BLOG} component={Blog} />
           <Route path={ROUTES.ARTICLE} component={Article} />
           <Route path={ROUTES.ADMIN} component={Admin} />
