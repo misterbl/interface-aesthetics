@@ -50,7 +50,7 @@ module.exports = {
     rules: [
       {
         test: /\.(scss|sass|css)$/,
-        exclude: /node_modules/,
+        // exclude: /node_modules/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
       },
 

@@ -100,7 +100,7 @@ export class About extends React.Component {
                 healthcare principles and clinical skills. Our courses are
                 suitable for:
               </p>
-              <ul>
+              <ul className="orange-dot-li">
                 <li>Doctors registered with the GMC</li>
                 <li>Dentists registered with the GDC</li>
                 <li>Nurses and Midwives registered with the NMC</li>

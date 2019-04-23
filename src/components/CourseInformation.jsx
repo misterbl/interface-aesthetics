@@ -5,7 +5,7 @@ const CourseInformation = ({ image, overview, details }) => (
     <img src={image} alt={overview} />
     <div>
       <p>{overview}</p>
-      <ul>
+      <ul className="orange-dot-li">
         {details.map(paragraph => (
           <li key={paragraph}>{paragraph}</li>
         ))}

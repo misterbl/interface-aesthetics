@@ -1,4 +1,5 @@
 import React from "react";
+import formattedDate from "../utils/formattedDate";
 
 const BookCourseCard = ({ title, dates }) => (
   <div className="book-course">
@@ -9,7 +10,7 @@ const BookCourseCard = ({ title, dates }) => (
           <select>
             <option selected>Select course date</option>
             {dates.map(date => (
-              <option key={date}>{date}</option>
+              <option key={date.date}>{formattedDate(date.date)}</option>
             ))}
           </select>
         </div>

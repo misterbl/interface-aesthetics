@@ -1,32 +1,64 @@
 import React from "react";
-import TitleWithMark from "./TitleWithMark";
+import DatePicker from "react-datepicker";
+import {
+  getAllCourses,
+  updateCourses
+} from "../../functions/firebase-database";
 
+import "react-datepicker/dist/react-datepicker.css";
+import TitleWithMark from "./TitleWithMark";
+import formattedDate from "../utils/formattedDate";
+import calendar from "../assets/calendar-blue.svg";
 class CoursesAdmin extends React.PureComponent {
-  state = {
-    courses: this.props.courses
+  constructor(props) {
+    super(props);
+    this.state = {
+      courses: []
+      // startDate: new Date()
+    };
+  }
+
+  async componentDidMount() {
+    const courses = await getAllCourses();
+    this.setState({ courses });
+  }
+
+  onUpdateCourses = courses => {
+    updateCourses(courses);
+    console.log("update");
   };
 
+  handleDateChange = date => {
+    this.setState({
+      startDate: date
+    });
+  };
   handleSubmit = async e => {
     e.preventDefault();
-    this.props.updateBlog(this.state.blog);
+    console.log(e.target.value);
+    this.onUpdateCourses(this.state.courses);
   };
 
   render() {
-    const { courses } = this.props;
+    const { courses } = this.state;
+    console.log(this.state.courses);
     return (
       <React.Fragment>
         <TitleWithMark text="Courses" />
         <p className="font-16">You can update the courses information here</p>
-        <form onSubmit={this.formSubmit}>
+        <form onSubmit={this.handleSubmit}>
           {courses.map((course, index) => (
-            <div className="mb-5 w-100 p-5 bg-white">
+            <div
+              key={course.id}
+              className="mb-5 w-100 p-5 bg-white text-center"
+            >
               <label
                 className="font-weight-bold"
                 htmlFor={`${course.id}-title`}
               >
-                Title
+                {course.title}
               </label>
-              <textarea
+              {/* <textarea
                 onChange={e => {
                   const coursesState = this.state.courses;
                   coursesState[index].title = e.target.value;
@@ -36,9 +68,9 @@ class CoursesAdmin extends React.PureComponent {
                 name={`${course.id}-title`}
                 type="text"
                 placeholder="Title"
-                value={course.title}
-              />
-              <label
+                defaultValue={course.title}
+              /> */}
+              {/* <label
                 className="font-weight-bold"
                 htmlFor={`${course.id}-overview`}
               >
@@ -128,9 +160,9 @@ class CoursesAdmin extends React.PureComponent {
                         />
                       </React.Fragment>
                     ))}
-                  </React.Fragment>
-                ))}
-              {course.days &&
+                  </React.Fragment> */}
+              {/* ))} */}
+              {/* {course.days &&
                 course.days.map((day, dayIndex) => (
                   <React.Fragment>
                     <label
@@ -180,14 +212,14 @@ class CoursesAdmin extends React.PureComponent {
                       </React.Fragment>
                     ))}
                   </React.Fragment>
-                ))}
+                ))} */}
               <label
                 className="font-weight-bold"
                 htmlFor={`${course.id}-price`}
               >
                 Price
               </label>
-              <textarea
+              <input
                 onChange={e => {
                   const coursesState = this.state.courses;
                   coursesState[index].price = e.target.value;
@@ -196,48 +228,72 @@ class CoursesAdmin extends React.PureComponent {
                 name={`${course.id}-price`}
                 type="text"
                 placeholder="Price"
-                value={course.price}
-              />
-              <label
-                className="font-weight-bold"
-                htmlFor={`${course.id}-placesLeft`}
-              >
-                Places left
-              </label>
-              <textarea
-                onChange={e => {
-                  const coursesState = this.state.courses;
-                  coursesState[index].placesLeft = e.target.value;
-                  this.setState({ courses: coursesState });
-                }}
-                id={`${course.id}-placesLeft`}
-                name={`${course.id}-placesLeft`}
-                type="text"
-                placeholder="PlacesLeft"
-                value={course.placesLeft}
+                defaultValue={course.price}
               />
               {course.dates &&
                 course.dates.map((date, dateIndex) => (
-                  <React.Fragment>
+                  <div
+                    key={`${date}-${dateIndex}-${date}`}
+                    className="border border-primary m-3"
+                  >
                     <label
                       className="font-weight-bold"
                       htmlFor={`${course.id}-date`}
                     >
                       {`Date${dateIndex + 1}`}
                     </label>
-                    <textarea
+                    <br />
+                    <div>{formattedDate(date.date)}</div>
+                    <img src={calendar} alt="date picker" />
+                    <DatePicker
+                      className="date-picker"
+                      placeholderText="click here to select a date"
+                      // selected={formattedDate(date.date)}
+                      onChange={async selectedDate => {
+                        const coursesState = this.state.courses;
+                        coursesState[index].dates[
+                          dateIndex
+                        ].date = await selectedDate.toString();
+                        this.setState({
+                          courses: coursesState,
+                          dateUpdated: !this.state.dateUpdated
+                        });
+                      }}
+                      // value={this.state.courses[index].dates[dateIndex].date}
+                    />
+                    {/* <input
                       onChange={e => {
                         const coursesState = this.state.courses;
-                        coursesState[index].dates[dateIndex] = e.target.value;
+                        coursesState[index].dates[dateIndex].date =
+                          e.target.value;
                         this.setState({ courses: coursesState });
                       }}
-                      id={`${course.id}-${date}`}
-                      name={`${course.id}-${date}`}
+                      id={`${course.id}-${date.date}`}
+                      name={`${course.id}-${date.date}`}
                       type="text"
                       placeholder="DD/MM/YEAR"
-                      value={date}
+                      value={date.date}
+                    /> */}
+                    <label
+                      className="font-weight-bold d-block"
+                      htmlFor={`${course.id}-placesLeft`}
+                    >
+                      Places left
+                    </label>
+                    <input
+                      onChange={e => {
+                        const coursesState = this.state.courses;
+                        coursesState[index].dates[dateIndex].placesLeft =
+                          e.target.value;
+                        this.setState({ courses: coursesState });
+                      }}
+                      id={`${course.id}-${date.date}-placesLeft`}
+                      name={`${course.id}-${date.date}-placesLeft`}
+                      type="text"
+                      placeholder="PlacesLeft"
+                      defaultValue={date.placesLeft}
                     />
-                  </React.Fragment>
+                  </div>
                 ))}
             </div>
           ))}

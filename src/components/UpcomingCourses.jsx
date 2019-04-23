@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import TitleWithMark from "./TitleWithMark";
-import courses from "../data/courses";
+import formattedDate from "../utils/formattedDate";
 
 export default class UpcomingCourses extends Component {
   render() {
@@ -24,44 +24,47 @@ export default class UpcomingCourses extends Component {
           </ol>
 
           <div className="carousel-inner">
-            {courses.map((course, index) => (
-              <div
-                className={`carousel-item ${index === 0 && "active"}`}
-                data-interval="10000"
-                key={course.title}
-              >
-                <div className="d-flex">
-                  <div className="content">
-                    <TitleWithMark text="Upcoming Courses" />
-                    <p className="font-22">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      In congue, neque at dignissim condimentum, metus nisl
-                      luctus lectus, et consequat tellus justo nec augue.
-                    </p>
-                    <p className="blue-font mt-3 mb-2">{course.title}</p>
-                    <p className="font-16">{course.overview}</p>
-                    <div className="d-flex flex-wrap flex-lg-nowrap">
-                      <div className="next-course w-100 p-3">
-                        {`Next Course: ${course.dates[0]}`}
-                      </div>
-                      <div className="position-relative">
-                        <button>BOOK COURSE</button>
+            {this.props.courses &&
+              this.props.courses.map((course, index) => (
+                <div
+                  className={`carousel-item ${index === 0 && "active"}`}
+                  data-interval="10000"
+                  key={course.title}
+                >
+                  <div className="d-flex">
+                    <div className="content">
+                      <TitleWithMark text="Upcoming Courses" />
+                      <p className="font-22">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        In congue, neque at dignissim condimentum, metus nisl
+                        luctus lectus, et consequat tellus justo nec augue.
+                      </p>
+                      <p className="blue-font mt-3 mb-2">{course.title}</p>
+                      <p className="font-16">{course.overview}</p>
+                      <div className="d-flex flex-wrap flex-lg-nowrap">
+                        <div className="next-course w-100 p-3">
+                          {`Next Course: ${formattedDate(
+                            course.dates[0].date
+                          )}`}
+                        </div>
+                        <div className="position-relative">
+                          <button>BOOK COURSE</button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    className="course-image"
-                    style={{ backgroundImage: `url(${course.image})` }}
-                  >
-                    {/* <img
+                    <div
+                      className="course-image"
+                      style={{ backgroundImage: `url(${course.image})` }}
+                    >
+                      {/* <img
                       src={course.image}
                       className="course-image"
                       alt={course.title}
                     /> */}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
           <a
             className="carousel-control-prev d-none d-md-block"

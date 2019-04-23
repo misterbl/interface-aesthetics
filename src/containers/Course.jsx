@@ -5,13 +5,15 @@ import { Query } from "react-apollo";
 // import { ClipLoader } from "react-spinners";
 import gql from "graphql-tag";
 import CourseImage from "../components/CourseImage";
-import courses from "../data/courses";
+// import courses from "../data/courses";
+import { getAllCourses } from "../../functions/firebase-database";
 import CourseInformation from "../components/CourseInformation";
 import BookCourseCard from "../components/BookCourseCard";
 import CourseDay from "../components/CourseDay";
 import BlueFooter from "../components/BlueFooter";
 import BluePhotoContainer from "../components/BluePhotoContainer";
 import TitleWithMark from "../components/TitleWithMark";
+import formattedDate from "../utils/formattedDate";
 
 class Course extends React.Component {
   constructor(props) {
@@ -19,19 +21,24 @@ class Course extends React.Component {
     this.state = {
       image: "",
       imageBase64: "",
-      courseId: parseInt(props.match.params.courseId, 10)
+      courseId: parseInt(props.match.params.courseId, 10),
+      courses: undefined
     };
   }
 
-  componentDidMount() {
-    // this.getCourse();
-    // const { courseId } = this.props.match.params;
-    // this.setState({ courseId });
-    // const imageBase64 = await getCourseImage(this.props.image);
-    // this.setState({ imageBase64 });
-    //   console.log(this);
-    //   console.log(courseId);
+  async componentDidMount() {
+    const courses = await getAllCourses();
+    this.setState({ courses });
   }
+  // componentDidMount() {
+  // this.getCourse();
+  // const { courseId } = this.props.match.params;
+  // this.setState({ courseId });
+  // const imageBase64 = await getCourseImage(this.props.image);
+  // this.setState({ imageBase64 });
+  //   console.log(this);
+  //   console.log(courseId);
+  // }
   // renderImage() {
   //   const imageBase64 = this.state.image && getCourseImage(this.state.image);
   //   return <img src={imageBase64} />;
@@ -89,90 +96,95 @@ class Course extends React.Component {
   //   );
   // };
   getCourse = () => {
-    const filtered = courses.filter(
-      course => course.id === this.state.courseId
-    );
-    const {
-      overview,
-      moreInformation,
-      information,
-      title,
-      dates,
-      days
-    } = filtered[0];
-    return (
-      <React.Fragment>
-        <BluePhotoContainer container="course-photo" header="course-header">
-          <p>OUR COURSES</p>
-          <p>{title}</p>
-        </BluePhotoContainer>
-        <div className="course flex-wrap flex-lg-nowrap">
-          <div className="w-75 mr-5">
-            <div className="course-section">
-              <TitleWithMark text="Course Overview" />
-              <p className="font-16 my-3">{overview}</p>
-            </div>
-            <div className="course-section">
-              <TitleWithMark text="What can you expect" />
-            </div>
-            {days && (
-              <div className="d-flex flex-wrap my-5">
-                {days.map((day, i) => (
-                  <CourseDay
-                    index={i + 1}
-                    description={day.description}
-                    details={day.details}
-                  />
-                ))}
+    if (this.state.courses) {
+      const filtered = this.state.courses.filter(
+        course => course.id === this.state.courseId
+      );
+      const {
+        overview,
+        moreInformation,
+        information,
+        title,
+        dates,
+        days
+      } = filtered[0];
+      return (
+        <React.Fragment>
+          <BluePhotoContainer container="course-photo" header="course-header">
+            <p>OUR COURSES</p>
+            <p>{title}</p>
+          </BluePhotoContainer>
+          <div className="course flex-wrap flex-lg-nowrap">
+            <div className="w-75 mr-5">
+              <div className="course-section">
+                <TitleWithMark text="Course Overview" />
+                <p className="font-16 my-3">{overview}</p>
               </div>
-            )}
-            {
-              <div className="my-3">
-                {information.map(info => (
-                  <CourseInformation
-                    key={info.overview}
-                    image={info.image}
-                    overview={info.overview}
-                    details={info.details}
-                  />
-                ))}
+              <div className="course-section">
+                <TitleWithMark text="What can you expect" />
               </div>
-            }
-            <div className="course-section">
-              <TitleWithMark text="More information" />
-              {moreInformation.map(info => (
-                <p key={info} className="font-16 my-3">
-                  {info}
-                </p>
-              ))}
-            </div>
-          </div>
-          <BookCourseCard title={title} dates={dates} />
-        </div>
-        <BlueFooter container="book-course-photo">
-          <div className="flex-wrap flex-lg-nowrap">
-            <div className="w-50">
-              <TitleWithMark text="Book your place now" />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                feugiat rhoncus nisl, id rutrum dui tempor vitae. Aenean vel
-                placerat nisl.
-              </p>
-            </div>
-            <form className="select-date">
-              <div className="select-container">
-                <select className="form-control form-control-sm">
-                  <option selected>Select course date</option>
-                  {dates.map(date => (
-                    <option key={date}>{date}</option>
+              {days && (
+                <div className="d-flex flex-wrap my-5">
+                  {days.map((day, i) => (
+                    <CourseDay
+                      index={i + 1}
+                      description={day.description}
+                      details={day.details}
+                    />
                   ))}
-                </select>
+                </div>
+              )}
+              {
+                <div className="my-3">
+                  {information.map(info => (
+                    <CourseInformation
+                      key={info.overview}
+                      image={info.image}
+                      overview={info.overview}
+                      details={info.details}
+                    />
+                  ))}
+                </div>
+              }
+              <div className="course-section">
+                <TitleWithMark text="More information" />
+                {moreInformation.map(info => (
+                  <p key={info} className="font-16 my-3">
+                    {info}
+                  </p>
+                ))}
               </div>
-            </form>
+            </div>
+            <BookCourseCard title={title} dates={dates} />
           </div>
-        </BlueFooter>
-      </React.Fragment>
-    );
+          <BlueFooter container="book-course-photo">
+            <div className="flex-wrap flex-lg-nowrap">
+              <div className="w-50">
+                <TitleWithMark text="Book your place now" />
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam feugiat rhoncus nisl, id rutrum dui tempor vitae.
+                  Aenean vel placerat nisl.
+                </p>
+              </div>
+              <form className="select-date">
+                <div className="select-container">
+                  <select className="form-control form-control-sm">
+                    <option selected>Select course date</option>
+                    {dates.map(date => (
+                      <option key={date.date}>
+                        {formattedDate(date.date)}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </form>
+            </div>
+          </BlueFooter>
+        </React.Fragment>
+      );
+    }
+    return "loading...";
   };
 
   render() {

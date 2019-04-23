@@ -18,11 +18,20 @@ import charity from "../assets/charity.jpg";
 import BlogList from "../components/BlogList";
 import TestimonialCard from "../components/TestimonialCard";
 import blogList from "../data/blogList";
+import { getAllCourses } from "../../functions/firebase-database";
 
 export class Home extends React.Component {
+  state = { courses: undefined };
+
+  async componentDidMount() {
+    const courses = await getAllCourses();
+    this.setState({ courses });
+  }
+
   pushToModelForm = () => {
     this.props.history.push(ROUTES.BECOME_A_MODEL);
   };
+
   render() {
     return (
       <main className="text-center text-md-left">
@@ -94,7 +103,7 @@ export class Home extends React.Component {
           </div>
         </div>
         <div className="d-flex justify-content-around p-60 flex-wrap flex-lg-nowrap">
-          <div className="d-flex flex-column w-50">
+          <div className="d-flex flex-column w-50-md">
             <p className="blue-font w-75-md">
               Interface Aesthetics is leading innovation in non-surgical
               aesthetic training
@@ -121,7 +130,7 @@ export class Home extends React.Component {
         </div>
         <Accreditations />
         <WhoWeTrain />
-        <UpcomingCourses />
+        <UpcomingCourses courses={this.state.courses} />
         <div className="d-flex p-60 side-margin flex-wrap flex-lg-nowrap">
           <div className="become-model">
             <TitleWithMark text="Become a model" />

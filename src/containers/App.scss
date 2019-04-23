@@ -129,7 +129,7 @@ ul {
   padding: 15px;
 }
 
-ul li::before {
+.orange-dot-li li::before {
   content: "\2022";
   color: $orange;
   font-weight: bold;
@@ -191,6 +191,8 @@ li {
 }
 
 .navbar {
+  flex-wrap: nowrap;
+  width: 100%;
   justify-content: space-between;
   img {
     width: 180px;
@@ -198,6 +200,7 @@ li {
   @media (max-width: 768px) {
     display: block !important;
     padding: 35%;
+    flex-direction: column !important;
     button {
       width: 100% !important;
     }
@@ -218,14 +221,34 @@ a:hover {
 .interface-blue {
   color: #2e76ba;
 }
-.navbar-collapse {
-  a {
-    color: $blue-font;
-    text-align: center;
-    width: 100%;
+// .navbar-collapse {
+//   a {
+//     color: $blue-font !important;
+//     text-align: center;
+//     width: 100%;
+//   }
+// }
+// .navbar-light .navbar-nav .nav-link .active > .nav-link {
+//   color: $blue-font;
+//   margin-left: 50px;
+//   font-weight: 800;
+//   font-size: 14px;
+//   @media (max-width: 768px) {
+//     width: 40%;
+//   }
+// }
+
+.nav-link:last-of-type {
+  @media (min-width: 769px) {
+    margin-right: 50px;
   }
 }
-.navbar-light .navbar-nav .nav-link {
+.navbar-nav {
+  padding: 15px 0px;
+  text-align: center;
+}
+
+a.nav-link {
   color: $blue-font;
   margin-left: 50px;
   font-weight: 800;
@@ -234,38 +257,28 @@ a:hover {
     width: 40%;
   }
 }
-
-.navbar-nav {
-  @media (max-width: 768px) {
-    margin-left: 70px;
+.navbar-light,
+.navbar-nav,
+.nav-link,
+.active > .nav-link {
+  color: $blue-font;
+  :focus,
+  :hover {
+    color: red;
   }
-  width: 100%;
-}
-.nav-link:last-of-type {
-  @media (min-width: 769px) {
-    margin-right: 50px;
-  }
-}
-
-a.nav-link {
-  @media (max-width: 768px) {
-    margin-left: 0px !important;
-  }
-}
-.navbar-light .navbar-nav .nav-link:focus,
-.navbar-light .navbar-nav .nav-link:hover {
-  color: red;
 }
 
 .navbar-brand {
-  @media (max-width: 768px) {
+  margin: 0px !important;
+  img {
     margin: 0px !important;
   }
 }
-.nav {
+nav {
   flex-wrap: nowrap;
+  width: 100%;
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: column !important;
   }
 }
 .navbar-light .navbar-toggler {
@@ -417,4 +430,8 @@ a.nav-link {
       background-repeat: no-repeat;
     }
   }
+}
+
+.date-picker {
+  border: none !important;
 }

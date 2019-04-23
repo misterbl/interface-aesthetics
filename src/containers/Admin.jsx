@@ -6,8 +6,6 @@ import { Mutation } from "react-apollo";
 import ROUTES from "../const/routes";
 import { uploadCourseImage, getCourseImage } from "../apiThunk";
 import { UploadScreen } from "../components/UploadScreen";
-import { getAllCourses } from "../../functions/firebase-database";
-import { updateCourses } from "../../functions/firebase-database";
 import { signIn } from "../../functions/firebase-auth";
 import BluePhotoContainer from "../components/BluePhotoContainer";
 import TitleWithMark from "../components/TitleWithMark";
@@ -24,20 +22,10 @@ export class Admin extends React.Component {
     blog: []
   };
 
-  async componentDidMount() {
-    const courses = await getAllCourses();
-    this.setState({ courses });
-  }
-
-  updateBlog = blog => {
-    updateCourses(blog);
-    console.log("update");
-  };
-
-  updateBlog = courses => {
-    updateCourses(courses);
-    console.log("update");
-  };
+  // updateBlog = courses => {
+  //   updateCourses(courses);
+  //   console.log("update");
+  // };
 
   handleSignIn = async (email, password) => {
     const auth = await signIn(email, password);
@@ -54,7 +42,7 @@ export class Admin extends React.Component {
 
   renderPage = () => {
     const { courses, blog, auth, showCourseAdmin, showBlogAdmin } = this.state;
-    if (auth.user.uid === "d61hpynjQDXY59Zh8MU33R2rDSp2") {
+    if (auth.user.uid !== "d61hpynjQDXY59Zh8MU33R2rDSp2") {
       return (
         <React.Fragment>
           <nav className="nav nav-pills flex-column flex-sm-row">
@@ -76,10 +64,7 @@ export class Admin extends React.Component {
             </button>
           </nav>
           {showCourseAdmin && (
-            <CoursesAdmin
-              courses={courses}
-              updateCourses={this.updateCourses}
-            />
+            <CoursesAdmin updateCourses={this.updateCourses} />
           )}
           {showBlogAdmin && (
             <BlogAdmin blog={blog} updateBlog={this.updateBlog} />
