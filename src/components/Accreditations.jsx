@@ -10,7 +10,7 @@ import TitleWithMark from "./TitleWithMark";
 const Accreditations = () => (
   <div className="p-60">
     <TitleWithMark text="Our Accreditations" />
-    <div className="d-flex accreditations-container justify-content-between flex-wrap">
+    <div className="d-md-flex accreditations-container justify-content-between flex-wrap">
       <img src={cpd} alt="cpd certification service" />
       <img src={cosmeticInsure} alt="cosmetic insure" />
       <img src={allergan} alt="allergan" />

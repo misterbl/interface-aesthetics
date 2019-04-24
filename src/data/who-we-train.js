@@ -7,11 +7,11 @@ const whoWeTrain = [
     image: stethoscope,
     title: "DOCTORS",
     text:
-      " Whether you are looking to explore a new career, or to diversify your existing one with the potential to work in the private sector, we will ensure you receive teaching which sets you up to achieve your objectives."
+      "Whether you are looking to explore a new career, or to diversify your existing one with the potential to work in the private sector, we will ensure you receive teaching which sets you up to achieve your objectives."
   },
   {
     image: tooth,
-    title: "DENTISTS ",
+    title: "DENTISTS",
     text:
       "Our tutors bring knowledge and expertise from across medicine and dentistry, making our courses well-suited for dental surgeons looking to expand their scope of practice."
   },

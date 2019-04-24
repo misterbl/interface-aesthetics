@@ -66,9 +66,7 @@ export class Admin extends React.Component {
           {showCourseAdmin && (
             <CoursesAdmin updateCourses={this.updateCourses} />
           )}
-          {showBlogAdmin && (
-            <BlogAdmin blog={blog} updateBlog={this.updateBlog} />
-          )}
+          {showBlogAdmin && <BlogAdmin />}
         </React.Fragment>
       );
     }

@@ -7,7 +7,7 @@ const UpcomingCourses = ({ onClick, courses }) => (
     <div
       id="upcoming-courses-indicator"
       className="carousel slide position-relative"
-      data-ride="upcoming-courses-carousel"
+      data-ride="carousel"
       touch="true"
     >
       <ol className="carousel-indicators">
@@ -26,7 +26,6 @@ const UpcomingCourses = ({ onClick, courses }) => (
           courses.map((course, index) => (
             <div
               className={`carousel-item ${index === 0 && "active"}`}
-              data-interval="10000"
               key={course.title}
             >
               <div className="d-flex">

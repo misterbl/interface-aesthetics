@@ -42,6 +42,26 @@ async function updateCourses(courses) {
     .ref("/courses")
     .set(courses);
 }
+
+async function getBlog() {
+  const snap = await firebase
+    .database()
+    .ref("/blog")
+    .orderByChild("level")
+    .once("value");
+  return snap.val();
+}
+
+function writeBlogArticle({ articleId, title, text, image = "" }) {
+  firebase
+    .database()
+    .ref("blog/" + articleId)
+    .set({
+      title,
+      text,
+      image
+    });
+}
 // Get and return an employee by their id number
 // also fetch all of the employee's direct reports (if any)
 // async function getEmployeeById(employeeId) {
@@ -65,6 +85,7 @@ async function updateCourses(courses) {
 
 module.exports = {
   getAllCourses,
-  updateCourses
-  // getEmployeeById
+  updateCourses,
+  writeBlogArticle,
+  getBlog
 };

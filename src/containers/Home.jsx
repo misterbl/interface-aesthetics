@@ -40,7 +40,7 @@ export class Home extends React.Component {
       <main className="text-center text-md-left">
         <div className="home-bg-blue">
           <div
-            id="carouselExampleIndicators"
+            id="home-header-carousel"
             className="carousel slide position-relative"
             data-ride="carousel"
             touch="true"
@@ -83,7 +83,7 @@ export class Home extends React.Component {
             </div>
             <a
               className="carousel-control-prev"
-              href="#carouselExampleIndicators"
+              href="#home-header-carousel"
               role="button"
               data-slide="prev"
             >
@@ -94,7 +94,7 @@ export class Home extends React.Component {
             </a>
             <a
               className="carousel-control-next"
-              href="#carouselExampleIndicators"
+              href="#home-header-carousel"
               role="button"
               data-slide="next"
             >
@@ -123,7 +123,7 @@ export class Home extends React.Component {
           <iframe
             src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Finterfaceaesthetics.co.uk%2Fvideos%2F430225077804662%2F&show_text=0&width=560"
             width="560"
-            height="315"
+            height="170"
             style={{ border: "none", overflow: "hidden" }}
             scrolling="no"
             frameBorder="0"
