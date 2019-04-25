@@ -6,7 +6,8 @@
 @import "../styles/ModelForm.scss";
 @import "../styles/About.scss";
 @import "../styles/Blog.scss";
-@import "../styles/Admin.scss";
+@import "../styles/Testimonials.scss";
+@import "~cookie-consent-box/dist/cookie-consent-box";
 
 body {
   margin: 0;
@@ -14,13 +15,10 @@ body {
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
+  font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $light-grey;
-}
-
-button:focus {
-  outline: none;
 }
 
 form > div {
@@ -95,6 +93,10 @@ button {
   width: 140px;
   font-weight: 700;
   padding: 13px;
+  outline: none;
+  :focus {
+    outline: none;
+  }
 }
 
 footer {
@@ -105,14 +107,8 @@ footer {
   img {
     width: 115px;
   }
-  form > div {
-    display: flex;
-    flex-wrap: nowrap;
-    @media (max-width: 768px) {
-      flex-wrap: wrap;
-    }
-    width: auto;
-    input {
+  form {
+    input[type="text"] {
       width: 400px;
     }
     button {
@@ -129,6 +125,16 @@ ul {
   padding: 15px;
 }
 
+li {
+  font-size: 18px;
+  font-weight: 300;
+  color: $grey;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
 .orange-dot-li li::before {
   content: "\2022";
   color: $orange;
@@ -138,154 +144,60 @@ ul {
   margin-left: -1em;
 }
 
-li {
-  font-size: 18px;
-  font-weight: 300;
-  color: $grey;
-}
-
-.loading-indicator {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  color: $orange !important;
-  width: 70px;
-  height: 70px;
-}
 .disabled {
   opacity: 0.7;
 }
-.no-hover {
-  position: relative;
-  img {
-    position: absolute;
-    top: 140px;
-    left: 135px;
-  }
-  &:before,
-  &:after {
-    position: absolute;
-    width: 100%;
-    height: 60px;
-    background: #f5f5f5;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    content: "";
-    display: block;
-  }
-  &:after {
-    top: auto;
-    bottom: -18px;
-  }
-}
-
-.player-overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
-.image-container {
-  width: 225px;
-}
-
-.navbar {
-  flex-wrap: nowrap;
-  width: 100%;
-  justify-content: space-between;
-  img {
-    width: 180px;
-  }
-  @media (max-width: 768px) {
-    display: block !important;
-    padding: 35%;
-    flex-direction: column !important;
-    button {
-      width: 100% !important;
-    }
-  }
-  @media (max-width: 460px) {
-    padding: 25%;
-  }
-}
-.dropdown-toggle::after {
-  border: none;
-}
-
-a:hover {
-  color: red;
-  text-decoration: none;
-}
-
-.interface-blue {
-  color: #2e76ba;
-}
-// .navbar-collapse {
-//   a {
-//     color: $blue-font !important;
-//     text-align: center;
+// .no-hover {
+//   position: relative;
+//   img {
+//     position: absolute;
+//     top: 140px;
+//     left: 135px;
+//   }
+//   &:before,
+//   &:after {
+//     position: absolute;
 //     width: 100%;
+//     height: 60px;
+//     background: #f5f5f5;
+//     z-index: 999;
+//     top: 0;
+//     left: 0;
+//     content: "";
+//     display: block;
+//   }
+//   &:after {
+//     top: auto;
+//     bottom: -18px;
 //   }
 // }
-.navbar-light,
-.navbar-nav,
-.nav-link,
-.active > .nav-link {
-  color: $blue-font !important;
-}
 
-.nav-link:last-of-type {
-  @media (min-width: 769px) {
-    margin-right: 50px;
-  }
-}
-.navbar-nav {
-  padding: 15px 0px;
-  text-align: center;
-}
+// .player-overlay {
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+// }
 
-a.nav-link {
-  color: $blue-font;
-  margin-left: 50px;
-  font-weight: 800;
-  font-size: 14px;
-  @media (max-width: 768px) {
-    width: 40%;
-  }
-}
-.navbar-light,
-.navbar-nav,
-.nav-link,
-.active > .nav-link {
-  color: $blue-font;
-  :focus,
-  :hover {
-    color: red;
-  }
-}
+// .image-container {
+//   width: 225px;
+// }
 
-.navbar-brand {
-  margin: 0px !important;
-  img {
-    margin: 0px !important;
-  }
-}
-nav {
-  flex-wrap: nowrap;
-  width: 100%;
-  @media (max-width: 768px) {
-    flex-direction: column !important;
-  }
-}
-.navbar-light .navbar-toggler {
-  border: none;
-  outline: none;
-}
+// a.nav-link {
+//   color: $blue-font;
+//   :focus,
+//   :hover {
+//     color: red;
+//   }
+//   @media (max-width: 768px) {
+//     margin: auto;
+//   }
+//   font-weight: 800;
+//   font-size: 14px;
+//   @media (max-width: 768px) {
+//     width: 40%;
+//   }
+// }
 
-.nav-link {
-  padding-right: 0 !important;
-}
 .hamburger {
   &__container {
     position: relative;
@@ -294,6 +206,9 @@ nav {
     width: 40px;
     height: 40px;
     margin: 0 auto;
+  }
+  &__white {
+    background-color: white;
   }
   &__line-container {
     position: absolute;
@@ -312,9 +227,9 @@ nav {
   }
 }
 
-.navbar-toggler-icon {
-  display: none;
-}
+// .navbar-toggler-icon {
+//   display: none;
+// }
 
 .mark-margin {
   margin-left: -15px;
@@ -352,84 +267,6 @@ nav {
     margin: 0 !important;
   }
   margin: 0 64px !important;
-}
-.testimonial {
-  .d-flex {
-    .mt-5 {
-      @media (min-width: 769px) {
-        width: 660px;
-      }
-    }
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
-  }
-  &__photo {
-    background-image: url("../assets/model_page_lead_photo.jpg");
-    height: 600px;
-    @media (min-width: 769px) {
-      height: 380px;
-    }
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .carousel {
-    background-color: $dark-blue;
-    @media (min-width: 769px) {
-      margin-left: 67px;
-    }
-
-    width: 100%;
-  }
-  .carousel-indicators {
-    display: flex;
-    flex-direction: row;
-    left: 40%;
-    right: auto;
-    margin-left: 0;
-    bottom: -50px;
-    li {
-      background-color: white;
-    }
-  }
-  .carousel-item {
-    max-height: 300px;
-    overflow: scroll;
-  }
-  &__container {
-    position: absolute;
-    color: white;
-    top: 30px;
-    @media (min-width: 769px) {
-      padding: 0px 75px;
-    }
-    width: 100%;
-  }
-
-  .carousel-next-icon {
-    background-color: $orange;
-    right: -30px;
-    top: 100px;
-    div:first-of-type {
-      background-image: url("../assets/right-arrow-light.png");
-      width: 30px;
-      height: 30px;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-  }
-  .carousel-prev-icon {
-    background-color: $orange;
-    left: -30px;
-    top: 100px;
-    div:first-of-type {
-      background-image: url("../assets/left-arrow-white.png");
-      width: 30px;
-      height: 30px;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-  }
 }
 
 .date-picker {

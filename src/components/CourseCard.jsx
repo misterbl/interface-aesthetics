@@ -1,5 +1,4 @@
 import React from "react";
-import CourseImage from "./CourseImage";
 
 const CourseCard = ({ title, handleClick, price, image }) => (
   <div

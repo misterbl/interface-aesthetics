@@ -49,30 +49,6 @@
     padding: 70px 100px 40px 100px;
     margin-bottom: 50px;
   }
-  .no-hover {
-    margin-top: -60px;
-    z-index: 0;
-    div {
-      width: 600px !important;
-      height: 525px !important;
-      @media (max-width: 600px) {
-        width: auto;
-        height: 400px;
-      }
-    }
-    img {
-      top: 210px;
-      left: 260px;
-      @media (max-width: 600px) {
-        display: none;
-      }
-    }
-    &:after {
-      top: auto;
-      bottom: -30px;
-      margin-bottom: 30px;
-    }
-  }
   .d-flex {
     @media (max-width: 1000px) {
       flex-wrap: wrap;

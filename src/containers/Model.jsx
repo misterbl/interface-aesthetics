@@ -7,17 +7,8 @@ import ROUTES from "../const/routes";
 import BluePhotoContainer from "../components/BluePhotoContainer";
 import TitleWithMark from "../components/TitleWithMark";
 import TestimonialCard from "../components/TestimonialCard";
-export class Model extends React.Component {
-  state = { isActive: "" };
-
-  onClick = e => {
-    const { isActive } = this.state;
-    const { value } = e.currentTarget;
-    if (isActive === value) {
-      return this.setState({ isActive: "" });
-    }
-    this.setState({ isActive: value });
-  };
+import testimonialsFaq from "../data/testimonialsFaq";
+export class Model extends React.PureComponent {
   pushToModelForm = () => {
     this.props.history.push(ROUTES.BECOME_A_MODEL);
   };
@@ -100,17 +91,22 @@ export class Model extends React.Component {
               <TitleWithMark text="Model FAQ" />
             </div>
             <p className="font-16 my-3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              iaculis turpis dictum felis accumsan, semper bibendum neque
-              pellentesque. Proin eget porta risus. Maecenas purus justo,
-              eleifend vitae sagittis non, porta gravida urna. Curabitur ut enim
-              placerat, facilisis nulla et, volutpat ex.
+              "The decision to have any aesthetic treatment requires careful
+              consideration, and this is no different for our models. We would
+              love to hear from you to find out more about you, what treatments
+              you are considering and if you could join our growing cohort of
+              Interface models. Our team will be happy to answer any specific
+              questions you may have, while most general information can be
+              found here in our FAQ section. Feedback from our models is
+              excellent; this refers to both the experience on the day as well
+              as the results from the treatments carried out. But don't just
+              take our word for it..."
             </p>
             <button className="cta-button-blue w-50 mb-5">
               BE A MODEL PATIENT
             </button>
           </div>
-          <Accordion isActive={this.state.isActive} onClick={this.onClick} />
+          <Accordion data={testimonialsFaq} />
         </div>
         <TestimonialCard />
       </main>

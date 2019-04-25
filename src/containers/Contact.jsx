@@ -99,9 +99,9 @@ export class Contact extends React.Component {
                   name="reason"
                 >
                   <option selected>Reason for enquiry</option>
-                  <option key="reason1">reason1</option>
-                  <option key="reason2">reason2</option>
-                  <option key="reason3">reason3</option>
+                  <option key="DELEGATE ENQUIRY">DELEGATE ENQUIRY</option>
+                  <option key="MODEL ENQUIRY">MODEL ENQUIRY</option>
+                  <option key="GENERAL ENQUIRY">GENERAL ENQUIRY</option>
                 </select>
               </div>
               <textarea

@@ -1,5 +1,6 @@
 $dark-blue: #1e5589;
 $blue-font: #2d76bb;
+$interface-blue: #2e76ba;
 $orange: #fc4c10;
 $light-grey: #f5f5f5;
 $grey: #7a7a7a;
@@ -10,11 +11,10 @@ $grey: #7a7a7a;
   opacity: 0.7;
 }
 
-.bg-dark-blue {
-  background-color: $dark-blue;
-  height: 220px;
-  opacity: 0.8;
+.bg-light-blue {
+  background-color: $blue-font;
 }
+
 .font-12 {
   color: #7a7a7a;
   font-size: 12px !important;
@@ -51,19 +51,6 @@ $grey: #7a7a7a;
   }
 }
 
-.font-10 {
-  font-size: 10px !important;
-}
-
-.font-34 {
-  font-size: 34px !important;
-  font-weight: 900 !important;
-}
-
-.w-400 {
-  width: 400px;
-}
-
 .p-60 {
   padding: 60px;
   @media (max-width: 600px) {
@@ -75,21 +62,8 @@ $grey: #7a7a7a;
   padding: 70px;
 }
 
-.mw-50 {
-  min-width: 50%;
-}
-
-.dark-blue {
-  color: $dark-blue;
-}
-
 .w-85 {
   width: 85%;
-}
-
-.interface-bg-grey {
-  background-color: #ebebeb;
-  padding: 6rem;
 }
 
 .button-orange-border {
@@ -99,6 +73,7 @@ $grey: #7a7a7a;
   color: $dark-blue;
   padding: 15px 37px;
 }
+
 .cta-button-white {
   @extend %cta-button;
   background-color: #ffffff;
@@ -112,9 +87,9 @@ $grey: #7a7a7a;
   color: #ffffff;
 }
 
-.blue-font-reg {
-  color: $blue-font !important;
-}
+// .blue-font-reg {
+//   color: $blue-font !important;
+// }
 .blue-font {
   color: $blue-font;
   @media (max-width: 768px) {
@@ -134,8 +109,9 @@ $grey: #7a7a7a;
   line-height: 30px;
 }
 
-.z-index-5 {
-  z-index: 5;
+.blue-font-sm {
+  color: $blue-font !important;
+  font-size: 14px;
 }
 
 %cta-button {

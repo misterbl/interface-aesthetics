@@ -17,6 +17,8 @@ import Article from "./Article";
 import Admin from "./Admin";
 import Testimonials from "./Testimonials";
 import BookACourseForm from "../components/BookACourseForm";
+import TermsAndConditions from "../components/TermsAndConditions";
+import PrivacyPolicy from "../components/PrivacyPolicy";
 
 class App extends Component {
   constructor(props) {
@@ -52,6 +54,11 @@ class App extends Component {
           <Route path={ROUTES.BLOG} component={Blog} />
           <Route path={ROUTES.ARTICLE} component={Article} />
           <Route path={ROUTES.ADMIN} component={Admin} />
+          <Route
+            path={ROUTES.TERMS_AND_CONDITIONS}
+            component={TermsAndConditions}
+          />
+          <Route path={ROUTES.PRIVACY_POLICY} component={PrivacyPolicy} />
         </Switch>
         <Footer />
       </div>

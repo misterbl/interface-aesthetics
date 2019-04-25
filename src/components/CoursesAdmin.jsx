@@ -229,6 +229,7 @@ class CoursesAdmin extends React.PureComponent {
                 type="text"
                 placeholder="Price"
                 defaultValue={course.price}
+                className="w-100"
               />
               {course.dates &&
                 course.dates.map((date, dateIndex) => (
@@ -292,6 +293,7 @@ class CoursesAdmin extends React.PureComponent {
                       type="text"
                       placeholder="PlacesLeft"
                       defaultValue={date.placesLeft}
+                      className="w-100"
                     />
                   </div>
                 ))}

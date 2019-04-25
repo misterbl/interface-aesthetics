@@ -1,20 +1,5 @@
 @import "./Utilities.scss";
 
-.course-card {
-  @extend %box-shadow;
-  width: 150px;
-  @media (min-width: 768px) {
-    width: 250px;
-  }
-
-  &--description {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    height: 400px;
-  }
-}
-
 .model-page {
   .grey-mark-background {
     background-position: 50% 55% !important;
@@ -56,17 +41,17 @@
     margin-bottom: 15px;
   }
 }
-.model-man {
-  background-image: url("../assets/male_model.jpg");
-  height: 220px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0px -73px;
-  margin: 0 4.5rem 0 4.5rem;
-  zoom: 1.5;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
+// .model-man {
+//   background-image: url("../assets/male_model.jpg");
+//   height: 220px;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: 0px -73px;
+//   margin: 0 4.5rem 0 4.5rem;
+//   zoom: 1.5;
+//   -webkit-transform: scaleX(-1);
+//   transform: scaleX(-1);
+// }
 
 .discount {
   @media (min-width: 768px) {
@@ -227,6 +212,7 @@
   overflow: hidden;
   width: 650px;
 }
+
 .modal-image {
   width: 500px;
   height: 500px;

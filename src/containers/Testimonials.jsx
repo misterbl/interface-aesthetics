@@ -1,6 +1,10 @@
 import React from "react";
 import testimonials from "../data/testimonials";
 import BluePhotoContainer from "../components/BluePhotoContainer";
+import testimonialsFaq from "../data/testimonialsFaq";
+import TitleWithMark from "../components/TitleWithMark";
+import Accordion from "../components/Accordion";
+
 export const Testimonials = () => (
   <main>
     <BluePhotoContainer container="group-photo" header="courses-header">
@@ -15,6 +19,8 @@ export const Testimonials = () => (
           <p className="text-primary">Attended: {` ${testimonial.course}`}</p>
         </div>
       ))}
+      <TitleWithMark text="FAQ" />
+      <Accordion data={testimonialsFaq} />
     </div>
   </main>
 );

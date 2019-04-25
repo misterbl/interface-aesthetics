@@ -35,7 +35,7 @@ export class Footer extends React.Component {
             Stay up to date with the latest news from Interface Aesthetics
           </p>
           <form onSubmit={this.handleSubmit}>
-            <div>
+            <div className="d-flex flex-wrap flex-md-nowrap">
               <label htmlFor="name" />
               <input
                 autoComplete="off"
@@ -73,9 +73,8 @@ export class Footer extends React.Component {
                 onChange={this.isChecked}
               />
               <span className="ml-2 font-14">
-                GDPR consent Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit. Fusce accumsan dictum mi, sed hendrerit tortor commodo sit
-                amet. Vestibulum laoreet est et metus hendrerit mattis.
+                Please confirm that you have read, understood and accept our
+                <a href={ROUTES.PRIVACY_POLICY}>Privacy Policy</a>
               </span>
             </label>
           </form>
