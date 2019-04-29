@@ -1,21 +1,50 @@
 import React from "react";
 const uuidv1 = require("uuid/v1");
+import Editor, { createEditorStateWithText } from "draft-js-plugins-editor";
+import {
+  ItalicButton,
+  BoldButton,
+  UnderlineButton,
+  CodeButton,
+  HeadlineOneButton,
+  HeadlineTwoButton,
+  HeadlineThreeButton,
+  UnorderedListButton,
+  OrderedListButton,
+  BlockquoteButton,
+  CodeBlockButton
+} from "draft-js-buttons";
+
+import { Editor, EditorState, RichUtils } from "draft-js";
 import TitleWithMark from "./TitleWithMark";
-import { writeBlogArticle, getBlog } from "../../functions/firebase-database";
+import {
+  writeBlogArticle,
+  getBlog,
+  uploadImage
+} from "../../functions/firebase-database";
+
+const styles = {
+  editor: {
+    border: "1px solid gray",
+    minHeight: "6em",
+    width: "100%"
+  }
+};
 class BlogAdmin extends React.PureComponent {
   state = {
     blog: undefined,
     newArticle: {
-      articleId: undefined,
+      id: undefined,
       title: undefined,
       text: undefined,
-      image: undefined
-    }
+      image: undefined,
+      imageName: undefined
+    },
+    editorState: EditorState.createEmpty()
   };
 
   async componentDidMount() {
     const blog = await getBlog();
-    console.log(blog);
     this.setState({ blog });
   }
 
@@ -27,14 +56,34 @@ class BlogAdmin extends React.PureComponent {
   addArticle = async e => {
     e.preventDefault();
     const newArticleState = this.state.newArticle;
-    newArticleState.articleId = uuidv1();
+    newArticleState.id = uuidv1();
     await this.setState({ newArticle: newArticleState });
-    console.log(this.state);
     writeBlogArticle(this.state.newArticle);
   };
 
+  onChange = editorState => {
+    this.setState({ editorState: editorState }),
+      console.log(editorState.getCurrentConte);
+  };
+
+  _onBoldClick = () => {
+    this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, "BOLD"));
+  };
+  // handleImageChange = image => {
+  //   const reader = new FileReader();
+  //   reader.addEventListener(
+  //     "load",
+  //     () => {
+  //       this.setState({ image: reader.result, imageName: image.name });
+  //       uploadImage(image.name, reader.result);
+  //     },
+  //     false
+  //   );
+  //   reader.readAsDataURL(image);
+  // };
   render() {
     const { blog } = this.state;
+    console.log(this.state);
     return (
       <React.Fragment>
         <TitleWithMark text="Blog" />
@@ -85,11 +134,27 @@ class BlogAdmin extends React.PureComponent {
         </form> */}
         <TitleWithMark text="Add an article" />
         <form onSubmit={this.addArticle}>
-          ]
           <div className="mb-5 w-100 p-5 bg-white">
             <label className="font-weight-bold" htmlFor="newArticleTitle">
               Title
             </label>
+            <div style={styles.editor} onClick={this.focusEditor}>
+              <button onClick={this._onBoldClick}>Bold</button>
+              <Editor
+                editorState={this.state.editorState}
+                onChange={this.onChange}
+              />
+            </div>
+            {/* <input
+              type="file"
+              required
+              onChange={({
+                target: {
+                  validity,
+                  files: [file]
+                }
+              }) => validity.valid && this.handleImageChange(file)}
+            /> */}
             <textarea
               onChange={e => {
                 const newArticleState = this.state.newArticle;

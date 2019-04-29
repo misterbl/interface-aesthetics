@@ -1,24 +1,28 @@
 import React from "react";
 import BluePhotoContainer from "../components/BluePhotoContainer";
 import BlogList from "../components/BlogList";
-import blog from "../data/blogList";
+// import blog from "../data/blogList";
+import getBlog from "../apiCalls/getBlog";
 
 class Blog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      blog: [],
       showedArticles: [],
-      numberInView: 9
+      numberInView: 10
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
+    const blog = await getBlog();
+    await this.setState({ blog });
+    console.log(blog);
     this.filterBlog();
   }
+
   filterBlog = () => {
-    const showedArticles = blog.filter(
-      article => article.id <= this.state.numberInView
-    );
+    const showedArticles = this.state.blog.slice(0, this.state.numberInView);
     this.setState({ showedArticles });
   };
 
@@ -28,7 +32,8 @@ class Blog extends React.Component {
   };
 
   render() {
-    const { showedArticles } = this.state;
+    const { showedArticles, blog } = this.state;
+    console.log(this.state);
     return (
       <main className>
         <BluePhotoContainer container="blog-photo" header="courses-header">

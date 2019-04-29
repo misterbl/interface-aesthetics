@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router";
-import blog from "../data/blogList";
+import getBlog from "../apiCalls/getBlog";
 import BluePhotoContainer from "../components/BluePhotoContainer";
 import ROUTES from "../const/routes";
 
@@ -8,15 +8,20 @@ class Article extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      articleId: parseInt(props.match.params.articleId, 10),
+      blog: [],
+      articleId: props.match.params.articleId,
       article: {}
     };
   }
-  componentDidMount() {
+  async componentDidMount() {
+    const blog = await getBlog();
+    await this.setState({ blog });
     this.getArticle();
   }
   getArticle = () => {
-    const article = blog.filter(article => article.id === this.state.articleId);
+    const article = this.state.blog.filter(
+      article => article.id === this.state.articleId
+    );
     this.setState({ article: article[0] });
   };
 

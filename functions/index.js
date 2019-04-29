@@ -13,6 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+const global = require("global");
+const window = require("global/window");
 const functions = require("firebase-functions");
 const app = require("express")();
 const React = require("react");
@@ -28,6 +30,10 @@ const emailAuth = require("./emailAuth");
 if (process.env.NODE_ENV === "development") {
   require("dotenv").config({ path: "development.env" });
 }
+
+const mySpecialWindowFunction = () => {
+  return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+};
 // React App
 const ServerApp = React.createFactory(
   require("./build/server.bundle.js").default

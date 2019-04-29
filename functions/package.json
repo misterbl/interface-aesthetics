@@ -2,6 +2,7 @@
   "name": "interface-aesthetics",
   "description": "interface-aesthetics",
   "dependencies": {
+    "@google-cloud/storage": "^2.5.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "express": "^4.16.4",
@@ -9,6 +10,7 @@
     "firebase": "5.8.2",
     "firebase-admin": "~7.0.0",
     "firebase-functions": "^2.2.0",
+    "global": "^4.3.2",
     "graphql": "^14.1.1",
     "graphql-tag": "^2.10.1",
     "graphql-tools": "^4.0.4",
@@ -20,7 +22,8 @@
   },
   "devDependencies": {
     "eslint": "^4.13.1",
-    "eslint-plugin-promise": "^3.6.0"
+    "eslint-plugin-promise": "^3.6.0",
+    "webpack-node-externals": "^1.7.2"
   },
   "scripts": {
     "lint": "./node_modules/.bin/eslint --max-warnings=0 .",

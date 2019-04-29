@@ -74,7 +74,7 @@ export class Footer extends React.Component {
               />
               <span className="ml-2 font-14">
                 Please confirm that you have read, understood and accept our
-                <a href={ROUTES.PRIVACY_POLICY}>Privacy Policy</a>
+                <a href={ROUTES.PRIVACY_POLICY}>{` Privacy Policy`}</a>
               </span>
             </label>
           </form>

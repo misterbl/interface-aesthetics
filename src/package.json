@@ -10,6 +10,7 @@
     "serve": "firebase serve --only hosting,functions"
   },
   "dependencies": {
+    "@google-cloud/storage": "^2.5.0",
     "apollo-boost": "^0.3.1",
     "apollo-client": "^2.5.1",
     "autoprefixer": "^9.5.1",
@@ -20,11 +21,16 @@
     "cookie-consent-box": "^2.3.1",
     "css-loader": "^2.1.1",
     "draft-js": "^0.10.5",
+    "draft-js-buttons": "^2.0.1",
+    "draft-js-plugins-editor": "^2.1.1",
     "file-loader": "^3.0.1",
     "firebase": "5.8.2",
+    "global": "^4.3.2",
     "graphql": "^14.1.1",
     "graphql-tag": "^2.10.1",
+    "immutable": "^4.0.0-rc.12",
     "lodash": "^4.17.11",
+    "node-fetch": "^2.3.0",
     "react": "^16.7.0",
     "react-apollo": "^2.5.2",
     "react-bootstrap": "^1.0.0-beta.5",
@@ -35,11 +41,15 @@
     "react-player": "^1.10.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
+    "react-rte": "^0.16.1",
     "sass-loader": "^7.1.0",
+    "slate": "^0.45.1",
+    "slate-react": "^0.21.21",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "uuid": "^3.3.2",
-    "watch": "^1.0.2"
+    "watch": "^1.0.2",
+    "webpack-node-externals": "^1.7.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

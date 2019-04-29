@@ -46,6 +46,7 @@ module.exports = {
   resolveLoader: {
     modules: [path.resolve(__dirname, "./node_modules")]
   },
+
   module: {
     rules: [
       {
