@@ -31,13 +31,13 @@ const UpcomingCourses = ({ onClick, courses }) => (
               <div className="d-flex">
                 <div className="content">
                   <TitleWithMark text="Upcoming Courses" />
-                  <p className="font-22">
+                  <h4>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                     congue, neque at dignissim condimentum, metus nisl luctus
                     lectus, et consequat tellus justo nec augue.
-                  </p>
-                  <p className="blue-font mt-3 mb-2">{course.title}</p>
-                  <p className="font-16">{course.overview}</p>
+                  </h4>
+                  <h5 className="blue-font mt-3 mb-2">{course.title}</h5>
+                  <p>{course.overview}</p>
                   <div className="d-flex flex-wrap flex-lg-nowrap">
                     <div className="next-course w-100 p-3">
                       {`Next Course: ${formattedDate(course.dates[0].date)}`}

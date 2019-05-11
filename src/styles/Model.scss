@@ -5,71 +5,6 @@
     background-position: 50% 55% !important;
   }
 }
-.model-photo {
-  background-image: url("../assets/model_page_lead_photo.jpg");
-  height: 380px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0px -270px;
-}
-
-.model-header {
-  color: white;
-  text-align: center;
-  position: absolute;
-  top: 11px;
-
-  p {
-    margin: 0px;
-  }
-  p:first-of-type {
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 67px;
-    padding-top: 50px;
-  }
-  p:nth-child(2) {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 67px;
-  }
-  p:nth-child(3) {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 25px;
-    padding: 0 200px 0 200px;
-    margin-bottom: 15px;
-  }
-}
-// .model-man {
-//   background-image: url("../assets/male_model.jpg");
-//   height: 220px;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: 0px -73px;
-//   margin: 0 4.5rem 0 4.5rem;
-//   zoom: 1.5;
-//   -webkit-transform: scaleX(-1);
-//   transform: scaleX(-1);
-// }
-
-.discount {
-  @media (min-width: 768px) {
-    width: 360px;
-    margin-right: 20px;
-  }
-
-  div:first-of-type {
-    margin-left: 35px;
-    position: relative;
-  }
-  img {
-    width: 53px;
-    position: absolute;
-    top: 0px;
-    left: -50px;
-  }
-}
 
 .accordion {
   max-width: 480px;
@@ -135,7 +70,6 @@
   width: 360px;
   height: 280px;
   background-size: cover;
-
   div:first-of-type {
     background-color: white;
     width: 360px;
@@ -208,14 +142,8 @@
   }
 }
 
-.modal-image-container {
-  overflow: hidden;
-  width: 650px;
-}
-
 .modal-image {
-  width: 500px;
-  height: 500px;
+  height: 100%;
   background-position: -340px 0px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -228,10 +156,4 @@
 
 .ReactModal__Body--open {
   overflow-y: hidden !important;
-}
-
-.model-card-container {
-  padding: 60px 60px 0px 60px;
-  display: flex;
-  flex-wrap: wrap;
 }

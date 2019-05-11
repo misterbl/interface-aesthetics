@@ -3,10 +3,8 @@
 @import "../styles/Courses.scss";
 @import "../styles/Contact.scss";
 @import "../styles/Utilities.scss";
-@import "../styles/ModelForm.scss";
 @import "../styles/About.scss";
 @import "../styles/Blog.scss";
-@import "../styles/Testimonials.scss";
 @import "~cookie-consent-box/dist/cookie-consent-box";
 
 body {
@@ -16,9 +14,25 @@ body {
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
   font-size: 14px;
+  color: #7a7a7a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $light-grey;
+}
+
+header {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  div:first-child {
+    position: absolute;
+    top: 130px;
+    left: 120px;
+    @media (max-width: 768px) {
+      top: 20px;
+      left: 25px;
+    }
+  }
 }
 
 form > div {
@@ -95,9 +109,9 @@ button {
   width: 140px;
   font-weight: 700;
   padding: 13px;
-  outline: none;
+  outline: none !important;
   :focus {
-    outline: none;
+    outline: none !important;
   }
 }
 
@@ -127,12 +141,6 @@ ul {
   padding: 15px;
 }
 
-li {
-  font-size: 18px;
-  font-weight: 300;
-  color: $grey;
-}
-
 a:hover {
   text-decoration: none !important;
 }
@@ -148,6 +156,19 @@ a:hover {
 
 .disabled {
   opacity: 0.7;
+}
+
+.w-50-container {
+  width: 100%;
+  @media (min-width: 900px) {
+    width: 50%;
+  }
+}
+
+.header-text {
+  left: 35% !important;
+  top: 35% !important;
+  text-align: center;
 }
 // .no-hover {
 //   position: relative;
@@ -229,23 +250,10 @@ a:hover {
   }
 }
 
-// .navbar-toggler-icon {
-//   display: none;
-// }
-
 .mark-margin {
   margin-left: -15px;
   @media (max-width: 768px) {
     margin: 0px auto;
-  }
-}
-
-.admin-header {
-  @extend %header-text;
-  top: 40%;
-  left: 30%;
-  p {
-    font-size: 30px;
   }
 }
 
@@ -258,11 +266,6 @@ a:hover {
     right: 0;
     left: 15%;
   }
-  img {
-    width: 50%;
-    height: auto;
-    opacity: 1;
-  }
 }
 .block {
   @media (max-width: 768px) {
@@ -273,4 +276,8 @@ a:hover {
 
 .date-picker {
   border: none !important;
+}
+
+.h-100 {
+  height: 100%;
 }

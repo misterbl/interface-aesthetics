@@ -4,14 +4,14 @@ import whyChoose from "../data/whyChoose";
 import TitleWithMark from "./TitleWithMark";
 
 const WhyChoose = () => (
-  <div className="why-container">
+  <React.Fragment>
     <TitleWithMark text="Why choose Interface Aesthetics" />
-    <div className="d-flex flex-wrap mt-3">
+    <div className="d-flex flex-wrap mt-3 justify-content-center">
       {whyChoose.map(reason => (
         <WhyCard key={reason.title} title={reason.title} text={reason.text} />
       ))}
     </div>
-  </div>
+  </React.Fragment>
 );
 
 export default WhyChoose;

@@ -1,8 +1,9 @@
 import React from "react";
 import BluePhotoContainer from "../components/BluePhotoContainer";
 import BlogList from "../components/BlogList";
-// import blog from "../data/blogList";
-import getBlog from "../apiCalls/getBlog";
+import blog from "../data/blogList";
+import home1 from "../assets/home1.png";
+// import getBlog from "../apiCalls/getBlog";
 
 class Blog extends React.Component {
   constructor(props) {
@@ -14,15 +15,15 @@ class Blog extends React.Component {
     };
   }
 
-  async componentDidMount() {
-    const blog = await getBlog();
-    await this.setState({ blog });
-    console.log(blog);
+  componentDidMount() {
+    // const blog = await getBlog();
+    // await this.setState({ blog });
+    // console.log(blog);
     this.filterBlog();
   }
 
   filterBlog = () => {
-    const showedArticles = this.state.blog.slice(0, this.state.numberInView);
+    const showedArticles = blog.slice(0, this.state.numberInView);
     this.setState({ showedArticles });
   };
 
@@ -36,11 +37,14 @@ class Blog extends React.Component {
     console.log(this.state);
     return (
       <main className>
-        <BluePhotoContainer container="blog-photo" header="courses-header">
-          <p>INTERFACE AESTHETICS</p>
-          <p>LATEST NEWS</p>
-        </BluePhotoContainer>
-        <div className="p-70">
+        <header>
+          <div className="text-center mx-5 mt-5 w-75">
+            <h3 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h3>
+            <h2 className="m-0">LATEST NEWS</h2>
+          </div>
+          <img src={home1} className="d-block w-100" alt="become a model" />
+        </header>
+        <div className="p-60">
           <BlogList blogList={showedArticles} />
         </div>
         <div className="text-center">

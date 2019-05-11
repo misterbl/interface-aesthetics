@@ -47,7 +47,7 @@ export class Header extends React.Component {
         >
           <button
             onClick={this.handleCloseModal}
-            className="bg-light-blue  border-0 w-100 d-block d-md-none"
+            className="bg-light-blue px-5 border-0 w-100 d-block d-md-none"
             type="button"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -128,7 +128,7 @@ export class Header extends React.Component {
         <ul className="d-none d-md-flex justify-content-between w-100">
           <li>
             <a
-              className="font-weight-bold blue-font-sm "
+              className="font-weight-bold blue-font"
               href={ROUTES.COURSES}
               style={this.isActive(ROUTES.COURSES)}
             >
@@ -137,7 +137,7 @@ export class Header extends React.Component {
           </li>
           <li>
             <a
-              className="font-weight-bold blue-font-sm"
+              className="font-weight-bold blue-font"
               href={ROUTES.ABOUT}
               style={this.isActive(ROUTES.ABOUT)}
             >
@@ -146,7 +146,7 @@ export class Header extends React.Component {
           </li>
           <li>
             <a
-              className="font-weight-bold blue-font-sm"
+              className="font-weight-bold blue-font"
               href={ROUTES.TESTIMONIALS}
               style={this.isActive(ROUTES.TESTIMONIALS)}
             >
@@ -164,7 +164,7 @@ export class Header extends React.Component {
           </div>
           <li>
             <a
-              className="font-weight-bold blue-font-sm"
+              className="font-weight-bold blue-font"
               href={ROUTES.MODEL}
               style={this.isActive(ROUTES.MODEL)}
             >
@@ -173,7 +173,7 @@ export class Header extends React.Component {
           </li>
           <li>
             <a
-              className="font-weight-bold blue-font-sm"
+              className="font-weight-bold blue-font"
               href={ROUTES.CONTACT}
               style={this.isActive(ROUTES.CONTACT)}
             >
@@ -182,7 +182,7 @@ export class Header extends React.Component {
           </li>
           <li>
             <a
-              className="font-weight-bold blue-font-sm"
+              className="font-weight-bold blue-font"
               href={ROUTES.BLOG}
               style={this.isActive(ROUTES.BLOG)}
             >

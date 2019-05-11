@@ -1,21 +1,28 @@
 import React from "react";
 import testimonials from "../data/testimonials";
-import BluePhotoContainer from "../components/BluePhotoContainer";
 import testimonialsFaq from "../data/testimonialsFaq";
 import TitleWithMark from "../components/TitleWithMark";
 import Accordion from "../components/Accordion";
+import testimonialsImage from "../assets/testimonials.png";
 
 export const Testimonials = () => (
   <main>
-    <BluePhotoContainer container="group-photo" header="courses-header">
-      <p>INTERFACE AESTHETICS</p>
-      <p>TESTIMONIALS</p>
-    </BluePhotoContainer>
-    <div className="block">
+    <header>
+      <div className="header-text">
+        <h3 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h3>
+        <h2 className="m-0">TESTIMONIALS</h2>
+      </div>
+      <img
+        src={testimonialsImage}
+        className="d-block w-100"
+        alt="interface aesthetics's testimonials"
+      />
+    </header>
+    <div className="p-60">
       {testimonials.map(testimonial => (
         <div key={testimonial.name} className="bg-white my-5 p-60">
           <p className="blue-font">{testimonial.name}</p>
-          <p className="font-16">{testimonial.text}</p>
+          <p>{testimonial.text}</p>
           <p className="text-primary">Attended: {` ${testimonial.course}`}</p>
         </div>
       ))}

@@ -12,6 +12,7 @@ import TitleWithMark from "../components/TitleWithMark";
 import SignInForm from "../components/SignInForm";
 import BlogAdmin from "../components/BlogAdmin";
 import CoursesAdmin from "../components/CoursesAdmin";
+import contact from "../assets/contact.png";
 
 export class Admin extends React.Component {
   state = {
@@ -74,10 +75,17 @@ export class Admin extends React.Component {
   };
   render() {
     return (
-      <main className="admin-page side-margin p-60">
-        <BluePhotoContainer container="group-photo" header="admin-header">
-          <p>Admin Dashboard</p>
-        </BluePhotoContainer>
+      <main className="admin-page p-60">
+        <header>
+          <div className="text-center w-75 ml-5 mt-5">
+            <h2 className="m-0">ADMIN DASHBOARD</h2>
+          </div>
+          <img
+            src={contact}
+            className="d-block w-100"
+            alt="contact interface aesthetics"
+          />
+        </header>
         <br />
         {this.renderPage()}
       </main>

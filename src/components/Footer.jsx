@@ -72,7 +72,7 @@ export class Footer extends React.Component {
                 type="checkbox"
                 onChange={this.isChecked}
               />
-              <span className="ml-2 font-14">
+              <span className="ml-2">
                 Please confirm that you have read, understood and accept our
                 <a href={ROUTES.PRIVACY_POLICY}>{` Privacy Policy`}</a>
               </span>

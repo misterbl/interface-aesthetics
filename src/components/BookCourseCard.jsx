@@ -7,7 +7,7 @@ const BookCourseCard = ({ title, dates, onClick }) => (
     <div>
       <form>
         <div className="select-container">
-          <select>
+          <select className="mb-3">
             <option selected>Select course date</option>
             {dates.map(date => (
               <option key={date.date}>{formattedDate(date.date)}</option>

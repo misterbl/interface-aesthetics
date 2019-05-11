@@ -103,7 +103,7 @@ app.post("/email", (req, res) => {
 
   var mailOptions = {
     from: data.email,
-    to: "interface.aesthetics@gmail.com",
+    to: "contact@interfaceaesthetics.co.uk",
     subject: "contact",
     html: `<p>From:</p>
           <p>${data.name}</p>
@@ -137,7 +137,7 @@ app.post("/upload", (req, res, next) => {
 app.post("/uploadCourseImage", (req, res, next) => {
   const extension = path.extname(req.body.imageName);
   const guid = uuid();
-  fs.writeFile(`/tmp/${guid}${extension}`, req.body.image, function(err) {
+  fs.writeFile(`/tmp/${guid}${extension}`, req.body.image, function (err) {
     if (err) {
       return console.log(err);
     }

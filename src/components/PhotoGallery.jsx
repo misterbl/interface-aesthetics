@@ -1,15 +1,14 @@
 import React from "react";
-import photoGalleryList from "../data/photoGalleryList";
 
-const PhotoGallery = () => (
+const PhotoGallery = ({ images, className = "" }) => (
   <div
     id="photo-gallery-indicator"
-    className="carousel slide position-relative photo-gallery"
+    className={`carousel slide position-relative photo-gallery ${className}`}
     data-ride="photo-gallery-carousel"
     touch="true"
   >
     <ol className="carousel-indicators">
-      {photoGalleryList.map((photo, index) => (
+      {images.map((image, index) => (
         <li
           data-target="#photo-gallery-indicator"
           data-slide-to={index}
@@ -19,12 +18,12 @@ const PhotoGallery = () => (
     </ol>
 
     <div className="carousel-inner">
-      {photoGalleryList.map((photo, index) => (
+      {images.map((image, index) => (
         <div
           className={`carousel-item ${index === 0 && "active"}`}
-          key={photo.title}
+          key={`photo-gallery-${index}`}
         >
-          <img src={photo.image} alt={photo.title} />
+          <img src={image} alt="non surgical aesthetics training" />
         </div>
       ))}
     </div>

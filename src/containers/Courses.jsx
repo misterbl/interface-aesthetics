@@ -1,68 +1,17 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-// import { ClipLoader } from "react-spinners";
-import { Query } from "react-apollo";
-import gql from "graphql-tag";
-import ROUTES from "../const/routes";
 import courses from "../data/courses";
+import home5 from "../assets/home5.png";
 import CourseCard from "../components/CourseCard";
-import BluePhotoContainer from "../components/BluePhotoContainer";
 import WhyTrain from "../components/WhyTrain";
 import WhyChoose from "../components/WhyChoose";
 import PhotoGallery from "../components/PhotoGallery";
+import carousel1 from "../assets/Carousel_1.jpg";
+import carousel2 from "../assets/Carousel_2.jpg";
+import carousel3 from "../assets/Carousel_3.jpg";
+import carousel4 from "../assets/Carousel_4.jpg";
+
 export class Courses extends React.Component {
-  // getCourses = () => {
-  //   const GET_ALL_COURSES = gql`
-  //     {
-  //       courses {
-  //         _id
-  //         title
-  //         description
-  //         price
-  //         image
-  //       }
-  //     }
-  //   `;
-  //   return (
-  //     <Query query={GET_ALL_COURSES}>
-  //       {({ loading, error, data }) => {
-  //         if (loading)
-  //           return (
-  //             <div className="text-center">
-  //               <ClipLoader
-  //                 sizeUnit={"px"}
-  //                 size={30}
-  //                 color={"#123abc"}
-  //                 loading={true}
-  //               />
-  //             </div>
-  //           );
-  //         if (error) return `Error! ${error.message}`;
-  //         // console.log(data.courses);
-  //         return (
-  //           <div className="position-absolute bg-white m-5 p-5">
-  //             {" "}
-  //             <h1 className="ml-4 mb-4">Courses</h1>
-  //             <ul className="d-flex flex-wrap p-0 list-unstyled">
-  //               {data &&
-  //                 data.courses &&
-  //                 data.courses.map(course => (
-  //                   <CourseCard
-  //                     id={course._id}
-  //                     key={course._id}
-  //                     title={course.title}
-  //                     price={course.price}
-  //                     description={course.description}
-  //                     image={course.image}
-  //                   />
-  //                 ))}
-  //             </ul>
-  //           </div>
-  //         );
-  //       }}
-  //     </Query>
-  //   );
-  // };
   getCourses = () => (
     <div className="d-flex flex-wrap p-60 justify-content-around">
       {courses.map(course => (
@@ -79,35 +28,47 @@ export class Courses extends React.Component {
   render() {
     return (
       <main className="courses-page">
-        <BluePhotoContainer container="group-photo" header="courses-header">
-          <p>INTERFACE AESTHETICS</p>
-          <p>OUR COURSES</p>
-        </BluePhotoContainer>
-        <div className="d-flex flex-wrap p-60 grey-mark-background">
-          <div className="discount d-flex flex-column">
-            <p className="blue-font w-75">
-              Our courses have been developed to provide the greatest possible
-              exposure to real patients
-            </p>
+        <header>
+          <div className="header-text">
+            <h3 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h3>
+            <h2 className="m-0">OUR COURSES</h2>
           </div>
-          <div className="w-50 font-16">
-            <p>
-              Interface Aesthetics is leading innovation in non-surgical
-              aesthetic training. High quality training is fundamental to safe
-              and successful aesthetic practice.
-            </p>
-            <p>
-              Our Foundation and Advanced courses are designed to provide
-              unrivalled levels of hands-on injecting with model patients.
-              Teaching is surgeon-led, in small groups and firmly grounded in
-              anatomy.
-            </p>
+          <img
+            src={home5}
+            className="d-block w-100"
+            alt="interface aesthetics's courses"
+          />
+        </header>
+        <div className="p-60">
+          <div className="d-flex flex-wrap p-60 grey-mark-background">
+            <div className="w-50-container d-flex flex-column pr-4">
+              <h3 className="blue-font">
+                Our courses have been developed to provide the greatest possible
+                exposure to real patients
+              </h3>
+            </div>
+            <div className="w-50-container">
+              <p>
+                Interface Aesthetics is leading innovation in non-surgical
+                aesthetic training. High quality training is fundamental to safe
+                and successful aesthetic practice.
+              </p>
+              <p>
+                Our Foundation and Advanced courses are designed to provide
+                unrivalled levels of hands-on injecting with model patients.
+                Teaching is surgeon-led, in small groups and firmly grounded in
+                anatomy.
+              </p>
+            </div>
           </div>
+          {this.getCourses()}
+          <WhyChoose />
+          <PhotoGallery
+            images={[carousel1, carousel2, carousel3, carousel4]}
+            className="mt-5"
+          />
+          <WhyTrain className="mt-5" />
         </div>
-        {this.getCourses()}
-        <WhyChoose />
-        <PhotoGallery />
-        <WhyTrain className="mt-5" />
       </main>
     );
   }

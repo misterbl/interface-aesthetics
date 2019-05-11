@@ -1,19 +1,15 @@
 import React from "react";
 import { getCourseImage } from "../apiThunk";
 import { withRouter } from "react-router";
-import { Query } from "react-apollo";
-// import { ClipLoader } from "react-spinners";
-import gql from "graphql-tag";
-import CourseImage from "../components/CourseImage";
 import ROUTES from "../const/routes";
 import { getAllCourses } from "../../functions/firebase-database";
 import CourseInformation from "../components/CourseInformation";
 import BookCourseCard from "../components/BookCourseCard";
 import CourseDay from "../components/CourseDay";
-import BlueFooter from "../components/BlueFooter";
-import BluePhotoContainer from "../components/BluePhotoContainer";
 import TitleWithMark from "../components/TitleWithMark";
 import formattedDate from "../utils/formattedDate";
+import home1 from "../assets/home1.png";
+import home2 from "../assets/home2.png";
 
 class Course extends React.Component {
   constructor(props) {
@@ -30,71 +26,6 @@ class Course extends React.Component {
     const courses = await getAllCourses();
     this.setState({ courses });
   }
-  // componentDidMount() {
-  // this.getCourse();
-  // const { courseId } = this.props.match.params;
-  // this.setState({ courseId });
-  // const imageBase64 = await getCourseImage(this.props.image);
-  // this.setState({ imageBase64 });
-  //   console.log(this);
-  //   console.log(courseId);
-  // }
-  // renderImage() {
-  //   const imageBase64 = this.state.image && getCourseImage(this.state.image);
-  //   return <img src={imageBase64} />;
-  // }
-  // getCourse = () => {
-  //   // const { courseId } = this.props.match.params;
-  //   //  this.setState({ courseId });
-  //   const GET_COURSE = gql`
-  //     {
-  //       getCourseById(_id:"${this.state.courseId}") {
-  //         _id
-  //         title
-  //         description
-  //         price
-  //         image
-  //       }
-  //     }
-  //   `;
-  //   return (
-  //     <Query query={GET_COURSE}>
-  //       {({ loading, error, data }) => {
-  //         if (loading)
-  //           return (
-  //             <div className="text-center">
-  //               <ClipLoader
-  //                 sizeUnit={"px"}
-  //                 size={30}
-  //                 color={"#123abc"}
-  //                 loading={true}
-  //               />
-  //             </div>
-  //           );
-  //         if (error) return `Error! ${error.message}`;
-  //         const {
-  //           getCourseById: { title, description, image }
-  //         } = data;
-  //         return (
-  //           <div className="container position-absolute bg-white p-5 m-5 w-85">
-  //             <div className="row d-flex">
-  //               <div className="col col-6">
-  //                 <h1
-  //                   className="interface-blue mb-3"
-  //                   dangerouslySetInnerHTML={{ __html: title }}
-  //                 />
-  //                 <p dangerouslySetInnerHTML={{ __html: description }} />
-  //               </div>
-  //               <div className="col">
-  //                 <CourseImage image={image} />
-  //               </div>
-  //             </div>
-  //           </div>
-  //         );
-  //       }}
-  //     </Query>
-  //   );
-  // };
 
   pushToBookCourse = () => {
     this.props.history.push(ROUTES.BOOK_A_COURSE);
@@ -114,81 +45,83 @@ class Course extends React.Component {
       } = filtered[0];
       return (
         <React.Fragment>
-          <BluePhotoContainer container="course-photo" header="course-header">
-            <p>OUR COURSES</p>
-            <p>{title}</p>
-          </BluePhotoContainer>
-          <div className="course flex-wrap flex-lg-nowrap">
-            <div className="w-75 mr-5">
-              <div className="course-section">
+          <header>
+            <div className="text-center w-75 ml-5 mt-5">
+              <h4 className="m-0">OUR COURSES</h4>
+              <h2>{title}</h2>
+            </div>
+            <img src={home1} className="d-block w-100" alt={title} />
+          </header>
+          <div className="p-60">
+            <div className="d-flex flex-wrap flex-lg-nowrap justify-content-center">
+              <div className="w-75 mr-5">
                 <TitleWithMark text="Course Overview" />
-                <p className="font-16 my-3">{overview}</p>
-              </div>
-              <div className="course-section">
+                <p className="mb-4">{overview}</p>{" "}
                 <TitleWithMark text="What can you expect" />
-              </div>
-              {days && (
-                <div className="d-flex flex-wrap my-5">
-                  {days.map((day, i) => (
-                    <CourseDay
-                      index={i + 1}
-                      description={day.description}
-                      details={day.details}
-                    />
-                  ))}
-                </div>
-              )}
-              {
-                <div className="my-3">
-                  {information.map(info => (
-                    <CourseInformation
-                      key={info.overview}
-                      image={info.image}
-                      overview={info.overview}
-                      details={info.details}
-                    />
-                  ))}
-                </div>
-              }
-              <div className="course-section">
+                {days && (
+                  <div className="d-flex flex-wrap my-3">
+                    {days.map((day, i) => (
+                      <CourseDay
+                        index={i + 1}
+                        description={day.description}
+                        details={day.details}
+                      />
+                    ))}
+                  </div>
+                )}
+                {
+                  <div className="my-3">
+                    {information.map(info => (
+                      <CourseInformation
+                        key={info.overview}
+                        image={info.image}
+                        overview={info.overview}
+                        details={info.details}
+                      />
+                    ))}
+                  </div>
+                }
                 <TitleWithMark text="More information" />
                 {moreInformation.map(info => (
-                  <p key={info} className="font-16 my-3">
+                  <p key={info} className="my-3">
                     {info}
                   </p>
                 ))}
               </div>
+              <BookCourseCard
+                title={title}
+                dates={dates}
+                onClick={this.pushToBookCourse}
+              />
             </div>
-            <BookCourseCard
-              title={title}
-              dates={dates}
-              onClick={this.pushToBookCourse}
-            />
-          </div>
-          <BlueFooter container="book-course-photo">
-            <div className="flex-wrap flex-lg-nowrap">
-              <div className="w-50">
-                <TitleWithMark text="Book your place now" />
-                <p>
+            <div className="position-absolute d-flex flex-wrap flex-lg-nowrap p-5 mt-5 text-white">
+              <div className="w-50-container pr-3">
+                <TitleWithMark text="Book your place now" color="white" />
+                <p className="d-none d-sm-block">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Aliquam feugiat rhoncus nisl, id rutrum dui tempor vitae.
                   Aenean vel placerat nisl.
                 </p>
               </div>
-              <form className="select-date">
-                <div className="select-container">
-                  <select className="form-control form-control-sm">
-                    <option selected>Select course date</option>
-                    {dates.map(date => (
-                      <option key={date.date}>
-                        {formattedDate(date.date)}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+              <form className="w-50-container">
+                <select className="select-course-container form-control form-control-sm">
+                  <option selected>Select course date</option>
+                  {dates.map(date => (
+                    <option key={date.date}>
+                      {`${formattedDate(date.date)} ${date.placesLeft} place${
+                        date.placesLeft !== 0 ? "s" : ""
+                      } left`}
+                    </option>
+                  ))}
+                </select>
               </form>
             </div>
-          </BlueFooter>
+            <img
+              src={home2}
+              className="w-100 select-course-image mt-5"
+              alt="book a course"
+            />
+          </div>
         </React.Fragment>
       );
     }

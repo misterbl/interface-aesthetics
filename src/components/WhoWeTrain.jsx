@@ -7,7 +7,7 @@ import tooth from "../assets/tooth.svg";
 import syringe from "../assets/syringe.svg";
 
 const WhoWeTrain = ({ className = "" }) => (
-  <div className={`${className} who-we-train side-margin`}>
+  <div className={`${className} who-we-train`}>
     <TitleWithMark text="Who we train" />
     <div className="d-md-flex flex-wrap d-none d-md-block">
       {whoWeTrain.map(card => (

@@ -1,13 +1,5 @@
 @import "./Utilities.scss";
 
-.blog-photo {
-  background-image: url("../assets/home1.jpg");
-  height: 380px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0px -270px;
-}
-
 .blog-card {
   @media (max-width: 768px) {
     margin: 0 auto;
@@ -21,15 +13,5 @@
     @media (max-width: 400px) {
       display: none;
     }
-  }
-}
-
-.blog-list {
-  .carousel {
-    padding-bottom: 50px;
-  }
-  .carousel-indicators {
-    right: 0px;
-    margin-left: null;
   }
 }

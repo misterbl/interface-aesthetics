@@ -14,7 +14,6 @@ class CoursesAdmin extends React.PureComponent {
     super(props);
     this.state = {
       courses: []
-      // startDate: new Date()
     };
   }
 
@@ -45,7 +44,7 @@ class CoursesAdmin extends React.PureComponent {
     return (
       <React.Fragment>
         <TitleWithMark text="Courses" />
-        <p className="font-16">You can update the courses information here</p>
+        <p>You can update the courses information here</p>
         <form onSubmit={this.handleSubmit}>
           {courses.map((course, index) => (
             <div

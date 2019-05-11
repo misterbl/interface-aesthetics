@@ -1,14 +1,5 @@
 @import "./Utilities.scss";
 
-.contact-header {
-  @extend %header-text;
-  top: 45%;
-  left: 45%;
-  p:first-of-type {
-    font-size: 34px;
-  }
-}
-
 .contact-form {
   @extend %grey-mark-background;
   background-position: 50% 55% !important;
@@ -32,9 +23,6 @@
     input,
     textarea {
       width: 200px;
-      @media (max-width: 768px) {
-        margin: auto;
-      }
     }
   }
 }

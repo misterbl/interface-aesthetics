@@ -1,9 +1,8 @@
 import React, { PureComponent } from "react";
 import axios from "axios";
-import BluePhotoContainer from "./BluePhotoContainer";
-import modelContactReason from "../data/modelContactReason";
 import { getAllCourses } from "../../functions/firebase-database";
 import formattedDate from "../utils/formattedDate";
+import modelPhoto from "../assets/model_page_lead_photo.png";
 
 export default class BookACourseForm extends PureComponent {
   state = {
@@ -53,61 +52,68 @@ export default class BookACourseForm extends PureComponent {
     const { name, email, phoneNumber, courses } = this.state;
     return (
       <main>
-        <BluePhotoContainer container="become-a-model" header="model-form">
-          <p>INTERFACE AESTHETICS</p>
-          <p>BOOK A COURSE</p>
-          <div className="model-form-container">
-            <h3>Fill out the form below and we’ll be in touch shortly</h3>
-            <form onSubmit={this.formSubmit}>
+        <header>
+          <div className="text-center w-75 ml-5 mt-5">
+            <h3 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h3>
+            <h2 className="m-0">BOOK A COURSE</h2>
+          </div>
+          <img
+            src={modelPhoto}
+            className="d-block w-100"
+            alt="interface aesthetics's courses"
+          />
+        </header>
+        <div className="p-60">
+          <h3 className="blue-font font-weight-bold">
+            Fill out the form below and we’ll be in touch shortly
+          </h3>
+          <form onSubmit={this.formSubmit} className="mt-5">
+            <div>
+              <input
+                onChange={e => this.setState({ name: e.target.value })}
+                type="text"
+                name="name"
+                placeholder="Name"
+                defaultValue={name}
+              />
+              <input
+                onChange={e => this.setState({ email: e.target.value })}
+                type="text"
+                name="email"
+                placeholder="Email address"
+                defaultValue={email}
+              />
+              <input
+                onChange={e => this.setState({ phoneNumber: e.target.value })}
+                type="text"
+                name="phoneNumber"
+                placeholder="Phone number"
+                defaultValue={phoneNumber}
+              />
               <div>
-                <input
-                  onChange={e => this.setState({ name: e.target.value })}
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  defaultValue={name}
-                />
-                <input
-                  onChange={e => this.setState({ email: e.target.value })}
-                  type="text"
-                  name="email"
-                  placeholder="Email address"
-                  defaultValue={email}
-                />
-                <input
-                  onChange={e => this.setState({ phoneNumber: e.target.value })}
-                  type="text"
-                  name="phoneNumber"
-                  placeholder="Phone number"
-                  defaultValue={phoneNumber}
-                />
-                <div>
-                  <div className="select-container">
-                    <select
-                      onChange={e => this.setState({ course: e.target.value })}
-                      name="course"
-                    >
-                      <option selected>
-                        What course are you interested in?
-                      </option>
-                      {courses &&
-                        courses.map(course => {
-                          return course.dates.map(date => (
-                            <option key={`${course.title}-${date.date}`}>{`${
-                              course.title
-                            } on the: ${formattedDate(date.date)}`}</option>
-                          ));
-                        })}
-                    </select>
-                  </div>
+                <div className="select-container">
+                  <select
+                    onChange={e => this.setState({ course: e.target.value })}
+                    name="course"
+                  >
+                    <option selected>What course are you interested in?</option>
+                    {courses &&
+                      courses.map(course => {
+                        return course.dates.map(date => (
+                          <option key={`${course.title}-${date.date}`}>{`${
+                            course.title
+                          } on the: ${formattedDate(date.date)}`}</option>
+                        ));
+                      })}
+                  </select>
                 </div>
               </div>
-              <button className="mt-5" type="submit">
-                SEND
-              </button>
-            </form>
-          </div>
-        </BluePhotoContainer>
+            </div>
+            <button className="mt-5" type="submit">
+              SEND
+            </button>
+          </form>
+        </div>
       </main>
     );
   }

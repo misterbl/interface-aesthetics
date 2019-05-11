@@ -1,45 +1,8 @@
 @import "./Utilities.scss";
 
-%header-photo {
-  height: 380px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0px -70px;
-}
-
 .courses-page {
   .grey-mark-background {
     background-position: 50% 55% !important;
-  }
-}
-
-.group-photo {
-  @extend %header-photo;
-  background-image: url("../assets/group_photo.jpg");
-  z-index: 1;
-}
-
-.course-photo {
-  @extend %header-photo;
-  background-image: url("../assets/home1.jpg");
-}
-
-.courses-header {
-  @extend %header-text;
-  top: 45%;
-  left: 35%;
-  p:first-of-type {
-    font-size: 28px;
-  }
-}
-
-.course-header {
-  @extend %header-text;
-  top: 30%;
-  left: 22%;
-  width: 650px;
-  p:first-of-type {
-    font-size: 24px;
   }
 }
 
@@ -79,28 +42,6 @@
     font-weight: 900;
     color: $dark-blue;
     width: auto;
-  }
-}
-
-.course-section {
-  position: relative;
-  margin-top: 40px;
-  span:first-of-type {
-    margin-left: 39px;
-  }
-  img {
-    width: 53px;
-    position: absolute;
-    top: -3px;
-    left: -12px;
-  }
-}
-
-.course {
-  display: flex;
-  padding: 60px 0px 60px 140px;
-  @media (max-width: 768px) {
-    padding: 60px 0px 60px 40px;
   }
 }
 
@@ -193,46 +134,14 @@
   }
 }
 
-.book-course-photo {
-  margin-bottom: 100px;
-  div:nth-of-type(2) {
-    color: white;
-    position: absolute;
-    top: 0px;
-    margin: 40px 0px 0px 40px;
-    display: flex;
-  }
+.select-course-container {
+  width: 300px !important;
+  height: 50px !important;
+  text-indent: 15px !important;
+}
 
-  background-image: url("../assets/home2.jpg");
-  height: 220px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0px -270px;
-  margin: 0 4.5rem 0 4.5rem;
-  span:first-of-type {
-    margin-left: 45px;
-    font-size: 37px;
-    font-weight: bold;
-  }
-  img {
-    width: 53px;
-    position: absolute;
-    top: 4px;
-    left: -5px;
-  }
-  p {
-    font-size: 15px;
-    font-weight: 300;
-  }
-  .select-date {
-    right: 80px;
-    top: -30px;
-    select {
-      width: 300px;
-      height: 50px;
-      text-indent: 15px;
-    }
-  }
+.select-course-image {
+  height: 300px;
 }
 
 .why-card {
@@ -268,12 +177,5 @@
     div {
       padding: 20px 0px;
     }
-  }
-}
-
-.why-container {
-  margin: 0px 80px 40px 110px;
-  @media (max-width: 758px) {
-    margin: 20px 20px 20px 20px;
   }
 }

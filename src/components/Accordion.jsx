@@ -18,7 +18,7 @@ class Accordion extends React.Component {
             <div
               className={`card-header ${
                 this.state.isActive === `collapse${index}` ? "active" : ""
-              }`}
+                }`}
               id={`heading${index}`}
             >
               <h2 className="mb-0 mr-2">
@@ -42,7 +42,7 @@ class Accordion extends React.Component {
               aria-labelledby={`heading${index}`}
               data-parent="#accordion"
             >
-              <div className="card-body font-16">{info.text}</div>
+              <div className="card-body">{info.text}</div>
             </div>
           </div>
         ))}

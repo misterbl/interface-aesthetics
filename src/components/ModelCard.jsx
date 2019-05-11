@@ -44,8 +44,8 @@ class ModelCard extends React.Component {
           isOpen={this.state.showModal}
           onRequestClose={this.handleCloseModal}
         >
-          <div className="d-flex">
-            <div className="modal-image-container">
+          <div className="d-flex h-100">
+            <div className="d-none d-md-block w-100">
               <div
                 className="modal-image"
                 style={{ backgroundImage: `url(${image})` }}

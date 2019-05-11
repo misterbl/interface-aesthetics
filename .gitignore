@@ -7,4 +7,4 @@ node_modules/
 ./functions/development.env
 .functions/firebase-config.json
 *credentials
-./funtion/emailAuth.js
+./functions/emailAuth.js

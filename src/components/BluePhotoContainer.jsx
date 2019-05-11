@@ -1,10 +1,9 @@
 import React from "react";
 
 const BluePhotoContainer = ({ container, header, children }) => (
-  <div className={`${container} d-none d-md-block position-relative`}>
-    <div className="bg-blue" />
-    {header && <div className={`${header}`}>{children}</div>}
-  </div>
+  <header className={`${container} d-none d-md-block position-relative`}>
+    <div>{header && <div className={`${header}`}>{children}</div>}</div>
+  </header>
 );
 
 export default BluePhotoContainer;

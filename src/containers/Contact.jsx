@@ -3,8 +3,8 @@ import { withRouter } from "react-router-dom";
 import axios from "axios";
 import phone from "../assets/Phone.svg";
 import email from "../assets/Email.svg";
-import BluePhotoContainer from "../components/BluePhotoContainer";
-import { DH_CHECK_P_NOT_SAFE_PRIME } from "constants";
+import contact from "../assets/contact.png";
+
 export class Contact extends React.Component {
   state = {
     name: "",
@@ -50,13 +50,22 @@ export class Contact extends React.Component {
     const { name, phoneNumber, reason, message } = this.state;
     return (
       <main>
-        <BluePhotoContainer container="group-photo" header="contact-header">
-          <p>Contact Interface</p>
-        </BluePhotoContainer>
+        <header>
+          <div className="text-center w-75 ml-5 mt-5">
+            <h2 className="m-0">CONTACT INTERFACE</h2>
+          </div>
+          <img
+            src={contact}
+            className="d-block w-100"
+            alt="contact interface aesthetics"
+          />
+        </header>
         <div className="contact-form flex-wrap flex-lg-nowrap">
-          <div className="d-flex flex-column">
-            <p className="blue-font w-75">Get in touch with us</p>
-            <p className="w-50 font-16">
+          <div className="d-flex flex-column w-50-container pr-5">
+            <h3 className="blue-font w-75 font-weight-bold">
+              Get in touch with us
+            </h3>
+            <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
               iaculis turpis dictum felis accumsan, semper bibendum neque
               pellentesque. Proin eget porta risus.
@@ -70,7 +79,7 @@ export class Contact extends React.Component {
               <span>info@interfaceaesthetic.com</span>
             </div>
           </div>
-          <form onSubmit={this.formSubmit}>
+          <form onSubmit={this.formSubmit} className="w-50-container">
             <div>
               <input
                 onChange={e => this.setState({ name: e.target.value })}
