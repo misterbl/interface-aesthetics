@@ -3,6 +3,7 @@ import axios from "axios";
 import { getAllCourses } from "../../functions/firebase-database";
 import formattedDate from "../utils/formattedDate";
 import modelPhoto from "../assets/model_page_lead_photo.png";
+import validateEmail from "../utils/validateEmail";
 
 export default class BookACourseForm extends PureComponent {
   state = {
@@ -12,8 +13,10 @@ export default class BookACourseForm extends PureComponent {
     course: "",
     message: "",
     sent: false,
-    buttonText: "Send Message",
-    courses: undefined
+    buttonText: "SEND",
+    courses: undefined,
+    validEmail: true,
+    error: false
   };
   async componentDidMount() {
     const courses = await getAllCourses();
@@ -25,7 +28,7 @@ export default class BookACourseForm extends PureComponent {
       name: "",
       message: "",
       email: "",
-      buttonText: "Message Sent"
+      buttonText: "SEND"
     });
   };
 
@@ -34,22 +37,35 @@ export default class BookACourseForm extends PureComponent {
     e.preventDefault();
 
     this.setState({
-      buttonText: "...sending"
+      validEmail: true,
+      error: false
     });
 
     let data = { name, email, phoneNumber, reason: `course: ${course}` };
-
-    axios
-      .post("http://localhost:5000/email", data)
-      .then(res => {
-        this.setState({ sent: true }, this.resetForm());
-      })
-      .catch(() => {
-        console.log("Message not sent");
-      });
+    if (validateEmail(email)) {
+      this.setState({ buttonText: "...sending" });
+      axios
+        .post("http://localhost:5000/email", data)
+        .then(res => {
+          this.setState({ sent: true }, this.resetForm());
+        })
+        .catch(() => {
+          console.log("Message not sent");
+          this.setState({ error: true, buttonText: "SEND" });
+        });
+    } else this.setState({ validEmail: false });
   };
   render() {
-    const { name, email, phoneNumber, courses } = this.state;
+    const {
+      name,
+      email,
+      phoneNumber,
+      courses,
+      sent,
+      validEmail,
+      error,
+      buttonText
+    } = this.state;
     return (
       <main>
         <header>
@@ -109,8 +125,15 @@ export default class BookACourseForm extends PureComponent {
                 </div>
               </div>
             </div>
+            {sent && <div className="text-success">Message sent</div>}
+            {!validEmail && (
+              <div className="text-danger">Email address not valid</div>
+            )}
+            {error && (
+              <div className="text-danger">Something went wrong, try again</div>
+            )}
             <button className="mt-5" type="submit">
-              SEND
+              {buttonText}
             </button>
           </form>
         </div>

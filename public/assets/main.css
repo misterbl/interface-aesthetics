@@ -1077,7 +1077,7 @@ header {
 
 @media (max-width: 440px) {
   iframe {
-    margin-bottom: -230px; } }
+    margin-bottom: -190px; } }
 
 @media (min-width: 441px) and (max-width: 750px) {
   iframe {

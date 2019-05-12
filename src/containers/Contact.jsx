@@ -1,9 +1,10 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
-import phone from "../assets/Phone.svg";
-import email from "../assets/Email.svg";
+import phoneIcon from "../assets/Phone.svg";
+import emailIcon from "../assets/Email.svg";
 import contact from "../assets/contact.png";
+import validateEmail from "../utils/validateEmail";
 
 export class Contact extends React.Component {
   state = {
@@ -13,41 +14,55 @@ export class Contact extends React.Component {
     reason: "",
     message: "",
     sent: false,
-    buttonText: "Send Message"
+    buttonText: "SEND",
+    validEmail: true,
+    error: false
   };
 
   resetForm = () => {
-    console.log("reset");
     this.setState({
       name: "",
       message: "",
       email: "",
-      buttonText: "Message Sent"
+      buttonText: "SEND",
+      phoneNumber: ""
     });
   };
 
   formSubmit = e => {
-    const { name, phoneNumber, reason, message } = this.state;
+    const { name, phoneNumber, reason, message, email } = this.state;
     e.preventDefault();
-
     this.setState({
-      buttonText: "...sending"
+      validEmail: true,
+      error: false
     });
 
     let data = { name, email, phoneNumber, reason, message };
-
-    axios
-      .post("http://localhost:5000/email", data)
-      .then(res => {
-        console.log("res", res);
-        this.setState({ sent: true }, this.resetForm());
-      })
-      .catch(e => {
-        console.log("Message not sent", e);
-      });
+    if (validateEmail(email)) {
+      this.setState({ buttonText: "...sending" });
+      axios
+        .post("http://localhost:5000/email", data)
+        .then(res => {
+          console.log("res", res);
+          this.setState({ sent: true }, this.resetForm());
+        })
+        .catch(e => {
+          console.log("Message not sent", e);
+          this.setState({ error: true, buttonText: "SEND" });
+        });
+    } else this.setState({ validEmail: false });
   };
   render() {
-    const { name, phoneNumber, reason, message } = this.state;
+    const {
+      name,
+      phoneNumber,
+      sent,
+      message,
+      validEmail,
+      buttonText,
+      error
+    } = this.state;
+    console.log(this.state);
     return (
       <main>
         <header>
@@ -71,11 +86,11 @@ export class Contact extends React.Component {
               pellentesque. Proin eget porta risus.
             </p>
             <div>
-              <img src={phone} alt="phone" />
+              <img src={phoneIcon} alt="phone" />
               <span>+44 (0) 123 456 789</span>
             </div>
             <div>
-              <img src={email} alt="email" />
+              <img src={emailIcon} alt="email" />
               <span>info@interfaceaesthetic.com</span>
             </div>
           </div>
@@ -119,7 +134,14 @@ export class Contact extends React.Component {
                 value={message}
               />
             </div>
-            <button type="submit">SEND</button>
+            {sent && <div className="text-success">Message sent</div>}
+            {!validEmail && (
+              <div className="text-danger">Email address not valid</div>
+            )}
+            {error && (
+              <div className="text-danger">Something went wrong, try again</div>
+            )}
+            <button type="submit">{buttonText}</button>
           </form>
         </div>
       </main>

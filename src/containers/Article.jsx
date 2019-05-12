@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router";
 import getBlog from "../apiCalls/getBlog";
+import blog from "../data/blogList";
 import BluePhotoContainer from "../components/BluePhotoContainer";
 import ROUTES from "../const/routes";
 
@@ -9,12 +10,12 @@ class Article extends React.Component {
     super(props);
     this.state = {
       blog: [],
-      articleId: props.match.params.articleId,
-      article: {}
+      articleId: parseInt(props.match.params.articleId),
+      article: { title: "", image: "", text: "" }
     };
   }
   async componentDidMount() {
-    const blog = await getBlog();
+    // const blog = await getBlog();
     await this.setState({ blog });
     this.getArticle();
   }
@@ -30,12 +31,15 @@ class Article extends React.Component {
   };
 
   render() {
-    const { article } = this.state;
+    const {
+      article: { title, image, text }
+    } = this.state;
+    console.log(this);
     return (
       <main>
         <BluePhotoContainer container="blog-photo" header="courses-header">
           <p>INTERFACE AESTHETICS</p>
-          <p>{article.title}</p>
+          <p>{title}</p>
         </BluePhotoContainer>
         <p className="p-60">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
@@ -43,8 +47,8 @@ class Article extends React.Component {
           Reiciendis ex aut laboriosam molestiae nisi fugit veritatis eligendi
           totam repudiandae.
         </p>
-        <img className="w-100 p-60" src={article.image} alt={article.title} />
-        <p className="p-60">{article.text}</p>
+        <img className="w-100 p-60" src={image} alt={title} />
+        <p className="p-60">{text}</p>
         <div className="text-center">
           <button
             className="button-orange-border my-5"
