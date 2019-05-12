@@ -25,7 +25,7 @@ export class About extends React.Component {
     return (
       <main className="about-page">
         <header>
-          <div className="text-center mx-5">
+          <div className="text-center mx-5 header-text-two">
             <h3 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h3>
             <h2 className="m-0">ABOUT US</h2>
             <p className="d-none d-sm-block">
@@ -133,7 +133,7 @@ export class About extends React.Component {
           <PhotoGallery images={[carousel5, carousel6, carousel7, carousel8]} />
           <WhyTrain className="mt-5" />
           <div className="d-flex flex-wrap flex-lg-nowrap mt-5">
-            <div className="w-75 mr-5">
+            <div className="w-75 mr-5 w-100-md">
               <TitleWithMark text="Hugely rewarding in all senses" />
               <h6>
                 A career in medical aesthetics can be hugely rewarding in all
@@ -151,9 +151,7 @@ export class About extends React.Component {
               </h6>
             </div>
             <div className="w-50">
-              <h2 className="blue-font text-center font-weight-bold">
-                Make a change
-              </h2>
+              <h2 className="blue-font font-weight-bold">Make a change</h2>
               <button onClick={this.pushToBookCourse} className="w-75">
                 Book a course today
               </button>

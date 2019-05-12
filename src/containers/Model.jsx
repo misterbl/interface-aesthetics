@@ -14,7 +14,7 @@ export class Model extends React.PureComponent {
     this.props.history.push(ROUTES.BECOME_A_MODEL);
   };
   showModelCards = () => (
-    <div className="d-flex flex-wrap justify-content-center">
+    <div className="d-flex flex-wrap justify-content-center ml-5">
       {modelCards.map(card => {
         const {
           image,
@@ -95,7 +95,7 @@ export class Model extends React.PureComponent {
         <div className="p-60">
           {this.showModelCards()}
           <div className="d-flex  flex-wrap flex-lg-nowrap justify-content-between">
-            <div className="w-50-container d-flex flex-column">
+            <div className="w-50-container d-flex flex-column pr-5">
               <div>
                 <TitleWithMark text="Model FAQ" />
               </div>
@@ -115,8 +115,9 @@ export class Model extends React.PureComponent {
                 BE A MODEL PATIENT
               </button>
             </div>
-            <Accordion data={testimonialsFaq} />
+            <Accordion className="w-50-container" data={testimonialsFaq} />
           </div>
+          <br />
           <TitleWithMark text="Testimonials" />
           {testimonials.map(testimonial => (
             <div key={testimonial.name} className="bg-white my-5 p-60">

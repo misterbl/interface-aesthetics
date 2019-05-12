@@ -31,7 +31,7 @@ export class Header extends React.Component {
   };
   render() {
     return (
-      <nav className="py-4 bg-white w-100">
+      <nav className="p-4 bg-white w-100">
         <button
           onClick={this.handleShowModal}
           className="bg-transparent  border-0 w-100 d-block d-md-none pt-4"

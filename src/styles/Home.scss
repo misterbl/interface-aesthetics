@@ -66,7 +66,10 @@
   img {
     width: 53px;
   }
-  padding: 20px 20px 60px 20px;
+  @media (min-width: 400px) {
+    padding: 20px 20px 60px 20px;
+  }
+
   .carousel-indicators {
     left: 5%;
     right: 0;
@@ -83,6 +86,10 @@
   height: 400px;
   color: white;
   text-align: center;
+  @media (max-width: 400px) {
+    padding: 30px 30px 30px 5px;
+  }
+
   padding: 45px 30px 45px 30px;
   div:first-of-type {
     font-size: 26px;
@@ -100,7 +107,9 @@
 }
 
 .upcoming-courses {
-  margin: 30px 80px 30px 80px;
+  @media (min-width: 500px) {
+    margin: 30px 80px 30px 80px;
+  }
   .carousel-prev-icon {
     left: -60px;
     top: 40%;
@@ -113,7 +122,9 @@
     @extend %grey-mark-background;
   }
   .carousel-inner {
-    padding: 70px 50px 70px 50px;
+    @media (min-width: 330px) {
+      padding: 70px 50px 70px 50px;
+    }
   }
   .carousel-item {
     height: auto;

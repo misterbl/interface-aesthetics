@@ -2,7 +2,7 @@ import React from "react";
 
 const CourseInformation = ({ image, overview, details }) => (
   <div className="course-information flex-wrap flex-lg-nowrap">
-    <img src={image} alt={overview} />
+    {image && <img src={image} alt={overview} />}
     <div>
       <p>{overview}</p>
       <ul className="orange-dot-li">

@@ -2,7 +2,7 @@ import React from "react";
 
 const CourseCard = ({ title, handleClick, price, image }) => (
   <div
-    className="course-card position-relative"
+    className="ml-5 course-card position-relative"
     style={{ backgroundImage: `url(${image})` }}
   >
     <div />

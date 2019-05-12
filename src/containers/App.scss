@@ -24,6 +24,7 @@ header {
   position: relative;
   overflow: hidden;
   color: white;
+  max-height: 500px;
   div:first-child {
     position: absolute;
     top: 130px;
@@ -35,12 +36,20 @@ header {
   }
 }
 
+iframe {
+  @media (max-width: 440px) {
+    margin-bottom: -230px;
+  }
+  @media (min-width: 441px) and (max-width: 750px) {
+    margin-bottom: -100px;
+  }
+}
 form > div {
   .select-container {
     border-bottom: 1px solid $dark-blue;
   }
   display: flex;
-  @media (min-width: 7569px) {
+  @media (min-width: 769px) {
     width: 500px;
   }
   flex-wrap: wrap;
@@ -160,15 +169,35 @@ a:hover {
 
 .w-50-container {
   width: 100%;
+  margin: 0 !important;
   @media (min-width: 900px) {
     width: 50%;
+    margin: auto;
   }
 }
 
+.w-100-md {
+  @media (max-width: 900px) {
+    width: 100% !important;
+  }
+}
 .header-text {
-  left: 35% !important;
+  left: 30% !important;
   top: 35% !important;
   text-align: center;
+  @media (max-width: 430px) {
+    left: 20% !important;
+  }
+}
+.header-text-two {
+  @media (max-width: 399px) {
+    top: 35% !important;
+    left: 10% !important;
+  }
+  @media (min-width: 400px) and (max-width: 577px) {
+    top: 45% !important;
+    left: 25% !important;
+  }
 }
 // .no-hover {
 //   position: relative;
@@ -280,4 +309,8 @@ a:hover {
 
 .h-100 {
   height: 100%;
+}
+
+.neg-mb-10 {
+  margin-bottom: -10px !important;
 }
