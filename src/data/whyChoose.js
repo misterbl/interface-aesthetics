@@ -17,7 +17,7 @@ const whyChoose = [
   {
     title: "Our training partners:",
     text:
-      "We work with Allergan, the pharmaceutical industry leader in non-surgical aesthetics, ensuring that our delegates are trained using recognisable and reputable products (Botox(R), Juvederm(R))."
+      "We work with Allergan, the pharmaceutical industry leader in non-surgical aesthetics, ensuring that our delegates are trained using recognisable and reputable products (Botox ®, Juvederm ®)."
   },
   {
     title: "Small group teaching:",

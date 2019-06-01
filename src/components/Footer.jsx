@@ -4,6 +4,7 @@ import axios from "axios";
 import logo from "../assets/Interface_logo.svg";
 import ROUTES from "../const/routes";
 import validateEmail from "../utils/validateEmail";
+import SocialMediaBar from "./SocialMediaBar";
 
 export class Footer extends React.Component {
   state = {
@@ -127,10 +128,10 @@ export class Footer extends React.Component {
             </label>
           </form>
         </div>
-        <div className="d-flex justify-content-around my-4 font-12 mx-3">
+        <div className="d-flex justify-content-between my-4 font-12 mx-3">
           <p>©Interface Aeshetics 2019. All Rights Reserved</p>
           <img src={logo} alt="Interface Aestheticslogo" className="mx-5" />
-          <p>Freelance Web Design - The Lonely Pixel</p>
+          <SocialMediaBar />
         </div>
       </footer>
     );

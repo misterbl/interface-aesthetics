@@ -5,7 +5,7 @@ import BlogCard from "./BlogCard";
 const BlogList = ({ blogList }) => (
   <div className="blog-list">
     <TitleWithMark text="Interface Aethestics in focus" />
-    <div className="d-flex flex-wrap">
+    <div className="d-flex flex-wrap justify-content-center">
       {blogList.map(blog => (
         <BlogCard
           key={blog.title}

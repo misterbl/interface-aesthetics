@@ -1,26 +1,27 @@
 import React from "react";
 
 const PrivacyPolicy = () => (
-  <React.Fragment>
+  <div className="p-60">
     <h1>Welcome to our Privacy Policy</h1>
     <h3>Your privacy is critically important to us.</h3>
-    Interface Aesthetics is located at:
+    <span style={{ textTransform: "capitalize" }}>
+      Interface Aesthetics is a subsidiary of JAO Medical Ltd
+    </span>
+    is located at:
     <br />
     <address>
-      Interface Aesthetics
-      <br />
       9b York Way, Flat 5 London <br />
       N7 9GY , United Kingdom
       <br />
-      07482639644{" "}
     </address>
+    <p>Registered Company Number: 08882369</p>
     <p>
       It is Interface Aesthetics's policy to respect your privacy regarding any
       information we may collect while operating our website. This Privacy
       Policy applies to{" "}
       <a href="http://www.interfaceaesthetics.co.uk">
         www.interfaceaesthetics.co.uk
-      </a>{" "}
+      </a>
       (hereinafter, "us", "we", or "www.interfaceaesthetics.co.uk"). We respect
       your privacy and are committed to protecting personally identifiable
       information you may provide us through the Website. We have adopted this
@@ -153,21 +154,7 @@ const PrivacyPolicy = () => (
     </p>
     <h2 />
     <p />
-    <h2>Credit & Contact Information</h2>
-    <p>
-      This privacy policy was created at{" "}
-      <a
-        style={{ color: "inherit", textDecoration: "none" }}
-        href="https://termsandconditionstemplate.com/privacy-policy-generator/"
-        title="Privacy policy template generator"
-        target="_blank"
-      >
-        termsandconditionstemplate.com
-      </a>
-      . If you have any questions about this Privacy Policy, please contact us
-      via <a href="mailto:contact@interfaceaesthetics.co.uk">email</a>
-    </p>
-  </React.Fragment>
+  </div>
 );
 
 export default PrivacyPolicy;

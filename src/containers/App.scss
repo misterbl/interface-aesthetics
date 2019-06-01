@@ -314,3 +314,29 @@ a:hover {
 .neg-mb-10 {
   margin-bottom: -10px !important;
 }
+
+.w-5 {
+  width: 5% !important;
+}
+
+%social-media {
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: auto;
+  border: none;
+}
+.facebook {
+  @extend %social-media;
+  background-image: url("../assets/facebook.png");
+}
+
+.instagram {
+  @extend %social-media;
+  background-image: url("../assets/instagram.png");
+}
+
+.social-header {
+  position: absolute;
+  right: 40px;
+}

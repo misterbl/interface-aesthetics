@@ -37,6 +37,7 @@ class Course extends React.Component {
       );
       const {
         overview,
+        expect,
         moreInformation,
         information,
         title,
@@ -47,7 +48,7 @@ class Course extends React.Component {
         <React.Fragment>
           <header>
             <div className="text-center w-75 ml-5 mt-5">
-              <h4 className="m-0">OUR COURSES</h4>
+              <h4 className="m-0">OUR COURSE</h4>
               <h2>{title}</h2>
             </div>
             <img src={home1} className="d-block w-100" alt={title} />
@@ -58,6 +59,16 @@ class Course extends React.Component {
                 <TitleWithMark text="Course Overview" />
                 <p className="mb-4">{overview}</p>{" "}
                 <TitleWithMark text="What can you expect" />
+                {expect && (
+                  <React.Fragment>
+                    <p>{expect.text}</p>
+                    <ul className="orange-dot-li">
+                      {expect.details.map(paragraph => (
+                        <li key={paragraph}>{paragraph}</li>
+                      ))}
+                    </ul>
+                  </React.Fragment>
+                )}
                 {days && (
                   <div className="d-flex flex-wrap my-3">
                     {days.map((day, i) => (
@@ -98,9 +109,9 @@ class Course extends React.Component {
               <div className="w-50-container pr-3">
                 <TitleWithMark text="Book your place now" color="white" />
                 <p className="d-none d-sm-block">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam feugiat rhoncus nisl, id rutrum dui tempor vitae.
-                  Aenean vel placerat nisl.
+                  Whether you are starting out in aesthetics, or looking to
+                  perfect and advance your skills, securing your place on one of
+                  our accredited training courses is easy.
                 </p>
               </div>
               <form className="w-50-container">
@@ -108,8 +119,8 @@ class Course extends React.Component {
                   <option selected>Select course date</option>
                   {dates.map(date => (
                     <option key={date.date}>
-                      {`${formattedDate(date.date)} ${date.placesLeft} place${
-                        date.placesLeft !== 0 ? "s" : ""
+                      {`${formattedDate(date.date)} - ${date.placesLeft} place${
+                        date.placesLeft !== 1 ? "s" : ""
                       } left`}
                     </option>
                   ))}

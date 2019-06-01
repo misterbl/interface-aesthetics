@@ -7,8 +7,7 @@ import home5 from "../assets/home5.png";
 const homeCarousel = [
   {
     title: "WELCOME TO INTERFACE AESTHETICS",
-    text:
-      "Innovative training in non-surgical aesthetics for healthcare profesionals.",
+    text: "Botox ® and Dermal Filler courses",
     image: home1
   },
   {
@@ -18,18 +17,17 @@ const homeCarousel = [
   },
   {
     title: "BECOME A COMPETENT AESTHETIC PRACTITIONER",
-    text: "Unrivalled level of practical training on live models",
+    text: "Expert tuition with a proven track record",
     image: home3
   },
   {
-    title: "GUARANTEED SMALL GROUP TEACHING TO MAXIMISE YOUR HANDS-ON TRAINING",
-    text: "Direct observation and expert feedback on injecting",
+    title: "GUARANTEED SMALL GROUP TEACHING",
+    text: "Hands-on training with live model patients",
     image: home4
   },
   {
-    title: "BUSINESS ADVICE",
-    text:
-      "Learn how to succeed in the vastly expanding industry of non-surgical aesthetics",
+    title: "SUCCEED IN THE AESTHETICS INDUSTRY",
+    text: "Dedicated teaching on business development",
     image: home5
   }
 ];

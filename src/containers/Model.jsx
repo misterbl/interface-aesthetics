@@ -6,7 +6,7 @@ import modelCards from "../data/modelCards";
 import ROUTES from "../const/routes";
 import TitleWithMark from "../components/TitleWithMark";
 import testimonials from "../data/testimonials";
-import testimonialsFaq from "../data/testimonialsFaq";
+import modelFaq from "../data/modelFaq";
 import modelImage from "../assets/model_page_lead_photo.png";
 
 export class Model extends React.PureComponent {
@@ -115,7 +115,7 @@ export class Model extends React.PureComponent {
                 BE A MODEL PATIENT
               </button>
             </div>
-            <Accordion className="w-50-container" data={testimonialsFaq} />
+            <Accordion className="w-50-container" data={modelFaq} />
           </div>
           <br />
           <TitleWithMark text="Testimonials" />

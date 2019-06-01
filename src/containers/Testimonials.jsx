@@ -1,8 +1,8 @@
 import React from "react";
 import testimonials from "../data/testimonials";
-import testimonialsFaq from "../data/testimonialsFaq";
-import TitleWithMark from "../components/TitleWithMark";
-import Accordion from "../components/Accordion";
+// import testimonialsFaq from "../data/testimonialsFaq";
+// import TitleWithMark from "../components/TitleWithMark";
+// import Accordion from "../components/Accordion";
 import testimonialsImage from "../assets/testimonials.png";
 
 export const Testimonials = () => (
@@ -26,8 +26,8 @@ export const Testimonials = () => (
           <p className="text-primary">Attended: {` ${testimonial.course}`}</p>
         </div>
       ))}
-      <TitleWithMark text="FAQ" />
-      <Accordion data={testimonialsFaq} />
+      {/* <TitleWithMark text="FAQ" />
+      <Accordion data={testimonialsFaq} /> */}
     </div>
   </main>
 );

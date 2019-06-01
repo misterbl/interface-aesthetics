@@ -4,7 +4,9 @@ import BluePhotoContainer from "../components/BluePhotoContainer";
 import james from "../assets/james_olding.jpg";
 import WhyTrain from "../components/WhyTrain";
 import PhotoGallery from "../components/PhotoGallery";
+import testimonialsFaq from "../data/testimonialsFaq";
 import TitleWithMark from "../components/TitleWithMark";
+import Accordion from "../components/Accordion";
 import groupPhoto from "../assets/group_photo.png";
 import ROUTES from "../const/routes";
 import WhyChoose from "../components/WhyChoose";
@@ -28,13 +30,6 @@ export class About extends React.Component {
           <div className="text-center mx-5 header-text-two">
             <h3 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h3>
             <h2 className="m-0">ABOUT US</h2>
-            <p className="d-none d-sm-block">
-              Interface Aesthetics is a surgeon-led training academy (Smaller)
-              Small-Groups and hands-on training are at the core of our
-              philosophy. Our courses are accredited by the two leading insurers
-              of cosmetic practice in the UK, The CPD Accreditation Service, and
-              the pharmaceutical industry leader in aesthetics, Allergan.
-            </p>
           </div>
           <img
             src={groupPhoto}
@@ -49,6 +44,25 @@ export class About extends React.Component {
                 Our courses have been developed to provide the greatest possible
                 exposure to real patients
               </h4>
+              <p>
+                Interface Aesthetics has a proven track record of getting our
+                delegates into independent practice. Working with the industry
+                leaders, and ensuring all training is hands-on and practically
+                oriented, our delegates have the confidence to start independent
+                work immediately after our courses. All teaching is firmly
+                grounded in anatomy, and delivered by doctors with backgrounds
+                in head & neck surgery and aesthetics.
+              </p>
+              <p>
+                We exclusively train healthcare professionals, and as such we
+                are able to provide a level of training commensurate with the
+                healthcare qualifications and experience of our delegates.
+                Learning in this way allows the course to move faster, ensuring
+                delegates are pushed, while maintaining a supportive training
+                environment. From the outset, tuition is patient-focused, with
+                an emphasis on putting into action the theory behind safe and
+                successful aesthetic practice.
+              </p>
               <button className="w-50" onClick={this.pushToCourses}>
                 VIEW COURSES
               </button>
@@ -66,14 +80,10 @@ export class About extends React.Component {
               />
             </div>
           </div>
-          <WhyChoose />
+          <WhyChoose className="mt-5" />
           <Accreditations />
-          <div className="about-founder text-center">
-            <img
-              className="about-founder about-founder__photo d-none d-md-block"
-              src={james}
-              alt="James Olding, founder and trainer at Interface Aesthetics"
-            />
+          <div className="about-founder text-center mt-5">
+            <div className="about-founder about-founder__photo d-none d-md-block" />
             <div className="mx-5">
               <TitleWithMark text="About The Founder" />
               <p>
@@ -132,6 +142,8 @@ export class About extends React.Component {
           </div>
           <PhotoGallery images={[carousel5, carousel6, carousel7, carousel8]} />
           <WhyTrain className="mt-5" />
+          <TitleWithMark text="FAQ" />
+          <Accordion data={testimonialsFaq} />
           <div className="d-flex flex-wrap flex-lg-nowrap mt-5">
             <div className="w-75 mr-5 w-100-md">
               <TitleWithMark text="Hugely rewarding in all senses" />

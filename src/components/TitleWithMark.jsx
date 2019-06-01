@@ -1,8 +1,8 @@
 import React from "react";
 import mark from "../assets/Mark.svg";
 
-const TitleWithMark = ({ text, color = "blue-font" }) => (
-  <React.Fragment>
+const TitleWithMark = ({ text, color = "blue-font", className = "" }) => (
+  <div className={className}>
     <img className="mark-margin d-none d-md-inline-block" src={mark} />
     <h3
       className={`${color} text-center d-none font-weight-bold d-md-inline-block`}
@@ -13,7 +13,7 @@ const TitleWithMark = ({ text, color = "blue-font" }) => (
       {text}
     </h2>
     <img className="mark-margin d-block d-md-none" src={mark} />
-  </React.Fragment>
+  </div>
 );
 
 export default TitleWithMark;

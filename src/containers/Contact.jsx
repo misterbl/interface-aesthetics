@@ -81,9 +81,10 @@ export class Contact extends React.Component {
               Get in touch with us
             </h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              iaculis turpis dictum felis accumsan, semper bibendum neque
-              pellentesque. Proin eget porta risus.
+              Fill out our online enquiry form, send us an email, or call us to
+              find out which aesthetic course could be right for you. One of the
+              Interface Aesthetics team will be happy to discuss any questions
+              you may have.
             </p>
             <div>
               <img src={phoneIcon} alt="phone" />

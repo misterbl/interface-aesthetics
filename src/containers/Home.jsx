@@ -6,7 +6,7 @@ import Accreditations from "../components/Accreditations";
 import WhoWeTrain from "../components/WhoWeTrain";
 import UpcomingCourses from "../components/UpcomingCourses";
 import TitleWithMark from "../components/TitleWithMark";
-import modelSmiling from "../assets/model_smiling.jpg";
+import tearThroughModel from "../assets/model/tear_through_filler_model.jpg";
 import ROUTES from "../const/routes";
 import WhyCard from "../components/WhyCard";
 import becomeAModelUsps from "../data/become-a-model-usps";
@@ -32,6 +32,7 @@ export class Home extends React.Component {
   };
   render() {
     const threeArticles = blogList.slice(0, 3);
+
     return (
       <main className="text-center text-md-left">
         <div
@@ -90,10 +91,33 @@ export class Home extends React.Component {
               </h4>
               <p>
                 High quality training is fundamental to safe and successful
-                aesthetic practice. Our Foundation and Advanced courses are
+                aesthetic practice. Our Botox ® and dermal filler courses are
                 designed to provide unrivalled levels of hands-on injecting with
                 model patients. Teaching is surgeon-led, in small groups and
                 firmly grounded in anatomy.
+              </p>
+
+              <p>Beginner – Foundation Course in Botox ® and Dermal Filler</p>
+              <p>
+                Advanced - Advanced Course in Botox ® and Dermal Filler Perfect
+              </p>
+              <p>
+                Masterclass Courses in Lip Augmentation, Tear Trough & Facial
+                Harmonization
+              </p>
+
+              <p>
+                The demand for Botox ® and dermal filler treatments continues to
+                grow rapidly. This is a unique area within healthcare which
+                presents professional and financial opportunities. Working as an
+                aesthetic practitioner can complement full-time healthcare work,
+                or it can become a new full-time career with greater autonomy
+                and exciting new challenges. We have trained doctors, dentists
+                and nurses from diverse backgrounds. Our training is exclusively
+                for qualified healthcare professionals. We are well placed to
+                guide our delegates through both the practical the logistical
+                aspects of become an independent and competent aesthetic
+                practitioner.
               </p>
             </div>
             <div className="w-50-container">
@@ -110,12 +134,22 @@ export class Home extends React.Component {
             </div>
           </div>
           <div>
-            <Accreditations />
-            <WhoWeTrain />
+            <Accreditations className="mt-5" />
+            <WhoWeTrain className="mt-5" />
             <UpcomingCourses
               courses={this.state.courses}
               onClick={this.pushToBookCourse}
             />
+            <TitleWithMark text="Testimonials" className="mt-5" />
+            {testimonials.map(testimonial => (
+              <div key={testimonial.name} className="bg-white my-5 p-60">
+                <p className="blue-font">{testimonial.name}</p>
+                <p>{testimonial.text}</p>
+                <p className="text-primary">
+                  Attended: {` ${testimonial.course}`}
+                </p>
+              </div>
+            ))}
             <div className="d-flex flex-wrap flex-lg-nowrap my-5">
               <div className="become-model">
                 <TitleWithMark text="Become a model" />
@@ -127,7 +161,7 @@ export class Home extends React.Component {
                   MODEL FOR US
                 </button>
                 <img
-                  src={modelSmiling}
+                  src={tearThroughModel}
                   alt="model for us and receive cheap Aesthetic treatments"
                   className="d-block w-75 mb-5"
                 />
@@ -138,8 +172,7 @@ export class Home extends React.Component {
                 ))}
               </div>
             </div>
-            <BlogList blogList={threeArticles} />
-            <div className="d-flex pt-0 flex-wrap flex-lg-nowrap my-5">
+            {/* <div className="d-flex pt-0 flex-wrap flex-lg-nowrap my-5">
               <div className="w-50-container">
                 <img
                   className="w-100"
@@ -161,18 +194,9 @@ export class Home extends React.Component {
                   porta risus.
                 </p>
               </div>
-            </div>
-            <TitleWithMark text="Testimonials" />
-            {testimonials.map(testimonial => (
-              <div key={testimonial.name} className="bg-white my-5 p-60">
-                <p className="blue-font">{testimonial.name}</p>
-                <p>{testimonial.text}</p>
-                <p className="text-primary">
-                  Attended: {` ${testimonial.course}`}
-                </p>
-              </div>
-            ))}
+            </div> */}
           </div>
+          <BlogList blogList={threeArticles} />
         </div>
       </main>
       // {/* <div className="no-hover">

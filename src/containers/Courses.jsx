@@ -31,7 +31,7 @@ export class Courses extends React.Component {
         <header>
           <div className="header-text">
             <h3 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h3>
-            <h2 className="m-0">OUR COURSES</h2>
+            <h2 className="m-0">OUR COURSES IN BOTOX ® AND DERMAL FILLER</h2>
           </div>
           <img
             src={home5}
@@ -49,16 +49,26 @@ export class Courses extends React.Component {
             </div>
             <div className="w-50-container">
               <p>
-                Interface Aesthetics is leading innovation in non-surgical
-                aesthetic training. High quality training is fundamental to safe
-                and successful aesthetic practice.
+                Overall, the two-day Foundation Course for Botox® and dermal
+                fillers was excellent. I am a Medical Doctor and prior to the
+                course I did not have any experience in injecting Botox ® and
+                dermal fillers. The course had a great balance in theory
+                sessions and practical sessions (morning theory, afternoon
+                practice) at a neat location. The Saturday covered Botox ® and
+                the Sunday covered dermal fillers. Dr. James Olding is a great
+                and knowledgeable teacher and I felt safe asking any questions.
+                During the practical parts Dr. James guided me and the other
+                delegates through the process. The practical part included
+                plenty of hands-on for the delegates. I was lucky to have a
+                group of only 3 delegates during the course and therefore I was
+                very confident in my practice after the course. I really
+                appreciated the inclusion of cheek fillers in this course. The
+                course also included information on insurance and FAQ on how to
+                set up your own business, which I successfully did after the
+                course.
               </p>
-              <p>
-                Our Foundation and Advanced courses are designed to provide
-                unrivalled levels of hands-on injecting with model patients.
-                Teaching is surgeon-led, in small groups and firmly grounded in
-                anatomy.
-              </p>
+              <p>Dr Lara Van De Lande</p>
+              <p>Medical Doctor</p>
             </div>
           </div>
           {this.getCourses()}

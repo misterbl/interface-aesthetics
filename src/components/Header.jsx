@@ -6,6 +6,7 @@ import logo from "../assets/Interface_logo.svg";
 import whiteLogo from "../assets/Interface_logo-white.svg";
 
 import NavBurgerButton from "./NavBurgerButton";
+import SocialMediaBar from "./SocialMediaBar";
 export class Header extends React.Component {
   state = { showModal: false };
   isActive = route => {
@@ -31,87 +32,161 @@ export class Header extends React.Component {
   };
   render() {
     return (
-      <nav className="p-4 bg-white w-100">
-        <button
-          onClick={this.handleShowModal}
-          className="bg-transparent  border-0 w-100 d-block d-md-none pt-4"
-          type="button"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <NavBurgerButton open={false} />
-        </button>
-        <Modal
-          isOpen={this.state.showModal}
-          onRequestClose={this.handleCloseModal}
-        >
+      <div className="p-4 bg-white">
+        <SocialMediaBar className="social-header" />
+
+        <nav className="mt-4">
           <button
-            onClick={this.handleCloseModal}
-            className="bg-light-blue px-5 border-0 w-100 d-block d-md-none"
+            onClick={this.handleShowModal}
+            className="bg-transparent  border-0 w-100 d-block d-md-none pt-4"
             type="button"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <NavBurgerButton open={true} />
+            <NavBurgerButton open={false} />
           </button>
-          <ul className="d-flex flex-column bg-light-blue w-100 h-100 text-center">
-            <li className="my-5">
-              <a href={ROUTES.INDEX}>
-                <img
-                  className="m-auto"
-                  src={whiteLogo}
-                  alt="interface aesthetics's logo"
-                />
-              </a>
-            </li>
-            <li className="mb-3">
+          <Modal
+            isOpen={this.state.showModal}
+            onRequestClose={this.handleCloseModal}
+          >
+            <button
+              onClick={this.handleCloseModal}
+              className="bg-light-blue px-5 border-0 w-100 d-block d-md-none"
+              type="button"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <NavBurgerButton open={true} />
+            </button>
+            <ul className="d-flex flex-column bg-light-blue w-100 h-100 text-center">
+              <li className="my-5">
+                <a href={ROUTES.INDEX}>
+                  <img
+                    className="m-auto"
+                    src={whiteLogo}
+                    alt="interface aesthetics's logo"
+                  />
+                </a>
+              </li>
+              <li className="mb-3">
+                <a
+                  className="font-weight-bold text-white"
+                  href={ROUTES.COURSES}
+                  style={this.isActive(ROUTES.COURSES)}
+                >
+                  COURSES <span className="sr-only">(current)</span>
+                </a>
+              </li>
+              <li className="mb-3">
+                <a
+                  className="font-weight-bold text-white"
+                  href={ROUTES.ABOUT}
+                  style={this.isActive(ROUTES.ABOUT)}
+                >
+                  ABOUT
+                </a>
+              </li>
+              <li className="mb-3">
+                <a
+                  className="font-weight-bold text-white"
+                  href={ROUTES.TESTIMONIALS}
+                  style={this.isActive(ROUTES.TESTIMONIALS)}
+                >
+                  TESTIMONIALS
+                </a>
+              </li>
+              <li className="mb-3">
+                <a
+                  className="font-weight-bold text-white"
+                  href={ROUTES.MODEL}
+                  style={this.isActive(ROUTES.MODEL)}
+                >
+                  MODEL
+                </a>
+              </li>
+              <li className="mb-3">
+                <a
+                  className="font-weight-bold text-white"
+                  href={ROUTES.CONTACT}
+                  style={this.isActive(ROUTES.CONTACT)}
+                >
+                  CONTACT
+                </a>
+              </li>
+              <li className="mb-3">
+                <a
+                  className="font-weight-bold text-white"
+                  href={ROUTES.BLOG}
+                  style={this.isActive(ROUTES.BLOG)}
+                >
+                  BLOG
+                </a>
+              </li>
+            </ul>
+          </Modal>
+          <div className="d-block d-md-none text-center">
+            <a href={ROUTES.INDEX}>
+              <img src={logo} alt="interface aesthetics's logo" />
+            </a>
+          </div>
+          <ul className="d-none d-md-flex justify-content-between w-100">
+            <li>
               <a
-                className="font-weight-bold text-white"
+                className="font-weight-bold blue-font"
                 href={ROUTES.COURSES}
                 style={this.isActive(ROUTES.COURSES)}
               >
                 COURSES <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li className="mb-3">
+            <li>
               <a
-                className="font-weight-bold text-white"
+                className="font-weight-bold blue-font"
                 href={ROUTES.ABOUT}
                 style={this.isActive(ROUTES.ABOUT)}
               >
                 ABOUT
               </a>
             </li>
-            <li className="mb-3">
+            <li>
               <a
-                className="font-weight-bold text-white"
+                className="font-weight-bold blue-font"
                 href={ROUTES.TESTIMONIALS}
                 style={this.isActive(ROUTES.TESTIMONIALS)}
               >
                 TESTIMONIALS
               </a>
             </li>
-            <li className="mb-3">
+            <div className="d-none d-md-block">
+              <a className="m-0" href={ROUTES.INDEX}>
+                <img
+                  className="m-0"
+                  src={logo}
+                  alt="interface aesthetics's logo"
+                />
+              </a>
+            </div>
+            <li>
               <a
-                className="font-weight-bold text-white"
+                className="font-weight-bold blue-font"
                 href={ROUTES.MODEL}
                 style={this.isActive(ROUTES.MODEL)}
               >
                 MODEL
               </a>
             </li>
-            <li className="mb-3">
+            <li>
               <a
-                className="font-weight-bold text-white"
+                className="font-weight-bold blue-font"
                 href={ROUTES.CONTACT}
                 style={this.isActive(ROUTES.CONTACT)}
               >
                 CONTACT
               </a>
             </li>
-            <li className="mb-3">
+            <li>
               <a
-                className="font-weight-bold text-white"
+                className="font-weight-bold blue-font"
                 href={ROUTES.BLOG}
                 style={this.isActive(ROUTES.BLOG)}
               >
@@ -119,78 +194,8 @@ export class Header extends React.Component {
               </a>
             </li>
           </ul>
-        </Modal>
-        <div className="d-block d-md-none text-center">
-          <a href={ROUTES.INDEX}>
-            <img src={logo} alt="interface aesthetics's logo" />
-          </a>
-        </div>
-        <ul className="d-none d-md-flex justify-content-between w-100">
-          <li>
-            <a
-              className="font-weight-bold blue-font"
-              href={ROUTES.COURSES}
-              style={this.isActive(ROUTES.COURSES)}
-            >
-              COURSES <span className="sr-only">(current)</span>
-            </a>
-          </li>
-          <li>
-            <a
-              className="font-weight-bold blue-font"
-              href={ROUTES.ABOUT}
-              style={this.isActive(ROUTES.ABOUT)}
-            >
-              ABOUT
-            </a>
-          </li>
-          <li>
-            <a
-              className="font-weight-bold blue-font"
-              href={ROUTES.TESTIMONIALS}
-              style={this.isActive(ROUTES.TESTIMONIALS)}
-            >
-              TESTIMONIALS
-            </a>
-          </li>
-          <div className="d-none d-md-block">
-            <a className="m-0" href={ROUTES.INDEX}>
-              <img
-                className="m-0"
-                src={logo}
-                alt="interface aesthetics's logo"
-              />
-            </a>
-          </div>
-          <li>
-            <a
-              className="font-weight-bold blue-font"
-              href={ROUTES.MODEL}
-              style={this.isActive(ROUTES.MODEL)}
-            >
-              MODEL
-            </a>
-          </li>
-          <li>
-            <a
-              className="font-weight-bold blue-font"
-              href={ROUTES.CONTACT}
-              style={this.isActive(ROUTES.CONTACT)}
-            >
-              CONTACT
-            </a>
-          </li>
-          <li>
-            <a
-              className="font-weight-bold blue-font"
-              href={ROUTES.BLOG}
-              style={this.isActive(ROUTES.BLOG)}
-            >
-              BLOG
-            </a>
-          </li>
-        </ul>
-      </nav>
+        </nav>
+      </div>
     );
   }
 }

@@ -32,9 +32,10 @@ const UpcomingCourses = ({ onClick, courses }) => (
                 <div className="content">
                   <TitleWithMark text="Upcoming Courses" />
                   <h4>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                    congue, neque at dignissim condimentum, metus nisl luctus
-                    lectus, et consequat tellus justo nec augue.
+                    Check our upcoming course availability online.
+                    Alternatively, you can discuss which course could be right
+                    for you by completing out Contact form. One of our expert
+                    trainers will get back to you straight away.
                   </h4>
                   <h5 className="blue-font mt-3 mb-2">{course.title}</h5>
                   <p>{course.overview}</p>

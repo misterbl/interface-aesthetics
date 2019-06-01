@@ -1,14 +1,16 @@
 import React from "react";
 
 const TermsAndConditions = () => (
-  <React.Fragment>
+  <div className="p-60">
     <h2>Welcome to Interface Aesthetics</h2>
     <p>
       These terms and conditions outline the rules and regulations for the use
       of Interface Aesthetics's Website.
     </p>{" "}
     <br />
-    <span style={{ textTransform: "capitalize" }}>Interface Aesthetics</span>
+    <span style={{ textTransform: "capitalize" }}>
+      Interface Aesthetics is a subsidiary of JAO Medical Ltd
+    </span>
     is located at:
     <br />
     <address>
@@ -16,10 +18,32 @@ const TermsAndConditions = () => (
       N7 9GY , United Kingdom
       <br />
     </address>
+    <p>Registered Company Number: 08882369</p>
     <p>
       By accessing this website we assume you accept these terms and conditions
       in full. Do not continue to use Interface Aesthetics's website if you do
       not accept all of the terms and conditions stated on this page.
+    </p>
+    <p>
+      The content of this website is for general information only. All content
+      is subject to change at any time.{" "}
+    </p>
+    <p>
+      Interface Aesthetics has the permission to use all logos contained within
+      the website.
+    </p>
+    <p>
+      All images and videos which do not pertain to an acknowledged company
+      within this website are the property of Interface Aesthetics and should
+      not be used by any other person or organisation.
+    </p>
+    <p>
+      Unauthorised use of this website may give rise to claims for
+      damages/criminal prosecution.
+    </p>
+    <p>
+      Use of this website is subject to the laws of England, Scotland, Wales &
+      Northern Ireland.
     </p>
     <p>
       The following terminology applies to these Terms and Conditions, Privacy
@@ -259,19 +283,7 @@ const TermsAndConditions = () => (
     </p>
     <h2 />
     <p />
-    <h2>Credit & Contact Information</h2>
-    <p>
-      This Terms and conditions page was created at{" "}
-      <a
-        style={{ color: "inherit", textDecoration: "none", cursor: "text" }}
-        href="https://termsandconditionstemplate.com"
-      >
-        termsandconditionstemplate.com
-      </a>{" "}
-      generator. If you have any queries regarding any of our terms, please
-      contact us.
-    </p>
-  </React.Fragment>
+  </div>
 );
 
 export default TermsAndConditions;
