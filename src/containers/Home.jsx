@@ -47,7 +47,7 @@ export class Home extends React.Component {
                 key={item.title}
                 className={`carousel-item ${index === 0 && "active"}`}
               >
-                <div>
+                <div className="text-center">
                   <h4 className="m-0">{item.title}</h4>
                   <h2 className="m-0 d-none d-sm-block">{item.text}</h2>
                 </div>

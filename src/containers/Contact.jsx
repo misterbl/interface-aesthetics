@@ -66,7 +66,7 @@ export class Contact extends React.Component {
     return (
       <main>
         <header>
-          <div className="text-center w-75 ml-5 mt-5">
+          <div className="text-center">
             <h2 className="m-0">CONTACT INTERFACE</h2>
           </div>
           <img

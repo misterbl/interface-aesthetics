@@ -5,7 +5,7 @@ import ModelCard from "../components/ModelCard";
 import modelCards from "../data/modelCards";
 import ROUTES from "../const/routes";
 import TitleWithMark from "../components/TitleWithMark";
-import testimonials from "../data/testimonials";
+import modelTestimonials from "../data/modelTestimonials";
 import modelFaq from "../data/modelFaq";
 import modelImage from "../assets/model_page_lead_photo.png";
 
@@ -43,17 +43,13 @@ export class Model extends React.PureComponent {
     return (
       <main className="model-page">
         <header>
-          <div className="text-center mx-5">
+          <div className="text-center">
             <h4 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h4>
             <h2 className="m-0">BECOME A MODEL PATIENT</h2>
-            <p className="d-none d-sm-block">
-              Model patients are in the center of all our training courses. You
-              can have the opportunity to undergo the aesthetic treatment(s) of
-              your choice for up to 70% discount rate. All treatments are
-              carried out by qualified healthcare professionals under expert
-              supervision of our surgeons.
-            </p>
-            <button className="cta-button-white" onClick={this.pushToModelForm}>
+            <button
+              className="cta-button-white mt5 d-none d-md-inline"
+              onClick={this.pushToModelForm}
+            >
               BE A MODEL PATIENT
             </button>
           </div>
@@ -77,18 +73,24 @@ export class Model extends React.PureComponent {
           </div>
           <div className="w-50-container">
             <p>
-              You can be sure that your treatment with us will be safe,
-              effective and adherent to the highest off standards. Interface
-              Aesthetics is recognised by the two leading providers of cosmetic
-              insurance in the UK, and all training is in line with best
-              practice as specified with the GMC.
+              Model patients are in the center of all our training courses. You
+              can have the opportunity to undergo the aesthetic treatment(s) of
+              your choice for up to 70% discount rate. All treatments are
+              carried out by qualified healthcare professionals under expert
+              supervision of our surgeons and doctors.​
             </p>
             <p>
-              We are also recognised as a training course by Allergan, the
-              pharmaceutical industry leader in aesthetics, and greater of the
-              leading products currently in use. Our course exclusively uses
-              Botox(R) and Juvederm(R) ranges produced by Allergan, giving you
-              extra peace of mind.
+              You can be sure that your treatment with us will be safe,
+              effective and adherent to the highest of standards. Interface
+              Aesthetics is accredited by the two leading providers of cosmetic
+              insurance in the UK, and all training is in line with best
+              practice as specified by the GMC.
+            </p>
+            <p>
+              We are also recognised as an approved training course by Allergan,
+              the industry leader in aesthetics. Allergan are the creators of
+              Botox ® and Juvederm ®, and at Interface Aesthetics we exclusively
+              use these recognisable and renowned products for your treatments."
             </p>
           </div>
         </div>
@@ -119,7 +121,7 @@ export class Model extends React.PureComponent {
           </div>
           <br />
           <TitleWithMark text="Testimonials" />
-          {testimonials.map(testimonial => (
+          {modelTestimonials.map(testimonial => (
             <div key={testimonial.name} className="bg-white my-5 p-60">
               <p className="blue-font">{testimonial.name}</p>
               <p>{testimonial.text}</p>

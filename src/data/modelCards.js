@@ -14,43 +14,43 @@ import facialHarmonisation from "../assets/model/facial_harmonisation.jpg";
 const modelCards = [
   {
     image: upperFaceBotox,
-    title: "Botox(R) for the Upper Face",
+    title: "Botox ® for the Upper Face",
     price: "£100",
-    whatIsIt: "Treatment with Botox(R) for the forehead, brow and crow's feet.",
+    whatIsIt: "Treatment with Botox ® for the forehead, brow and crow's feet.",
     whatDoesItInvolve:
-      "Injections with fine needles, with Botox(R) acting to relax the muscles of the upper face and reduce the appearance of lines",
+      "Injections with fine needles, with Botox ® acting to relax the muscles of the upper face and reduce the appearance of lines",
     isThereDowntime:
       "The procedure itself takes around 30 minutes in total. After the procedure there are some instructions to follow, but there is no downtime."
   },
   {
     image: lowerFaceBottox,
-    title: "Botox(R) for the Lower Face",
+    title: "Botox ® for the Lower Face",
     price: "£100",
     whatIsIt:
-      "Treatment with Botox(R) for the one of the following areas: gummy smile, jaw muscles for teeth grinding or for facial slimming, chin/mouth depressors for cobblestone chin or down-turned mouth cornerst.",
+      "Treatment with Botox ® for the one of the following areas: gummy smile, jaw muscles for teeth grinding or for facial slimming, chin/mouth depressors for cobblestone chin or down-turned mouth cornerst.",
     whatDoesItInvolve:
-      "Injections with fine needles, with Botox(R) acting to relax the muscles being targeted.",
+      "Injections with fine needles, with Botox ® acting to relax the muscles being targeted.",
     isThereDowntime:
       "The procedure itself takes around 30 minutes in total. After the procedure there are some instructions to follow, but there is no downtime."
   },
   {
     image: neckBottox,
-    title: "Botox(R) for the Neck",
+    title: "Botox ® for the Neck",
     price: "£150",
     whatIsIt:
-      "Treatment with Botox(R) for the neck muscle bands (platysmal bands).",
+      "Treatment with Botox ® for the neck muscle bands (platysmal bands).",
     whatDoesItInvolve:
-      "Injections with fine needles, with Botox(R) acting to relax the muscles of the superficial neck muscle (platysma). This results in a reduction in neck lines and a sharpening of the jawline.",
+      "Injections with fine needles, with Botox ® acting to relax the muscles of the superficial neck muscle (platysma). This results in a reduction in neck lines and a sharpening of the jawline.",
     isThereDowntime:
       "The procedure itself takes around 30 minutes in total. After the procedure there are some instructions to follow, but there is no downtime."
   },
   {
     image: armpitBotox,
-    title: "Botox(R) for Underarm Sweating (Hyperhydrosis)",
+    title: "Botox ® for Underarm Sweating (Hyperhydrosis)",
     price: "£150",
-    whatIsIt: "Treatment with Botox(R) for excessive sweating.",
+    whatIsIt: "Treatment with Botox ® for excessive sweating.",
     whatDoesItInvolve:
-      "Injections with fine needles, with Botox(R) acting to reduce underarm sweating.",
+      "Injections with fine needles, with Botox ® acting to reduce underarm sweating.",
     isThereDowntime:
       "The procedure itself takes around 45 minutes in total. After the procedure there are some instructions to follow, but there is no downtime."
   },
@@ -136,7 +136,7 @@ const modelCards = [
     title: "Facial Harmonisation/Non-surgical facelift",
     price: "£200",
     whatIsIt:
-      "Treatment with Dermal Filler (Juvederm(R) range) and Botox(R) according to the bespoke needs of the patient.",
+      "Treatment with Dermal Filler (Juvederm(R) range) and Botox ® according to the bespoke needs of the patient.",
     whatDoesItInvolve:
       "Application of anaesthetic cream followed by injections into the relevant areas.",
     isThereDowntime:

@@ -7,7 +7,7 @@ const modelFaq = [
   {
     title: "What treatments can I have done?",
     text:
-      "The treatments available for a particular course depend on which techniques are being taught and on how many spaces have already been filled. The earlier you book on to one of our courses as model, the greater the chance that you will be able to have exactly the treatment(s) you want. On our Foundation course, for example, we require models for anti-wrinkle (Botox(R)) injections to the upper face and eyes, and for Dermal Filler for the lips, nasolabial lines, Marionette lines and cheek bones. If they wish models can have multiple treatments if there is availability."
+      "The treatments available for a particular course depend on which techniques are being taught and on how many spaces have already been filled. The earlier you book on to one of our courses as model, the greater the chance that you will be able to have exactly the treatment(s) you want. On our Foundation course, for example, we require models for anti-wrinkle (Botox ®) injections to the upper face and eyes, and for Dermal Filler for the lips, nasolabial lines, Marionette lines and cheek bones. If they wish models can have multiple treatments if there is availability."
   },
   {
     title: "What does the 70% discount on the usual price refer to?",

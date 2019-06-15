@@ -28,6 +28,12 @@ const testimonials = [
     text:
       "Overall, the two-day Foundation Course for Botox® and Dermal Fillers was excellent. I am a Medical Doctor and prior to the course I did not have any experience in injecting Botox ® and Dermal Fillers. The course had a great balance in theory sessions and practical sessions (morning theory, afternoon practice) at a neat location. The Saturday covered Botox ® and the Sunday covered Dermal Fillers. Dr. James Olding is a great and knowledgeable teacher and I felt safe asking any questions. During the practical parts Dr. James guided me and the other delegates through the process. The practical part included plenty of hands-on for the delegates. I was lucky to have a group of only 3 delegates during the course and therefore I was very confident in my practice after the course. I really appreciated the inclusion of cheek fillers in this course. The course also included information on insurance and FAQ on how to set up your own business, which I successfully did after the course.",
     course: "Foundation Course in Botox ® and Dermal Filler - April 2019"
+  },
+  {
+    name: "Aida Stan, Registered Nurse​",
+    text:
+      "I had the opportunity to attend the combined Botox(R) and dermal fillers course and it was absolutely brilliant. I am so glad that I booked it because was a fantastic opportunity to start out and advance in the world of facial aesthetics. The doctors who teach are simply amazing instructors and we had a large number of models. You get the level of hands-on experience that you simply cannot get anywhere else. Overall, I highly recommend the course and the fantastic team at Interface.",
+    course: "Foundation Course in Botox ® and Dermal Filler - April 2019"
   }
 ];
 

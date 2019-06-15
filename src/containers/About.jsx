@@ -27,7 +27,7 @@ export class About extends React.Component {
     return (
       <main className="about-page">
         <header>
-          <div className="text-center mx-5 header-text-two">
+          <div className="text-center">
             <h4 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h4>
             <h2 className="m-0">ABOUT US</h2>
           </div>

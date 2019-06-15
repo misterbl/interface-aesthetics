@@ -12,8 +12,9 @@ const testimonialsFaq = [
     text: (
       <React.Fragment>
         <p>
-          We offer Foundation & Advanced courses in the use of Botox(R) and
-          Dermal Filler.
+          We offer Foundation & Advanced courses in the use of Botox ® and
+          dermal filler, as well as Masterclass courses covering advanced lip,
+          tear trough and facial harmonization techniques.
         </p>
         <p>
           The Foundation Course is a starting point for healthcare professionals
@@ -26,7 +27,14 @@ const testimonialsFaq = [
         <p>
           The Advanced Course is designed for practitioners who have already
           undertaken a Foundation Course, and are looking to learn a broader
-          range of techniques which are beyond the scope of a Foundation Course.
+          range of techniques which are beyond the scope of a Foundation
+          Course.​
+        </p>
+        <p>
+          The Masterclasses are designed for delegates who are experienced and
+          looking to perfect these popular and important techniques, or as part
+          of a package of training in addition to our other course, as part of
+          becoming the complete aesthetic practitioner.
         </p>
       </React.Fragment>
     )
@@ -43,12 +51,11 @@ const testimonialsFaq = [
       <React.Fragment>
         <p>
           Delegates will learn how to carry out the most commonly requested
-          procedures in non-surgical aesthetics using Botox(R) and dermal
-          filler.
+          procedures in non-surgical aesthetics using Botox ® and dermal filler.
         </p>
         <p>
-          The Botox(R) procedures involve the upper face, specifically the
-          forehead, the brow and around the eyes ("crows feet"). The Botox(R)
+          The Botox ® procedures involve the upper face, specifically the
+          forehead, the brow and around the eyes ("crows feet"). The Botox ®
           training takes place over one entire day, and involves 2 hours of
           lectures followed by a full day of injecting live model patients, This
           ensures delegates get the maximum hands-on experience.
@@ -57,7 +64,7 @@ const testimonialsFaq = [
           The Dermal Filler procedures are lip augmentation, Marionette line
           filler, nasolabial filler and cheek bone augmentation. Again, the
           Dermal Filler training takes place over a full day, directly following
-          the Botox(R) day, and consists in 2 hours of lectures followed by most
+          the Botox ® day, and consists in 2 hours of lectures followed by most
           of the day injecting patients.'
         </p>
       </React.Fragment>
@@ -71,7 +78,7 @@ const testimonialsFaq = [
   {
     title: "Why should I choose an Interface Aesthetics course?",
     text:
-      "Our courses put hands-on practical experience at the very heart of training. All teaching is delivered in small groups, with a maximum of 4 delegates per trainer, and all injecting is carried out on live model patients. This ensures our delegates can grow in both confidence and competence, and means the step on to becoming an independent practitioner will be a smoother one. In addition to the above, our courses are CPD accredited, recognised by the two leading insures for cosmetics in the UK, and partnered with the pharmaceutical company and industry leader, Allergan. Our training is designed and delivered by doctors with backgrounds in Maxillofacial Surgery & Aesthetics, ensuring detailed anatomical content which will make delegates safer and more confident practitioners."
+      "Our courses put hands-on practical experience at the very heart of training. All teaching is delivered in small groups, with a maximum of 4 delegates per trainer, and all injecting is carried out on live model patients. This ensures our delegates can grow in both confidence and competence, and means the step on to becoming an independent practitioner will be a smoother one. In addition to the above, our courses are CPD accredited, recognised by the two leading insurers for cosmetics in the UK, and partnered with the pharmaceutical company and industry leader, Allergan. Our training is designed and delivered by doctors with backgrounds in Maxillofacial Surgery & Aesthetics, ensuring detailed anatomical content which will make delegates safer and more confident practitioners."
   },
   {
     title: "What are the benefits of a career in non-surgical aesthetics?",

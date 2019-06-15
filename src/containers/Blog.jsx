@@ -38,7 +38,7 @@ class Blog extends React.Component {
     return (
       <main className>
         <header>
-          <div className="text-center mx-5 mt-5 w-75">
+          <div className="text-center">
             <h4 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h4>
             <h2 className="m-0">LATEST NEWS</h2>
           </div>

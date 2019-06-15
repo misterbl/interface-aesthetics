@@ -47,7 +47,7 @@ class Course extends React.Component {
       return (
         <React.Fragment>
           <header>
-            <div className="text-center w-75 ml-5 mt-5">
+            <div className="text-center">
               <h4 className="m-0">OUR COURSE</h4>
               <h2>{title}</h2>
             </div>
@@ -59,16 +59,17 @@ class Course extends React.Component {
                 <TitleWithMark text="Course Overview" />
                 <p className="mb-4">{overview}</p>{" "}
                 <TitleWithMark text="What can you expect" />
-                {expect && (
-                  <React.Fragment>
-                    <p>{expect.text}</p>
-                    <ul className="orange-dot-li">
-                      {expect.details.map(paragraph => (
-                        <li key={paragraph}>{paragraph}</li>
-                      ))}
-                    </ul>
-                  </React.Fragment>
-                )}
+                {expect &&
+                  expect.map(expectaction => (
+                    <React.Fragment>
+                      <p>{expectaction.text}</p>
+                      <ul className="orange-dot-li">
+                        {expectaction.details.map(paragraph => (
+                          <li key={paragraph}>{paragraph}</li>
+                        ))}
+                      </ul>
+                    </React.Fragment>
+                  ))}
                 {days && (
                   <div className="d-flex flex-wrap my-3">
                     {days.map((day, i) => (
@@ -80,7 +81,7 @@ class Course extends React.Component {
                     ))}
                   </div>
                 )}
-                {
+                {information && (
                   <div className="my-3">
                     {information.map(info => (
                       <CourseInformation
@@ -91,7 +92,7 @@ class Course extends React.Component {
                       />
                     ))}
                   </div>
-                }
+                )}
                 <TitleWithMark text="More information" />
                 {moreInformation.map(info => (
                   <p key={info} className="my-3">

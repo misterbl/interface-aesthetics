@@ -27,12 +27,8 @@ header {
   max-height: 500px;
   div:first-child {
     position: absolute;
-    top: 130px;
-    left: 120px;
-    @media (max-width: 768px) {
-      top: 20px;
-      left: 25px;
-    }
+    top: 35%;
+    width: 100%;
   }
 }
 
