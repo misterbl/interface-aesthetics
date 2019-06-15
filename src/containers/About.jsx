@@ -63,7 +63,7 @@ export class About extends React.Component {
                 an emphasis on putting into action the theory behind safe and
                 successful aesthetic practice.
               </p>
-              <button className="w-50" onClick={this.pushToCourses}>
+              <button className="w-50 mb-3" onClick={this.pushToCourses}>
                 VIEW COURSES
               </button>
             </div>
@@ -81,7 +81,7 @@ export class About extends React.Component {
             </div>
           </div>
           <WhyChoose className="mt-5" />
-          <Accreditations />
+          <Accreditations className="mt-5" />
           <div className="about-founder text-center mt-5">
             <div className="about-founder about-founder__photo d-none d-md-block" />
             <div className="mx-5">

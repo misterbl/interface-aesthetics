@@ -98,30 +98,16 @@ export class Home extends React.Component {
               </p>
 
               <p>
-                <span className="blue-font">${`Beginner `}</span>– Foundation
+                <span className="blue-font">{`Beginner `}</span>– Foundation
                 Course in Botox ® and Dermal Filler
               </p>
               <p>
-                <span className="blue-font">${`Advanced `}</span>- Advanced
+                <span className="blue-font">{`Advanced `}</span>- Advanced
                 Course in Botox ® and Dermal Filler Perfect
               </p>
               <p>
-                <span className="blue-font">${`Masterclass `}</span>- Courses in
+                <span className="blue-font">{`Masterclass `}</span>- Courses in
                 Lip Augmentation, Tear Trough & Facial Harmonization
-              </p>
-
-              <p>
-                The demand for Botox ® and Dermal Filler treatments continues to
-                grow rapidly. This is a unique area within healthcare which
-                presents professional and financial opportunities. Working as an
-                aesthetic practitioner can complement full-time healthcare work,
-                or it can become a new full-time career with greater autonomy
-                and exciting new challenges. We have trained doctors, dentists
-                and nurses from diverse backgrounds. Our training is exclusively
-                for qualified healthcare professionals. We are well placed to
-                guide our delegates through both the practical the logistical
-                aspects of become an independent and competent aesthetic
-                practitioner.
               </p>
             </div>
             <div className="w-50-container">
@@ -137,6 +123,18 @@ export class Home extends React.Component {
               />
             </div>
           </div>
+          <p>
+            The demand for Botox ® and Dermal Filler treatments continues to
+            grow rapidly. This is a unique area within healthcare which presents
+            professional and financial opportunities. Working as an aesthetic
+            practitioner can complement full-time healthcare work, or it can
+            become a new full-time career with greater autonomy and exciting new
+            challenges. We have trained doctors, dentists and nurses from
+            diverse backgrounds. Our training is exclusively for qualified
+            healthcare professionals. We are well placed to guide our delegates
+            through both the practical the logistical aspects of become an
+            independent and competent aesthetic practitioner.
+          </p>
           <div>
             <Accreditations className="mt-5" />
             <WhoWeTrain className="mt-5" />

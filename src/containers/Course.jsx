@@ -62,7 +62,7 @@ class Course extends React.Component {
                 {expect &&
                   expect.map(expectaction => (
                     <React.Fragment>
-                      <p className="m=0">{expectaction.text}</p>
+                      <p className="m-0">{expectaction.text}</p>
                       <ul className="orange-dot-li">
                         {expectaction.details.map(paragraph => (
                           <li key={paragraph}>{paragraph}</li>
