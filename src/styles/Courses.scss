@@ -60,7 +60,7 @@
   }
   img {
     @media (max-width: 1000px) {
-      width: 100%;
+      margin-left: 35%;
     }
   }
 }
@@ -80,7 +80,6 @@
     font-size: 20px;
     font-weight: 700;
     padding: 20px;
-    border-bottom: 1px solid $grey;
   }
   div:nth-of-type(2) {
     border-bottom: 1px $blue-font solid;

@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import courses from "../data/courses";
+import { getAllCourses } from "../../functions/firebase-database";
 import home5 from "../assets/home5.png";
 import CourseCard from "../components/CourseCard";
 import WhyTrain from "../components/WhyTrain";
@@ -12,9 +12,20 @@ import carousel3 from "../assets/Carousel_3.jpg";
 import carousel4 from "../assets/Carousel_4.jpg";
 
 export class Courses extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      courses: undefined
+    };
+  }
+  async componentDidMount() {
+    const courses = await getAllCourses();
+    this.setState({ courses });
+  }
+
   getCourses = () => (
     <div className="d-flex flex-wrap p-60 justify-content-around">
-      {courses.map(course => (
+      {this.state.courses.map(course => (
         <CourseCard
           key={course.id}
           title={course.title}
@@ -26,6 +37,7 @@ export class Courses extends React.Component {
     </div>
   );
   render() {
+    console.log(this.state);
     return (
       <main className="courses-page">
         <header>
@@ -71,7 +83,7 @@ export class Courses extends React.Component {
               <p>Medical Doctor</p>
             </div>
           </div>
-          {this.getCourses()}
+          {this.state.courses && this.getCourses()}
           <WhyChoose />
           <PhotoGallery
             images={[carousel1, carousel2, carousel3, carousel4]}

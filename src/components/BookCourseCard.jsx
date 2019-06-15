@@ -3,7 +3,7 @@ import formattedDate from "../utils/formattedDate";
 
 const BookCourseCard = ({ title, dates, onClick }) => (
   <div className="book-course">
-    <div>{title}</div>
+    <div className="border-bottom">{title}</div>
     <div>
       <form>
         <div className="select-container">

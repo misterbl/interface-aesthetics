@@ -20,6 +20,7 @@ class CoursesAdmin extends React.PureComponent {
   async componentDidMount() {
     const courses = await getAllCourses();
     this.setState({ courses });
+    console.log("courses: ", courses);
   }
 
   onUpdateCourses = courses => {
@@ -51,12 +52,9 @@ class CoursesAdmin extends React.PureComponent {
               key={course.id}
               className="mb-5 w-100 p-5 bg-white text-center"
             >
-              <label
-                className="font-weight-bold"
-                htmlFor={`${course.id}-title`}
-              >
+              <p className="font-weight-bold" htmlFor={`${course.id}-title`}>
                 {course.title}
-              </label>
+              </p>
               {/* <textarea
                 onChange={e => {
                   const coursesState = this.state.courses;
@@ -212,12 +210,7 @@ class CoursesAdmin extends React.PureComponent {
                     ))}
                   </React.Fragment>
                 ))} */}
-              <label
-                className="font-weight-bold"
-                htmlFor={`${course.id}-price`}
-              >
-                Price
-              </label>
+
               <input
                 onChange={e => {
                   const coursesState = this.state.courses;
@@ -228,7 +221,7 @@ class CoursesAdmin extends React.PureComponent {
                 type="text"
                 placeholder="Price"
                 defaultValue={course.price}
-                className="w-100"
+                className="w-100 text-center"
               />
               {course.dates &&
                 course.dates.map((date, dateIndex) => (
@@ -244,7 +237,7 @@ class CoursesAdmin extends React.PureComponent {
                     </label>
                     <br />
                     <div>{formattedDate(date.date)}</div>
-                    <img src={calendar} alt="date picker" />
+                    <img src={calendar} alt="date picker" className="mx-5" />
                     <DatePicker
                       className="date-picker"
                       placeholderText="click here to select a date"
@@ -292,7 +285,7 @@ class CoursesAdmin extends React.PureComponent {
                       type="text"
                       placeholder="PlacesLeft"
                       defaultValue={date.placesLeft}
-                      className="w-100"
+                      className="w-100 text-center border-0"
                     />
                   </div>
                 ))}

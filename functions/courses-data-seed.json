@@ -1,99 +1,169 @@
-{
-  "courses": [
-    {
-      "dates": [
-        { "date": "date1", "placesLeft": 3 },
-        { "date": "date2", "placesLeft": 0 },
-        { "date": "date3", "placesLeft": 1 }
-      ],
-      "days": [
-        {
-          "description": "Day 1 is devoted to the use of Botulinum Toxin to the upper face:",
-          "details": ["Forehead", "Brow", "Eyes (“crows feet”)"]
-        },
-        {
-          "description": "Day 2 will cover the use of Dermal Filler to the face and lips:",
-          "details": [
-            "Lip augmentation",
-            "Nasolabial fold",
-            "Marionette Lines",
-            "Cheek bone augmentation"
-          ]
-        }
-      ],
-      "id": 1,
-      "image": "https://firebasestorage.googleapis.com/v0/b/interface-aesthetics.appspot.com/o/upper_face_botox_model.jpg?alt=media&token=72b70217-c16c-44e5-808a-122bcfbdf393",
-      "information": [
-        {
-          "details": [
-            "Groups are limited to a maximum of 4 delegates, meaning greater exposure and more opportunities to perform techniques.",
-            "Procedure-based learning, ensuring knowledge and practical skills are linked at every stage."
-          ],
-          "image": "https://firebasestorage.googleapis.com/v0/b/interface-aesthetics.appspot.com/o/Hands-on.svg?alt=media&token=e9295941-e1d3-4690-a133-cffa2cd984c0",
-          "overview": "Hands-on practical training in all of the listed techniques:"
-        },
-        {
-          "details": [
-            "We make it our business to ensure that you get the learning opportunities you need to meet the level expected of a Foundation Course graduate.",
-            "Ongoing access to expert advice as you begin to practice independently with our exclusive Graduate Zone."
-          ],
-          "image": "https://firebasestorage.googleapis.com/v0/b/interface-aesthetics.appspot.com/o/Support-learning.svg?alt=media&token=285f4b9e-a357-450b-86b2-348d9bbbe464",
-          "overview": "A supportive learning environment:"
-        },
-        {
-          "details": [
-            "Graduates are able to obtain insurance with our partner Hamilton Fraser, the number one cosmetic insurance provider in the UK.",
-            "Certificates are presented at the end of the two-day course, enabling you to take the first steps into the vast and exciting field of medical aesthetics."
-          ],
-          "image": "https://firebasestorage.googleapis.com/v0/b/interface-aesthetics.appspot.com/o/Certificate.svg?alt=media&token=3fceb514-77d3-4de1-a51c-ae5bdbb5839f",
-          "overview": "Get practising immediately with our Foundation Certificate of Completion:"
-        }
-      ],
-      "moreInformation": [
-        "We believe that our Foundation Course provides unrivalled levels of patient contact and hands-on injecting. Our philosophy focuses on developing competency to perform Foundation techniques safely and effectively. Many Foundation Courses on the market are delivered over a single day for both Botulinum Toxin and Dermal Filler. Furthermore, teaching is often in large groups and consists in observing most, if not all, treatments without taking part and gaining hands-on exposure.",
-        "Such an approach to training in any field of healthcare would be judged wholly inadequate. If we consider learning how to take blood, or indeed how to extract a tooth, it becomes obvious that simply watching a procedure and then being expected to carry it out competently would be unacceptable to both our patients and to ourselves. With this in mind, Interface courses will have you assessing and injecting for the majority of your time, ensuring you get the learning opportunities you need to begin practising safely and confidently. As an Interface trainee, you will have the opportunity to directly perform all of the listed techniques – we make this our responsibility and guarantee."
-      ],
-      "overview": "Our two-day course provides training in the key treatments of non-surgical aesthetics that you will be expected to perform as independent practitioners. Our innovative approach to competency-based training focuses on hands-on practical injecting on real patients in a supportive and friendly environment. ",
-      "price": "£100",
-      "title": "Updated FOUNDATION COURSE IN BOTULINUM TOXIN & DERMAL FILLER"
-    },
-    {
-      "dates": [
-        { "date": "date1", "placesLeft": 3 },
-        { "date": "date2", "placesLeft": 0 },
-        { "date": "date3", "placesLeft": 1 }
-      ],
-      "id": 2,
-      "image": "https://firebasestorage.googleapis.com/v0/b/interface-aesthetics.appspot.com/o/upper_face_botox_model.jpg?alt=media&token=72b70217-c16c-44e5-808a-122bcfbdf393",
-      "information": [
-        {
-          "details": [
-            "Neck – Platysma",
-            "Jaw line/teeth grinding – Masseter",
-            "Brow lift",
-            "Bunny lines",
-            "Chin – Mentalis",
-            "Gummy smile"
-          ],
-          "image": "",
-          "overview": "Advanced Botulinum Toxin treatments:"
-        },
-        {
-          "details": [
-            "Cheek augmentation",
-            "Jaw line contouring",
-            "Tear trough (under-eye bags) "
-          ],
-          "image": "",
-          "overview": "Advanced Dermal Filler Treatments (including training in use of cannulas):"
-        }
-      ],
-      "moreInformation": [
-        "Entry to the Advanced Course will require proof of completion of any recognised Foundation Course. Group sizes are limited to 4 delegates per trainer to ensure adequate exposure and practice."
-      ],
-      "overview": "Our one-day advanced course builds on the main techniques taught from the Foundation Course.",
-      "price": "£100",
-      "title": "ADVANCED COURSE IN BOTULINUM TOXIN & DERMAL FILLER"
-    }
-  ]
-}
+[
+  {
+    "dates": [
+      { "date": "date1", "placesLeft": 3 },
+      { "date": "date2", "placesLeft": 0 },
+      { "date": "date3", "placesLeft": 1 }
+    ],
+    "days": [
+      {
+        "description": "Day 1 is devoted to the use of Botox ® to the upper face:",
+        "details": ["Forehead", "Brow", "Eyes (“crows feet”)"]
+      },
+      {
+        "description": "Day 2 will cover the use of Dermal Filler to the face and lips:",
+        "details": [
+          "Lip augmentation",
+          "Nasolabial fold",
+          "Marionette Lines",
+          "Cheek bone augmentation"
+        ]
+      }
+    ],
+    "expect": [
+      {
+        "text": "The Interface Aesthetics core syllabus covers the theory, practical and business aspects that will form the foundation of your future aesthetic practice. The Foundation Syllabus:",
+        "details": [
+          "The pharmacology of Botox ® and Dermal Fillers",
+          "Essential facial anatomy for cosmetic practice",
+          "Learn to recognise and deal with complications",
+          "Understand how to approach the ‘aesthetic consultation’",
+          "Become systematic in your assessment of the face",
+          "Become confident in selecting the correct product and treatment for your patient",
+          "Become confident in performing all of the listed foundation techniques "
+        ]
+      }
+    ],
+    "id": 1,
+    "image": "https://firebasestorage.googleapis.com/v0/b/interface-aesthetics.appspot.com/o/upper_face_botox_model.jpg?alt=media&token=72b70217-c16c-44e5-808a-122bcfbdf393",
+    "information": [
+      {
+        "details": [
+          "Groups are limited to a maximum of 4 delegates, meaning greater exposure and more opportunities to perform techniques.",
+          "Procedure-based learning, ensuring knowledge and practical skills are linked at every stage."
+        ],
+        "image": "https://firebasestorage.googleapis.com/v0/b/interface-aesthetics.appspot.com/o/Hands-on.svg?alt=media&token=e9295941-e1d3-4690-a133-cffa2cd984c0",
+        "overview": "Hands-on practical training in all of the listed techniques:"
+      },
+      {
+        "details": [
+          "We make it our business to ensure that you get the learning opportunities you need to meet the level expected of a Foundation Course graduate.",
+          "Ongoing access to expert advice as you begin to practice independently with our exclusive Graduate Zone."
+        ],
+        "image": "https://firebasestorage.googleapis.com/v0/b/interface-aesthetics.appspot.com/o/Support-learning.svg?alt=media&token=285f4b9e-a357-450b-86b2-348d9bbbe464",
+        "overview": "A supportive learning environment:"
+      },
+      {
+        "details": [
+          "Graduates are able to obtain insurance with our partner Hamilton Fraser, the number one cosmetic insurance provider in the UK.",
+          "Certificates are presented at the end of the two-day course, enabling you to take the first steps into the vast and exciting field of medical aesthetics."
+        ],
+        "image": "https://firebasestorage.googleapis.com/v0/b/interface-aesthetics.appspot.com/o/Certificate.svg?alt=media&token=3fceb514-77d3-4de1-a51c-ae5bdbb5839f",
+        "overview": "Get practising immediately with our Foundation Certificate of Completion:"
+      }
+    ],
+    "moreInformation": [
+      "We believe that our Foundation Course provides unrivalled levels of patient contact and hands-on injecting. Our philosophy focuses on developing competency to perform Foundation techniques safely and effectively. Many Foundation Courses on the market are delivered over a single day for both Botox ® and Dermal Filler. Furthermore, teaching is often in large groups and consists in observing most, if not all, treatments without taking part and gaining hands-on exposure.",
+      "Such an approach to training in any field of healthcare would be judged wholly inadequate. If we consider learning how to take blood, or indeed how to extract a tooth, it becomes obvious that simply watching a procedure and then being expected to carry it out competently would be unacceptable to both our patients and to ourselves. With this in mind, Interface courses will have you assessing and injecting for the majority of your time, ensuring you get the learning opportunities you need to begin practising safely and confidently. As an Interface trainee, you will have the opportunity to directly perform all of the listed techniques – we make this our responsibility and guarantee."
+    ],
+    "overview": "Our two-day course  in Botox ® and Dermal Filler provides training in the key treatments that you will be expected to perform as an independent practitioner. Our innovative approach to competency-based training focuses on hands-on practical injecting on real patients in a supportive and friendly environment.",
+    "price": "£1495",
+    "title": "FOUNDATION COURSE IN BOTOX ® & DERMAL FILLER"
+  },
+  {
+    "dates": [
+      { "date": "date1", "placesLeft": 3 },
+      { "date": "date2", "placesLeft": 0 },
+      { "date": "date3", "placesLeft": 1 }
+    ],
+    "id": 2,
+    "image": "https://firebasestorage.googleapis.com/v0/b/interface-aesthetics.appspot.com/o/upper_face_botox_model.jpg?alt=media&token=72b70217-c16c-44e5-808a-122bcfbdf393",
+    "information": [
+      {
+        "details": [
+          "Neck – Platysma",
+          "Jaw line/teeth grinding – Masseter",
+          "Brow lift",
+          "Bunny lines",
+          "Chin – Mentalis",
+          "Gummy smile",
+          "Hyperhydrosis - underarm sweating"
+        ],
+        "image": "",
+        "overview": "Advanced Botox ® treatments:"
+      },
+      {
+        "details": [
+          "Cheek augmentation",
+          "Jaw line contouring",
+          "Chin augmentation",
+          "Nefertiti lift",
+          "Advanced treatment of the glabella",
+          "Tear trough (under-eye bags) "
+        ],
+        "image": "",
+        "overview": "Advanced Dermal Filler Treatments (including training in use of cannulas):"
+      }
+    ],
+    "moreInformation": [
+      "Entry to the Advanced Course will require proof of completion of any recognised Foundation Course. Group sizes are limited to 4 delegates per trainer to ensure adequate exposure and practice."
+    ],
+    "overview": "Our one-day advanced course builds on the main techniques taught from the Foundation Course. The course is hands-on, with theory covering advanced anatomy, safety considerations and common pitfalls to avoid in carrying out advanced aesthetic treatments. The course will also cover product selection and advanced facial analysis, building on the 'aesthetic consultation' training undertaken at the Foundation level.",
+    "price": "£795",
+    "title": "ADVANCED COURSE IN BOTOX ® & DERMAL FILLER"
+  },
+  {
+    "dates": [
+      { "date": "date1", "placesLeft": 3 },
+      { "date": "date2", "placesLeft": 0 },
+      { "date": "date3", "placesLeft": 1 }
+    ],
+    "id": 3,
+    "expect": [
+      {
+        "text": "Masterclass in Lip Augmentation :",
+        "details": [
+          "Advanced anatomy of perioral region",
+          "Assessing for volume loss",
+          "perioral (smoker's) lines",
+          "volume loss",
+          "lip asymmetry",
+          "Depressor Anguli Oris (DAO)",
+          "Safety considerations, complications and pitfalls",
+          "Use of needles and cannulas",
+          "Product selection"
+        ]
+      },
+      {
+        "text": "Masterclass in Tear Trough Treatment :",
+        "details": [
+          "Advanced anatomy of the mid and upper face",
+          "Assessing for volume loss around the eyes and mid-face",
+          "Safety considerations, complications and pitfalls",
+          "Use of needles and cannulas",
+          "Product selection​"
+        ]
+      },
+      {
+        "text": "Masterclass in Facial Harmonization:",
+        "details": [
+          "Advanced global assessment of the face",
+          "Recent advances in practical facial harmonization",
+          "Global and cultural perspectives on facial harmonization",
+          "Assessing for volume loss systematically",
+          "Considerations for the male face",
+          "Considerations for the female face",
+          "Safety considerations, complications and pitfalls",
+          "Product selection​"
+        ]
+      }
+    ],
+    "image": "https://firebasestorage.googleapis.com/v0/b/interface-aesthetics.appspot.com/o/upper_face_botox_model.jpg?alt=media&token=72b70217-c16c-44e5-808a-122bcfbdf393",
+    "moreInformation": [
+      "Masterclasses are suitable for practitioners with previous experience looking to perfect areas of practice. As your patients become more confident with you, it is important that you are able to offer advanced treatments, including with different options for your patient. Becoming the complete aesthetic practitioner requires a depth and breadth of understanding of how to address our patients' concerns. Our masterclasses focus on the some of the treatments that are most commonly requested by patients. These treatments are also some of the most complex, with many pitfalls and safety aspects requiring special consideration. Interface Aesthetics has as its ultimate goal making practitioners safer and more confident in non-surgical aesthetic practice. Masterclass training provides essential mentorship in these challenging yet highly sought-after procedures which will add much to your aesthetic practice."
+    ],
+    "overview": "Our masterclasses provided dedicated training in complex areas of facial aesthetics, with a focus on the most recent advances in products and techniques. Delegates will move beyond the techniques taught on Foundation and Advanced courses, with discussion of common pitfalls encountered. The emphasis will be on hands-on practical training, with patients hand-picked to provide injecting opportunities for delegates.",
+    "price": "£495",
+    "title": "MASTERCLASS COURSE IN BOTOX ® & DERMAL FILLER"
+  }
+]

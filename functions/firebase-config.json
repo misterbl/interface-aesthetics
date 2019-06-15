@@ -1,11 +1,12 @@
 {
   "status": "success",
   "result": {
-    "apiKey": "AIzaSyCE0QwAqGozvk4gLhWwmVzoLQv81lreI10",
-    "databaseURL": "https://interface-aesthetics.firebaseio.com",
-    "storageBucket": "interface-aesthetics.appspot.com",
-    "authDomain": "interface-aesthetics.firebaseapp.com",
-    "messagingSenderId": "316527730177",
-    "projectId": "interface-aesthetics"
+    "apiKey": "AIzaSyBll94b5GB6uZH5NoMhi_d6HzDle_g2OA8",
+    "databaseURL": "https://interface-aesthetics-staging.firebaseio.com",
+    "storageBucket": "interface-aesthetics-staging.appspot.com",
+    "authDomain": "interface-aesthetics-staging.firebaseapp.com",
+    "messagingSenderId": "1051319775208",
+    "projectId": "interface-aesthetics-staging",
+    "appId": "1:1051319775208:web:6bfc30686ee2f42b"
   }
 }

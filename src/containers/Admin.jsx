@@ -17,7 +17,7 @@ import contact from "../assets/contact.png";
 export class Admin extends React.Component {
   state = {
     courses: [],
-    auth: { user: { uid: "" } },
+    auth: { user: { uid: null } },
     showCourseAdmin: true,
     showBlogAdmin: false,
     blog: []
@@ -43,7 +43,7 @@ export class Admin extends React.Component {
 
   renderPage = () => {
     const { courses, blog, auth, showCourseAdmin, showBlogAdmin } = this.state;
-    if (auth.user.uid !== "d61hpynjQDXY59Zh8MU33R2rDSp2") {
+    if (auth.user.uid) {
       return (
         <React.Fragment>
           <nav className="nav nav-pills flex-column flex-sm-row">
@@ -55,14 +55,14 @@ export class Admin extends React.Component {
             >
               Courses
             </button>
-            <button
+            {/* <button
               className={`flex-sm-fill text-sm-center nav-link ${
                 showBlogAdmin ? "active" : "bg-secondary"
               }`}
               onClick={this.showBlog}
             >
               Blog
-            </button>
+            </button> */}
           </nav>
           {showCourseAdmin && (
             <CoursesAdmin updateCourses={this.updateCourses} />
