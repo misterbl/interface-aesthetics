@@ -59,7 +59,7 @@ const modelCards = [
     title: "Dermal Filler for Lip Augmentation",
     price: "£100",
     whatIsIt:
-      "Treatment with dermal filler (Juvederm(R) range) to augment the lips.",
+      "Treatment with Dermal Filler (Juvederm(R) range) to augment the lips.",
     whatDoesItInvolve:
       "Application of anaesthetic cream followed by injections into the body/border/cupids bow of the lip to improve shape and increase volume.",
     isThereDowntime:
@@ -70,7 +70,7 @@ const modelCards = [
     title: "Dermal Filler for Nasolabial Lines",
     price: "£100",
     whatIsIt:
-      "Treatment with dermal filler (Juvederm(R) range) to reduce the appearance of nasolabial folds.",
+      "Treatment with Dermal Filler (Juvederm(R) range) to reduce the appearance of nasolabial folds.",
     whatDoesItInvolve:
       " Application of anaesthetic cream followed by injections into nasolabial folds of the face.",
     isThereDowntime:
@@ -81,7 +81,7 @@ const modelCards = [
     title: "Dermal Filler for Marionette Lines",
     price: "£100",
     whatIsIt:
-      "Treatment with dermal filler (Juvederm(R) range) to reduce the appearance of Marionette Lines.",
+      "Treatment with Dermal Filler (Juvederm(R) range) to reduce the appearance of Marionette Lines.",
     whatDoesItInvolve:
       "Application of anaesthetic cream followed by injections into Marionette areas in the lower face.",
     isThereDowntime:
@@ -92,7 +92,7 @@ const modelCards = [
     title: "Dermal Filler for Cheek Augmentation",
     price: "£100",
     whatIsIt:
-      "Treatment with dermal filler (Juvederm(R) range) to augment and contour the cheek bones.",
+      "Treatment with Dermal Filler (Juvederm(R) range) to augment and contour the cheek bones.",
     whatDoesItInvolve:
       "Application of anaesthetic cream followed by injections onto the cheek bone.",
     isThereDowntime:
@@ -103,7 +103,7 @@ const modelCards = [
     title: "Dermal Filler for the Jawline",
     price: "£100",
     whatIsIt:
-      "Treatment with dermal filler (Juvederm(R) range) to add volume to or define the jawline and/or chin.",
+      "Treatment with Dermal Filler (Juvederm(R) range) to add volume to or define the jawline and/or chin.",
     whatDoesItInvolve:
       "Application of anaesthetic cream followed by injections into lower face/jaw/chin.",
     isThereDowntime:
@@ -114,7 +114,7 @@ const modelCards = [
     title: "Dermal Filler for Tear Trough (under eye hollowing)",
     price: "£100",
     whatIsIt:
-      "Treatment with dermal filler (Juvederm(R) range) to reduce the appearance of under eye hollowing.",
+      "Treatment with Dermal Filler (Juvederm(R) range) to reduce the appearance of under eye hollowing.",
     whatDoesItInvolve:
       " Application of anaesthetic cream followed by injections into the tear trough region.",
     isThereDowntime:
@@ -125,7 +125,7 @@ const modelCards = [
     title: "Dermal Filler for Temple Hollowing",
     price: "£100",
     whatIsIt:
-      "Treatment with dermal filler (Juvederm(R) range) to reduce the appearance of temporal hollowing.",
+      "Treatment with Dermal Filler (Juvederm(R) range) to reduce the appearance of temporal hollowing.",
     whatDoesItInvolve:
       "Application of anaesthetic cream followed by injections into the temples.",
     isThereDowntime:
@@ -136,7 +136,7 @@ const modelCards = [
     title: "Facial Harmonisation/Non-surgical facelift",
     price: "£200",
     whatIsIt:
-      "Treatment with dermal filler (Juvederm(R) range) and Botox(R) according to the bespoke needs of the patient.",
+      "Treatment with Dermal Filler (Juvederm(R) range) and Botox(R) according to the bespoke needs of the patient.",
     whatDoesItInvolve:
       "Application of anaesthetic cream followed by injections into the relevant areas.",
     isThereDowntime:

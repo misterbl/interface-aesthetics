@@ -9,7 +9,7 @@ export const Testimonials = () => (
   <main>
     <header>
       <div className="header-text">
-        <h3 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h3>
+        <h4 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h4>
         <h2 className="m-0">TESTIMONIALS</h2>
       </div>
       <img

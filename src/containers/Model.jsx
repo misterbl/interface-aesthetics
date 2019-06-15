@@ -44,7 +44,7 @@ export class Model extends React.PureComponent {
       <main className="model-page">
         <header>
           <div className="text-center mx-5">
-            <h3 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h3>
+            <h4 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h4>
             <h2 className="m-0">BECOME A MODEL PATIENT</h2>
             <p className="d-none d-sm-block">
               Model patients are in the center of all our training courses. You

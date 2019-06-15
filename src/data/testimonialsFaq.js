@@ -13,7 +13,7 @@ const testimonialsFaq = [
       <React.Fragment>
         <p>
           We offer Foundation & Advanced courses in the use of Botox(R) and
-          dermal filler.
+          Dermal Filler.
         </p>
         <p>
           The Foundation Course is a starting point for healthcare professionals
@@ -54,9 +54,9 @@ const testimonialsFaq = [
           ensures delegates get the maximum hands-on experience.
         </p>
         <p>
-          The dermal filler procedures are lip augmentation, Marionette line
+          The Dermal Filler procedures are lip augmentation, Marionette line
           filler, nasolabial filler and cheek bone augmentation. Again, the
-          dermal filler training takes place over a full day, directly following
+          Dermal Filler training takes place over a full day, directly following
           the Botox(R) day, and consists in 2 hours of lectures followed by most
           of the day injecting patients.'
         </p>
@@ -66,7 +66,7 @@ const testimonialsFaq = [
   {
     title: "What is taught on the Interface Aesthetics Advanced Course?",
     text:
-      "Delegates will learn how to carry out Botox (R) procedures including on the neck, in the armpit (hyperhidrosis), brow lift, bunny lines, gummy smile, jaw reduction/muscle reduction for jaw clenching. Delegates will also learn dermal filler procedures including advanced cheeks filler, jawline filler, chin augmentation, tear trough filler and temple filler. The use of cannulas will also be covered."
+      "Delegates will learn how to carry out Botox (R) procedures including on the neck, in the armpit (hyperhidrosis), brow lift, bunny lines, gummy smile, jaw reduction/muscle reduction for jaw clenching. Delegates will also learn Dermal Filler procedures including advanced cheeks filler, jawline filler, chin augmentation, tear trough filler and temple filler. The use of cannulas will also be covered."
   },
   {
     title: "Why should I choose an Interface Aesthetics course?",

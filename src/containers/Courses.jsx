@@ -30,7 +30,7 @@ export class Courses extends React.Component {
       <main className="courses-page">
         <header>
           <div className="header-text">
-            <h3 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h3>
+            <h4 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h4>
             <h2 className="m-0">OUR COURSES IN BOTOX ® AND DERMAL FILLER</h2>
           </div>
           <img
@@ -52,10 +52,10 @@ export class Courses extends React.Component {
                 Overall, the two-day Foundation Course for Botox® and dermal
                 fillers was excellent. I am a Medical Doctor and prior to the
                 course I did not have any experience in injecting Botox ® and
-                dermal fillers. The course had a great balance in theory
+                Dermal Fillers. The course had a great balance in theory
                 sessions and practical sessions (morning theory, afternoon
                 practice) at a neat location. The Saturday covered Botox ® and
-                the Sunday covered dermal fillers. Dr. James Olding is a great
+                the Sunday covered Dermal Fillers. Dr. James Olding is a great
                 and knowledgeable teacher and I felt safe asking any questions.
                 During the practical parts Dr. James guided me and the other
                 delegates through the process. The practical part included

@@ -9,7 +9,7 @@ import TitleWithMark from "./TitleWithMark";
 
 const Accreditations = ({ className = "" }) => (
   <div className={className}>
-    <TitleWithMark text="Our Accreditations" />
+    <TitleWithMark text="Partners & Accreditations" />
     <p>
       We work with Allergan, the pharmaceutical industry leader in non-surgical
       aesthetics, ensuring that our delegates are trained using recognisable and

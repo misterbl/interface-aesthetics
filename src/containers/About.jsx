@@ -28,7 +28,7 @@ export class About extends React.Component {
       <main className="about-page">
         <header>
           <div className="text-center mx-5 header-text-two">
-            <h3 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h3>
+            <h4 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h4>
             <h2 className="m-0">ABOUT US</h2>
           </div>
           <img

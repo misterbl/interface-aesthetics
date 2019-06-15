@@ -1,0 +1,14 @@
+[debug] [2019-06-15T13:18:49.430Z] ----------------------------------------------------------------------
+[debug] [2019-06-15T13:18:49.435Z] Command:       /Users/laurentbouhnik/.nvm/versions/node/v8.5.0/bin/node /Users/laurentbouhnik/.nvm/versions/node/v8.5.0/bin/firebase setup:web --json
+[debug] [2019-06-15T13:18:49.436Z] CLI Version:   6.8.0
+[debug] [2019-06-15T13:18:49.436Z] Platform:      darwin
+[debug] [2019-06-15T13:18:49.436Z] Node Version:  v8.5.0
+[debug] [2019-06-15T13:18:49.438Z] Time:          Sat Jun 15 2019 15:18:49 GMT+0200 (CEST)
+[debug] [2019-06-15T13:18:49.438Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-15T13:18:49.461Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-15T13:18:49.461Z] > authorizing via signed-in user
+[debug] [2019-06-15T13:18:49.462Z] [iam] checking project interface-aesthetics-staging for permissions ["firebase.projects.get"]
+[debug] [2019-06-15T13:18:49.464Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-06-15T13:18:49.465Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>

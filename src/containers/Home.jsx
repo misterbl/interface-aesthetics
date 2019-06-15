@@ -48,8 +48,8 @@ export class Home extends React.Component {
                 className={`carousel-item ${index === 0 && "active"}`}
               >
                 <div>
-                  <h2 className="m-0">{item.title}</h2>
-                  <h3 className="m-0 d-none d-sm-block">{item.text}</h3>
+                  <h4 className="m-0">{item.title}</h4>
+                  <h2 className="m-0 d-none d-sm-block">{item.text}</h2>
                 </div>
                 <img
                   src={item.image}
@@ -91,23 +91,27 @@ export class Home extends React.Component {
               </h4>
               <p>
                 High quality training is fundamental to safe and successful
-                aesthetic practice. Our Botox ® and dermal filler courses are
+                aesthetic practice. Our Botox ® and Dermal Filler courses are
                 designed to provide unrivalled levels of hands-on injecting with
                 model patients. Teaching is surgeon-led, in small groups and
                 firmly grounded in anatomy.
               </p>
 
-              <p>Beginner – Foundation Course in Botox ® and Dermal Filler</p>
               <p>
-                Advanced - Advanced Course in Botox ® and Dermal Filler Perfect
+                <span className="blue-font">${`Beginner `}</span>– Foundation
+                Course in Botox ® and Dermal Filler
               </p>
               <p>
-                Masterclass Courses in Lip Augmentation, Tear Trough & Facial
-                Harmonization
+                <span className="blue-font">${`Advanced `}</span>- Advanced
+                Course in Botox ® and Dermal Filler Perfect
+              </p>
+              <p>
+                <span className="blue-font">${`Masterclass `}</span>- Courses in
+                Lip Augmentation, Tear Trough & Facial Harmonization
               </p>
 
               <p>
-                The demand for Botox ® and dermal filler treatments continues to
+                The demand for Botox ® and Dermal Filler treatments continues to
                 grow rapidly. This is a unique area within healthcare which
                 presents professional and financial opportunities. Working as an
                 aesthetic practitioner can complement full-time healthcare work,
