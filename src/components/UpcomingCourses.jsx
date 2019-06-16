@@ -10,17 +10,6 @@ const UpcomingCourses = ({ onClick, courses }) => (
       data-ride="carousel"
       touch="true"
     >
-      <ol className="carousel-indicators">
-        <li
-          data-target="#upcoming-courses-indicator"
-          data-slide-to="0"
-          className="active"
-        />
-        <li data-target="#upcoming-courses-indicator" data-slide-to="1" />
-        {/* <li data-target="#upcoming-courses-indicator" data-slide-to="2" />
-          <li data-target="#upcoming-courses-indicator" data-slide-to="3" /> */}
-      </ol>
-
       <div className="carousel-inner">
         {courses &&
           courses.map((course, index) => (
@@ -56,6 +45,15 @@ const UpcomingCourses = ({ onClick, courses }) => (
             </div>
           ))}
       </div>
+      <ol className="carousel-indicators">
+        <li
+          data-target="#upcoming-courses-indicator"
+          data-slide-to="0"
+          className="active"
+        />
+        <li data-target="#upcoming-courses-indicator" data-slide-to="1" />
+        <li data-target="#upcoming-courses-indicator" data-slide-to="2" />
+      </ol>
       <a
         className="carousel-control-prev d-none d-md-block"
         href="#upcoming-courses-indicator"

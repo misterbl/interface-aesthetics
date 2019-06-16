@@ -4,19 +4,9 @@ const PhotoGallery = ({ images, className = "" }) => (
   <div
     id="photo-gallery-indicator"
     className={`carousel slide position-relative photo-gallery ${className}`}
-    data-ride="photo-gallery-carousel"
+    data-ride="carousel"
     touch="true"
   >
-    <ol className="carousel-indicators">
-      {images.map((image, index) => (
-        <li
-          data-target="#photo-gallery-indicator"
-          data-slide-to={index}
-          className={`${index === 0 && "active"} border-0`}
-        />
-      ))}
-    </ol>
-
     <div className="carousel-inner">
       {images.map((image, index) => (
         <div
@@ -27,6 +17,15 @@ const PhotoGallery = ({ images, className = "" }) => (
         </div>
       ))}
     </div>
+    <ol className="carousel-indicators">
+      {images.map((image, index) => (
+        <li
+          data-target="#photo-gallery-indicator"
+          data-slide-to={index}
+          className={`${index === 0 && "active"} border-0`}
+        />
+      ))}
+    </ol>
   </div>
 );
 

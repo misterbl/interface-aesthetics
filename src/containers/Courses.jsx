@@ -37,7 +37,6 @@ export class Courses extends React.Component {
     </div>
   );
   render() {
-    console.log(this.state);
     return (
       <main className="courses-page">
         <header>
