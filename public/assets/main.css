@@ -935,6 +935,12 @@
     .blog-card .card-text {
       display: none; } }
 
+.article li {
+  margin-left: 3rem; }
+
+.article ul {
+  padding: 0 15px 15px 15px; }
+
 .cookie-box {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;

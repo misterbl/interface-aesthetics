@@ -1,0 +1,17 @@
+[debug] [2019-06-16T12:29:43.545Z] ----------------------------------------------------------------------
+[debug] [2019-06-16T12:29:43.548Z] Command:       /Users/laurentbouhnik/.nvm/versions/node/v8.5.0/bin/node /Users/laurentbouhnik/.nvm/versions/node/v8.5.0/bin/firebase deploy
+[debug] [2019-06-16T12:29:43.548Z] CLI Version:   6.8.0
+[debug] [2019-06-16T12:29:43.548Z] Platform:      darwin
+[debug] [2019-06-16T12:29:43.548Z] Node Version:  v8.5.0
+[debug] [2019-06-16T12:29:43.550Z] Time:          Sun Jun 16 2019 14:29:43 GMT+0200 (CEST)
+[debug] [2019-06-16T12:29:43.550Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-16T12:29:43.575Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-16T12:29:43.576Z] > authorizing via signed-in user
+[debug] [2019-06-16T12:29:43.576Z] [iam] checking project interface-aesthetics-staging for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2019-06-16T12:29:43.579Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/interface-aesthetics-staging:testIamPermissions  
+
+[debug] [2019-06-16T12:29:44.333Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-16T12:29:44.339Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/interface-aesthetics-staging  
+ 
+[debug] [2019-06-16T12:29:44.783Z] <<< HTTP RESPONSE 200

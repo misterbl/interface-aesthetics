@@ -1,35 +1,38 @@
-[debug] [2019-06-16T09:03:52.670Z] ----------------------------------------------------------------------
-[debug] [2019-06-16T09:03:52.673Z] Command:       /Users/laurentbouhnik/.nvm/versions/node/v8.5.0/bin/node /Users/laurentbouhnik/.nvm/versions/node/v8.5.0/bin/firebase serve --only hosting,functions
-[debug] [2019-06-16T09:03:52.673Z] CLI Version:   6.8.0
-[debug] [2019-06-16T09:03:52.673Z] Platform:      darwin
-[debug] [2019-06-16T09:03:52.674Z] Node Version:  v8.5.0
-[debug] [2019-06-16T09:03:52.676Z] Time:          Sun Jun 16 2019 11:03:52 GMT+0200 (CEST)
-[debug] [2019-06-16T09:03:52.676Z] ----------------------------------------------------------------------
+[debug] [2019-06-16T12:28:14.159Z] ----------------------------------------------------------------------
+[debug] [2019-06-16T12:28:14.162Z] Command:       /Users/laurentbouhnik/.nvm/versions/node/v8.5.0/bin/node /Users/laurentbouhnik/.nvm/versions/node/v8.5.0/bin/firebase serve --only hosting,functions
+[debug] [2019-06-16T12:28:14.162Z] CLI Version:   6.8.0
+[debug] [2019-06-16T12:28:14.162Z] Platform:      darwin
+[debug] [2019-06-16T12:28:14.162Z] Node Version:  v8.5.0
+[debug] [2019-06-16T12:28:14.163Z] Time:          Sun Jun 16 2019 14:28:14 GMT+0200 (CEST)
+[debug] [2019-06-16T12:28:14.163Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2019-06-16T09:03:52.695Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-06-16T09:03:52.696Z] > authorizing via signed-in user
-[debug] [2019-06-16T09:03:52.696Z] [iam] checking project interface-aesthetics-staging for permissions ["firebase.projects.get"]
-[debug] [2019-06-16T09:03:52.698Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/interface-aesthetics-staging:testIamPermissions  
+[debug] [2019-06-16T12:28:14.183Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-16T12:28:14.183Z] > authorizing via signed-in user
+[debug] [2019-06-16T12:28:14.183Z] [iam] checking project interface-aesthetics-staging for permissions ["firebase.projects.get"]
+[debug] [2019-06-16T12:28:14.186Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/interface-aesthetics-staging:testIamPermissions  
 
-[debug] [2019-06-16T09:03:53.599Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-16T09:03:53.602Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/interface-aesthetics-staging  
+[debug] [2019-06-16T12:28:14.937Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-16T12:28:14.941Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/interface-aesthetics-staging  
  
-[debug] [2019-06-16T09:03:55.313Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-16T12:28:15.695Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/Users/laurentbouhnik/Documents/perso/interface-aesthetics-ssr'...
 [info] 
 [info] i  functions: Preparing to emulate functions.
-[debug] [2019-06-16T09:03:57.227Z] Fetching environment
-[debug] [2019-06-16T09:03:57.232Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1051319775208:getServerAppConfig  
+[debug] [2019-06-16T12:28:17.273Z] Fetching environment
+[debug] [2019-06-16T12:28:17.276Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1051319775208:getServerAppConfig  
  
-[debug] [2019-06-16T09:03:57.233Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1051319775208/clients/_:getWebAppConfig  
+[debug] [2019-06-16T12:28:17.277Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1051319775208/clients/_:getWebAppConfig  
  
-[debug] [2019-06-16T09:03:57.424Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-16T09:03:57.425Z] Starting @google-cloud/functions-emulator
-[debug] [2019-06-16T09:03:57.490Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-16T12:28:17.463Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-16T12:28:17.463Z] Starting @google-cloud/functions-emulator
+[debug] [2019-06-16T12:28:17.521Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000
-[debug] [2019-06-16T09:04:00.030Z] Parsing function triggers
+[debug] [2019-06-16T12:28:19.577Z] Parsing function triggers
+[info] [hosting] Rewriting / to http://localhost:5001/interface-aesthetics-staging/us-central1/app for local Function app
+[info] [hosting] Rewriting / to http://localhost:5001/interface-aesthetics-staging/us-central1/app for local Function app
 [info] ✔  functions: app: http://localhost:5001/interface-aesthetics-staging/us-central1/app
-[info] [hosting] Rewriting /courses to http://localhost:5001/interface-aesthetics-staging/us-central1/app for local Function app
+[info] [hosting] Rewriting /blog to http://localhost:5001/interface-aesthetics-staging/us-central1/app for local Function app
+[info] [hosting] Rewriting /article/1 to http://localhost:5001/interface-aesthetics-staging/us-central1/app for local Function app
 [info] [hosting] Rewriting / to http://localhost:5001/interface-aesthetics-staging/us-central1/app for local Function app
