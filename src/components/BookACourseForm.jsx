@@ -28,7 +28,8 @@ export default class BookACourseForm extends PureComponent {
       name: "",
       message: "",
       email: "",
-      buttonText: "SEND"
+      buttonText: "SEND",
+      sent: false
     });
   };
 
@@ -45,9 +46,12 @@ export default class BookACourseForm extends PureComponent {
     if (validateEmail(email)) {
       this.setState({ buttonText: "...sending" });
       axios
-        .post("https://interface-aesthetics-staging.firebaseapp.comemail", data)
+        .post(
+          "https://interface-aesthetics-staging.firebaseapp.com/email",
+          data
+        )
         .then(res => {
-          this.setState({ sent: true }, this.resetForm());
+          this.setState({ sent: true, buttonText: "SEND" }, this.resetForm());
         })
         .catch(() => {
           console.log("Message not sent");

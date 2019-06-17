@@ -26,7 +26,10 @@ export class Footer extends React.Component {
     if (validateEmail(email)) {
       this.setState({ buttonText: "...sending" });
       axios
-        .post("https://interface-aesthetics-staging.firebaseapp.comemail", data)
+        .post(
+          "https://interface-aesthetics-staging.firebaseapp.com/email",
+          data
+        )
         .then(res => {
           this.setState({ sent: true }, this.resetForm());
         })

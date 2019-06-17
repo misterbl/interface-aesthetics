@@ -23,6 +23,7 @@ export class Contact extends React.Component {
     this.setState({
       name: "",
       message: "",
+      reason: "",
       email: "",
       buttonText: "SEND",
       phoneNumber: ""
@@ -41,10 +42,13 @@ export class Contact extends React.Component {
     if (validateEmail(email)) {
       this.setState({ buttonText: "...sending" });
       axios
-        .post("https://interface-aesthetics-staging.firebaseapp.comemail", data)
+        .post(
+          "https://interface-aesthetics-staging.firebaseapp.com/email",
+          data
+        )
         .then(res => {
           console.log("res", res);
-          this.setState({ sent: true }, this.resetForm());
+          this.setState({ sent: true, buttonText: "SEND" }, this.resetForm());
         })
         .catch(e => {
           console.log("Message not sent", e);
@@ -62,7 +66,6 @@ export class Contact extends React.Component {
       buttonText,
       error
     } = this.state;
-    console.log(this.state);
     return (
       <main>
         <header>
@@ -120,7 +123,7 @@ export class Contact extends React.Component {
               />
               <div className="select-container h-100">
                 <select
-                  onChange={e => this.setState({ message: e.target.value })}
+                  onChange={e => this.setState({ reason: e.target.value })}
                   name="reason"
                 >
                   <option selected>Reason for enquiry</option>

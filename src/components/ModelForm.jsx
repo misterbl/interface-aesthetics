@@ -41,7 +41,10 @@ export default class ModelForm extends PureComponent {
       this.setState({ buttonText: "...sending" });
 
       axios
-        .post("https://interface-aesthetics-staging.firebaseapp.comemail", data)
+        .post(
+          "https://interface-aesthetics-staging.firebaseapp.com/email",
+          data
+        )
         .then(res => {
           this.setState({ sent: true, buttonText: "SEND" }, this.resetForm());
         })
