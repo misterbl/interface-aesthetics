@@ -38,7 +38,7 @@ const NonSurgicalAesthetics = () => (
       UK, and there are some important points summarised below:
     </p>
     <div className="text-center mb-5">
-      <img className="w-100" src={postgraduate} alt="postgraduate level" />
+      <img src={postgraduate} alt="postgraduate level" />
     </div>
     <p>
       It is clear that certain procedures can only be carried out by

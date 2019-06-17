@@ -26,7 +26,7 @@ export class Footer extends React.Component {
     if (validateEmail(email)) {
       this.setState({ buttonText: "...sending" });
       axios
-        .post("http://localhost:5000/email", data)
+        .post("https://interface-aesthetics-staging.firebaseapp.comemail", data)
         .then(res => {
           this.setState({ sent: true }, this.resetForm());
         })
@@ -77,7 +77,7 @@ export class Footer extends React.Component {
             Stay up to date with the latest news from Interface Aesthetics
           </p>
           <form onSubmit={this.handleSubmit}>
-            <div className="d-flex flex-wrap flex-md-nowrap">
+            <div className="d-flex flex-wrap flex-md-nowrap w-100">
               <label htmlFor="name" />
               <input
                 autoComplete="off"

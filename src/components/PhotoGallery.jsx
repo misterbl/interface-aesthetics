@@ -10,6 +10,7 @@ const PhotoGallery = ({ images, className = "" }) => (
     <div className="carousel-inner">
       {images.map((image, index) => (
         <div
+          data-interval="2000"
           className={`carousel-item ${index === 0 && "active"}`}
           key={`photo-gallery-${index}`}
         >

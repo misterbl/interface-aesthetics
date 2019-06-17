@@ -4,6 +4,8 @@ import { withRouter } from "react-router";
 // import blog from "../data/blogList";
 import ROUTES from "../const/routes";
 import NonSurgicalAesthetics from "../components/Articles/NonSurgicalAesthetics";
+import DermalFillerLowerFace from "../components/Articles/DermalFillerLowerFace";
+import Complications from "../components/Articles/Complications";
 
 class Article extends React.Component {
   constructor(props) {
@@ -39,6 +41,8 @@ class Article extends React.Component {
       <main>
         <div className="p-60 article">
           {articleId === 1 && <NonSurgicalAesthetics />}
+          {articleId === 2 && <DermalFillerLowerFace />}
+          {articleId === 3 && <Complications />}
           <div className="text-center">
             <button
               className="button-orange-border my-5"

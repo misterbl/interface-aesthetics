@@ -7,7 +7,7 @@ import App from "./App";
 import ScrollToTop from "../components/ScrollToTop";
 
 const client = new ApolloClient({
-  uri: "http://localhost:5000/graphql"
+  uri: "https://interface-aesthetics-staging.firebaseapp.comgraphql"
 });
 
 ReactDOM.hydrate(

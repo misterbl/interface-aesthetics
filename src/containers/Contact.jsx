@@ -41,7 +41,7 @@ export class Contact extends React.Component {
     if (validateEmail(email)) {
       this.setState({ buttonText: "...sending" });
       axios
-        .post("http://localhost:5000/email", data)
+        .post("https://interface-aesthetics-staging.firebaseapp.comemail", data)
         .then(res => {
           console.log("res", res);
           this.setState({ sent: true }, this.resetForm());

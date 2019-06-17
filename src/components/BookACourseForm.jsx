@@ -45,7 +45,7 @@ export default class BookACourseForm extends PureComponent {
     if (validateEmail(email)) {
       this.setState({ buttonText: "...sending" });
       axios
-        .post("http://localhost:5000/email", data)
+        .post("https://interface-aesthetics-staging.firebaseapp.comemail", data)
         .then(res => {
           this.setState({ sent: true }, this.resetForm());
         })
