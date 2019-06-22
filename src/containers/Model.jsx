@@ -45,7 +45,7 @@ export class Model extends React.PureComponent {
         <header>
           <div className="text-center">
             <h4 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h4>
-            <h2 className="m-0">BECOME A MODEL PATIENT</h2>
+            <h2 className="m-0">Become a model patient</h2>
             <button
               className="cta-button-white mt5 d-none d-md-inline"
               onClick={this.pushToModelForm}

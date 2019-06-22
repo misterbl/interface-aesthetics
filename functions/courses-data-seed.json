@@ -1,9 +1,21 @@
 [
   {
     "dates": [
-      { "date": "date1", "placesLeft": 3 },
-      { "date": "date2", "placesLeft": 0 },
-      { "date": "date3", "placesLeft": 1 }
+      {
+        "date": "Tue Jul 02 2019 00:00:00 GMT+0200 (Central European Summer Time)",
+        "placesLeft": "1",
+        "type": ""
+      },
+      {
+        "date": "Wed Jul 03 2019 00:00:00 GMT+0200 (Central European Summer Time)",
+        "placesLeft": "3",
+        "type": ""
+      },
+      {
+        "date": "Thu Jul 04 2019 00:00:00 GMT+0200 (Central European Summer Time)",
+        "placesLeft": "4",
+        "type": ""
+      }
     ],
     "days": [
       {
@@ -22,7 +34,6 @@
     ],
     "expect": [
       {
-        "text": "The Interface Aesthetics core syllabus covers the theory, practical and business aspects that will form the foundation of your future aesthetic practice. The Foundation Syllabus:",
         "details": [
           "The pharmacology of Botox ® and Dermal Fillers",
           "Essential facial anatomy for cosmetic practice",
@@ -31,7 +42,8 @@
           "Become systematic in your assessment of the face",
           "Become confident in selecting the correct product and treatment for your patient",
           "Become confident in performing all of the listed foundation techniques "
-        ]
+        ],
+        "text": "The Interface Aesthetics core syllabus covers the theory, practical and business aspects that will form the foundation of your future aesthetic practice. The Foundation Syllabus:"
       }
     ],
     "id": 1,
@@ -68,13 +80,25 @@
     ],
     "overview": "Our two-day course  in Botox ® and Dermal Filler provides training in the key treatments that you will be expected to perform as an independent practitioner. Our innovative approach to competency-based training focuses on hands-on practical injecting on real patients in a supportive and friendly environment.",
     "price": "£1495",
-    "title": "FOUNDATION COURSE IN BOTOX ® & DERMAL FILLER"
+    "title": "Foundation course in Botox ® & Dermal Filler"
   },
   {
     "dates": [
-      { "date": "date1", "placesLeft": 3 },
-      { "date": "date2", "placesLeft": 0 },
-      { "date": "date3", "placesLeft": 1 }
+      {
+        "date": "Tue May 28 2019 00:00:00 GMT+0200 (Central European Summer Time)",
+        "placesLeft": 1,
+        "type": ""
+      },
+      {
+        "date": "Sat Jun 29 2019 00:00:00 GMT+0200 (Central European Summer Time)",
+        "placesLeft": 0,
+        "type": ""
+      },
+      {
+        "date": "Sat Jul 06 2019 00:00:00 GMT+0200 (Central European Summer Time)",
+        "placesLeft": 3,
+        "type": ""
+      }
     ],
     "id": 2,
     "image": "https://firebasestorage.googleapis.com/v0/b/interface-aesthetics.appspot.com/o/upper_face_botox_model.jpg?alt=media&token=72b70217-c16c-44e5-808a-122bcfbdf393",
@@ -110,18 +134,28 @@
     ],
     "overview": "Our one-day advanced course builds on the main techniques taught from the Foundation Course. The course is hands-on, with theory covering advanced anatomy, safety considerations and common pitfalls to avoid in carrying out advanced aesthetic treatments. The course will also cover product selection and advanced facial analysis, building on the 'aesthetic consultation' training undertaken at the Foundation level.",
     "price": "£795",
-    "title": "ADVANCED COURSE IN BOTOX ® & DERMAL FILLER"
+    "title": "Advanced course in Botox ® & Dermal Filler"
   },
   {
     "dates": [
-      { "date": "date1", "placesLeft": 3 },
-      { "date": "date2", "placesLeft": 0 },
-      { "date": "date3", "placesLeft": 1 }
+      {
+        "date": "Tue May 28 2019 00:00:00 GMT+0200 (Central European Summer Time)",
+        "placesLeft": 1,
+        "type": ""
+      },
+      {
+        "date": "Tue Jun 11 2019 00:00:00 GMT+0200 (Central European Summer Time)",
+        "placesLeft": 0,
+        "type": ""
+      },
+      {
+        "date": "Tue Jul 02 2019 00:00:00 GMT+0200 (Central European Summer Time)",
+        "placesLeft": 3,
+        "type": ""
+      }
     ],
-    "id": 3,
     "expect": [
       {
-        "text": "Masterclass in Lip Augmentation :",
         "details": [
           "Advanced anatomy of perioral region",
           "Assessing for volume loss",
@@ -132,20 +166,20 @@
           "Safety considerations, complications and pitfalls",
           "Use of needles and cannulas",
           "Product selection"
-        ]
+        ],
+        "text": "Masterclass in Lip Augmentation :"
       },
       {
-        "text": "Masterclass in Tear Trough Treatment :",
         "details": [
           "Advanced anatomy of the mid and upper face",
           "Assessing for volume loss around the eyes and mid-face",
           "Safety considerations, complications and pitfalls",
           "Use of needles and cannulas",
           "Product selection​"
-        ]
+        ],
+        "text": "Masterclass in Tear Trough Treatment :"
       },
       {
-        "text": "Masterclass in Facial Harmonization:",
         "details": [
           "Advanced global assessment of the face",
           "Recent advances in practical facial harmonization",
@@ -155,15 +189,17 @@
           "Considerations for the female face",
           "Safety considerations, complications and pitfalls",
           "Product selection​"
-        ]
+        ],
+        "text": "Masterclass in Facial Harmonization:"
       }
     ],
+    "id": 3,
     "image": "https://firebasestorage.googleapis.com/v0/b/interface-aesthetics.appspot.com/o/upper_face_botox_model.jpg?alt=media&token=72b70217-c16c-44e5-808a-122bcfbdf393",
     "moreInformation": [
       "Masterclasses are suitable for practitioners with previous experience looking to perfect areas of practice. As your patients become more confident with you, it is important that you are able to offer advanced treatments, including with different options for your patient. Becoming the complete aesthetic practitioner requires a depth and breadth of understanding of how to address our patients' concerns. Our masterclasses focus on the some of the treatments that are most commonly requested by patients. These treatments are also some of the most complex, with many pitfalls and safety aspects requiring special consideration. Interface Aesthetics has as its ultimate goal making practitioners safer and more confident in non-surgical aesthetic practice. Masterclass training provides essential mentorship in these challenging yet highly sought-after procedures which will add much to your aesthetic practice."
     ],
     "overview": "Our masterclasses provided dedicated training in complex areas of facial aesthetics, with a focus on the most recent advances in products and techniques. Delegates will move beyond the techniques taught on Foundation and Advanced courses, with discussion of common pitfalls encountered. The emphasis will be on hands-on practical training, with patients hand-picked to provide injecting opportunities for delegates.",
     "price": "£495",
-    "title": "MASTERCLASS COURSE IN BOTOX ® & DERMAL FILLER"
+    "title": "Masterclass Foundation course in Botox ® & Dermal Filler"
   }
 ]

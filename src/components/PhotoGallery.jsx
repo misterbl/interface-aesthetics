@@ -24,6 +24,7 @@ const PhotoGallery = ({ images, className = "" }) => (
           data-target="#photo-gallery-indicator"
           data-slide-to={index}
           className={`${index === 0 && "active"} border-0`}
+          key={`photo-gallery-indicator${index}`}
         />
       ))}
     </ol>

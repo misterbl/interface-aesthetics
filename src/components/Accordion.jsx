@@ -15,7 +15,7 @@ class Accordion extends React.Component {
     return (
       <div className={`accordion ${className ? className : ""}`} id="accordion">
         {data.map((info, index) => (
-          <div className="card">
+          <div className="card" key={info.title}>
             <div
               className={`card-header ${
                 this.state.isActive === `collapse${index}` ? "active" : ""

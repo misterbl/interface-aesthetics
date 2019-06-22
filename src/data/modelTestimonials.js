@@ -21,12 +21,6 @@ const modelTestimonials = [
       "Model on The Foundation Course in Botox ® & Dermal Filler - April 2019"
   },
   {
-    name: "Sian Bassett, Registered Nurse",
-    text:
-      "After quite some time of deciding whether I should do the course, I finally decided to go for it and I am so glad that I did. James quickly and clearly answered all the questions I had before starting, and I knew exactly what to expect from the day. The small group numbers really helped my learning and I had so much hands on experience that I was confident enough to do my first client just a few days after the course. I felt completely relaxed and had the opportunity to ask as many questions as I needed to during the day. Our clients got some great results and I am looking forward to my next training opportunity with Interface Aesthetics!!!",
-    course: "Foundation Course in Botox ® and Dermal Filler - April 2019"
-  },
-  {
     name: "Fernanda",
     text:
       "I have been a model for Interface Aesthetics several times now, and I can honestly say that it is a fantastic experience. Above all, the results are always outstanding, and the aftercare by the team is a real stand-out feature. I had had some aesthetic treatments before privately, but I cannot compare my previous experiences to Interface. From start  to finish, the team are friendly and caring, the delegates are extremely professional and the results, under the supervision of the surgeon trainers, are second to none. I have referred many friends to be models and they are all happy with their experiences and results. The fact that Interface is run by surgical doctors with such understanding of anatomy and such experience, means you are at ease and confident that you are going to receive excellent care. I fully recommend Interface Aesthetics!",

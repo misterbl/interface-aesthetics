@@ -23,7 +23,7 @@ const UpcomingCourses = ({ onClick, courses }) => (
                   <h4>
                     Check our upcoming course availability online.
                     Alternatively, you can discuss which course could be right
-                    for you by completing out Contact form. One of our expert
+                    for you by completing our Contact form. One of our expert
                     trainers will get back to you straight away.
                   </h4>
                   <h5 className="blue-font mt-3 mb-2">{course.title}</h5>
@@ -31,6 +31,7 @@ const UpcomingCourses = ({ onClick, courses }) => (
                   <div className="d-flex flex-wrap flex-lg-nowrap">
                     <div className="next-course w-100 p-3">
                       {`Next Course: ${formattedDate(course.dates[0].date)}`}
+                      {course.dates[0].type && ` - ${course.dates[0].type}`}
                     </div>
                     <div className="position-relative">
                       <button onClick={onClick}>BOOK COURSE</button>

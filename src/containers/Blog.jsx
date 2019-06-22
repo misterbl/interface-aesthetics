@@ -41,7 +41,7 @@ class Blog extends React.Component {
         <header>
           <div className="text-center">
             <h4 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h4>
-            <h2 className="m-0">LATEST NEWS</h2>
+            <h2 className="m-0">Latest news</h2>
           </div>
           <img src={home1} className="d-block w-100" alt="become a model" />
         </header>

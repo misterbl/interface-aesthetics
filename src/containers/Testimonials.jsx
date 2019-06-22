@@ -10,7 +10,7 @@ export const Testimonials = () => (
     <header>
       <div className="text-center">
         <h4 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h4>
-        <h2 className="m-0">TESTIMONIALS</h2>
+        <h2 className="m-0">Testimonials</h2>
       </div>
       <img
         src={testimonialsImage}

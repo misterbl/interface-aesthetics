@@ -18,9 +18,7 @@ class SignInForm extends React.PureComponent {
           <p className="blue-font">
             You need to be logged in as an admin to see this page
           </p>
-          <label className="font-weight-bold" htmlFor="signInEmail">
-            Email
-          </label>
+          <label className="font-weight-bold" htmlFor="signInEmail" />
           <input
             onChange={e => {
               this.setState({ email: e.target.value });
@@ -29,10 +27,9 @@ class SignInForm extends React.PureComponent {
             type="text"
             id="signInEmail"
             name="signInEmail"
+            placeholder="Email"
           />
-          <label className="font-weight-bold" htmlFor="signInPassword">
-            Password
-          </label>
+          <label className="font-weight-bold" htmlFor="signInPassword" />
           <input
             onChange={e => {
               this.setState({ password: e.target.value });
@@ -41,6 +38,7 @@ class SignInForm extends React.PureComponent {
             type="password"
             id="signInPassword"
             name="signInPassword"
+            placeholder="Password"
           />
         </div>
         <button type="submit">Sign in</button>

@@ -61,7 +61,7 @@ class Course extends React.Component {
                 <TitleWithMark text="What can you expect" />
                 {expect &&
                   expect.map(expectaction => (
-                    <React.Fragment>
+                    <React.Fragment key={expectaction.text}>
                       <p className="m-0">{expectaction.text}</p>
                       <ul className="orange-dot-li">
                         {expectaction.details.map(paragraph => (
@@ -120,7 +120,9 @@ class Course extends React.Component {
                   <option selected>Select course date</option>
                   {dates.map(date => (
                     <option key={date.date}>
-                      {`${formattedDate(date.date)} - ${date.placesLeft} place${
+                      {`${formattedDate(date.date)}`}
+                      {date.type && ` - ${date.type}`}
+                      {` - ${date.placesLeft} place${
                         date.placesLeft !== 1 ? "s" : ""
                       } left`}
                     </option>

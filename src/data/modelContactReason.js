@@ -1,7 +1,7 @@
 const modelContactReason = [
-  "Botox - FACE",
-  "Botox - NECK",
-  "Botox - UNDERARM",
+  "Botox - Face",
+  "Botox - Neck",
+  "Botox - Underarm",
   "Filler - Lip",
   "Filler - Marionette",
   "Filler - Nasolabial",

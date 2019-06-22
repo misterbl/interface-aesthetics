@@ -73,9 +73,9 @@ export default class BookACourseForm extends PureComponent {
     return (
       <main>
         <header>
-          <div className="text-center w-75 ml-5 mt-5">
+          <div className="text-center">
             <h3 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h3>
-            <h2 className="m-0">BOOK A COURSE</h2>
+            <h2 className="m-0">Book a course</h2>
           </div>
           <img
             src={modelPhoto}
@@ -120,9 +120,11 @@ export default class BookACourseForm extends PureComponent {
                     {courses &&
                       courses.map(course => {
                         return course.dates.map(date => (
-                          <option key={`${course.title}-${date.date}`}>{`${
-                            course.title
-                          } on the: ${formattedDate(date.date)}`}</option>
+                          <option key={`${course.title}-${date.date}`}>
+                            {course.title}
+                            {date.type && ` - ${date.type} - `}
+                            {` on the: ${formattedDate(date.date)}`}
+                          </option>
                         ));
                       })}
                   </select>

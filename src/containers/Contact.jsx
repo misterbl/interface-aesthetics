@@ -70,7 +70,7 @@ export class Contact extends React.Component {
       <main>
         <header>
           <div className="text-center">
-            <h2 className="m-0">CONTACT INTERFACE</h2>
+            <h2 className="m-0">Contact Interface</h2>
           </div>
           <img
             src={contact}

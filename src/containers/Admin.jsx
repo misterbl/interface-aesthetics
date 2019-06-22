@@ -77,8 +77,8 @@ export class Admin extends React.Component {
     return (
       <main className="admin-page p-60">
         <header>
-          <div className="text-center w-75 ml-5 mt-5">
-            <h2 className="m-0">ADMIN DASHBOARD</h2>
+          <div className="text-center">
+            <h2>ADMIN DASHBOARD</h2>
           </div>
           <img
             src={contact}

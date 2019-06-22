@@ -13,19 +13,20 @@ class CoursesAdmin extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      courses: []
+      courses: [],
+      buttonText: "SAVE"
     };
   }
 
   async componentDidMount() {
     const courses = await getAllCourses();
     this.setState({ courses });
-    console.log("courses: ", courses);
   }
 
-  onUpdateCourses = courses => {
-    updateCourses(courses);
-    console.log("update");
+  onUpdateCourses = async courses => {
+    this.setState({ buttonText: "SAVING" });
+    await updateCourses(courses);
+    this.setState({ buttonText: "SAVE" });
   };
 
   handleDateChange = date => {
@@ -33,15 +34,31 @@ class CoursesAdmin extends React.PureComponent {
       startDate: date
     });
   };
-  handleSubmit = async e => {
+
+  sortDates = () => {
+    const coursesState = this.state.courses;
+    coursesState.map(async (course, index) => {
+      const sortedDates = await course.dates.sort(function(a, b) {
+        console.log("course.dates: ", course.dates);
+        const dateA = new Date(a.date),
+          dateB = new Date(b.date);
+        return dateA - dateB;
+      });
+      console.log("coursesState: ", coursesState);
+      console.log("coursesState[index][dates]: ", coursesState[index].dates);
+      coursesState[index].dates = sortedDates;
+      this.setState({ courses: coursesState });
+    });
+  };
+
+  handleSubmit = e => {
     e.preventDefault();
-    console.log(e.target.value);
+    this.sortDates();
     this.onUpdateCourses(this.state.courses);
   };
 
   render() {
-    const { courses } = this.state;
-    console.log(this.state.courses);
+    const { courses, buttonText } = this.state;
     return (
       <React.Fragment>
         <TitleWithMark text="Courses" />
@@ -269,7 +286,7 @@ class CoursesAdmin extends React.PureComponent {
                     /> */}
                     <label
                       className="font-weight-bold d-block"
-                      htmlFor={`${course.id}-placesLeft`}
+                      htmlFor={`${course.id}-${date.date}-placesLeft`}
                     >
                       Places left
                     </label>
@@ -287,11 +304,31 @@ class CoursesAdmin extends React.PureComponent {
                       defaultValue={date.placesLeft}
                       className="w-100 text-center border-0"
                     />
+                    <label
+                      className="font-weight-bold d-block"
+                      htmlFor={`${course.id}-${date.date}-type`}
+                    >
+                      Type
+                    </label>
+                    <input
+                      onChange={e => {
+                        const coursesState = this.state.courses;
+                        coursesState[index].dates[dateIndex].type =
+                          e.target.value;
+                        this.setState({ courses: coursesState });
+                      }}
+                      id={`${course.id}-${date.date}-type`}
+                      name={`${course.id}-${date.date}-type`}
+                      type="text"
+                      placeholder="Type"
+                      defaultValue={date.type}
+                      className="w-100 text-center border-0"
+                    />
                   </div>
                 ))}
             </div>
           ))}
-          <button type="submit">SAVE</button>
+          <button type="submit">{buttonText}</button>
         </form>
       </React.Fragment>
     );

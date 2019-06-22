@@ -42,7 +42,7 @@ export class Courses extends React.Component {
         <header>
           <div className="text-center">
             <h4 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h4>
-            <h2 className="m-0">OUR COURSES IN BOTOX ® AND DERMAL FILLER</h2>
+            <h2 className="m-0">Our courses in Botox ® and Dermal Filler</h2>
           </div>
           <img
             src={home5}

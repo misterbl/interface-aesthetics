@@ -69,7 +69,7 @@ export default class ModelForm extends PureComponent {
         <header>
           <div className="text-center">
             <h4 className="m-0 d-none d-sm-block">INTERFACE AESTHETICS</h4>
-            <h2 className="m-0">BECOME A MODEL PATIENT</h2>
+            <h2 className="m-0">Become a model patient</h2>
           </div>
           <img
             src={modelPhoto}
