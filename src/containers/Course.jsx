@@ -48,7 +48,7 @@ class Course extends React.Component {
         <React.Fragment>
           <header>
             <div className="text-center">
-              <h4 className="m-0">OUR COURSE</h4>
+              <h4 className="m-0 d-none d-sm-block">OUR COURSE</h4>
               <h2>{title}</h2>
             </div>
             <img src={home1} className="d-block w-100" alt={title} />

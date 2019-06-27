@@ -3,7 +3,7 @@ import TitleWithMark from "./TitleWithMark";
 import formattedDate from "../utils/formattedDate";
 
 const UpcomingCourses = ({ onClick, courses }) => (
-  <div className="upcoming-courses">
+  <div className="upcoming-courses mt-5">
     <div
       id="upcoming-courses-indicator"
       className="carousel slide position-relative"

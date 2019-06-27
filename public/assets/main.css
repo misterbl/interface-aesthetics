@@ -350,91 +350,84 @@
     .blue-card {
       margin: 0 auto; } }
 
-@media (min-width: 500px) {
-  .upcoming-courses {
-    margin: 30px 80px 30px 80px; } }
-
-.upcoming-courses .carousel-prev-icon {
-  left: -60px;
-  top: 40%; }
-
-.upcoming-courses .carousel-next-icon {
-  right: -60px;
-  top: 40%; }
-
-@media (min-width: 330px) {
-  .upcoming-courses .carousel-inner {
-    padding: 70px 50px 70px 50px; } }
-
-.upcoming-courses .carousel-item {
-  height: auto; }
-  .upcoming-courses .carousel-item div {
-    position: relative;
-    top: 0px;
-    left: 0px; }
-  .upcoming-courses .carousel-item p:first-of-type {
-    font-weight: 500 !important; }
-  .upcoming-courses .carousel-item p:nth-of-type(2) {
-    font-weight: 700;
-    font-size: 20px; }
-
-@media (max-width: 768px) {
-  .upcoming-courses .carousel-indicators {
-    left: 0;
-    right: 0;
-    margin: 0px auto; } }
-
-.upcoming-courses .course-image {
-  margin-left: 80px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 500px;
-  height: 500px;
-  background-position: -300px; }
-  @media (max-width: 1000px) {
-    .upcoming-courses .course-image {
-      display: none; } }
-
-.upcoming-courses img {
-  opacity: 1; }
-
-.upcoming-courses button {
-  border: 1px solid #fc4c10;
-  height: 100%; }
-
-.upcoming-courses .next-course {
-  background-color: #f5f5f5;
-  border: 1px solid #7a7a7a;
-  color: #2d76bb;
-  font-weight: bold; }
+.upcoming-courses {
+  margin-top: 70px; }
+  @media (min-width: 500px) {
+    .upcoming-courses {
+      margin: 30px 80px 30px 80px; } }
+  .upcoming-courses .carousel-prev-icon {
+    left: -60px;
+    top: 40%; }
+  .upcoming-courses .carousel-next-icon {
+    right: -60px;
+    top: 40%; }
+  @media (max-width: 780px) {
+    .upcoming-courses .carousel-inner {
+      min-height: 850px; } }
+  @media (min-width: 330px) {
+    .upcoming-courses .carousel-inner {
+      padding: 70px 50px 70px 50px; } }
+  .upcoming-courses .carousel-item {
+    height: auto; }
+    .upcoming-courses .carousel-item div {
+      position: relative;
+      top: 0px;
+      left: 0px; }
+    .upcoming-courses .carousel-item p:first-of-type {
+      font-weight: 500 !important; }
+    .upcoming-courses .carousel-item p:nth-of-type(2) {
+      font-weight: 700;
+      font-size: 20px; }
   @media (max-width: 768px) {
-    .upcoming-courses .next-course {
-      width: 100%; } }
-
-.upcoming-courses .next-course + div {
-  background-color: #fc4c10;
-  width: 200px; }
-  @media (max-width: 1000px) {
-    .upcoming-courses .next-course + div {
-      width: 100%; } }
-
-.upcoming-courses .right-arrow-light {
-  position: absolute !important;
-  top: 15% !important;
-  left: 80% !important;
-  background-image: url(data:image/png;base64,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);
-  width: 30px;
-  height: 30px;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.upcoming-courses .content {
-  width: 60%; }
-  @media (max-width: 1000px) {
-    .upcoming-courses .content {
-      width: auto; } }
+    .upcoming-courses .carousel-indicators {
+      left: 0;
+      right: 0;
+      margin: 0px auto; } }
+  .upcoming-courses .course-image {
+    margin-left: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 500px;
+    background-position: -300px; }
+    @media (max-width: 1000px) {
+      .upcoming-courses .course-image {
+        display: none; } }
+  .upcoming-courses img {
+    opacity: 1; }
+  .upcoming-courses button {
+    border: 1px solid #fc4c10;
+    height: 100%; }
+  .upcoming-courses .next-course {
+    background-color: #f5f5f5;
+    border: 1px solid #7a7a7a;
+    color: #2d76bb;
+    font-weight: bold; }
+    @media (max-width: 768px) {
+      .upcoming-courses .next-course {
+        width: 100%; } }
+  .upcoming-courses .next-course + div {
+    background-color: #fc4c10;
+    width: 200px; }
+    @media (max-width: 1000px) {
+      .upcoming-courses .next-course + div {
+        width: 100%; } }
+  .upcoming-courses .right-arrow-light {
+    position: absolute !important;
+    top: 15% !important;
+    left: 80% !important;
+    background-image: url(data:image/png;base64,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);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .upcoming-courses .content {
+    width: 60%; }
+    @media (max-width: 1000px) {
+      .upcoming-courses .content {
+        width: auto; } }
 
 .carousel-indicators {
   left: 0px;

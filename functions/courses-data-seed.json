@@ -2,17 +2,17 @@
   {
     "dates": [
       {
-        "date": "Tue Jul 02 2019 00:00:00 GMT+0200 (Central European Summer Time)",
-        "placesLeft": "1",
+        "date": "Sat Jul 20 2019 00:00:00 GMT+0100 (British Summer Time)",
+        "placesLeft": "2",
         "type": ""
       },
       {
-        "date": "Wed Jul 03 2019 00:00:00 GMT+0200 (Central European Summer Time)",
-        "placesLeft": "3",
+        "date": "Sat Aug 24 2019 00:00:00 GMT+0100 (British Summer Time)",
+        "placesLeft": "4",
         "type": ""
       },
       {
-        "date": "Thu Jul 04 2019 00:00:00 GMT+0200 (Central European Summer Time)",
+        "date": "Sat Sep 28 2019 00:00:00 GMT+0100 (British Summer Time)",
         "placesLeft": "4",
         "type": ""
       }
@@ -85,18 +85,18 @@
   {
     "dates": [
       {
-        "date": "Tue May 28 2019 00:00:00 GMT+0200 (Central European Summer Time)",
-        "placesLeft": 1,
+        "date": "Sat Aug 17 2019 00:00:00 GMT+0100 (British Summer Time)",
+        "placesLeft": "4",
         "type": ""
       },
       {
-        "date": "Sat Jun 29 2019 00:00:00 GMT+0200 (Central European Summer Time)",
-        "placesLeft": 0,
+        "date": "Sat Sep 28 2019 00:00:00 GMT+0100 (British Summer Time)",
+        "placesLeft": "4",
         "type": ""
       },
       {
-        "date": "Sat Jul 06 2019 00:00:00 GMT+0200 (Central European Summer Time)",
-        "placesLeft": 3,
+        "date": "Sat Oct 26 2019 00:00:00 GMT+0100 (British Summer Time)",
+        "placesLeft": "4",
         "type": ""
       }
     ],
@@ -139,19 +139,19 @@
   {
     "dates": [
       {
-        "date": "Tue May 28 2019 00:00:00 GMT+0200 (Central European Summer Time)",
-        "placesLeft": 1,
-        "type": ""
+        "date": "Sun Aug 18 2019 00:00:00 GMT+0100 (British Summer Time)",
+        "placesLeft": "4",
+        "type": "Lip Augmentation Masterclass (Half Day) "
       },
       {
-        "date": "Tue Jun 11 2019 00:00:00 GMT+0200 (Central European Summer Time)",
-        "placesLeft": 0,
-        "type": ""
+        "date": "Sun Aug 18 2019 00:00:00 GMT+0100 (British Summer Time)",
+        "placesLeft": "4",
+        "type": "Tear Trough Masterclass (Half Day)"
       },
       {
-        "date": "Tue Jul 02 2019 00:00:00 GMT+0200 (Central European Summer Time)",
-        "placesLeft": 3,
-        "type": ""
+        "date": "Sun Sep 29 2019 00:00:00 GMT+0100 (British Summer Time)",
+        "placesLeft": "4",
+        "type": "Facial Harmonization Masterclass (Full Day)"
       }
     ],
     "expect": [
@@ -200,6 +200,6 @@
     ],
     "overview": "Our masterclasses provided dedicated training in complex areas of facial aesthetics, with a focus on the most recent advances in products and techniques. Delegates will move beyond the techniques taught on Foundation and Advanced courses, with discussion of common pitfalls encountered. The emphasis will be on hands-on practical training, with patients hand-picked to provide injecting opportunities for delegates.",
     "price": "£495",
-    "title": "Masterclass Foundation course in Botox ® & Dermal Filler"
+    "title": "Masterclass course in Botox ® & Dermal Filler"
   }
 ]

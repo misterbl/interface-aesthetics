@@ -91,11 +91,11 @@ export class Contact extends React.Component {
             </p>
             <div>
               <img src={phoneIcon} alt="phone" />
-              <span>+44 (0) 123 456 789</span>
+              <span>+44 (0) 7905341021</span>
             </div>
             <div>
               <img src={emailIcon} alt="email" />
-              <span>info@interfaceaesthetic.com</span>
+              <span>info@interfaceaesthetics.co.uk</span>
             </div>
           </div>
           <form onSubmit={this.formSubmit} className="w-50-container">

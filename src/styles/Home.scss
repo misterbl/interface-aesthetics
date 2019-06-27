@@ -104,6 +104,7 @@
 }
 
 .upcoming-courses {
+  margin-top: 70px;
   @media (min-width: 500px) {
     margin: 30px 80px 30px 80px;
   }
@@ -119,6 +120,9 @@
     @extend %grey-mark-background;
   }
   .carousel-inner {
+    @media (max-width: 780px) {
+      min-height: 850px;
+    }
     @media (min-width: 330px) {
       padding: 70px 50px 70px 50px;
     }

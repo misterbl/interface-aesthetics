@@ -33,6 +33,20 @@ const modelTestimonials = [
       "I attended the Interface course for Botox(R) and lip filler and I am extremely happy with my results. Everyone was friendly and professional, and I was given lots of time to discuss what I wanted with the the surgeon and with the doctors and dentists who were doing the course. To get so much expert input and such amazing treatment as a model patient is simply amazing. Afterwards, I was given the contact details of the team and the option of follow up if I wanted. This was really standout for me, and showed very much the friendly and caring attitude of the team on the course.  Like most people, I do get slightly nervous with needles, and I can say without reservation that I was put at ease, and made to feel very comfortable and, above all, confident with the treatment I received. Looking at the credentials of the Interface team, working in facial surgery and cosmetics, it was a big help to help me put aside any worries.",
     course:
       "Model on The Foundation & Advanced Courses in Botox® & Dermal Filler​ - April 2019"
+  },
+  {
+    name: "Mo",
+    text:
+      "I am 49-years old and I had never undergone any procedure in my face before my experience as a model patient for Interface Aesthetics. I had been wanting do do something for some time but having a doctor I could trust was the most important thing for me. Through friends who had been models on the training courses with Dr Olding, I saw the amazing results and heard about the excellent care given/ So I made up my mind and attended the course where I had Botox and filler treatments. I was thankful for the professionalism and expertise. I will pass on my recommendation to anyone who is looking great results and younger looking skin.",
+    course:
+      "Model on The Foundation Course in Botox ® & Dermal Filler - April 2019​"
+  },
+  {
+    name: "Amnon",
+    text:
+      "I came to be a model patient at Interface Aesthetics through hearing about the courses from friends, and I had Botox treatment of my forehead and frown lines. l still look like me but a fresher and more radiant me. l found Dr. Olding and the whole team at Interface to be reassuring and excellent at treatment with solid professional credentials and amazing clinical skill. l had absolutely no bruising after my Botox  and I was given all the aftercare advice with care and plenty of time and attention. I would thoroughly recommend Interface Aesthetics to anyone considering having Botox treatment.",
+    course:
+      "Attended: Model on The Foundation Course in Botox ® & Dermal Filler - April 2019​​"
   }
 ];
 
