@@ -42,7 +42,7 @@ export default class ModelForm extends PureComponent {
 
       axios
         .post(
-          "https://interface-aesthetics-staging.firebaseapp.com/email",
+          "https://interfaceaesthetics.co.uk/email",
           data
         )
         .then(res => {

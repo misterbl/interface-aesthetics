@@ -27,7 +27,7 @@ export class Footer extends React.Component {
       this.setState({ buttonText: "...sending" });
       axios
         .post(
-          "https://interface-aesthetics-staging.firebaseapp.com/email",
+          "https://interfaceaesthetics.co.uk/email",
           data
         )
         .then(res => {

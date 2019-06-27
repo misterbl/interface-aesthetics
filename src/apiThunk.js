@@ -4,7 +4,7 @@ export const uploadCourseImage = async (courseId, image, imageName) => {
   const body = { _id: courseId, image, imageName };
   try {
     const response = await Axios.create({
-      baseURL: "https://interface-aesthetics-staging.firebaseapp.comuploadCourseImage"
+      baseURL: "https://interfaceaesthetics.co.ukuploadCourseImage"
     }).post("", body);
     if (response && response.status === 200) {
       return response.data;
@@ -19,7 +19,7 @@ export const uploadCourseImage = async (courseId, image, imageName) => {
 
 export const getCourseImage = async image => {
   try {
-    const response = await Axios.get("https://interface-aesthetics-staging.firebaseapp.comgetCourseImage", {
+    const response = await Axios.get("https://interfaceaesthetics.co.ukgetCourseImage", {
       params: {
         image
       }

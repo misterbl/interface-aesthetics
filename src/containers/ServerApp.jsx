@@ -6,7 +6,7 @@ import App from "./App.jsx";
 import ScrollToTop from "../components/ScrollToTop.jsx";
 
 const client = new ApolloClient({
-  uri: "https://interface-aesthetics-staging.firebaseapp.comgraphql"
+  uri: "https://interfaceaesthetics.co.ukgraphql"
 });
 export default class ServerApp extends React.Component {
   render() {
