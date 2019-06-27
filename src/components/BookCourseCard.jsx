@@ -5,8 +5,8 @@ const BookCourseCard = ({ title, dates, onClick }) => (
   <div className="book-course">
     <div className="border-bottom">{title}</div>
     <div>
-      <form>
-        <div className="select-container overflow-hidden">
+      <form className="overflow-hidden">
+        <div className="select-container">
           <select className="mb-3">
             <option selected>Select course date</option>
             {dates.map(date => (
