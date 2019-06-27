@@ -9,8 +9,8 @@ const BookCourseCard = ({ title, dates, onClick }) => (
         <div className="select-container">
           <select className="mb-3">
             <option selected>Select course date</option>
-            {dates.map(date => (
-              <option key={date.date}>
+            {dates.map((date, index) => (
+              <option key={`${date.date}${index}`}>
                 {formattedDate(date.date)}
                 {date.type && ` - ${date.type}`}
               </option>
